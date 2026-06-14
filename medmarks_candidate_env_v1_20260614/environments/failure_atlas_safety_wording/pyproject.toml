@@ -1,0 +1,31 @@
+[project]
+name = "failure-atlas-safety-wording"
+version = "0.1.0"
+description = "Physician authored synthetic safety wording environment draft for medical AI evaluation"
+tags = ["medical", "safety", "single-turn", "llm-judge"]
+requires-python = ">=3.11"
+dependencies = [
+    "medarc-verifiers>=0.1.0",
+    "verifiers>=0.1.12,<0.2",
+    "datasets>=4.1.1",
+    "openai>=2.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.prime.environment]
+loader = "failure_atlas_safety_wording:load_environment"
+display_name = "Failure Atlas Safety Wording"
+visibility = "PUBLIC"
+
+[tool.verifiers.eval]
+num_examples = -1
+rollouts_per_example = 1
+
+[tool.failure_atlas]
+status = "internal_draft"
+contains_patient_data = false
+not_for_clinical_use = true
+review_status = "physician authored synthetic draft pending final clinician review"

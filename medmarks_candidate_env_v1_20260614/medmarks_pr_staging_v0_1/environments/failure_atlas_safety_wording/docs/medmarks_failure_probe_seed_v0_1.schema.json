@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/v0id-lab/medical-ai-failure-atlas/schemas/medmarks_failure_probe_seed_v0_1.schema.json",
+  "title": "Medmarks exploratory failure probe seed v0.1",
+  "type": "object",
+  "required": [
+    "case_id",
+    "schema_version",
+    "artifact_role",
+    "source_scenario_id",
+    "source_file",
+    "source_data_status",
+    "source_license",
+    "derivation",
+    "selection_method",
+    "selection_stratum",
+    "task_family",
+    "medhelm_category_guess",
+    "medmarks_subset_guess",
+    "clinical_domain",
+    "setting",
+    "language",
+    "data_provenance",
+    "contains_patient_data",
+    "not_for_clinical_use",
+    "external_status",
+    "review_status",
+    "prompt",
+    "expected_safety_focus",
+    "failure_mechanism_tags",
+    "clinician_review_question",
+    "rubric"
+  ],
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^FA_MEDMARKS_[0-9]{3}$"},
+    "schema_version": {"const": "medmarks_failure_probe_seed_v0_1"},
+    "artifact_role": {"const": "exploratory_failure_probe_set"},
+    "data_provenance": {"const": "synthetic"},
+    "contains_patient_data": {"const": false},
+    "not_for_clinical_use": {"const": true},
+    "external_status": {"const": "internal_draft"},
+    "language": {"const": "en"},
+    "source_license": {"const": "CC-BY-4.0"},
+    "failure_mechanism_tags": {
+      "type": "array",
+      "minItems": 3,
+      "items": {"type": "string"}
+    },
+    "rubric": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["criterion_id", "positive_behavior", "points"],
+        "properties": {
+          "criterion_id": {"type": "string"},
+          "positive_behavior": {"type": "string"},
+          "points": {"const": 2}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,111 @@
+{
+  "status": "probe_pass_with_dependency_gap",
+  "no_endpoint_or_model_call": true,
+  "hard_checks_ok": true,
+  "dependency_ready": false,
+  "required_files": [
+    {
+      "label": "environment",
+      "path": "medmarks_candidate_env_v1_20260614/environments/failure_atlas_safety_wording/failure_atlas_safety_wording.py",
+      "exists": true,
+      "size_bytes": 10260
+    },
+    {
+      "label": "judge_prompts",
+      "path": "medmarks_candidate_env_v1_20260614/environments/failure_atlas_safety_wording/judge_prompts.py",
+      "exists": true,
+      "size_bytes": 761
+    },
+    {
+      "label": "pyproject",
+      "path": "medmarks_candidate_env_v1_20260614/environments/failure_atlas_safety_wording/pyproject.toml",
+      "exists": true,
+      "size_bytes": 860
+    },
+    {
+      "label": "cases",
+      "path": "data/failure_atlas_medmarks_30_case_seed_v0_1.jsonl",
+      "exists": true,
+      "size_bytes": 67635
+    },
+    {
+      "label": "config",
+      "path": "medmarks_candidate_env_v1_20260614/configs/failure_atlas_safety_wording_30case_smoke.toml",
+      "exists": true,
+      "size_bytes": 274
+    }
+  ],
+  "compile_checks": [
+    {
+      "path": "medmarks_candidate_env_v1_20260614/environments/failure_atlas_safety_wording/failure_atlas_safety_wording.py",
+      "ok": true
+    },
+    {
+      "path": "medmarks_candidate_env_v1_20260614/environments/failure_atlas_safety_wording/judge_prompts.py",
+      "ok": true
+    }
+  ],
+  "pyproject": {
+    "project_name": "failure-atlas-safety-wording",
+    "requires_python": ">=3.11",
+    "dependency_hits": {
+      "medarc-verifiers": true,
+      "verifiers": true,
+      "datasets": true,
+      "openai": true
+    },
+    "loader": "failure_atlas_safety_wording:load_environment",
+    "display_name": "Failure Atlas Safety Wording",
+    "visibility": "PUBLIC",
+    "prime_metadata_ok": true,
+    "dependency_set_ok": true
+  },
+  "config": {
+    "path": "medmarks_candidate_env_v1_20260614/configs/failure_atlas_safety_wording_30case_smoke.toml",
+    "has_model": true,
+    "save_results": true,
+    "eval_count": 1,
+    "env_id": "failure-atlas-safety-wording",
+    "num_examples": 30,
+    "rollouts_per_example": 1,
+    "cases_path": "data/failure_atlas_medmarks_30_case_seed_v0_1.jsonl",
+    "config_shape_ok": true
+  },
+  "optional_imports": {
+    "datasets": false,
+    "medarc_verifiers": false,
+    "openai": false,
+    "verifiers": false
+  },
+  "smoke": {
+    "status": "smoke_pass",
+    "cases": 30,
+    "first_case_id": "FA_MEDMARKS_001",
+    "points_per_case_unique": [
+      8
+    ],
+    "review_status": "single physician authored synthetic draft pending additional clinician review",
+    "contains_patient_data": false,
+    "not_for_clinical_use": true,
+    "smoke_shape_ok": true
+  },
+  "medmarks_root": {
+    "provided": false
+  },
+  "load_environment_check": {
+    "attempted": false
+  },
+  "claim_boundary": {
+    "can_claim": [
+      "local dependency probe passed without endpoint calls",
+      "environment metadata and local smoke shape are ready for a Medmarks checkout test"
+    ],
+    "cannot_claim": [
+      "Medmarks accepted environment",
+      "full Medmarks dependency run completed",
+      "judge or model endpoint evaluation completed",
+      "clinical validation",
+      "model ranking or safety performance"
+    ]
+  }
+}

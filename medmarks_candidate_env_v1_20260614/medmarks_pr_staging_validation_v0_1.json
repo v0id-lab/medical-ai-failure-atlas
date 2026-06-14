@@ -1,0 +1,92 @@
+{
+  "status": "staging_pass",
+  "no_endpoint_or_model_call": true,
+  "files": [
+    {
+      "path": "STAGING_MANIFEST.md",
+      "exists": true,
+      "size_bytes": 927
+    },
+    {
+      "path": "configs/failure_atlas_safety_wording_30case_smoke.toml",
+      "exists": true,
+      "size_bytes": 316
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/__init__.py",
+      "exists": true,
+      "size_bytes": 86
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/failure_atlas_safety_wording.py",
+      "exists": true,
+      "size_bytes": 10260
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/judge_prompts.py",
+      "exists": true,
+      "size_bytes": 761
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/pyproject.toml",
+      "exists": true,
+      "size_bytes": 860
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/README.md",
+      "exists": true,
+      "size_bytes": 2032
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/data/failure_atlas_medmarks_30_case_seed_v0_1.jsonl",
+      "exists": true,
+      "size_bytes": 67635
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/docs/medmarks_failure_probe_seed_v0_1.schema.json",
+      "exists": true,
+      "size_bytes": 1933
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/docs/MEDMARKS_FAILURE_PROBE_SET_DATASHEET_V0_1.md",
+      "exists": true,
+      "size_bytes": 2911
+    },
+    {
+      "path": "environments/failure_atlas_safety_wording/docs/MEDMARKS_FAILURE_PROBE_TAXONOMY_V0_1.md",
+      "exists": true,
+      "size_bytes": 3135
+    }
+  ],
+  "pyproject_ok": true,
+  "config_ok": true,
+  "jsonl": {
+    "rows": 30,
+    "first_case_id": "FA_MEDMARKS_001",
+    "contains_patient_data": false,
+    "not_for_clinical_use": true
+  },
+  "smoke": {
+    "status": "smoke_pass",
+    "cases": 30,
+    "first_case_id": "FA_MEDMARKS_001",
+    "points_per_case_unique": [
+      8
+    ],
+    "contains_patient_data": false,
+    "not_for_clinical_use": true
+  },
+  "claim_boundary": {
+    "can_claim": [
+      "local Medmarks style staging package validates without endpoint calls",
+      "staging package can be copied into a Medmarks checkout for dependency testing"
+    ],
+    "cannot_claim": [
+      "Medmarks accepted environment",
+      "pull request opened",
+      "full dependency run completed",
+      "model or judge endpoint evaluation completed",
+      "clinical validation"
+    ]
+  }
+}

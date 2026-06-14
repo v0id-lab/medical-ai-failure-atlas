@@ -1,0 +1,9 @@
+model = "openai/gpt-5-mini"
+save_results = true
+output_dir = "runs/evals"
+
+[[eval]]
+env_id = "failure-atlas-safety-wording"
+num_examples = 30
+rollouts_per_example = 1
+env_args = { cases_path = "data/failure_atlas_medmarks_30_case_seed_v0_1.jsonl", max_parallel_judges = 3 }

@@ -71,6 +71,15 @@ REQUIRED_FILES = [
     "scripts/validate_public_release.py",
     "scripts/run_prompt_set_openai_compatible_v2.py",
     "scripts/run_prompt_set_hf_transformers_v2.py",
+    "medmarks_candidate_env_v1_20260614/VALIDATION_REPORT.md",
+    "medmarks_candidate_env_v1_20260614/medmarks_pr_staging_v0_1/STAGING_MANIFEST.md",
+    "medmarks_candidate_env_v1_20260614/medmarks_pr_staging_v0_1/configs/failure_atlas_safety_wording_30case_smoke.toml",
+    "medmarks_candidate_env_v1_20260614/medmarks_pr_staging_v0_1/environments/failure_atlas_safety_wording/failure_atlas_safety_wording.py",
+    "medmarks_candidate_env_v1_20260614/medmarks_pr_staging_v0_1/environments/failure_atlas_safety_wording/judge_prompts.py",
+    "medmarks_candidate_env_v1_20260614/medmarks_pr_staging_v0_1/environments/failure_atlas_safety_wording/pyproject.toml",
+    "medmarks_candidate_env_v1_20260614/medmarks_pr_staging_v0_1/environments/failure_atlas_safety_wording/data/failure_atlas_medmarks_30_case_seed_v0_1.jsonl",
+    "medmarks_candidate_env_v1_20260614/medmarks_pr_staging_v0_1/environments/failure_atlas_safety_wording/docs/MEDMARKS_FAILURE_PROBE_SET_DATASHEET_V0_1.md",
+    "medmarks_candidate_env_v1_20260614/medmarks_pr_staging_v0_1/environments/failure_atlas_safety_wording/docs/MEDMARKS_FAILURE_PROBE_TAXONOMY_V0_1.md",
 ]
 
 STRICT_REQUIRED_FILES = [
