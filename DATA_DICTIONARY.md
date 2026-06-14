@@ -60,6 +60,10 @@ Columns:
 2. `prompt_text`: Prompt sent to each model.
 3. `output_capture_instruction`: Rule for saving the model output.
 
+Rows:
+
+10
+
 ## data/prompt_set_v2_hard_30.tsv
 
 This file uses the same columns as `prompt_set_v1.tsv`.
@@ -79,6 +83,46 @@ Purpose:
 1. Run 30 selected scenarios from the V3 scale seed.
 2. Stress remote dosing, rescue protocol wording, evidence reliability, abstention, under triage, and communication risk.
 3. Produce a second model output layer beyond the hard thirty run.
+
+## data/inter_rater_review_subset_v0_1.tsv
+
+Pilot subset for inter rater review protocol testing.
+
+Rows:
+
+24
+
+Boundary:
+
+This file is not a validation result and is not powered to estimate a stable agreement statistic.
+
+## review_forms/inter_rater_review_form_v0_1.tsv
+
+Internal reviewer facing pilot form generated from the 24 row subset.
+
+It includes prompt text and model answer text.
+
+It intentionally excludes source priority, possible failure tags, source triage file, and prior short reason fields.
+
+Public boundary:
+
+This file is held out of the public release while raw model output redistribution remains uncleared.
+
+## review_forms/inter_rater_review_source_key_v0_1.tsv
+
+Coordinator key that maps reviewer row ids back to source subset metadata.
+
+Public boundary:
+
+This file is held out of the public release while the reviewer workflow package remains internal.
+
+## review_forms/adjudication_log_template_v0_1.tsv
+
+Template for recording disagreements and adjudicated fields after two independent reviews.
+
+Public boundary:
+
+This file is held out of the public release while the reviewer workflow package remains internal.
 
 ## data/failure_atlas_external_sample_v0_1.jsonl
 

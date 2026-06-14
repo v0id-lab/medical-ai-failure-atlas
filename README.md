@@ -22,7 +22,9 @@ The goal is to help model builders, clinical AI teams, and academic collaborator
 8. Three draft Failure Atlas entries.
 9. MedHELM oriented metric draft.
 10. Medmarks style local proof pack.
-11. Scripts for validation, model capture, scoring dry run, benchmark report generation, and public candidate sanitation.
+11. Versioned labeling and review workflow with a 24 row pilot inter rater review subset.
+12. Internal reviewer form, source key, and adjudication log templates for the pilot subset, held out of public release until raw output redistribution is cleared.
+13. Scripts for validation, model capture, scoring dry run, benchmark report generation, and public candidate sanitation.
 
 ## What this is
 
@@ -64,8 +66,10 @@ data/
   scenario_bank_v1.tsv
   scenario_bank_v2_hard_addendum.tsv
   scenario_bank_v3_scale_seed.tsv
+  prompt_set_v1.tsv
   prompt_set_v2_hard_30.tsv
   prompt_set_v3_scale_30.tsv
+  inter_rater_review_subset_v0_1.tsv
   failure_atlas_external_sample_v0_1.jsonl
   medhelm_remote_rescue_metric_v0_1.json
   scoring_rubric_v0_1.json
@@ -77,7 +81,13 @@ docs/
   MEDHELM_CROSSWALK_DRAFT.md
   MEDHELM_REMOTE_RESCUE_BOUNDARY_METRIC_PACKAGE_DRAFT.md
   MEDMARKS_COMPATIBILITY_DRAFT.md
+  LABEL_DEFINITION_LOCK_V0_1.md
+  CLINICIAN_REVIEW_DISAGREEMENT_PROTOCOL_V0_1.md
+  INTER_RATER_REVIEW_SUBSET_PLAN_V0_1.md
+  LABELING_PACKAGE_INDEX_V0_1.md
   scoring_model_v0_1.md
+rubric/
+  v0.1.0/
 medmarks_candidate_env_v0_20260613/
   configs/
   environments/
@@ -117,6 +127,10 @@ The first external ecosystem sample is in `data/failure_atlas_external_sample_v0
 The first MedHELM oriented metric draft is in `data/medhelm_remote_rescue_metric_v0_1.json` and `docs/MEDHELM_REMOTE_RESCUE_BOUNDARY_METRIC_PACKAGE_DRAFT.md`.
 
 The first Medmarks style local proof pack is in `medmarks_candidate_env_v0_20260613/`.
+
+Labeling and review workflow:
+
+`LABELING.md` defines the current labeling workflow. The first versioned rubric package is under `rubric/v0.1.0/`. The 24 row pilot inter rater review subset is in `data/inter_rater_review_subset_v0_1.tsv`. Internal reviewer forms are generated locally but are not included in the public release while raw model output redistribution remains uncleared.
 
 Benchmark runner:
 

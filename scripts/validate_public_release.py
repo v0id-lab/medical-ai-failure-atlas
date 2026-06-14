@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import sys
 from pathlib import Path
@@ -11,10 +12,18 @@ BLOCKED_DIR_NAMES = {
     "__pycache__",
     "raw_outputs",
     "logs",
+    "results",
+    "review_forms",
 }
 
 BLOCKED_SUFFIXES = {
     ".pyc",
+}
+
+VCS_DIR_NAMES = {
+    ".git",
+    ".hg",
+    ".svn",
 }
 
 def joined(*parts: str) -> str:
@@ -47,6 +56,8 @@ REQUIRED_FILES = [
     "data/failure_atlas_external_sample_v0_1.jsonl",
     "data/medhelm_remote_rescue_metric_v0_1.json",
     "data/scoring_rubric_v0_1.json",
+    "data/inter_rater_review_subset_v0_1.tsv",
+    "data/prompt_set_v1.tsv",
     "data/prompt_set_v2_hard_30.tsv",
     "data/prompt_set_v3_scale_30.tsv",
     "docs/clinician_evaluation_rubric.md",
@@ -101,7 +112,12 @@ def validate_jsonl(path: Path, errors: list[str]) -> None:
         if row.get("contains_patient_data") is not False:
             fail(errors, f"{path}: line {line_number} contains_patient_data must be false")
         if row.get("not_for_clinical_use") is not True:
-            fail(errors, f"{path}: line {line_number} not_for_clinical_use must be true")
+                fail(errors, f"{path}: line {line_number} not_for_clinical_use must be true")
+
+
+def count_tsv_rows(path: Path) -> int:
+    with path.open(newline="", encoding="utf-8") as handle:
+        return sum(1 for _ in csv.DictReader(handle, delimiter="\t"))
 
 
 def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
@@ -125,6 +141,17 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
 
     for path in sorted(root.rglob("*")):
         relative = path.relative_to(root)
+        if relative.parts and relative.parts[0] in VCS_DIR_NAMES:
+            continue
+        if relative.parts and relative.parts[0] == "review_forms":
+            fail(errors, f"Internal review form path present in public candidate: {relative}")
+            continue
+        if relative.parts and relative.parts[0] == "results":
+            fail(errors, f"Internal result path present in public candidate: {relative}")
+            continue
+        if len(relative.parts) >= 2 and relative.parts[0] == "docs" and path.name.startswith("HEALTHBENCH_"):
+            fail(errors, f"Internal HealthBench workflow doc present in public candidate: {relative}")
+            continue
         if path.is_dir() and path.name in BLOCKED_DIR_NAMES:
             fail(errors, f"Blocked directory present: {relative}")
             continue
@@ -147,6 +174,19 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
             fail(errors, "MedHELM metric contains_patient_data must be false")
         if metric.get("not_for_clinical_use") is not True:
             fail(errors, "MedHELM metric not_for_clinical_use must be true")
+
+    prompt_files = [
+        root / "data" / "prompt_set_v1.tsv",
+        root / "data" / "prompt_set_v2_hard_30.tsv",
+        root / "data" / "prompt_set_v3_scale_30.tsv",
+    ]
+    if all(path.exists() for path in prompt_files):
+        prompt_rows = sum(count_tsv_rows(path) for path in prompt_files)
+        if prompt_rows != 70:
+            fail(errors, f"Public prompt set count must be 70 rows, found {prompt_rows}")
+        readme = root / "README.md"
+        if readme.exists() and "70 row prompt set" not in readme.read_text(encoding="utf-8"):
+            fail(errors, "README must describe the public prompt set count as 70 rows")
 
     return errors, warnings
 
