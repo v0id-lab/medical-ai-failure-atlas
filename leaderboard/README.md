@@ -10,6 +10,16 @@ Run:
 make leaderboard
 ```
 
+Generate the public Markdown preview report:
+
+```bash
+make leaderboard_report
+```
+
 Current template:
 
 `leaderboard/synthetic_report_template_v0_1.tsv`
+
+Generated report:
+
+`leaderboard/build/synthetic_report_v0_1.md`

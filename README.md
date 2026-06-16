@@ -17,6 +17,7 @@ New visible build surfaces are now staged in this public repository:
 7. [SourceCheckup workflow example](sourcecheckup/WORKFLOW_EXAMPLE_20260616.md)
 8. [June 2026 public roadmap](docs/ROADMAP_2026_06.md)
 9. [No ranking leaderboard design](docs/LEADERBOARD_DESIGN_V0_1.md)
+10. [Synthetic report row contributor guide](docs/CONTRIBUTOR_GUIDE_SYNTHETIC_REPORT_ROWS_V0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -96,6 +97,12 @@ Validate the no ranking leaderboard template:
 
 ```bash
 make leaderboard
+```
+
+Generate the no ranking leaderboard report:
+
+```bash
+make leaderboard_report
 ```
 
 ## Folder structure
