@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: validate validate-public sourcecheckup sourcecheckup_v02 sourcecheckup_contrib_v02 leaderboard leaderboard_report case_intake taxonomy_dashboard tr_medllm_pack clinician_review_queue clinician_review_protocol release_note
+.PHONY: validate validate-public sourcecheckup sourcecheckup_v02 sourcecheckup_contrib_v02 source_claim_queue leaderboard leaderboard_report case_intake taxonomy_dashboard tr_medllm_pack clinician_review_queue clinician_review_protocol release_note
 
 validate:
 	$(PYTHON) scripts/validate_external_sample_jsonl.py data/failure_atlas_external_sample_v0_1.jsonl
@@ -8,6 +8,7 @@ validate:
 	$(PYTHON) scripts/validate_scoring_rubric_v0_1.py
 	$(PYTHON) scripts/validate_failure_atlas_public_summary_v0_1.py
 	$(PYTHON) scripts/validate_clinician_review_protocol_v0_1.py
+	$(PYTHON) scripts/validate_source_claim_review_queue_v0_1.py
 	$(PYTHON) scripts/validate_public_release_note_v0_1.py
 	$(PYTHON) scripts/validate_public_release.py --root .
 
@@ -22,6 +23,9 @@ sourcecheckup_v02:
 
 sourcecheckup_contrib_v02:
 	$(PYTHON) scripts/validate_sourcecheckup_contribution_v0_2.py
+
+source_claim_queue:
+	$(PYTHON) scripts/validate_source_claim_review_queue_v0_1.py
 
 leaderboard:
 	$(PYTHON) scripts/validate_leaderboard_template_v0_1.py

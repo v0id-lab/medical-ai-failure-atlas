@@ -38,6 +38,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 6. SourceCheckup contribution schema and validator.
 7. No ranking synthetic report generator.
 8. Clinician review protocol v0.1.
+9. Source claim review queue v0.1.
 
 ## External visibility sequence
 
@@ -62,8 +63,8 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Expand the SourceCheckup source review queue.
-2. Add a health data quality card for synthetic dataset release readiness.
-3. Add MedHELM and Medmarks compatibility notes with strict wording.
-4. Add an assurance card template for medical language model releases.
-5. Add specialty spread rows for the Turkish synthetic risk pack.
+1. Add a health data quality card for synthetic dataset release readiness.
+2. Add MedHELM and Medmarks compatibility notes with strict wording.
+3. Add an assurance card template for medical language model releases.
+4. Add specialty spread rows for the Turkish synthetic risk pack.
+5. Open the next SourceCheckup public issue for source claim review contributors.

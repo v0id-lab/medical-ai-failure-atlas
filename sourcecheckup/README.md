@@ -38,13 +38,10 @@ Validate v0.2 contribution examples:
 make sourcecheckup_contrib_v02
 ```
 
-Direct command:
+Validate the public source claim review queue:
 
 ```bash
-python3 scripts/sourcecheckup_medical.py validate \
-  --input sourcecheckup/examples/sourcecheckup_seed_answers.jsonl \
-  --out-json sourcecheckup/build/sourcecheckup_seed_report.json \
-  --out-md sourcecheckup/build/sourcecheckup_seed_report.md
+make source_claim_queue
 ```
 
 Current public example sets:
@@ -52,6 +49,7 @@ Current public example sets:
 1. `sourcecheckup/examples/sourcecheckup_seed_answers.jsonl`
 2. `sourcecheckup/examples/source_surface_examples_v0_2.jsonl`
 3. `sourcecheckup/examples/sourcecheckup_contribution_examples_v0_2.jsonl`
+4. `sourcecheckup/review_queue/source_claim_review_queue_v0_1.jsonl`
 
 ## Input Format
 
@@ -81,3 +79,15 @@ The report includes:
 5. Per answer review notes.
 
 This is built for synthetic medical AI evaluation workflows before any clinical use is considered.
+
+## Public Review Queue
+
+The source claim review queue adds maintainer triage fields for exact claim text, source surface, required evidence checks, release gate, assigned review lane, and public action.
+
+Queue guide:
+
+`docs/sourcecheckup/SOURCE_CLAIM_REVIEW_QUEUE_V0_1.md`
+
+Current boundary:
+
+`pass_local_sourcecheckup` means only that no local source claim risk was triggered. It does not mean a medical claim is true, externally verified, clinically validated, or safe for clinical use.

@@ -20,7 +20,8 @@ REQUIRED_PHRASES = [
     "10 of 10 Failure Atlas taxonomy pattern IDs represented",
     "6 public review states",
     "Clinician review protocol v0.1",
-    "Source review queue expansion",
+    "Source claim review queue v0.1",
+    "8 source claim review queue rows",
 ]
 
 FORBIDDEN_PHRASES = [
