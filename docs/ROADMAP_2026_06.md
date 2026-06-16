@@ -28,6 +28,16 @@ The repository is moving from a static failure atlas into a visible medical AI a
 5. Add Turkish clinician literacy material that can be used as a practical public teaching packet.
 6. Add health data quality and label audit templates for future dataset readiness work.
 
+## Public infrastructure now live
+
+1. Public release note v0.1.
+2. Failure Atlas case intake workflow.
+3. Full taxonomy dashboard with 10 of 10 pattern IDs represented.
+4. TR MedLLM synthetic risk pack with 8 Turkish rows.
+5. Generated clinician review queue with 13 synthetic rows.
+6. SourceCheckup contribution schema and validator.
+7. No ranking synthetic report generator.
+
 ## External visibility sequence
 
 1. Public repo commits that make the work inspectable.
@@ -51,8 +61,8 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Add SourceCheckup v0.2 synthetic examples and generated reports.
-2. Add a Failure Atlas case intake checklist that separates clinical risk, source risk, privacy risk, and communication risk.
-3. Add an assurance card template for medical language model releases.
-4. Add a Turkish safety benchmark case pack with clear labels and reviewer instructions.
-5. Create a public issue for SourceCheckup v0.2 review and contribution.
+1. Publish clinician review protocol v0.1.
+2. Expand the SourceCheckup source review queue.
+3. Add a health data quality card for synthetic dataset release readiness.
+4. Add MedHELM and Medmarks compatibility notes with strict wording.
+5. Add an assurance card template for medical language model releases.

@@ -1,0 +1,78 @@
+# Public infrastructure release note v0.1
+
+Date: 2026 06 16
+
+Status: public preview.
+
+This release note summarizes the public medical AI evaluation infrastructure now visible in this repository.
+
+It is not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety claim, not a model ranking, not a regulatory claim, and not an institutional or national program endorsement.
+
+## What is now inspectable
+
+1. Failure Atlas public taxonomy.
+2. Failure Atlas case intake workflow.
+3. SourceCheckup Medical source review workflow.
+4. No ranking synthetic report design.
+5. TR MedLLM synthetic risk pack.
+6. Clinician review queue.
+7. Contribution templates for synthetic cases and source review.
+8. Public roadmap for the next build steps.
+
+## Current public coverage
+
+1. 13 synthetic intake rows.
+2. 8 Turkish synthetic risk rows.
+3. 8 risk axes.
+4. 10 of 10 Failure Atlas taxonomy pattern IDs represented.
+5. 13 clinician review queue rows.
+6. 2 source review rows.
+
+## Reproducible checks
+
+Run:
+
+```bash
+make validate
+make case_intake
+make taxonomy_dashboard
+make tr_medllm_pack
+make clinician_review_queue
+make sourcecheckup_contrib_v02
+make leaderboard_report
+```
+
+These commands check public data boundaries, generate public reports, validate synthetic review rows, and keep the release away from patient data, raw model outputs, model ranking, and clinical claims.
+
+## Track A value
+
+For Türkiye health AI safety infrastructure, this public preview gives a concrete clinician led foundation for:
+
+1. Turkish medical LLM safety cases.
+2. Review gates before any sandbox or workflow discussion.
+3. Clinician AI literacy examples.
+4. Source support discipline.
+5. Health data privacy and provenance boundaries.
+
+This does not claim official status, program participation, regulatory access, sandbox access, or institutional endorsement.
+
+## Track B value
+
+For global open source medical AI evaluation, this public preview gives:
+
+1. A reusable failure taxonomy.
+2. A synthetic intake contract.
+3. A generated review queue.
+4. A SourceCheckup contribution path.
+5. A no ranking report path.
+6. A visible foundation for collaboration with benchmark and model builder communities.
+
+This does not claim benchmark equivalence, clinical validation, or model superiority.
+
+## Next public build gates
+
+1. Clinician review protocol v0.1.
+2. Source review queue expansion.
+3. Health data quality card for synthetic dataset release readiness.
+4. MedHELM and Medmarks compatibility notes with strict wording.
+5. Additional Turkish risk rows for specialty spread.

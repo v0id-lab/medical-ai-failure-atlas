@@ -1,12 +1,13 @@
 PYTHON ?= python3
 
-.PHONY: validate validate-public sourcecheckup sourcecheckup_v02 sourcecheckup_contrib_v02 leaderboard leaderboard_report case_intake taxonomy_dashboard tr_medllm_pack clinician_review_queue
+.PHONY: validate validate-public sourcecheckup sourcecheckup_v02 sourcecheckup_contrib_v02 leaderboard leaderboard_report case_intake taxonomy_dashboard tr_medllm_pack clinician_review_queue release_note
 
 validate:
 	$(PYTHON) scripts/validate_external_sample_jsonl.py data/failure_atlas_external_sample_v0_1.jsonl
 	$(PYTHON) scripts/validate_medhelm_metric_json.py data/medhelm_remote_rescue_metric_v0_1.json
 	$(PYTHON) scripts/validate_scoring_rubric_v0_1.py
 	$(PYTHON) scripts/validate_failure_atlas_public_summary_v0_1.py
+	$(PYTHON) scripts/validate_public_release_note_v0_1.py
 	$(PYTHON) scripts/validate_public_release.py --root .
 
 validate-public: validate
@@ -42,3 +43,6 @@ tr_medllm_pack:
 clinician_review_queue:
 	$(PYTHON) scripts/validate_failure_atlas_case_intake_v0_1.py
 	$(PYTHON) scripts/generate_clinician_review_queue_v0_1.py
+
+release_note:
+	$(PYTHON) scripts/validate_public_release_note_v0_1.py
