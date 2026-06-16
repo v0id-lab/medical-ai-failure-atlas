@@ -4,6 +4,17 @@ Status: public v0.1 release.
 
 Date: 2026 06 13
 
+## 2026 06 16 public preview update
+
+New visible build surfaces are now staged in this public repository:
+
+1. [TR MedAI Safety Suite public release card](docs/tr-medai-safety-suite/PUBLIC_REPO_RELEASE_CARD_20260616.md)
+2. [SourceCheckup Medical public demo matrix](docs/sourcecheckup/PUBLIC_DEMO_MATRIX_20260616.md)
+3. [Turkish Clinical AI Assurance Lab governance matrix](docs/tr-medai-safety-suite/ASSURANCE_LAB_TPLC_GOVERNANCE_MATRIX_20260616.md)
+4. [Clinician AI Literacy 30 minute Turkish facilitator packet](docs/tr-medai-safety-suite/CLINICIAN_AI_LITERACY_30MIN_TR_20260616.md)
+
+These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
+
 ## Purpose
 
 This project builds physician authored synthetic draft evaluation resources for medical AI systems across medicine, pending final clinician review.
