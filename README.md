@@ -16,6 +16,7 @@ New visible build surfaces are now staged in this public repository:
 6. [Failure Atlas taxonomy public preview](failure_atlas/public/TAXONOMY_PREVIEW_20260616.md)
 7. [SourceCheckup workflow example](sourcecheckup/WORKFLOW_EXAMPLE_20260616.md)
 8. [June 2026 public roadmap](docs/ROADMAP_2026_06.md)
+9. [No ranking leaderboard design](docs/LEADERBOARD_DESIGN_V0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -89,6 +90,12 @@ Run the larger SourceCheckup v0.2 example set:
 
 ```bash
 make sourcecheckup_v02
+```
+
+Validate the no ranking leaderboard template:
+
+```bash
+make leaderboard
 ```
 
 ## Folder structure
