@@ -18,6 +18,7 @@ REQUIRED_PHRASES = [
     "13 synthetic intake rows",
     "8 Turkish synthetic risk rows",
     "10 of 10 Failure Atlas taxonomy pattern IDs represented",
+    "6 public review states",
     "Clinician review protocol v0.1",
     "Source review queue expansion",
 ]

@@ -1,0 +1,57 @@
+{
+  "version": "clinician_review_states_v0_1",
+  "status": "public preview",
+  "boundary": "Synthetic review workflow only. Not clinical advice, not patient data, not clinical deployment, not clinical validation, not model ranking, and not an endorsement.",
+  "states": [
+    {
+      "id": "synthetic_preview_only",
+      "meaning": "Synthetic row may be shown as a preview but has not completed review."
+    },
+    {
+      "id": "needs_clinician_review",
+      "meaning": "Synthetic row needs clinician review before stronger public summary."
+    },
+    {
+      "id": "needs_source_review",
+      "meaning": "Synthetic row needs SourceCheckup review for source support or claim support."
+    },
+    {
+      "id": "needs_adjudication",
+      "meaning": "Reviewers disagree or uncertainty remains."
+    },
+    {
+      "id": "not_for_public_summary",
+      "meaning": "Synthetic row should not be summarized publicly in current form."
+    },
+    {
+      "id": "ready_for_public_synthetic_summary",
+      "meaning": "Synthetic row can be summarized publicly with strict boundaries. This is not clinical validation."
+    }
+  ],
+  "required_reviewer_fields": [
+    "case_id",
+    "reviewer_role",
+    "review_date",
+    "synthetic_boundary_ok",
+    "patient_data_absent",
+    "raw_model_output_absent",
+    "taxonomy_mapping_ok",
+    "safe_answer_boundary_ok",
+    "sourcecheckup_needed",
+    "review_state",
+    "release_gate_decision",
+    "short_reason"
+  ],
+  "blocked_public_claims": [
+    "clinical advice",
+    "patient data",
+    "raw model output",
+    "model ranking",
+    "clinical deployment",
+    "clinical validation",
+    "model safety claim",
+    "official role",
+    "institutional endorsement",
+    "national program endorsement"
+  ]
+}

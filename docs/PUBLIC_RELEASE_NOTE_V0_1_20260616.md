@@ -18,6 +18,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 6. Clinician review queue.
 7. Contribution templates for synthetic cases and source review.
 8. Public roadmap for the next build steps.
+9. Clinician review protocol v0.1.
 
 ## Current public coverage
 
@@ -27,6 +28,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 4. 10 of 10 Failure Atlas taxonomy pattern IDs represented.
 5. 13 clinician review queue rows.
 6. 2 source review rows.
+7. 6 public review states.
 
 ## Reproducible checks
 

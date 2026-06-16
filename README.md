@@ -24,6 +24,7 @@ New visible build surfaces are now staged in this public repository:
 14. [TR MedLLM synthetic risk pack](tr_medllm_safetybench/README.md)
 15. [Clinician review queue](failure_atlas/public/build/clinician_review_queue_v0_1.md)
 16. [Public infrastructure release note v0.1](docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md)
+17. [Clinician review protocol v0.1](docs/CLINICIAN_REVIEW_PROTOCOL_V0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -133,6 +134,12 @@ Generate the clinician review queue:
 
 ```bash
 make clinician_review_queue
+```
+
+Validate the clinician review protocol:
+
+```bash
+make clinician_review_protocol
 ```
 
 Validate the public release note:
