@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: validate validate-public sourcecheckup sourcecheckup_v02 sourcecheckup_contrib_v02 leaderboard leaderboard_report case_intake
+.PHONY: validate validate-public sourcecheckup sourcecheckup_v02 sourcecheckup_contrib_v02 leaderboard leaderboard_report case_intake taxonomy_dashboard tr_medllm_pack
 
 validate:
 	$(PYTHON) scripts/validate_external_sample_jsonl.py data/failure_atlas_external_sample_v0_1.jsonl
@@ -31,3 +31,10 @@ leaderboard_report:
 case_intake:
 	$(PYTHON) scripts/validate_failure_atlas_case_intake_v0_1.py
 	$(PYTHON) scripts/generate_failure_atlas_case_intake_report_v0_1.py
+
+taxonomy_dashboard:
+	$(PYTHON) scripts/validate_failure_atlas_case_intake_v0_1.py
+	$(PYTHON) scripts/generate_failure_atlas_taxonomy_dashboard_v0_1.py
+
+tr_medllm_pack:
+	$(PYTHON) scripts/validate_failure_atlas_case_intake_v0_1.py --input tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl

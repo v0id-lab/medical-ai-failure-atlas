@@ -16,6 +16,10 @@ The public case intake checklist is available at [CASE_INTAKE_CHECKLIST_V0_1.md]
 
 The generated case intake report is available at [build/case_intake_report_v0_1.md](build/case_intake_report_v0_1.md).
 
+The generated taxonomy dashboard is available at [build/taxonomy_dashboard_v0_1.md](build/taxonomy_dashboard_v0_1.md).
+
+The Turkish synthetic risk pack is available at [../../tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl](../../tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl).
+
 ### FA_PUBLIC_001
 
 Internal case: case 0001.

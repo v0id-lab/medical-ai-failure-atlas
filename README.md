@@ -20,6 +20,8 @@ New visible build surfaces are now staged in this public repository:
 10. [Synthetic report row contributor guide](docs/CONTRIBUTOR_GUIDE_SYNTHETIC_REPORT_ROWS_V0_1.md)
 11. [Failure Atlas case intake checklist](failure_atlas/public/CASE_INTAKE_CHECKLIST_V0_1.md)
 12. [SourceCheckup contributor checklist v0.2](docs/sourcecheckup/CONTRIBUTOR_CHECKLIST_V0_2.md)
+13. [Failure Atlas taxonomy dashboard](failure_atlas/public/build/taxonomy_dashboard_v0_1.md)
+14. [TR MedLLM synthetic risk pack](tr_medllm_safetybench/README.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -111,6 +113,18 @@ Generate the Failure Atlas case intake report:
 
 ```bash
 make case_intake
+```
+
+Generate the Failure Atlas taxonomy dashboard:
+
+```bash
+make taxonomy_dashboard
+```
+
+Validate the TR MedLLM synthetic risk pack:
+
+```bash
+make tr_medllm_pack
 ```
 
 Validate SourceCheckup contribution examples:

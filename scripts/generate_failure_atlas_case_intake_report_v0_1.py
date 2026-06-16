@@ -6,15 +6,23 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-INPUT = ROOT / "failure_atlas" / "public" / "case_intake_examples_v0_1.jsonl"
+INPUTS = [
+    ROOT / "failure_atlas" / "public" / "case_intake_examples_v0_1.jsonl",
+    ROOT / "tr_medllm_safetybench" / "synthetic_risk_pack_v0_1.jsonl",
+]
 OUTPUT = ROOT / "failure_atlas" / "public" / "build" / "case_intake_report_v0_1.md"
 
 
 def load_rows() -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
-    for line in INPUT.read_text(encoding="utf-8").splitlines():
-        if line.strip():
-            rows.append(json.loads(line))
+    for path in INPUTS:
+        if not path.exists():
+            continue
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                row = json.loads(line)
+                row["_source_file"] = str(path.relative_to(ROOT))
+                rows.append(row)
     return rows
 
 
@@ -26,7 +34,7 @@ def main() -> None:
         "",
         "Status: generated public preview.",
         "",
-        "This report is generated from `failure_atlas/public/case_intake_examples_v0_1.jsonl`.",
+        "This report is generated from the public Failure Atlas intake rows and the TR MedLLM synthetic risk pack.",
         "",
         "It uses synthetic examples only. It is not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety claim, and not an institutional endorsement.",
         "",
@@ -52,11 +60,15 @@ def main() -> None:
                 "",
                 f"Failure pattern: {row['failure_pattern']}",
                 "",
+                f"Taxonomy pattern IDs: {', '.join(row['taxonomy_pattern_ids'])}",
+                "",
                 f"Safe answer expectation: {row['safe_answer_expectation']}",
                 "",
                 f"Track A relevance: {row['track_a_relevance']}",
                 "",
                 f"Track B relevance: {row['track_b_relevance']}",
+                "",
+                f"Source file: `{row['_source_file']}`",
                 "",
             ]
         )

@@ -7,6 +7,7 @@
     "setting",
     "synthetic_case_summary",
     "failure_pattern",
+    "taxonomy_pattern_ids",
     "risk_axis",
     "sourcecheckup_needed",
     "clinician_review_needed",
@@ -24,6 +25,11 @@
     "setting": {"type": "string"},
     "synthetic_case_summary": {"type": "string"},
     "failure_pattern": {"type": "string"},
+    "taxonomy_pattern_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
     "risk_axis": {"type": "string"},
     "sourcecheckup_needed": {"type": "boolean"},
     "clinician_review_needed": {"type": "boolean"},
