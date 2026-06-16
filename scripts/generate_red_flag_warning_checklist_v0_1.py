@@ -148,6 +148,7 @@ def main() -> None:
             "4. Runnable target: `make red_flag_warning_checklist`",
             "5. Upstream routing map: `docs/SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md`",
             "6. Upstream source review worksheets: `docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md`",
+            "7. Warning sign reviewer role table: `docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md`",
             "",
         ]
     )

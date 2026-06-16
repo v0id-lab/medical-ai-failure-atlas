@@ -47,6 +47,8 @@ REQUIRED_PHRASES = [
     "locator format from source support",
     "warning signs remain visible",
     "symptom fluctuation is blocked",
+    "warning sign reviewer role table",
+    "docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md",
     "make red_flag_contributor_examples",
 ]
 

@@ -112,6 +112,7 @@ def main() -> None:
             "2. Use these examples to test whether warning signs remain visible before comfort language.",
             "3. Use these examples to test whether symptom fluctuation is blocked as a shortcut to reassurance.",
             "4. Use these examples to route unresolved red flag wording to clinician review.",
+            "5. Use the warning sign reviewer role table to assign clinician, source locator, warning sign wording, and adjudication checks.",
             "",
             "## Boundary checks",
             "",
@@ -128,6 +129,7 @@ def main() -> None:
             "3. Validator: `scripts/validate_red_flag_contributor_examples_v0_1.py`",
             "4. Runnable target: `make red_flag_contributor_examples`",
             "5. Red flag checklist: `docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md`",
+            "6. Warning sign reviewer role table: `docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md`",
             "",
         ]
     )

@@ -25,7 +25,9 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 13. 7 SourceCheckup TR MedLLM assurance routes.
 14. 2 source review worksheets.
 15. 3 red flag warning checklists.
-16. 3 red flag source locator contributor examples.
+16. 4 warning sign reviewer roles.
+17. 5 escalation gate audit rows.
+18. 3 red flag source locator contributor examples.
 
 ## Top public entry files
 
@@ -114,6 +116,8 @@ Public files:
 11. [Source review worksheets JSON](source_review_worksheets_v0_1.json)
 12. [Red flag source locator and warning sign checklist](RED_FLAG_WARNING_CHECKLIST_V0_1.md)
 13. [Red flag source locator and warning sign checklist JSON](red_flag_warning_checklist_v0_1.json)
+14. [Warning sign reviewer role table](WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md)
+15. [Warning sign reviewer role table JSON](warning_sign_reviewer_role_table_v0_1.json)
 
 Runnable checks:
 
@@ -123,6 +127,7 @@ make assurance_release_gate_map
 make sourcecheckup_tr_medllm_routing
 make source_review_worksheets
 make red_flag_warning_checklist
+make warning_sign_role_table
 make boundary_notes
 ```
 
@@ -130,7 +135,7 @@ Track A value: release gate language for Turkish health AI sandbox readiness dis
 
 Track B value: reusable assurance artifact pattern for public medical language model evaluation releases.
 
-Next build: link SourceCheckup dashboard rows back into TR MedLLM specialty and assurance release gates.
+Next build: add label audit reviewer role table and escalation gate rows.
 
 ### 4. SourceCheckup Medical
 
@@ -150,6 +155,7 @@ Public files:
 10. [Source review worksheets](../docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md)
 11. [Red flag source locator and warning sign checklist](../docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md)
 12. [Red flag source locator contributor examples](sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md)
+13. [Warning sign reviewer role table](../docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md)
 
 Runnable checks:
 
@@ -163,6 +169,7 @@ make sourcecheckup_tr_medllm_routing
 make source_review_worksheets
 make red_flag_warning_checklist
 make red_flag_contributor_examples
+make warning_sign_role_table
 make source_claim_queue
 ```
 
@@ -170,7 +177,7 @@ Track A value: public source support discipline for Turkish medical LLM review e
 
 Track B value: open source source quality infrastructure that can grow into source review examples, queues, and contributor workflows.
 
-Next build: add warning sign reviewer role table and escalation gate audit rows.
+Next build: add issue ready source locator example packets after maintainer wording review.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 
@@ -184,6 +191,7 @@ Public files:
 4. [Clinician review states](../failure_atlas/public/clinician_review_states_v0_1.json)
 5. [Clinician literacy release gate lesson map](CLINICIAN_LITERACY_RELEASE_GATE_LESSON_MAP_V0_1.md)
 6. [Clinician literacy release gate lesson JSON](clinician_literacy_release_gate_lesson_map_v0_1.json)
+7. [Warning sign reviewer role table](WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md)
 
 Runnable checks:
 
@@ -191,6 +199,7 @@ Runnable checks:
 make clinician_literacy_map
 make clinician_review_protocol
 make clinician_review_queue
+make warning_sign_role_table
 ```
 
 Track A value: Turkish clinician literacy material tied to real release gates and synthetic safety cases.
@@ -228,7 +237,7 @@ Next build: label audit workflow table with reviewer roles and escalation gates.
 ## Public build order
 
 1. Keep dashboard links and validators green.
-2. Add warning sign reviewer role table and escalation gate audit rows.
+2. Add label audit reviewer role table and escalation gate audit rows.
 3. Add lab target packets only after exact target review.
 
 ## Visibility rule

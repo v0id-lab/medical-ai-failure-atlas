@@ -61,6 +61,8 @@ REQUIRED_FILES = [
     "docs/source_review_worksheets_v0_1.json",
     "docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md",
     "docs/red_flag_warning_checklist_v0_1.json",
+    "docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md",
+    "docs/warning_sign_reviewer_role_table_v0_1.json",
     "docs/PLATFORM_DASHBOARD_INDEX_V0_1.md",
     "docs/CLINICIAN_LITERACY_RELEASE_GATE_LESSON_MAP_V0_1.md",
     "docs/clinician_literacy_release_gate_lesson_map_v0_1.json",
@@ -103,6 +105,8 @@ REQUIRED_FILES = [
     "scripts/validate_source_review_worksheets_v0_1.py",
     "scripts/generate_red_flag_warning_checklist_v0_1.py",
     "scripts/validate_red_flag_warning_checklist_v0_1.py",
+    "scripts/generate_warning_sign_reviewer_role_table_v0_1.py",
+    "scripts/validate_warning_sign_reviewer_role_table_v0_1.py",
     "scripts/generate_red_flag_contributor_examples_v0_1.py",
     "scripts/validate_red_flag_contributor_examples_v0_1.py",
     "scripts/validate_tr_medllm_specialty_spread_v0_1.py",
@@ -275,6 +279,10 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
             fail(errors, "README must link to the red flag warning checklist")
         if "make red_flag_warning_checklist" not in readme_text:
             fail(errors, "README must document the red flag warning checklist command")
+        if "docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md" not in readme_text:
+            fail(errors, "README must link to the warning sign reviewer role table")
+        if "make warning_sign_role_table" not in readme_text:
+            fail(errors, "README must document the warning sign reviewer role table command")
         if "docs/sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md" not in readme_text:
             fail(errors, "README must link to red flag contributor examples")
         if "make red_flag_contributor_examples" not in readme_text:

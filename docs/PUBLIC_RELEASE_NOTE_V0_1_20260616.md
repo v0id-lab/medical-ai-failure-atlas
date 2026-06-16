@@ -33,6 +33,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 21. Source review worksheets v0.1.
 22. Red flag source locator and warning sign checklist v0.1.
 23. Red flag source locator contributor examples v0.1.
+24. Warning sign reviewer role table v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -56,7 +57,9 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 16. 7 SourceCheckup TR MedLLM assurance routes.
 17. 2 source review worksheets.
 18. 3 red flag warning checklists.
-19. 3 red flag source locator contributor examples.
+19. 4 warning sign reviewer roles.
+20. 5 escalation gate audit rows.
+21. 3 red flag source locator contributor examples.
 
 ## Reproducible checks
 
@@ -80,6 +83,7 @@ make sourcecheckup_tr_medllm_routing
 make source_review_worksheets
 make red_flag_warning_checklist
 make red_flag_contributor_examples
+make warning_sign_role_table
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -112,6 +116,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 17. Source review worksheets that turn medication safety and policy wording routes into concrete public review questions.
 18. Red flag source locator and warning sign checklist that turns false reassurance, rare danger, and source locator risks into public review steps.
 19. Red flag source locator contributor examples that turn unsafe red flag wording into SourceCheckup contribution rows.
+20. Warning sign reviewer role table that assigns clinician, source locator, warning sign wording, and adjudication roles.
 
 This does not claim official status, program participation, regulatory access, sandbox access, or institutional endorsement.
 
@@ -139,11 +144,12 @@ For global open source medical AI evaluation, this public preview gives:
 18. Source review worksheets for medication safety and policy wording without source truth certification or clinical claims.
 19. Red flag warning checklists for partial negative evidence, symptom fluctuation, and source locator triage claims.
 20. Red flag contributor examples for PMID locator misuse, broad source reassurance, and warning sign placement.
+21. Escalation gate audit rows for partial negative evidence, symptom fluctuation, source locator triage claims, public wording boundaries, and reviewer disagreement.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Warning sign reviewer role table and escalation gate audit rows.
+1. Label audit reviewer role table and escalation gate audit rows.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

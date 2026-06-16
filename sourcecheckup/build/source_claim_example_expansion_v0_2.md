@@ -152,6 +152,7 @@ Declared claim count: 0
 4. Routes the source claim queue into the SourceCheckup TR MedLLM assurance routing map.
 5. Sends medication safety and policy wording routes into the source review worksheets.
 6. Sends red flag locator and warning sign wording routes into the red flag contributor examples.
+7. Sends unresolved warning sign and source locator rows into the warning sign reviewer role table.
 
 ## Track B value
 
@@ -162,6 +163,7 @@ Declared claim count: 0
 5. Adds a bridge into `docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md`.
 6. Adds a bridge into `docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md` for red flag source locator review.
 7. Adds a bridge into `docs/sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md`.
+8. Adds a bridge into `docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md` for reviewer role assignment and escalation gate audit rows.
 
 ## Boundary checks
 

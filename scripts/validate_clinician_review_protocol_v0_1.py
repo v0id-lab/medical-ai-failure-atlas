@@ -26,6 +26,9 @@ REQUIRED_PROTOCOL_PHRASES = [
     "Release gate checklist",
     "Disagreement rule",
     "SourceCheckup routing",
+    "Warning sign reviewer role table",
+    "Escalation gate audit rows",
+    "make warning_sign_role_table",
     "Track A use",
     "Track B use",
 ]

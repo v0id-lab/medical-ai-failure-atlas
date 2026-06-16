@@ -58,6 +58,8 @@ REQUIRED_PHRASES = [
     "make red_flag_warning_checklist",
     "docs/SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md",
     "docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md",
+    "Warning sign reviewer role table",
+    "docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md",
 ]
 
 FORBIDDEN_PHRASES = [

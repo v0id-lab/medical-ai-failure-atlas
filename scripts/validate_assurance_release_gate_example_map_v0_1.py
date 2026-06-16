@@ -61,6 +61,8 @@ REQUIRED_PHRASES = [
     "docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md",
     "Red flag source locator and warning sign checklist",
     "docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md",
+    "Warning sign reviewer role table",
+    "docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md",
 ]
 
 FORBIDDEN_PHRASES = [

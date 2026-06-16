@@ -106,6 +106,35 @@ Rows with source support risk should route to SourceCheckup when:
 
 SourceCheckup review is source support review. It is not clinical truth certification.
 
+## Warning sign reviewer role table
+
+Use `docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md` when a row involves false reassurance, partial negative evidence, symptom fluctuation, source locator claims, or warning sign placement.
+
+The table defines four public reviewer roles:
+
+1. Clinician first pass reviewer.
+2. Source locator reviewer.
+3. Warning sign wording reviewer.
+4. Escalation gate adjudicator.
+
+Run:
+
+```bash
+make warning_sign_role_table
+```
+
+## Escalation gate audit rows
+
+Use the escalation gate audit rows when a public summary might become stronger than the evidence allows.
+
+The current rows cover:
+
+1. Partial negative evidence escalation.
+2. Symptom fluctuation warning wording.
+3. Source locator triage claims.
+4. Public wording boundaries.
+5. Reviewer disagreement.
+
 ## Public wording allowed
 
 Allowed wording:
