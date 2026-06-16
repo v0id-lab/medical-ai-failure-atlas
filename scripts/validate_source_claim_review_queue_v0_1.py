@@ -108,8 +108,8 @@ def load_rows(errors: list[str]) -> list[dict[str, object]]:
 def main() -> int:
     errors: list[str] = []
     rows = load_rows(errors)
-    if len(rows) < 8:
-        errors.append("Expected at least 8 queue rows")
+    if len(rows) < 12:
+        errors.append("Expected at least 12 queue rows")
 
     seen_ids: set[str] = set()
     surfaces: set[str] = set()

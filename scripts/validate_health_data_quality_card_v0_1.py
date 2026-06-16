@@ -36,6 +36,7 @@ REQUIRED_PHRASES = [
     "150 synthetic scenario rows",
     "70 prompt rows",
     "24 pilot inter rater rows",
+    "12 source claim review queue rows",
     "single physician authored synthetic draft pending additional clinician review",
     "v0.1.0",
     "public_preview_allowed_synthetic_only",

@@ -15,7 +15,7 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 3. 10 risk axes.
 4. 10 of 10 Failure Atlas taxonomy pattern IDs represented.
 5. 19 clinician review queue rows.
-6. 8 source claim review queue rows.
+6. 12 source claim review queue rows.
 7. 24 pilot inter rater rows.
 8. 150 synthetic scenario rows.
 9. 70 prompt rows.
@@ -124,6 +124,7 @@ Public files:
 5. [SourceCheckup public contributor issue guide](sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md)
 6. [SourceCheckup seed report](../sourcecheckup/build/sourcecheckup_seed_report.md)
 7. [SourceCheckup v0.2 report](../sourcecheckup/build/source_surface_examples_v0_2_report.md)
+8. [SourceCheckup expansion dashboard](../sourcecheckup/build/source_claim_example_expansion_v0_2.md)
 
 Runnable checks:
 
@@ -132,6 +133,7 @@ make sourcecheckup
 make sourcecheckup_v02
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
+make sourcecheckup_expansion_dashboard
 make source_claim_queue
 ```
 
@@ -139,7 +141,7 @@ Track A value: public source support discipline for Turkish medical LLM review e
 
 Track B value: open source source quality infrastructure that can grow into source review examples, queues, and contributor workflows.
 
-Next build: expand source claim review examples after maintainer review.
+Next build: link SourceCheckup dashboard rows back into clinician literacy release gates.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 
@@ -194,8 +196,8 @@ Next build: label audit workflow table with reviewer roles and escalation gates.
 ## Public build order
 
 1. Keep dashboard links and validators green.
-2. Expand source claim review examples after maintainer review.
-3. Add clinician literacy lesson outline tied to release gates.
+2. Add clinician literacy lesson outline tied to release gates.
+3. Link SourceCheckup dashboard rows back into TR MedLLM specialty and assurance release gates.
 4. Add lab collaboration packets only after exact target review.
 
 ## Visibility rule

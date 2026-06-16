@@ -32,6 +32,7 @@ New visible build surfaces are now staged in this public repository:
 22. [SourceCheckup public contributor issue guide v0.1](docs/sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md)
 23. [Six platform dashboard index v0.1](docs/PLATFORM_DASHBOARD_INDEX_V0_1.md)
 24. [TR MedLLM specialty spread dashboard v0.1](tr_medllm_safetybench/build/specialty_spread_dashboard_v0_1.md)
+25. [SourceCheckup source claim example expansion v0.2](sourcecheckup/build/source_claim_example_expansion_v0_2.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -198,6 +199,12 @@ Validate the SourceCheckup public contributor issue route:
 make sourcecheckup_public_issue
 ```
 
+Generate the SourceCheckup source claim expansion dashboard:
+
+```bash
+make sourcecheckup_expansion_dashboard
+```
+
 Validate the six platform dashboard index:
 
 ```bash
@@ -241,6 +248,11 @@ docs/
   sourcecheckup/
     CONTRIBUTOR_CHECKLIST_V0_2.md
     PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md
+sourcecheckup/
+  build/
+    source_claim_example_expansion_v0_2.md
+  review_queue/
+    source_claim_review_queue_v0_1.jsonl
 failure_atlas/
   public/
     INDEX.md
@@ -266,6 +278,7 @@ scripts/
   validate_assurance_card_template_v0_1.py
   validate_tr_medllm_specialty_spread_v0_1.py
   validate_tr_medllm_specialty_dashboard_v0_1.py
+  validate_sourcecheckup_example_expansion_dashboard_v0_2.py
   run_prompt_set_openai_compatible_v2.py
   run_prompt_set_hf_transformers_v2.py
 CONTRIBUTING.md

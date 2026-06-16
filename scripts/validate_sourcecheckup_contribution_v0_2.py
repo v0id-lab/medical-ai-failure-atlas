@@ -84,8 +84,8 @@ def load_rows(errors: list[str]) -> list[dict[str, object]]:
 def main() -> int:
     errors: list[str] = []
     rows = load_rows(errors)
-    if len(rows) < 4:
-        errors.append("Expected at least 4 contribution examples")
+    if len(rows) < 8:
+        errors.append("Expected at least 8 contribution examples")
 
     seen_ids: set[str] = set()
     surfaces: set[str] = set()

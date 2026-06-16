@@ -13,6 +13,9 @@ This is not clinical advice, not patient data, not clinical deployment, not clin
 1. Queue rows: `sourcecheckup/review_queue/source_claim_review_queue_v0_1.jsonl`
 2. Validator: `scripts/validate_source_claim_review_queue_v0_1.py`
 3. Runnable target: `make source_claim_queue`
+4. Expansion dashboard: `sourcecheckup/build/source_claim_example_expansion_v0_2.md`
+
+Current queue size: 12 rows.
 
 ## Queue fields
 
@@ -68,6 +71,12 @@ make source_claim_queue
 ```
 
 The validator checks row count, source surface coverage, required evidence checks, review states, release gates, patient data boundary, and outward use boundary.
+
+The expansion dashboard can be regenerated with:
+
+```bash
+make sourcecheckup_expansion_dashboard
+```
 
 ## Maintainer rule
 

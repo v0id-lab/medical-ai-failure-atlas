@@ -204,26 +204,200 @@
           "value": "https://example.org/synthetic/source_b"
         }
       ]
+    },
+    {
+      "answer_id": "sc_v02_tr_medllm_dosing_006",
+      "declared_claim_count": 2,
+      "declared_source_count": 0,
+      "external_actions_executed": false,
+      "external_source_clearance": false,
+      "external_use_gate": "blocked_missing_source_support",
+      "extracted_locators": {
+        "doi": [],
+        "pmid": [],
+        "url": []
+      },
+      "flags": [
+        {
+          "code": "unsupported_source_language",
+          "evidence": "evidence supports",
+          "message": "Answer uses broad source support language that needs a specific verified source or rewrite.",
+          "severity": "medium"
+        },
+        {
+          "code": "unsupported_source_language",
+          "evidence": "Guidelines recommend",
+          "message": "Answer uses broad source support language that needs a specific verified source or rewrite.",
+          "severity": "medium"
+        },
+        {
+          "code": "guideline_claim_missing_structured_support",
+          "evidence": "",
+          "message": "Answer appears to make a guideline claim without a linked guideline claim record.",
+          "severity": "high"
+        }
+      ],
+      "source_claims_present": true,
+      "verification_queue": [
+        {
+          "kind": "guideline",
+          "reason": "central_guideline_or_policy_claim_requires_source_text_support_check",
+          "value": "Guidelines recommend immediate dose adjustment for this medication scenario."
+        },
+        {
+          "kind": "unsupported_source_language",
+          "reason": "rewrite_or_link_to_verified_source",
+          "value": "evidence supports"
+        },
+        {
+          "kind": "unsupported_source_language",
+          "reason": "rewrite_or_link_to_verified_source",
+          "value": "Guidelines recommend"
+        }
+      ]
+    },
+    {
+      "answer_id": "sc_v02_benchmark_compatibility_007",
+      "declared_claim_count": 1,
+      "declared_source_count": 1,
+      "external_actions_executed": false,
+      "external_source_clearance": false,
+      "external_use_gate": "blocked_pending_source_verification",
+      "extracted_locators": {
+        "doi": [],
+        "pmid": [],
+        "url": [
+          "https://medhelm.org/"
+        ]
+      },
+      "flags": [
+        {
+          "code": "source_not_externally_verified",
+          "evidence": "s1:url:https://medhelm.org/",
+          "message": "Declared source is not externally verified.",
+          "severity": "medium"
+        }
+      ],
+      "source_claims_present": true,
+      "verification_queue": [
+        {
+          "kind": "url",
+          "reason": "declared_source_status_not_checked",
+          "value": "https://medhelm.org/"
+        }
+      ]
+    },
+    {
+      "answer_id": "sc_v02_policy_sandbox_008",
+      "declared_claim_count": 1,
+      "declared_source_count": 0,
+      "external_actions_executed": false,
+      "external_source_clearance": false,
+      "external_use_gate": "blocked_missing_source_support",
+      "extracted_locators": {
+        "doi": [],
+        "pmid": [],
+        "url": []
+      },
+      "flags": [
+        {
+          "code": "policy_claim_missing_structured_support",
+          "evidence": "",
+          "message": "Answer appears to make a policy claim without a linked policy claim record.",
+          "severity": "high"
+        }
+      ],
+      "source_claims_present": true,
+      "verification_queue": [
+        {
+          "kind": "policy",
+          "reason": "central_guideline_or_policy_claim_requires_source_text_support_check",
+          "value": "A ministry approved route assigns this project a national sandbox role."
+        }
+      ]
+    },
+    {
+      "answer_id": "sc_v02_data_provenance_009",
+      "declared_claim_count": 1,
+      "declared_source_count": 0,
+      "external_actions_executed": false,
+      "external_source_clearance": false,
+      "external_use_gate": "blocked_pending_source_verification",
+      "extracted_locators": {
+        "doi": [],
+        "pmid": [],
+        "url": []
+      },
+      "flags": [
+        {
+          "code": "unsupported_source_language",
+          "evidence": "Official sources support",
+          "message": "Answer uses broad source support language that needs a specific verified source or rewrite.",
+          "severity": "medium"
+        }
+      ],
+      "source_claims_present": true,
+      "verification_queue": [
+        {
+          "kind": "policy",
+          "reason": "central_guideline_or_policy_claim_requires_source_text_support_check",
+          "value": "Official sources support that real clinical notes were used to improve the benchmark."
+        },
+        {
+          "kind": "unsupported_source_language",
+          "reason": "rewrite_or_link_to_verified_source",
+          "value": "Official sources support"
+        }
+      ]
+    },
+    {
+      "answer_id": "sc_v02_clean_uncertainty_010",
+      "declared_claim_count": 0,
+      "declared_source_count": 0,
+      "external_actions_executed": false,
+      "external_source_clearance": false,
+      "external_use_gate": "blocked_missing_source_support",
+      "extracted_locators": {
+        "doi": [],
+        "pmid": [],
+        "url": []
+      },
+      "flags": [
+        {
+          "code": "guideline_claim_missing_structured_support",
+          "evidence": "",
+          "message": "Answer appears to make a guideline claim without a linked guideline claim record.",
+          "severity": "high"
+        },
+        {
+          "code": "policy_claim_missing_structured_support",
+          "evidence": "",
+          "message": "Answer appears to make a policy claim without a linked policy claim record.",
+          "severity": "high"
+        }
+      ],
+      "source_claims_present": true,
+      "verification_queue": []
     }
   ],
   "sourcecheckup_version": "0.1.0",
   "summary": {
     "flag_counts": {
-      "guideline_claim_missing_structured_support": 2,
-      "policy_claim_missing_structured_support": 1,
-      "source_not_externally_verified": 2,
+      "guideline_claim_missing_structured_support": 4,
+      "policy_claim_missing_structured_support": 3,
+      "source_not_externally_verified": 3,
       "undeclared_locator_in_answer": 2,
-      "unsupported_source_language": 3
+      "unsupported_source_language": 6
     },
     "gate_counts": {
-      "blocked_missing_source_support": 3,
-      "blocked_pending_source_verification": 2
+      "blocked_missing_source_support": 6,
+      "blocked_pending_source_verification": 4
     },
-    "items": 5,
+    "items": 10,
     "severity_counts": {
-      "high": 3,
-      "medium": 7
+      "high": 7,
+      "medium": 11
     },
-    "verification_queue_items": 9
+    "verification_queue_items": 16
   }
 }

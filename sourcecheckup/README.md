@@ -50,6 +50,12 @@ Validate the public source claim review queue:
 make source_claim_queue
 ```
 
+Generate the SourceCheckup expansion dashboard:
+
+```bash
+make sourcecheckup_expansion_dashboard
+```
+
 Current public example sets:
 
 1. `sourcecheckup/examples/sourcecheckup_seed_answers.jsonl`
@@ -58,6 +64,7 @@ Current public example sets:
 4. `sourcecheckup/review_queue/source_claim_review_queue_v0_1.jsonl`
 5. `docs/sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md`
 6. `.github/ISSUE_TEMPLATE/sourcecheckup_review.yml`
+7. `sourcecheckup/build/source_claim_example_expansion_v0_2.md`
 
 ## Input Format
 
@@ -92,9 +99,21 @@ This is built for synthetic medical AI evaluation workflows before any clinical 
 
 The source claim review queue adds maintainer triage fields for exact claim text, source surface, required evidence checks, release gate, assigned review lane, and public action.
 
+Current public expansion counts:
+
+1. 10 SourceCheckup v0.2 answer examples.
+2. 8 SourceCheckup contributor examples.
+3. 12 source claim review queue rows.
+4. 8 review queue source surfaces.
+5. 3 review queue release gates.
+
 Queue guide:
 
 `docs/sourcecheckup/SOURCE_CLAIM_REVIEW_QUEUE_V0_1.md`
+
+Expansion dashboard:
+
+`sourcecheckup/build/source_claim_example_expansion_v0_2.md`
 
 Public contributor issue guide:
 

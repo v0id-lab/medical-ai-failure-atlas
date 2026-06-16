@@ -26,6 +26,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 14. SourceCheckup public contributor issue route v0.1.
 15. Six platform dashboard index v0.1.
 16. TR MedLLM specialty spread dashboard v0.1.
+17. SourceCheckup source claim example expansion v0.2.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -38,10 +39,12 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 5. 19 clinician review queue rows.
 6. 4 source review rows.
 7. 6 public review states.
-8. 8 source claim review queue rows.
-9. 150 synthetic scenario rows.
-10. 70 prompt rows.
-11. 24 pilot inter rater rows.
+8. 12 source claim review queue rows.
+9. 10 SourceCheckup v0.2 answer examples.
+10. 8 SourceCheckup contributor examples.
+11. 150 synthetic scenario rows.
+12. 70 prompt rows.
+13. 24 pilot inter rater rows.
 
 ## Reproducible checks
 
@@ -61,6 +64,7 @@ make boundary_notes
 make assurance_card_template
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
+make sourcecheckup_expansion_dashboard
 make platform_dashboard
 make leaderboard_report
 ```
@@ -83,6 +87,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 10. SourceCheckup public contributor issue route for synthetic Turkish medical language model source claim review examples.
 11. Six platform dashboard index that connects Turkish benchmark, assurance, literacy, source review, failure atlas, and data quality surfaces.
 12. TR MedLLM specialty spread dashboard for Turkish clinical domain, risk axis, release gate, and SourceCheckup routing coverage.
+13. SourceCheckup expansion dashboard that blocks medication, benchmark wording, national route wording, and data provenance source claims until exact support checks are complete.
 
 This does not claim official status, program participation, regulatory access, sandbox access, or institutional endorsement.
 
@@ -103,11 +108,12 @@ For global open source medical AI evaluation, this public preview gives:
 11. A public SourceCheckup contributor issue route for synthetic source claim review examples.
 12. A public dashboard entry point that links the six seed platforms and their runnable checks.
 13. A generated specialty spread dashboard for multilingual medical AI safety benchmark growth.
+14. A generated SourceCheckup expansion dashboard that turns source support, benchmark wording, policy wording, and provenance checks into a public review surface.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Expanded source claim review examples after maintainer review.
+1. Clinician literacy lesson outlines tied to release gates.
 2. External maintainer issue draft only after exact owner clearance.
-3. Clinician literacy lesson outlines tied to release gates.
+3. Model run plan files only after endpoint terms and cost are explicitly cleared.
