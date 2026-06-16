@@ -77,3 +77,13 @@ make sourcecheckup_contrib_v02
 1. `sourcecheckup/schemas/sourcecheckup_contribution_schema_v0_2.json`
 2. `sourcecheckup/examples/sourcecheckup_contribution_examples_v0_2.jsonl`
 3. `scripts/validate_sourcecheckup_contribution_v0_2.py`
+4. `docs/sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md`
+5. `.github/ISSUE_TEMPLATE/sourcecheckup_review.yml`
+
+## Public issue route
+
+Contributors may open a public issue with:
+
+`.github/ISSUE_TEMPLATE/sourcecheckup_review.yml`
+
+The public issue route is for synthetic source claim review examples only. It does not allow patient data, clinical advice, clinical validation claims, source truth certification, or outward use without maintainer review.

@@ -32,6 +32,9 @@ REQUIRED_PHRASES = [
     "MedHELM and Medmarks boundary notes v0.1",
     "Medical language model assurance card template v0.1",
     "Assurance card template for intended use, risk, source support, human review, and release gate boundaries",
+    "SourceCheckup public contributor issue route v0.1",
+    "make sourcecheckup_public_issue",
+    "public SourceCheckup contributor issue route for synthetic source claim review examples",
 ]
 
 FORBIDDEN_PHRASES = [

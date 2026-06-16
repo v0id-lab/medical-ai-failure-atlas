@@ -42,6 +42,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 10. Health data quality and label audit card v0.1.
 11. MedHELM and Medmarks boundary notes v0.1.
 12. Medical language model assurance card template v0.1.
+13. SourceCheckup public contributor issue route v0.1.
 
 ## External visibility sequence
 
@@ -66,7 +67,7 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Open the next SourceCheckup public issue for source claim review contributors.
-2. Build a public dashboard index that links the six seed platforms.
+1. Build a public dashboard index that links the six seed platforms.
+2. Add a specialty spread dashboard view for the Turkish synthetic risk pack.
 3. Prepare external maintainer issue drafts only after exact owner clearance.
-4. Add a specialty spread dashboard view for the Turkish synthetic risk pack.
+4. Expand public contributor examples after maintainer review of synthetic issue submissions.

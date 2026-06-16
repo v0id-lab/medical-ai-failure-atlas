@@ -53,6 +53,8 @@ REQUIRED_FILES = [
     "docs/MEDMARKS_BOUNDARY_NOTE_V0_1.md",
     "docs/ASSURANCE_CARD_TEMPLATE_V0_1.md",
     "docs/assurance_card_template_v0_1.json",
+    "docs/sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md",
+    ".github/ISSUE_TEMPLATE/sourcecheckup_review.yml",
     ".gitignore",
     "data/scenario_bank_v1.tsv",
     "data/scenario_bank_v2_hard_addendum.tsv",
@@ -80,6 +82,7 @@ REQUIRED_FILES = [
     "scripts/validate_boundary_notes_v0_1.py",
     "scripts/validate_assurance_card_template_v0_1.py",
     "scripts/validate_tr_medllm_specialty_spread_v0_1.py",
+    "scripts/validate_sourcecheckup_public_contributor_issue_v0_1.py",
     "scripts/validate_public_release.py",
     "scripts/run_prompt_set_openai_compatible_v2.py",
     "scripts/run_prompt_set_hf_transformers_v2.py",
@@ -205,6 +208,10 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
             fail(errors, "README must link to failure_atlas/public/METHODOLOGY.md")
         if "Raw model outputs and logs are not included" not in readme_text:
             fail(errors, "README must state that raw model outputs and logs are not included")
+        if "docs/sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md" not in readme_text:
+            fail(errors, "README must link to the SourceCheckup public contributor issue guide")
+        if "make sourcecheckup_public_issue" not in readme_text:
+            fail(errors, "README must document the SourceCheckup public issue validation command")
 
     prompt_files = [
         root / "data" / "prompt_set_v1.tsv",

@@ -38,6 +38,12 @@ Validate v0.2 contribution examples:
 make sourcecheckup_contrib_v02
 ```
 
+Validate the public contributor issue route:
+
+```bash
+make sourcecheckup_public_issue
+```
+
 Validate the public source claim review queue:
 
 ```bash
@@ -50,6 +56,8 @@ Current public example sets:
 2. `sourcecheckup/examples/source_surface_examples_v0_2.jsonl`
 3. `sourcecheckup/examples/sourcecheckup_contribution_examples_v0_2.jsonl`
 4. `sourcecheckup/review_queue/source_claim_review_queue_v0_1.jsonl`
+5. `docs/sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md`
+6. `.github/ISSUE_TEMPLATE/sourcecheckup_review.yml`
 
 ## Input Format
 
@@ -87,6 +95,10 @@ The source claim review queue adds maintainer triage fields for exact claim text
 Queue guide:
 
 `docs/sourcecheckup/SOURCE_CLAIM_REVIEW_QUEUE_V0_1.md`
+
+Public contributor issue guide:
+
+`docs/sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md`
 
 Current boundary:
 
