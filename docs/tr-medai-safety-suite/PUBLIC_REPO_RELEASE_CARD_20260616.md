@@ -8,7 +8,7 @@ This public preview makes the current Turkish and global medical AI evaluation b
 
 ## What This Adds
 
-This preview adds nine concrete build surfaces:
+This preview adds ten concrete build surfaces:
 
 1. SourceCheckup Medical public demo matrix.
 2. Turkish Clinical AI Assurance Lab governance matrix.
@@ -19,6 +19,7 @@ This preview adds nine concrete build surfaces:
 7. SourceCheckup TR MedLLM assurance routing map.
 8. Source review worksheets.
 9. Red flag source locator and warning sign checklist.
+10. Red flag source locator contributor examples.
 
 ## What This Is
 
@@ -61,7 +62,8 @@ It focuses on source support, synthetic case review, failure modes, clinician li
 7. [SourceCheckup TR MedLLM assurance routing map](../SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md)
 8. [Source review worksheets](../SOURCE_REVIEW_WORKSHEETS_V0_1.md)
 9. [Red flag source locator and warning sign checklist](../RED_FLAG_WARNING_CHECKLIST_V0_1.md)
+10. [Red flag source locator contributor examples](../sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md)
 
 ## Next Public Build
 
-The next useful public build is to add contributor examples for unsafe red flag source locator wording.
+The next useful public build is to add warning sign reviewer role table and escalation gate audit rows.

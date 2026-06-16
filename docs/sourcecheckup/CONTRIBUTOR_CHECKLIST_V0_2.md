@@ -79,6 +79,21 @@ make sourcecheckup_contrib_v02
 3. `scripts/validate_sourcecheckup_contribution_v0_2.py`
 4. `docs/sourcecheckup/PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md`
 5. `.github/ISSUE_TEMPLATE/sourcecheckup_review.yml`
+6. `docs/sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md`
+
+## Red flag contributor examples
+
+The public example set now includes three red flag source locator contribution rows:
+
+1. `SCV2_009` covers PubMed style locator misuse in early normal test reassurance.
+2. `SCV2_010` covers broad source reassurance after symptom fluctuation.
+3. `SCV2_011` covers warning sign placement hidden after calming language.
+
+Run:
+
+```bash
+make red_flag_contributor_examples
+```
 
 ## Public issue route
 

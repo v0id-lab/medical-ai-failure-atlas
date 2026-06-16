@@ -10,7 +10,9 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 
 SourceCheckup v0.2 answer examples: 10
 
-SourceCheckup contributor examples: 8
+SourceCheckup contributor examples: 11
+
+Red flag source locator contributor examples: 3
 
 Source claim review queue rows: 12
 
@@ -42,15 +44,15 @@ unsupported_source_language: 6
 
 ## Contribution source surfaces
 
-broad_source_language: 1
+broad_source_language: 2
 
 doi: 1
 
-guideline: 1
+guideline: 2
 
 none: 1
 
-pmid: 1
+pmid: 2
 
 policy: 2
 
@@ -149,6 +151,7 @@ Declared claim count: 0
 3. Gives clinician literacy and assurance lab modules concrete source claim exercises.
 4. Routes the source claim queue into the SourceCheckup TR MedLLM assurance routing map.
 5. Sends medication safety and policy wording routes into the source review worksheets.
+6. Sends red flag locator and warning sign wording routes into the red flag contributor examples.
 
 ## Track B value
 
@@ -158,6 +161,7 @@ Declared claim count: 0
 4. Adds a bridge into `docs/SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md`.
 5. Adds a bridge into `docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md`.
 6. Adds a bridge into `docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md` for red flag source locator review.
+7. Adds a bridge into `docs/sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md`.
 
 ## Boundary checks
 

@@ -32,6 +32,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 20. SourceCheckup TR MedLLM assurance routing map v0.1.
 21. Source review worksheets v0.1.
 22. Red flag source locator and warning sign checklist v0.1.
+23. Red flag source locator contributor examples v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -46,7 +47,7 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 7. 6 public review states.
 8. 12 source claim review queue rows.
 9. 10 SourceCheckup v0.2 answer examples.
-10. 8 SourceCheckup contributor examples.
+10. 11 SourceCheckup contributor examples.
 11. 150 synthetic scenario rows.
 12. 70 prompt rows.
 13. 24 pilot inter rater rows.
@@ -55,6 +56,7 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 16. 7 SourceCheckup TR MedLLM assurance routes.
 17. 2 source review worksheets.
 18. 3 red flag warning checklists.
+19. 3 red flag source locator contributor examples.
 
 ## Reproducible checks
 
@@ -77,6 +79,7 @@ make assurance_release_gate_map
 make sourcecheckup_tr_medllm_routing
 make source_review_worksheets
 make red_flag_warning_checklist
+make red_flag_contributor_examples
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -108,6 +111,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 16. SourceCheckup TR MedLLM assurance routing map that connects 12 source claim queue rows, 14 Turkish synthetic risk rows, and six assurance release gate examples.
 17. Source review worksheets that turn medication safety and policy wording routes into concrete public review questions.
 18. Red flag source locator and warning sign checklist that turns false reassurance, rare danger, and source locator risks into public review steps.
+19. Red flag source locator contributor examples that turn unsafe red flag wording into SourceCheckup contribution rows.
 
 This does not claim official status, program participation, regulatory access, sandbox access, or institutional endorsement.
 
@@ -134,11 +138,12 @@ For global open source medical AI evaluation, this public preview gives:
 17. A generated SourceCheckup TR MedLLM assurance routing map that links source surfaces, risk axes, release gate levels, and blocked public wording.
 18. Source review worksheets for medication safety and policy wording without source truth certification or clinical claims.
 19. Red flag warning checklists for partial negative evidence, symptom fluctuation, and source locator triage claims.
+20. Red flag contributor examples for PMID locator misuse, broad source reassurance, and warning sign placement.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Contributor examples for unsafe red flag source locator wording.
+1. Warning sign reviewer role table and escalation gate audit rows.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

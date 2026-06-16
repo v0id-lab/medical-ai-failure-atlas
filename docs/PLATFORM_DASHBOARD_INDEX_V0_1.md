@@ -16,14 +16,16 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 4. 10 of 10 Failure Atlas taxonomy pattern IDs represented.
 5. 19 clinician review queue rows.
 6. 12 source claim review queue rows.
-7. 24 pilot inter rater rows.
-8. 150 synthetic scenario rows.
-9. 70 prompt rows.
-10. 6 clinician literacy release gate lessons.
-11. 6 assurance release gate examples.
-12. 7 SourceCheckup TR MedLLM assurance routes.
-13. 2 source review worksheets.
-14. 3 red flag warning checklists.
+7. 11 SourceCheckup contributor examples.
+8. 24 pilot inter rater rows.
+9. 150 synthetic scenario rows.
+10. 70 prompt rows.
+11. 6 clinician literacy release gate lessons.
+12. 6 assurance release gate examples.
+13. 7 SourceCheckup TR MedLLM assurance routes.
+14. 2 source review worksheets.
+15. 3 red flag warning checklists.
+16. 3 red flag source locator contributor examples.
 
 ## Top public entry files
 
@@ -147,6 +149,7 @@ Public files:
 9. [SourceCheckup TR MedLLM assurance routing map](../docs/SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md)
 10. [Source review worksheets](../docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md)
 11. [Red flag source locator and warning sign checklist](../docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md)
+12. [Red flag source locator contributor examples](sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md)
 
 Runnable checks:
 
@@ -159,6 +162,7 @@ make sourcecheckup_expansion_dashboard
 make sourcecheckup_tr_medllm_routing
 make source_review_worksheets
 make red_flag_warning_checklist
+make red_flag_contributor_examples
 make source_claim_queue
 ```
 
@@ -166,7 +170,7 @@ Track A value: public source support discipline for Turkish medical LLM review e
 
 Track B value: open source source quality infrastructure that can grow into source review examples, queues, and contributor workflows.
 
-Next build: add contributor examples for unsafe red flag source locator wording.
+Next build: add warning sign reviewer role table and escalation gate audit rows.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 
@@ -224,7 +228,7 @@ Next build: label audit workflow table with reviewer roles and escalation gates.
 ## Public build order
 
 1. Keep dashboard links and validators green.
-2. Add contributor examples for unsafe red flag source locator wording.
+2. Add warning sign reviewer role table and escalation gate audit rows.
 3. Add lab target packets only after exact target review.
 
 ## Visibility rule

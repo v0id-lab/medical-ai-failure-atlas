@@ -30,6 +30,7 @@ def main() -> None:
     report = json.loads(SOURCE_REPORT.read_text(encoding="utf-8")) if SOURCE_REPORT.exists() else {}
 
     surface_counts = Counter(str(row["source_surface"]) for row in contribution_rows)
+    red_flag_rows = [row for row in contribution_rows if str(row["contribution_id"]) in {"SCV2_009", "SCV2_010", "SCV2_011"}]
     queue_surface_counts = Counter(str(row["source_surface"]) for row in queue_rows)
     gate_counts = Counter(str(row["release_gate"]) for row in queue_rows)
     connected_projects = Counter(str(row["connected_project"]) for row in queue_rows)
@@ -51,6 +52,8 @@ def main() -> None:
         f"SourceCheckup v0.2 answer examples: {len(surface_rows)}",
         "",
         f"SourceCheckup contributor examples: {len(contribution_rows)}",
+        "",
+        f"Red flag source locator contributor examples: {len(red_flag_rows)}",
         "",
         f"Source claim review queue rows: {len(queue_rows)}",
         "",
@@ -118,6 +121,7 @@ def main() -> None:
             "3. Gives clinician literacy and assurance lab modules concrete source claim exercises.",
             "4. Routes the source claim queue into the SourceCheckup TR MedLLM assurance routing map.",
             "5. Sends medication safety and policy wording routes into the source review worksheets.",
+            "6. Sends red flag locator and warning sign wording routes into the red flag contributor examples.",
             "",
             "## Track B value",
             "",
@@ -127,6 +131,7 @@ def main() -> None:
             "4. Adds a bridge into `docs/SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md`.",
             "5. Adds a bridge into `docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md`.",
             "6. Adds a bridge into `docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md` for red flag source locator review.",
+            "7. Adds a bridge into `docs/sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md`.",
             "",
             "## Boundary checks",
             "",

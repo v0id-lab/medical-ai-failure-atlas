@@ -38,6 +38,7 @@ New visible build surfaces are now staged in this public repository:
 28. [SourceCheckup TR MedLLM assurance routing map v0.1](docs/SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md)
 29. [Source review worksheets v0.1](docs/SOURCE_REVIEW_WORKSHEETS_V0_1.md)
 30. [Red flag source locator and warning sign checklist v0.1](docs/RED_FLAG_WARNING_CHECKLIST_V0_1.md)
+31. [Red flag source locator contributor examples v0.1](docs/sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -228,6 +229,12 @@ Validate SourceCheckup contribution examples:
 make sourcecheckup_contrib_v02
 ```
 
+Generate the red flag source locator contributor examples:
+
+```bash
+make red_flag_contributor_examples
+```
+
 Validate the SourceCheckup public contributor issue route:
 
 ```bash
@@ -293,6 +300,7 @@ docs/
   sourcecheckup/
     CONTRIBUTOR_CHECKLIST_V0_2.md
     PUBLIC_CONTRIBUTOR_ISSUE_V0_1.md
+    RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md
 sourcecheckup/
   build/
     source_claim_example_expansion_v0_2.md
@@ -323,6 +331,7 @@ scripts/
   validate_assurance_card_template_v0_1.py
   validate_assurance_release_gate_example_map_v0_1.py
   validate_red_flag_warning_checklist_v0_1.py
+  validate_red_flag_contributor_examples_v0_1.py
   validate_tr_medllm_specialty_spread_v0_1.py
   validate_tr_medllm_specialty_dashboard_v0_1.py
   validate_sourcecheckup_example_expansion_dashboard_v0_2.py

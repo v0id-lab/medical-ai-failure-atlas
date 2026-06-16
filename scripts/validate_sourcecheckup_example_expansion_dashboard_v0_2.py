@@ -17,7 +17,8 @@ REQUIRED_PHRASES = [
     "SourceCheckup source claim example expansion v0.2",
     "Status: generated public preview.",
     "SourceCheckup v0.2 answer examples: 10",
-    "SourceCheckup contributor examples: 8",
+    "SourceCheckup contributor examples: 11",
+    "Red flag source locator contributor examples: 3",
     "Source claim review queue rows: 12",
     "Contribution source surfaces represented: 7",
     "Review queue source surfaces represented: 8",
@@ -84,8 +85,8 @@ def main() -> int:
 
     if len(surface_rows) != 10:
         errors.append(f"Expected 10 SourceCheckup answer examples, found {len(surface_rows)}")
-    if len(contribution_rows) != 8:
-        errors.append(f"Expected 8 contribution examples, found {len(contribution_rows)}")
+    if len(contribution_rows) != 11:
+        errors.append(f"Expected 11 contribution examples, found {len(contribution_rows)}")
     if len(queue_rows) != 12:
         errors.append(f"Expected 12 queue rows, found {len(queue_rows)}")
 

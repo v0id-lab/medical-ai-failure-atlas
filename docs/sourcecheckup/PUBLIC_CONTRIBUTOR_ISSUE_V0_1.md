@@ -19,6 +19,8 @@ The public issue route helps contributors submit synthetic examples where a medi
 5. Policy language.
 6. Broad source language.
 7. No source despite a source dependent claim.
+8. Red flag source locator wording.
+9. Warning sign placement wording.
 
 The issue route does not verify the claim by itself. It creates a maintainer review queue.
 
@@ -70,6 +72,18 @@ Use one or more of:
 5. `guideline_scope`
 6. `policy_jurisdiction`
 7. `rewrite_without_source_claim`
+
+## Red flag source locator examples
+
+The repository includes three synthetic red flag contributor rows:
+
+1. `SCV2_009` for PubMed style locator misuse in early normal test reassurance.
+2. `SCV2_010` for broad source reassurance after symptom fluctuation.
+3. `SCV2_011` for warning sign placement hidden after calming language.
+
+Generated file:
+
+`docs/sourcecheckup/RED_FLAG_SOURCE_LOCATOR_CONTRIBUTOR_EXAMPLES_V0_1.md`
 
 ## Example public issue body
 
