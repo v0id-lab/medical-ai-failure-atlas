@@ -20,6 +20,8 @@ The generated taxonomy dashboard is available at [build/taxonomy_dashboard_v0_1.
 
 The Turkish synthetic risk pack is available at [../../tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl](../../tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl).
 
+The generated clinician review queue is available at [build/clinician_review_queue_v0_1.md](build/clinician_review_queue_v0_1.md).
+
 ### FA_PUBLIC_001
 
 Internal case: case 0001.

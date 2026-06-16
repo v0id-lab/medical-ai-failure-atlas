@@ -208,8 +208,9 @@ def main() -> int:
         errors.append("Expected Track B relevance")
     if not tr_pack_seen:
         errors.append("Expected at least one Turkish synthetic risk pack row")
-    if len(taxonomy_seen) < 7:
-        errors.append("Expected coverage of at least 7 taxonomy patterns across intake rows")
+    if taxonomy_ids and not taxonomy_ids.issubset(taxonomy_seen):
+        missing = ", ".join(sorted(taxonomy_ids - taxonomy_seen))
+        errors.append(f"Expected coverage of every taxonomy pattern; missing {missing}")
 
     if errors:
         print("FAIL Failure Atlas case intake validation")

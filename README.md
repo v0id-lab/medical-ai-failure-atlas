@@ -22,6 +22,7 @@ New visible build surfaces are now staged in this public repository:
 12. [SourceCheckup contributor checklist v0.2](docs/sourcecheckup/CONTRIBUTOR_CHECKLIST_V0_2.md)
 13. [Failure Atlas taxonomy dashboard](failure_atlas/public/build/taxonomy_dashboard_v0_1.md)
 14. [TR MedLLM synthetic risk pack](tr_medllm_safetybench/README.md)
+15. [Clinician review queue](failure_atlas/public/build/clinician_review_queue_v0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -125,6 +126,12 @@ Validate the TR MedLLM synthetic risk pack:
 
 ```bash
 make tr_medllm_pack
+```
+
+Generate the clinician review queue:
+
+```bash
+make clinician_review_queue
 ```
 
 Validate SourceCheckup contribution examples:
