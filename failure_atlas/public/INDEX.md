@@ -10,6 +10,8 @@ This index is a raw output withheld view of selected internal Failure Atlas case
 
 The entries below describe internal case packs at a high level only.
 
+The current failure mode taxonomy preview is available at [TAXONOMY_PREVIEW_20260616.md](TAXONOMY_PREVIEW_20260616.md).
+
 ### FA_PUBLIC_001
 
 Internal case: case 0001.
