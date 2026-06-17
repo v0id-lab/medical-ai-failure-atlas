@@ -81,6 +81,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 49. HealthBench and MedHELM mapping note v0.1.
 50. Benchmark style reviewer questions v0.1.
 51. Contributor issue template reviewer questions v0.1.
+52. Reviewer question intake examples v0.1.
 
 ## External visibility sequence
 
@@ -105,6 +106,6 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Generate reviewer question intake examples from the expanded templates without scoring or compatibility claims.
+1. Add a maintainer triage board for reviewer question intake examples without scoring or compatibility claims.
 2. Prepare external maintainer issue drafts only after exact owner clearance.
 3. Add model run plan files only after endpoint terms and cost are explicitly cleared.

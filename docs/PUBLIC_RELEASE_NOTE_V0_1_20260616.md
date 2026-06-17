@@ -62,6 +62,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 50. HealthBench and MedHELM mapping note v0.1.
 51. Benchmark style reviewer questions v0.1.
 52. Contributor issue template reviewer questions v0.1.
+53. Reviewer question intake examples v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -118,6 +119,7 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 49. 6 HealthBench and MedHELM mapping rows.
 50. 8 benchmark style reviewer question rows.
 51. 2 reviewer question issue templates.
+52. 4 reviewer question intake example rows.
 
 ## Reproducible checks
 
@@ -164,6 +166,7 @@ make sourcecheckup_repo_run_guide
 make healthbench_medhelm_mapping
 make benchmark_reviewer_questions
 make reviewer_question_issue_templates
+make reviewer_question_intake_examples
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -225,6 +228,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 46. HealthBench and MedHELM mapping note that connects six local public surfaces to source anchored benchmark vocabulary without compatibility, ranking, validation, deployment, or endorsement claims.
 47. Benchmark style reviewer questions that turn SourceCheckup and Failure Atlas rows into public questions for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility without scoring or compatibility claims.
 48. Contributor issue template reviewer questions that add benchmark reviewer question fields to SourceCheckup and Failure Atlas public issue templates without scoring or compatibility claims.
+49. Reviewer question intake examples that connect synthetic SourceCheckup and Failure Atlas template fields to benchmark reviewer question ids without scoring, compatibility, endpoint, patient data, clinical validation, or endorsement claims.
 
 These are benchmark style reviewer questions without scoring or compatibility claims.
 
@@ -283,11 +287,12 @@ For global open source medical AI evaluation, this public preview gives:
 47. HealthBench and MedHELM mapping note for benchmark maintainer readability without compatibility, equivalence, ranking, score, clinical deployment, clinical validation, or endorsement claims.
 48. Benchmark style reviewer questions for public contributor review without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 49. Contributor issue template reviewer questions for public intake without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
+50. Reviewer question intake examples for public intake orientation without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Generate reviewer question intake examples from the expanded templates without scoring or compatibility claims.
+1. Add a maintainer triage board for reviewer question intake examples without scoring or compatibility claims.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

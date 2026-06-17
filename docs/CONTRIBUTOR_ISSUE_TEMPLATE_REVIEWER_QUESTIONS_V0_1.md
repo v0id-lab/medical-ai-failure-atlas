@@ -84,3 +84,7 @@ For Turkiye health AI safety infrastructure, this gives Turkish medical LLM sour
 ## Track B value
 
 For global open source medical AI evaluation, this turns benchmark style reviewer questions into an inspectable issue intake path while preserving no score, no ranking, no compatibility, and no endorsement boundaries.
+
+## Example intake rows
+
+See `docs/REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md` for synthetic examples that fill the reviewer question fields without scoring, ranking, compatibility, endpoint, patient data, clinical validation, or endorsement claims.

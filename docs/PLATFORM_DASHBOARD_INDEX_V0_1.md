@@ -10,6 +10,8 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 
 The benchmark style reviewer questions without scoring or compatibility claims are now connected to public issue template intake fields.
 
+They remain issue template intake fields without scoring or compatibility claims.
+
 ## Current public coverage
 
 1. 19 synthetic intake rows.
@@ -60,6 +62,7 @@ The benchmark style reviewer questions without scoring or compatibility claims a
 46. 6 HealthBench and MedHELM mapping rows.
 47. 8 benchmark style reviewer question rows.
 48. 2 reviewer question issue templates.
+49. 4 reviewer question intake example rows.
 
 ## Top public entry files
 
@@ -77,6 +80,8 @@ The benchmark style reviewer questions without scoring or compatibility claims a
 12. [Benchmark style reviewer questions](BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md)
 13. [Benchmark style reviewer questions JSON](benchmark_style_reviewer_questions_v0_1.json)
 14. [Contributor issue template reviewer questions](CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md)
+15. [Reviewer question intake examples](REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md)
+16. [Reviewer question intake examples JSON](reviewer_question_intake_examples_v0_1.json)
 
 ## Platform map
 
@@ -95,6 +100,8 @@ Public files:
 7. [Benchmark style reviewer questions](BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md)
 8. [Benchmark style reviewer questions JSON](benchmark_style_reviewer_questions_v0_1.json)
 9. [Contributor issue template reviewer questions](CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md)
+10. [Reviewer question intake examples](REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md)
+11. [Reviewer question intake examples JSON](reviewer_question_intake_examples_v0_1.json)
 9. [BİLGE readiness queue](tr%2Dmedai%2Dsafety%2Dsuite/BILGE_READINESS_QUEUE_V0_1.md)
 10. [BİLGE readiness queue JSON](tr%2Dmedai%2Dsafety%2Dsuite/bilge_readiness_queue_v0_1.json)
 11. [TÜBİTAK 1711 collaboration readiness packet](tr%2Dmedai%2Dsafety%2Dsuite/TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md)
@@ -108,17 +115,18 @@ make tr_medllm_specialty_spread
 make tr_medllm_specialty_dashboard
 make sourcecheckup_tr_medllm_routing
 make benchmark_reviewer_questions
+make reviewer_question_intake_examples
 make bilge_readiness_queue
 make tubitak_1711_readiness_packet
 make taxonomy_dashboard
 make clinician_review_queue
 ```
 
-Track A value: Turkish clinician led evaluation material for national health AI safety, clinician literacy, assurance review, benchmark style reviewer questions for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility, BİLGE readiness with no access claim, no score claim, and no endorsement claim, and TÜBİTAK 1711 collaboration readiness with no submission claim.
+Track A value: Turkish clinician led evaluation material for national health AI safety, clinician literacy, assurance review, benchmark style reviewer questions and intake examples for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility, BİLGE readiness with no access claim, no score claim, and no endorsement claim, and TÜBİTAK 1711 collaboration readiness with no submission claim.
 
-Track B value: reusable multilingual safety benchmark seed, public reviewer questions without scoring or compatibility claims, no access readiness queue pattern, and collaboration readiness packet pattern for global medical AI evaluation without model ranking claims.
+Track B value: reusable multilingual safety benchmark seed, public reviewer questions and intake examples without scoring or compatibility claims, no access readiness queue pattern, and collaboration readiness packet pattern for global medical AI evaluation without model ranking claims.
 
-Next build: expand contributor issue templates to accept benchmark style reviewer question rows without scoring or compatibility claims.
+Next build: add a maintainer triage board for reviewer question intake examples without scoring or compatibility claims.
 
 ### 2. Medical AI Failure Atlas Global
 
@@ -134,6 +142,8 @@ Public files:
 6. [No ranking synthetic report](../leaderboard/build/synthetic_report_v0_1.md)
 7. [Benchmark style reviewer questions](BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md)
 8. [Benchmark style reviewer questions JSON](benchmark_style_reviewer_questions_v0_1.json)
+9. [Reviewer question intake examples](REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md)
+10. [Reviewer question intake examples JSON](reviewer_question_intake_examples_v0_1.json)
 
 Runnable checks:
 
@@ -144,13 +154,14 @@ make clinician_review_queue
 make leaderboard_report
 make benchmark_reviewer_questions
 make reviewer_question_issue_templates
+make reviewer_question_intake_examples
 ```
 
 Track A value: source material for Turkish health AI risk education and assurance gates, including benchmark style reviewer questions for escalation, medication safety, missing context, and warning sign visibility.
 
-Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions and issue template intake fields that do not add scores or compatibility claims.
+Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions, issue template intake fields, and intake examples that do not add scores or compatibility claims.
 
-Next build: generate reviewer question intake examples from the expanded templates.
+Next build: add a maintainer triage board for reviewer question intake examples without scoring or compatibility claims.
 
 ### 3. Turkish Clinical AI Assurance Lab
 
@@ -225,6 +236,8 @@ Public files:
 19. [Benchmark style reviewer questions](../docs/BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md)
 20. [Benchmark style reviewer questions JSON](../docs/benchmark_style_reviewer_questions_v0_1.json)
 21. [Contributor issue template reviewer questions](../docs/CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md)
+22. [Reviewer question intake examples](../docs/REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md)
+23. [Reviewer question intake examples JSON](../docs/reviewer_question_intake_examples_v0_1.json)
 
 Runnable checks:
 
@@ -244,13 +257,14 @@ make warning_sign_role_table
 make source_claim_queue
 make benchmark_reviewer_questions
 make reviewer_question_issue_templates
+make reviewer_question_intake_examples
 ```
 
-Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions for policy wording and source support, and one runnable SourceCheckup path for local review.
+Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions and intake examples for policy wording and source support, and one runnable SourceCheckup path for local review.
 
-Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, and issue template intake fields without scoring or compatibility claims.
+Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, issue template intake fields, and intake examples without scoring or compatibility claims.
 
-Next build: generate reviewer question intake examples from the expanded templates.
+Next build: add a maintainer triage board for reviewer question intake examples without scoring or compatibility claims.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 

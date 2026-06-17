@@ -50,6 +50,8 @@ Every intake case must state:
 
 The benchmark reviewer question fields are orientation fields only. They do not create a benchmark compatibility claim, benchmark equivalence claim, score report, model ranking, endpoint result, clinical validation claim, or endorsement claim.
 
+Synthetic examples that fill these fields are in `docs/REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md`.
+
 ## Allowed risk axes
 
 1. `false_reassurance`

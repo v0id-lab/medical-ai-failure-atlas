@@ -66,6 +66,7 @@ REQUIRED_PHRASES = [
     "6 HealthBench and MedHELM mapping rows",
     "8 benchmark style reviewer question rows",
     "2 reviewer question issue templates",
+    "4 reviewer question intake example rows",
     "not clinical advice",
     "not patient data",
     "not clinical deployment",
@@ -92,6 +93,7 @@ REQUIRED_PHRASES = [
     "make healthbench_medhelm_mapping",
     "make benchmark_reviewer_questions",
     "make reviewer_question_issue_templates",
+    "make reviewer_question_intake_examples",
     "make sourcecheckup_public_issue",
     "make sourcecheckup_expansion_dashboard",
     "make clinician_literacy_map",
@@ -134,7 +136,8 @@ REQUIRED_PHRASES = [
     "source support, escalation, medication safety, missing context, policy wording, and warning sign visibility",
     "Contributor issue template reviewer questions",
     "issue template intake fields without scoring or compatibility claims",
-    "Generate reviewer question intake examples from the expanded templates without scoring or compatibility claims",
+    "Reviewer question intake examples",
+    "Add a maintainer triage board for reviewer question intake examples without scoring or compatibility claims",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -150,6 +153,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md",
     "docs/benchmark_style_reviewer_questions_v0_1.json",
     "docs/CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md",
+    "docs/REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md",
+    "docs/reviewer_question_intake_examples_v0_1.json",
     "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
     "docs/ROADMAP_2026_06.md",
     "tr_medllm_safetybench/README.md",
