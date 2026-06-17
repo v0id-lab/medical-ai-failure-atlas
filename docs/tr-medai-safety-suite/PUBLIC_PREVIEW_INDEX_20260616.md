@@ -50,6 +50,7 @@ This is a public preview layer for clinician led medical AI evaluation infrastru
 40. `../REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md` gives synthetic reviewer question intake examples for SourceCheckup and Failure Atlas public templates without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 41. `../REVIEWER_QUESTION_INTAKE_TRIAGE_BOARD_V0_1.md` turns reviewer question intake examples into maintainer actions, owner roles, review states, and public wording decisions without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 42. `../REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md` records blocked wording and proposed public wording for reviewer question triage without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
+43. `../REVIEWER_QUESTION_RELEASE_GATE_CHECKLIST_V0_1.md` converts reviewer question public wording decisions into release gate pass and block states without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 
 ## What This Preview Is
 
@@ -81,7 +82,7 @@ Clinician led medical AI safety evaluation infrastructure, built from synthetic 
 
 ## Next Public Build Targets
 
-1. Add a release gate checklist for reviewer question public wording decisions without scoring or compatibility claims.
+1. Add a release gate outcome dashboard for reviewer question wording decisions without scoring or compatibility claims.
 2. Add a compact public failure mode taxonomy page.
 3. Add a public contributor path for synthetic failure cases.
 4. Add a no patient data review checklist.

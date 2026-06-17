@@ -65,6 +65,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 53. Reviewer question intake examples v0.1.
 54. Reviewer question intake triage board v0.1.
 55. Reviewer question public wording decision log v0.1.
+56. Reviewer question release gate checklist v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -124,6 +125,7 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 52. 4 reviewer question intake example rows.
 53. 4 reviewer question intake triage rows.
 54. 4 reviewer question public wording decision rows.
+55. 4 reviewer question release gate rows.
 
 ## Reproducible checks
 
@@ -173,6 +175,7 @@ make reviewer_question_issue_templates
 make reviewer_question_intake_examples
 make reviewer_question_intake_triage
 make reviewer_question_wording_log
+make reviewer_question_release_gates
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -237,6 +240,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 49. Reviewer question intake examples that connect synthetic SourceCheckup and Failure Atlas template fields to benchmark reviewer question ids without scoring, compatibility, endpoint, patient data, clinical validation, or endorsement claims.
 50. Reviewer question intake triage board that maps intake examples to maintainer actions, owner roles, review states, and public wording decisions without scoring, compatibility, endpoint, patient data, clinical validation, or endorsement claims.
 51. Reviewer question public wording decision log that records blocked wording and proposed public wording for source support, policy wording, escalation, and medication safety rows without scoring, compatibility, endpoint, patient data, clinical validation, or endorsement claims.
+52. Reviewer question release gate checklist that converts public wording decisions into pass and block states without scoring, compatibility, endpoint, patient data, clinical validation, or endorsement claims.
 
 These are benchmark style reviewer questions without scoring or compatibility claims.
 
@@ -298,11 +302,12 @@ For global open source medical AI evaluation, this public preview gives:
 50. Reviewer question intake examples for public intake orientation without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 51. Reviewer question intake triage board for maintainer review without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 52. Reviewer question public wording decision log for maintainer wording review without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
+53. Reviewer question release gate checklist for public preview release decisions without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Add a release gate checklist for reviewer question public wording decisions without scoring or compatibility claims.
+1. Add a release gate outcome dashboard for reviewer question wording decisions without scoring or compatibility claims.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.
