@@ -31,12 +31,13 @@ This is a public preview layer for clinician led medical AI evaluation infrastru
 21. `../label_audit/LABEL_AUDIT_PUBLIC_CHANGELOG_V0_1.md` records the label audit maintainer sequence.
 22. `../label_audit/LABEL_AUDIT_PUBLIC_RELEASE_INDEX_V0_1.md` consolidates the label audit route, packet, changelog, commands, and issue history.
 23. `../label_audit/LABEL_AUDIT_PUBLIC_CONTRIBUTOR_DIGEST_V0_1.md` gives contributors a short label audit orientation path.
-24. `../label_audit/LABEL_AUDIT_MAINTAINER_EVIDENCE_MAP_V0_1.md` maps readiness rows to public evidence surfaces.
-25. `../label_audit/LABEL_AUDIT_MAINTAINER_AUDIT_TRAIL_PACKET_V0_1.md` maps evidence rows to public audit trail surfaces.
-26. `../label_audit/LABEL_AUDIT_MAINTAINER_RELEASE_CANDIDATE_SUMMARY_V0_1.md` summarizes the current public preview release candidate state.
 24. `../label_audit/LABEL_AUDIT_MAINTAINER_HANDOFF_NOTES_V0_1.md` gives maintainers a bounded closeout checklist.
 25. `../label_audit/LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md` gives maintainers a compact closeout trail.
 26. `../label_audit/LABEL_AUDIT_MAINTAINER_RELEASE_READINESS_DIGEST_V0_1.md` gives maintainers a public preview readiness trail.
+27. `../label_audit/LABEL_AUDIT_MAINTAINER_EVIDENCE_MAP_V0_1.md` maps readiness rows to public evidence surfaces.
+28. `../label_audit/LABEL_AUDIT_MAINTAINER_AUDIT_TRAIL_PACKET_V0_1.md` maps evidence rows to public audit trail surfaces.
+29. `../label_audit/LABEL_AUDIT_MAINTAINER_RELEASE_CANDIDATE_SUMMARY_V0_1.md` summarizes the current public preview release candidate state.
+30. `../label_audit/LABEL_AUDIT_MAINTAINER_PUBLIC_PREVIEW_DECISION_LOG_V0_1.md` records current public preview decision rows.
 
 ## What This Preview Is
 
@@ -68,7 +69,7 @@ Clinician led medical AI safety evaluation infrastructure, built from synthetic 
 
 ## Next Public Build Targets
 
-1. Add label audit maintainer public preview decision log after release candidate summary review.
+1. Add label audit maintainer public preview handoff summary after decision log review.
 2. Make SourceCheckup Medical easier to run from this repository.
 3. Add a compact public failure mode taxonomy page.
 4. Add a public contributor path for synthetic failure cases.

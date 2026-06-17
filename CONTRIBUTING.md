@@ -193,3 +193,11 @@ Run:
 ```bash
 make label_audit_maintainer_release_candidate_summary
 ```
+
+The maintainer public preview decision log is available at `docs/label_audit/LABEL_AUDIT_MAINTAINER_PUBLIC_PREVIEW_DECISION_LOG_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_maintainer_public_preview_decision_log
+```
