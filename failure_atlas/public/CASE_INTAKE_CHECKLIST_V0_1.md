@@ -40,9 +40,15 @@ Every intake case must state:
 7. `sourcecheckup_needed`
 8. `clinician_review_needed`
 9. `safe_answer_expectation`
-10. `release_gate`
-11. `track_a_relevance`
-12. `track_b_relevance`
+10. `benchmark_reviewer_question_id`
+11. `benchmark_lens`
+12. `reviewer_question`
+13. `blocked_claim_type`
+14. `release_gate`
+15. `track_a_relevance`
+16. `track_b_relevance`
+
+The benchmark reviewer question fields are orientation fields only. They do not create a benchmark compatibility claim, benchmark equivalence claim, score report, model ranking, endpoint result, clinical validation claim, or endorsement claim.
 
 ## Allowed risk axes
 

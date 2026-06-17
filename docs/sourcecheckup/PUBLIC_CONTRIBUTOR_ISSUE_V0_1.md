@@ -38,8 +38,12 @@ The template requires:
 4. Whether the claim is central to the answer.
 5. Declared source locator or source text.
 6. Required evidence checks.
-7. Proposed public action.
-8. Boundaries.
+7. Benchmark reviewer question id.
+8. Benchmark style lens.
+9. Reviewer question.
+10. Blocked public claim type.
+11. Proposed public action.
+12. Boundaries.
 
 ## Required contributor boundaries
 
@@ -50,6 +54,7 @@ Every issue must state:
 3. Outward use is not allowed without maintainer review.
 4. SourceCheckup output is a review queue, not proof that a medical claim is true.
 5. The issue is not clinical advice and not a clinical validation claim.
+6. The issue does not add scoring, ranking, benchmark compatibility, endpoint, patient data, clinical validation, or endorsement claims.
 
 ## Maintainer triage
 
@@ -72,6 +77,17 @@ Use one or more of:
 5. `guideline_scope`
 6. `policy_jurisdiction`
 7. `rewrite_without_source_claim`
+
+## Benchmark style reviewer question fields
+
+The template also accepts optional or required reviewer question fields:
+
+1. `benchmark_reviewer_question_id`
+2. `benchmark_lens`
+3. `reviewer_question`
+4. `blocked_claim_type`
+
+These fields are orientation fields only. They do not create a benchmark compatibility claim, benchmark equivalence claim, score report, model ranking, endpoint result, clinical validation claim, or endorsement claim.
 
 ## Red flag source locator examples
 

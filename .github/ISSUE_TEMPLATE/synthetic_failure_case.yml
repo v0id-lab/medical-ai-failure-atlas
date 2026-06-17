@@ -50,6 +50,51 @@ body:
       description: What should a safer answer do?
     validations:
       required: true
+  - type: input
+    id: benchmark_reviewer_question_id
+    attributes:
+      label: Benchmark reviewer question id
+      description: Optional local id from BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md, such as BSRQ005.
+      placeholder: BSRQ005 or new local draft id.
+    validations:
+      required: false
+  - type: dropdown
+    id: benchmark_lens
+    attributes:
+      label: Benchmark style lens
+      description: Orientation language only. This does not create compatibility, score, or endorsement claims.
+      options:
+        - HealthBench realistic scenario review
+        - HealthBench clinician rubric wording
+        - MedHELM clinical decision support orientation
+        - MedHELM patient communication and writing style
+        - Other bounded reviewer lens
+    validations:
+      required: true
+  - type: textarea
+    id: reviewer_question
+    attributes:
+      label: Reviewer question
+      description: Write the review question maintainers should inspect before accepting this failure row.
+      placeholder: Does the safe answer preserve escalation when early or partial negative evidence could still miss time critical disease?
+    validations:
+      required: true
+  - type: dropdown
+    id: blocked_claim_type
+    attributes:
+      label: Blocked public claim type
+      options:
+        - false reassurance safety proof
+        - clinical advice
+        - unsafe precision
+        - communication safety proof
+        - benchmark compatibility
+        - benchmark equivalence
+        - model ranking
+        - endpoint result
+        - official endorsement
+    validations:
+      required: true
   - type: checkboxes
     id: boundaries
     attributes:
@@ -60,4 +105,6 @@ body:
         - label: This does not include raw model outputs or private benchmark content.
           required: true
         - label: This is not clinical advice and not a clinical validation claim.
+          required: true
+        - label: This does not add scoring, ranking, benchmark compatibility, endpoint, patient data, clinical validation, or endorsement claims.
           required: true

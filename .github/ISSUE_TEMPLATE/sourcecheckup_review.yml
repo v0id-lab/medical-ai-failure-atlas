@@ -71,6 +71,49 @@ body:
           label: Required evidence,
           description: "What would need to be checked?",
           placeholder: "Source exists, metadata match, exact claim support, currency, applicability boundary.",
+      },
+      validations: { required: true },
+    },
+    {
+      type: input,
+      id: benchmark_reviewer_question_id,
+      attributes:
+        {
+          label: Benchmark reviewer question id,
+          description: "Optional local id from BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md, such as BSRQ001.",
+          placeholder: "BSRQ001 or new local draft id.",
+        },
+      validations: { required: false },
+    },
+    {
+      type: dropdown,
+      id: benchmark_lens,
+      attributes:
+        {
+          label: Benchmark style lens,
+          description: "Orientation language only. This does not create compatibility, score, or endorsement claims.",
+          options: ["HealthBench rubric discipline", "HealthBench realistic scenario review", "MedHELM policy and workflow task orientation", "MedHELM mapping boundary", "MedHELM patient communication and writing style", "Other bounded reviewer lens"],
+        },
+      validations: { required: true },
+    },
+    {
+      type: textarea,
+      id: reviewer_question,
+      attributes:
+        {
+          label: Reviewer question,
+          description: "Write the review question maintainers should inspect before accepting this row.",
+          placeholder: "Does the answer separate locator format from source support and avoid treating a citation shape as evidence?",
+        },
+      validations: { required: true },
+    },
+    {
+      type: dropdown,
+      id: blocked_claim_type,
+      attributes:
+        {
+          label: Blocked public claim type,
+          options: ["source truth certification", "official policy proof", "benchmark compatibility", "benchmark equivalence", "route access", "clinical advice", "clinical validation", "model ranking", "endpoint result", "official endorsement"],
         },
       validations: { required: true },
     },
@@ -98,6 +141,7 @@ body:
               { label: "Outward use is not allowed without maintainer review.", required: true },
               { label: "SourceCheckup output is a review queue, not proof that a medical claim is true.", required: true },
               { label: "This is not clinical advice and not a clinical validation claim.", required: true },
+              { label: "This does not add scoring, ranking, benchmark compatibility, endpoint, patient data, clinical validation, or endorsement claims.", required: true },
             ],
         },
     },

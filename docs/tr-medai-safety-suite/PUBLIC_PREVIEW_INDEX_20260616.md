@@ -46,6 +46,7 @@ This is a public preview layer for clinician led medical AI evaluation infrastru
 36. `../sourcecheckup/SOURCECHECKUP_REPO_RUN_GUIDE_V0_1.md` gives one runnable SourceCheckup path with doctor checks for required files and row counts.
 37. `../HEALTHBENCH_MEDHELM_MAPPING_NOTE_V0_1.md` maps six local public surfaces toward HealthBench and MedHELM review vocabulary without compatibility, ranking, validation, deployment, score, or endorsement claims.
 38. `../BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md` turns SourceCheckup and Failure Atlas rows into benchmark style reviewer questions without scoring, compatibility, validation, deployment, endpoint, patient data, or endorsement claims.
+39. `../CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md` records the SourceCheckup and Failure Atlas public issue template fields for reviewer questions without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 
 ## What This Preview Is
 
@@ -77,7 +78,7 @@ Clinician led medical AI safety evaluation infrastructure, built from synthetic 
 
 ## Next Public Build Targets
 
-1. Expand contributor issue templates to accept benchmark style reviewer question rows without scoring or compatibility claims.
+1. Generate reviewer question intake examples from the expanded templates without scoring or compatibility claims.
 2. Add a compact public failure mode taxonomy page.
 3. Add a public contributor path for synthetic failure cases.
 4. Add a no patient data review checklist.

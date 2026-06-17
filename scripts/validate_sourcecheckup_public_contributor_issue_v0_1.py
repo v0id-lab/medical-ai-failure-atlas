@@ -42,11 +42,16 @@ REQUIRED_TEMPLATE_PHRASES = [
     "central_claim",
     "declared_sources",
     "required_evidence",
+    "benchmark_reviewer_question_id",
+    "benchmark_lens",
+    "reviewer_question",
+    "blocked_claim_type",
     "proposed_public_action",
     "This is synthetic and contains no patient data.",
     "No external action has been executed.",
     "Outward use is not allowed without maintainer review.",
     "SourceCheckup output is a review queue, not proof that a medical claim is true.",
+    "This does not add scoring, ranking, benchmark compatibility, endpoint, patient data, clinical validation, or endorsement claims.",
 ]
 
 FORBIDDEN_PHRASES = [

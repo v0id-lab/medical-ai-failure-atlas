@@ -8,6 +8,8 @@ This dashboard is the public entry point for the six seed platforms in the medic
 
 It uses synthetic examples only. It is not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety claim, not a model safety proof, not a model ranking, not a regulatory claim, not a benchmark compatibility claim, and not an official endorsement.
 
+The benchmark style reviewer questions without scoring or compatibility claims are now connected to public issue template intake fields.
+
 ## Current public coverage
 
 1. 19 synthetic intake rows.
@@ -57,6 +59,7 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 45. 6 SourceCheckup repo run guide rows.
 46. 6 HealthBench and MedHELM mapping rows.
 47. 8 benchmark style reviewer question rows.
+48. 2 reviewer question issue templates.
 
 ## Top public entry files
 
@@ -73,6 +76,7 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 11. [HealthBench and MedHELM mapping JSON](healthbench_medhelm_mapping_note_v0_1.json)
 12. [Benchmark style reviewer questions](BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md)
 13. [Benchmark style reviewer questions JSON](benchmark_style_reviewer_questions_v0_1.json)
+14. [Contributor issue template reviewer questions](CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md)
 
 ## Platform map
 
@@ -90,6 +94,7 @@ Public files:
 6. [SourceCheckup TR MedLLM assurance routing map](SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md)
 7. [Benchmark style reviewer questions](BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md)
 8. [Benchmark style reviewer questions JSON](benchmark_style_reviewer_questions_v0_1.json)
+9. [Contributor issue template reviewer questions](CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md)
 9. [BİLGE readiness queue](tr%2Dmedai%2Dsafety%2Dsuite/BILGE_READINESS_QUEUE_V0_1.md)
 10. [BİLGE readiness queue JSON](tr%2Dmedai%2Dsafety%2Dsuite/bilge_readiness_queue_v0_1.json)
 11. [TÜBİTAK 1711 collaboration readiness packet](tr%2Dmedai%2Dsafety%2Dsuite/TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md)
@@ -138,13 +143,14 @@ make taxonomy_dashboard
 make clinician_review_queue
 make leaderboard_report
 make benchmark_reviewer_questions
+make reviewer_question_issue_templates
 ```
 
 Track A value: source material for Turkish health AI risk education and assurance gates, including benchmark style reviewer questions for escalation, medication safety, missing context, and warning sign visibility.
 
-Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions that do not add scores or compatibility claims.
+Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions and issue template intake fields that do not add scores or compatibility claims.
 
-Next build: expand Failure Atlas contributor issue template with reviewer question fields.
+Next build: generate reviewer question intake examples from the expanded templates.
 
 ### 3. Turkish Clinical AI Assurance Lab
 
@@ -218,6 +224,7 @@ Public files:
 18. [Warning sign reviewer role table](../docs/WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md)
 19. [Benchmark style reviewer questions](../docs/BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md)
 20. [Benchmark style reviewer questions JSON](../docs/benchmark_style_reviewer_questions_v0_1.json)
+21. [Contributor issue template reviewer questions](../docs/CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md)
 
 Runnable checks:
 
@@ -236,13 +243,14 @@ make sourcecheckup_repo_run_guide
 make warning_sign_role_table
 make source_claim_queue
 make benchmark_reviewer_questions
+make reviewer_question_issue_templates
 ```
 
 Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions for policy wording and source support, and one runnable SourceCheckup path for local review.
 
-Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, and benchmark style reviewer questions without scoring or compatibility claims.
+Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, and issue template intake fields without scoring or compatibility claims.
 
-Next build: expand SourceCheckup contributor issue template with reviewer question fields.
+Next build: generate reviewer question intake examples from the expanded templates.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 
@@ -365,7 +373,7 @@ Next build: add BİLGE readiness queue with no access, no score, and no endorsem
 ## Public build order
 
 1. Keep dashboard links and validators green.
-2. Expand contributor issue templates to accept benchmark style reviewer question rows without scoring or compatibility claims.
+2. Generate reviewer question intake examples from the expanded templates without scoring or compatibility claims.
 3. Add lab target packets only after exact target review.
 
 ## Visibility rule

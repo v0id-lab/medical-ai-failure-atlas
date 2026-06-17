@@ -80,6 +80,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 48. SourceCheckup repo run guide v0.1.
 49. HealthBench and MedHELM mapping note v0.1.
 50. Benchmark style reviewer questions v0.1.
+51. Contributor issue template reviewer questions v0.1.
 
 ## External visibility sequence
 
@@ -104,6 +105,6 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Expand contributor issue templates to accept benchmark style reviewer question rows without scoring or compatibility claims.
+1. Generate reviewer question intake examples from the expanded templates without scoring or compatibility claims.
 2. Prepare external maintainer issue drafts only after exact owner clearance.
 3. Add model run plan files only after endpoint terms and cost are explicitly cleared.
