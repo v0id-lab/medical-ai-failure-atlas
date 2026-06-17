@@ -44,6 +44,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 32. Label audit release gate outcome dashboard v0.1.
 33. Label audit release note packet v0.1.
 34. Label audit public changelog v0.1.
+35. Label audit public release index v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -80,7 +81,9 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 29. 5 label audit release gate outcome rows.
 30. 7 label audit release note packet rows.
 31. 8 label audit public changelog rows.
-32. 3 red flag source locator contributor examples.
+32. 9 label audit public release index surface rows.
+33. 10 label audit issue history rows.
+34. 3 red flag source locator contributor examples.
 
 ## Reproducible checks
 
@@ -115,6 +118,7 @@ make label_audit_release_gates
 make label_audit_outcome_dashboard
 make label_audit_release_packet
 make label_audit_changelog
+make label_audit_release_index
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -158,6 +162,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 28. Label audit release gate outcome dashboard that summarizes pass and block outcomes.
 29. Label audit release note packet that packages the label audit public release surfaces.
 30. Label audit public changelog that records the chronological maintainer sequence.
+31. Label audit public release index that consolidates the label audit route and issue history.
 
 This does not claim official status, program participation, regulatory access, sandbox access, or institutional endorsement.
 
@@ -196,11 +201,12 @@ For global open source medical AI evaluation, this public preview gives:
 29. Label audit release gate outcome dashboard that makes current pass and block states inspectable for maintainers.
 30. Label audit release note packet that gives maintainers one public summary surface for the whole label audit route.
 31. Label audit public changelog that makes the label audit release sequence inspectable for contributors.
+32. Label audit public release index that gives contributors one entry point for route, packet, changelog, commands, and issue history.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Label audit public release index after maintainer review.
+1. Label audit public contributor digest after maintainer review.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

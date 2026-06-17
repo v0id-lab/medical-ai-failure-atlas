@@ -129,3 +129,11 @@ Run:
 ```bash
 make label_audit_changelog
 ```
+
+The public release index is available at `docs/label_audit/LABEL_AUDIT_PUBLIC_RELEASE_INDEX_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_release_index
+```

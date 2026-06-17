@@ -315,6 +315,28 @@ Run:
 make label_audit_changelog
 ```
 
+## Label audit public release index
+
+Current public release index:
+
+`docs/label_audit/LABEL_AUDIT_PUBLIC_RELEASE_INDEX_V0_1.md`
+
+Machine readable release index source:
+
+`docs/label_audit/label_audit_public_release_index_v0_1.json`
+
+Index surface rows: 9.
+
+Issue history rows: 10.
+
+The release index consolidates the contributor route, release packet, changelog, validation commands, and public issue history into one durable entry point. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
+
+Run:
+
+```bash
+make label_audit_release_index
+```
+
 ## Maintenance owner
 
 Maintainer: Dr. Goktug Ozkan, Internal Medicine Specialist.

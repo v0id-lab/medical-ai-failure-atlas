@@ -1,0 +1,170 @@
+{
+  "changelog_rows_represented": 8,
+  "contains_patient_data": false,
+  "date": "2026 06 17",
+  "index_decision": "ready_for_public_preview",
+  "index_surface_count": 9,
+  "issue_history": [
+    {
+      "issue_number": 19,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit reviewer role table",
+      "public_label": "label audit reviewer roles",
+      "public_value": "reviewer role table added"
+    },
+    {
+      "issue_number": 20,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit public contributor issue route",
+      "public_label": "label audit issue route",
+      "public_value": "public contributor route added"
+    },
+    {
+      "issue_number": 21,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit example intake rows",
+      "public_label": "label audit examples",
+      "public_value": "example intake rows added"
+    },
+    {
+      "issue_number": 22,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit example dashboard",
+      "public_label": "label audit dashboard",
+      "public_value": "example dashboard added"
+    },
+    {
+      "issue_number": 23,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit maintainer triage board",
+      "public_label": "label audit triage",
+      "public_value": "maintainer triage board added"
+    },
+    {
+      "issue_number": 24,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit public wording decisions",
+      "public_label": "label audit wording",
+      "public_value": "public wording decision log added"
+    },
+    {
+      "issue_number": 25,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit release gate checklist",
+      "public_label": "label audit release gates",
+      "public_value": "release gate checklist added"
+    },
+    {
+      "issue_number": 26,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit release gate outcome dashboard",
+      "public_label": "label audit outcomes",
+      "public_value": "release gate outcome dashboard added"
+    },
+    {
+      "issue_number": 27,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit release note packet",
+      "public_label": "label audit release packet",
+      "public_value": "release note packet added"
+    },
+    {
+      "issue_number": 28,
+      "issue_state": "closed",
+      "issue_title": "Roadmap: Label audit public changelog",
+      "public_label": "label audit changelog",
+      "public_value": "public changelog added"
+    }
+  ],
+  "issue_history_count": 10,
+  "no_clinical_deployment_claim": true,
+  "no_clinical_validation_claim": true,
+  "no_dataset_quality_proof": true,
+  "no_model_ranking": true,
+  "no_model_safety_claim": true,
+  "no_official_endorsement_claim": true,
+  "no_raw_model_output_release": true,
+  "not_for_clinical_use": true,
+  "release_note_packet_rows_represented": 7,
+  "sources": [
+    "docs/label_audit/label_audit_release_note_packet_v0_1.json",
+    "docs/label_audit/label_audit_public_changelog_v0_1.json"
+  ],
+  "status": "public_preview",
+  "surfaces": [
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/PUBLIC_LABEL_AUDIT_CONTRIBUTOR_ISSUE_V0_1.md",
+      "role": "opens the synthetic label audit issue route",
+      "surface_id": "LARI001",
+      "surface_name": "Public contributor route"
+    },
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/LABEL_AUDIT_EXAMPLE_INTAKE_V0_1.md",
+      "role": "shows synthetic provenance and label review rows",
+      "surface_id": "LARI002",
+      "surface_name": "Example intake rows"
+    },
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/LABEL_AUDIT_EXAMPLE_DASHBOARD_V0_1.md",
+      "role": "summarizes role, audit row, review state, and blocked claim type",
+      "surface_id": "LARI003",
+      "surface_name": "Example dashboard"
+    },
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/LABEL_AUDIT_MAINTAINER_TRIAGE_BOARD_V0_1.md",
+      "role": "maps dashboard rows to maintainer actions",
+      "surface_id": "LARI004",
+      "surface_name": "Maintainer triage board"
+    },
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/LABEL_AUDIT_PUBLIC_WORDING_DECISION_LOG_V0_1.md",
+      "role": "records blocked wording and safer public wording",
+      "surface_id": "LARI005",
+      "surface_name": "Public wording decision log"
+    },
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/LABEL_AUDIT_RELEASE_GATE_CHECKLIST_V0_1.md",
+      "role": "turns wording decisions into release checks",
+      "surface_id": "LARI006",
+      "surface_name": "Release gate checklist"
+    },
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/LABEL_AUDIT_RELEASE_GATE_OUTCOME_DASHBOARD_V0_1.md",
+      "role": "summarizes current pass and block outcomes",
+      "surface_id": "LARI007",
+      "surface_name": "Release gate outcome dashboard"
+    },
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/LABEL_AUDIT_RELEASE_NOTE_PACKET_V0_1.md",
+      "role": "packages the label audit route into one release note surface",
+      "surface_id": "LARI008",
+      "surface_name": "Release note packet"
+    },
+    {
+      "index_status": "included_in_public_release_index",
+      "next_action": "keep linked surface current during public preview",
+      "public_file": "docs/label_audit/LABEL_AUDIT_PUBLIC_CHANGELOG_V0_1.md",
+      "role": "records the chronological maintainer sequence",
+      "surface_id": "LARI009",
+      "surface_name": "Public changelog"
+    }
+  ],
+  "synthetic_examples_only": true,
+  "version": "label_audit_public_release_index_v0_1"
+}
