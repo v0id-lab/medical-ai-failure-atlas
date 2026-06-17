@@ -73,6 +73,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 61. Reviewer question public contributor digest v0.1.
 62. Reviewer question maintainer handoff notes v0.1.
 63. Reviewer question maintainer closeout digest v0.1.
+64. Reviewer question maintainer release readiness digest v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -141,6 +142,7 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 61. 5 reviewer question public contributor digest rows.
 62. 5 reviewer question maintainer handoff rows.
 63. 5 reviewer question maintainer closeout digest rows.
+64. 5 reviewer question maintainer release readiness digest rows.
 
 ## Reproducible checks
 
@@ -198,6 +200,7 @@ make reviewer_question_release_index
 make reviewer_question_contributor_digest
 make reviewer_question_maintainer_handoff
 make reviewer_question_maintainer_closeout_digest
+make reviewer_question_maintainer_release_readiness_digest
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -336,11 +339,12 @@ For global open source medical AI evaluation, this public preview gives:
 58. Reviewer question public contributor digest for compact contributor orientation without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 59. Reviewer question maintainer handoff notes for bounded maintainer review without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 60. Reviewer question maintainer closeout digest for public preview closeout without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
+61. Reviewer question maintainer release readiness digest for public preview readiness without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Add a reviewer question maintainer release readiness digest without scoring or compatibility claims.
+1. Add a reviewer question maintainer evidence map without scoring or compatibility claims.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

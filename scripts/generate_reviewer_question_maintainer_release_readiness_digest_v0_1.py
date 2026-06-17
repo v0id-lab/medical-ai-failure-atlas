@@ -7,68 +7,69 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-HANDOFF = ROOT / "docs" / "reviewer_question_maintainer_handoff_notes_v0_1.json"
-JSON_OUTPUT = ROOT / "docs" / "reviewer_question_maintainer_closeout_digest_v0_1.json"
-MD_OUTPUT = ROOT / "docs" / "REVIEWER_QUESTION_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md"
+CLOSEOUT = ROOT / "docs" / "reviewer_question_maintainer_closeout_digest_v0_1.json"
+JSON_OUTPUT = ROOT / "docs" / "reviewer_question_maintainer_release_readiness_digest_v0_1.json"
+MD_OUTPUT = ROOT / "docs" / "REVIEWER_QUESTION_MAINTAINER_RELEASE_READINESS_DIGEST_V0_1.md"
 
-CLOSEOUT_ROWS = [
+READINESS_ROWS = [
     {
-        "closeout_id": "RQMC001",
-        "closeout_name": "Synthetic scope closeout",
-        "evidence_file": "docs/REVIEWER_QUESTION_PUBLIC_CONTRIBUTOR_DIGEST_V0_1.md",
-        "closeout_action": "record that proposed reviewer question contributions stay synthetic only",
+        "readiness_id": "RQMR001",
+        "readiness_name": "Synthetic boundary readiness",
+        "evidence_file": "docs/REVIEWER_QUESTION_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md",
+        "readiness_action": "confirm closeout keeps public reviewer question rows synthetic only",
     },
     {
-        "closeout_id": "RQMC002",
-        "closeout_name": "Reviewer question fit closeout",
+        "readiness_id": "RQMR002",
+        "readiness_name": "Reviewer question lane readiness",
         "evidence_file": "docs/BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md",
-        "closeout_action": "record that the contribution maps to a public reviewer question lane",
+        "readiness_action": "confirm public reviewer question lanes remain bounded and source facing",
     },
     {
-        "closeout_id": "RQMC003",
-        "closeout_name": "Intake route closeout",
-        "evidence_file": "docs/REVIEWER_QUESTION_INTAKE_TRIAGE_BOARD_V0_1.md",
-        "closeout_action": "record owner role, review state, and public wording decision",
-    },
-    {
-        "closeout_id": "RQMC004",
-        "closeout_name": "Blocked wording closeout",
+        "readiness_id": "RQMR003",
+        "readiness_name": "Public wording readiness",
         "evidence_file": "docs/REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md",
-        "closeout_action": "record that blocked public wording remains excluded",
+        "readiness_action": "confirm blocked score, endpoint, compatibility, validation, and endorsement wording stays out",
     },
     {
-        "closeout_id": "RQMC005",
-        "closeout_name": "Validation closeout",
+        "readiness_id": "RQMR004",
+        "readiness_name": "Release surface readiness",
+        "evidence_file": "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
+        "readiness_action": "confirm release surfaces mention boundaries and runnable checks",
+    },
+    {
+        "readiness_id": "RQMR005",
+        "readiness_name": "Validation readiness",
         "evidence_file": "Makefile",
-        "closeout_action": "run make reviewer_question_maintainer_closeout_digest before public issue closure",
+        "readiness_action": "run make reviewer_question_maintainer_release_readiness_digest before public issue closure",
     },
 ]
 
 
 def main() -> int:
-    handoff = json.loads(HANDOFF.read_text(encoding="utf-8"))
+    closeout = json.loads(CLOSEOUT.read_text(encoding="utf-8"))
     rows: list[dict[str, Any]] = [
         {
             **row,
-            "closeout_status": "included_in_public_maintainer_closeout_digest",
-            "closeout_state": "current_preview_closed",
+            "readiness_status": "included_in_public_maintainer_release_readiness_digest",
+            "readiness_state": "current_preview_ready",
             "boundary": "synthetic only and not for clinical use",
         }
-        for row in CLOSEOUT_ROWS
+        for row in READINESS_ROWS
     ]
 
     data: dict[str, Any] = {
-        "version": "reviewer_question_maintainer_closeout_digest_v0_1",
+        "version": "reviewer_question_maintainer_release_readiness_digest_v0_1",
         "status": "public_preview",
         "date": "2026 06 17",
-        "source": "docs/reviewer_question_maintainer_handoff_notes_v0_1.json",
-        "closeout_row_count": len(rows),
-        "handoff_rows_represented": handoff["handoff_row_count"],
-        "contributor_digest_rows_represented": handoff["contributor_digest_rows_represented"],
-        "release_index_surface_rows_represented": handoff["release_index_surface_rows_represented"],
-        "issue_history_rows_represented": handoff["issue_history_rows_represented"],
-        "previous_public_issue_number": 56,
-        "closeout_decision": "ready_for_public_preview",
+        "source": "docs/reviewer_question_maintainer_closeout_digest_v0_1.json",
+        "readiness_row_count": len(rows),
+        "closeout_rows_represented": closeout["closeout_row_count"],
+        "handoff_rows_represented": closeout["handoff_rows_represented"],
+        "contributor_digest_rows_represented": closeout["contributor_digest_rows_represented"],
+        "release_index_surface_rows_represented": closeout["release_index_surface_rows_represented"],
+        "issue_history_rows_represented": closeout["issue_history_rows_represented"],
+        "previous_public_issue_number": 57,
+        "readiness_decision": "ready_for_public_preview",
         "maintainer_review_scope": "current public preview route only",
         "contains_patient_data": False,
         "synthetic_examples_only": True,
@@ -87,19 +88,21 @@ def main() -> int:
     JSON_OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     lines: list[str] = [
-        "# Reviewer question maintainer closeout digest v0.1",
+        "# Reviewer question maintainer release readiness digest v0.1",
         "",
         "Status: generated public preview.",
         "",
         "Date: 2026 06 17",
         "",
-        "This digest gives maintainers a compact closeout trail for synthetic reviewer question public preview updates after handoff review.",
+        "This digest gives maintainers a compact public preview readiness trail after reviewer question closeout review.",
         "",
         "It is not clinical advice, not patient data, not raw model output release, not clinical deployment, not clinical validation, not a benchmark compatibility claim, not a benchmark equivalence claim, not a score report, not a model ranking, not an endpoint result, and not an official endorsement.",
         "",
         "## Summary",
         "",
-        f"Closeout rows: {len(rows)}",
+        f"Readiness rows: {len(rows)}",
+        "",
+        f"Closeout rows represented: {data['closeout_rows_represented']}",
         "",
         f"Handoff rows represented: {data['handoff_rows_represented']}",
         "",
@@ -113,26 +116,26 @@ def main() -> int:
         "",
         "Maintainer review scope: current public preview route only",
         "",
-        "Closeout decision: `ready_for_public_preview`",
+        "Readiness decision: `ready_for_public_preview`",
         "",
-        "## Maintainer closeout rows",
+        "## Maintainer readiness rows",
         "",
     ]
 
     for row in rows:
         lines.extend(
             [
-                f"### {row['closeout_id']}",
+                f"### {row['readiness_id']}",
                 "",
-                f"Closeout name: {row['closeout_name']}",
+                f"Readiness name: {row['readiness_name']}",
                 "",
                 f"Evidence file: `{row['evidence_file']}`",
                 "",
-                f"Closeout action: {row['closeout_action']}",
+                f"Readiness action: {row['readiness_action']}",
                 "",
-                f"Closeout status: `{row['closeout_status']}`",
+                f"Readiness status: `{row['readiness_status']}`",
                 "",
-                f"Closeout state: `{row['closeout_state']}`",
+                f"Readiness state: `{row['readiness_state']}`",
                 "",
                 f"Boundary: {row['boundary']}",
                 "",
@@ -146,7 +149,7 @@ def main() -> int:
             "Run:",
             "",
             "```bash",
-            "make reviewer_question_maintainer_closeout_digest",
+            "make reviewer_question_maintainer_release_readiness_digest",
             "```",
             "",
             "## Next safe public action",
@@ -158,7 +161,7 @@ def main() -> int:
     MD_OUTPUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"generated={JSON_OUTPUT.relative_to(ROOT)}")
     print(f"generated={MD_OUTPUT.relative_to(ROOT)}")
-    print(f"closeout_rows={len(rows)}")
+    print(f"readiness_rows={len(rows)}")
     return 0
 
 

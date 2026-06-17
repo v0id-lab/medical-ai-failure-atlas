@@ -1,0 +1,74 @@
+{
+  "closeout_rows_represented": 5,
+  "contains_patient_data": false,
+  "contributor_digest_rows_represented": 5,
+  "date": "2026 06 17",
+  "handoff_rows_represented": 5,
+  "issue_history_rows_represented": 11,
+  "maintainer_review_scope": "current public preview route only",
+  "no_benchmark_compatibility_claim": true,
+  "no_benchmark_equivalence_claim": true,
+  "no_clinical_deployment_claim": true,
+  "no_clinical_validation_claim": true,
+  "no_endpoint_result": true,
+  "no_model_ranking": true,
+  "no_official_endorsement_claim": true,
+  "no_raw_model_output_release": true,
+  "no_score_report": true,
+  "not_for_clinical_use": true,
+  "previous_public_issue_number": 57,
+  "readiness_decision": "ready_for_public_preview",
+  "readiness_row_count": 5,
+  "release_index_surface_rows_represented": 9,
+  "rows": [
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "docs/REVIEWER_QUESTION_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md",
+      "readiness_action": "confirm closeout keeps public reviewer question rows synthetic only",
+      "readiness_id": "RQMR001",
+      "readiness_name": "Synthetic boundary readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "docs/BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md",
+      "readiness_action": "confirm public reviewer question lanes remain bounded and source facing",
+      "readiness_id": "RQMR002",
+      "readiness_name": "Reviewer question lane readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "docs/REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md",
+      "readiness_action": "confirm blocked score, endpoint, compatibility, validation, and endorsement wording stays out",
+      "readiness_id": "RQMR003",
+      "readiness_name": "Public wording readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
+      "readiness_action": "confirm release surfaces mention boundaries and runnable checks",
+      "readiness_id": "RQMR004",
+      "readiness_name": "Release surface readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "Makefile",
+      "readiness_action": "run make reviewer_question_maintainer_release_readiness_digest before public issue closure",
+      "readiness_id": "RQMR005",
+      "readiness_name": "Validation readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    }
+  ],
+  "source": "docs/reviewer_question_maintainer_closeout_digest_v0_1.json",
+  "status": "public_preview",
+  "synthetic_examples_only": true,
+  "version": "reviewer_question_maintainer_release_readiness_digest_v0_1"
+}
