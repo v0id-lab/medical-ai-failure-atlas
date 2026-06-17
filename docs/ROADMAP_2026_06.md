@@ -87,6 +87,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 55. Reviewer question release gate checklist v0.1.
 56. Reviewer question release gate outcome dashboard v0.1.
 57. Reviewer question public release packet v0.1.
+58. Reviewer question public changelog v0.1.
 
 ## External visibility sequence
 
@@ -111,6 +112,6 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Add a reviewer question public changelog without scoring or compatibility claims.
+1. Add a reviewer question public release index without scoring or compatibility claims.
 2. Prepare external maintainer issue drafts only after exact owner clearance.
 3. Add model run plan files only after endpoint terms and cost are explicitly cleared.

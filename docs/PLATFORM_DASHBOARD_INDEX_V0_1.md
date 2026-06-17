@@ -68,6 +68,7 @@ They remain issue template intake fields without scoring or compatibility claims
 52. 4 reviewer question release gate rows.
 53. 4 reviewer question release gate outcome rows.
 54. 7 reviewer question public release packet rows.
+55. 8 reviewer question public changelog rows.
 
 ## Top public entry files
 
@@ -97,6 +98,8 @@ They remain issue template intake fields without scoring or compatibility claims
 24. [Reviewer question release gate outcome dashboard JSON](reviewer_question_release_gate_outcome_dashboard_v0_1.json)
 25. [Reviewer question public release packet](REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md)
 26. [Reviewer question public release packet JSON](reviewer_question_public_release_packet_v0_1.json)
+27. [Reviewer question public changelog](REVIEWER_QUESTION_PUBLIC_CHANGELOG_V0_1.md)
+28. [Reviewer question public changelog JSON](reviewer_question_public_changelog_v0_1.json)
 
 ## Platform map
 
@@ -127,6 +130,8 @@ Public files:
 19. [Reviewer question release gate outcome dashboard JSON](reviewer_question_release_gate_outcome_dashboard_v0_1.json)
 20. [Reviewer question public release packet](REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md)
 21. [Reviewer question public release packet JSON](reviewer_question_public_release_packet_v0_1.json)
+22. [Reviewer question public changelog](REVIEWER_QUESTION_PUBLIC_CHANGELOG_V0_1.md)
+23. [Reviewer question public changelog JSON](reviewer_question_public_changelog_v0_1.json)
 9. [BİLGE readiness queue](tr%2Dmedai%2Dsafety%2Dsuite/BILGE_READINESS_QUEUE_V0_1.md)
 10. [BİLGE readiness queue JSON](tr%2Dmedai%2Dsafety%2Dsuite/bilge_readiness_queue_v0_1.json)
 11. [TÜBİTAK 1711 collaboration readiness packet](tr%2Dmedai%2Dsafety%2Dsuite/TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md)
@@ -146,17 +151,18 @@ make reviewer_question_wording_log
 make reviewer_question_release_gates
 make reviewer_question_gate_outcomes
 make reviewer_question_release_packet
+make reviewer_question_changelog
 make bilge_readiness_queue
 make tubitak_1711_readiness_packet
 make taxonomy_dashboard
 make clinician_review_queue
 ```
 
-Track A value: Turkish clinician led evaluation material for national health AI safety, clinician literacy, assurance review, benchmark style reviewer questions, intake examples, maintainer triage, public wording decisions, release gates, gate outcome review, and release packet review for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility, BİLGE readiness with no access claim, no score claim, and no endorsement claim, and TÜBİTAK 1711 collaboration readiness with no submission claim.
+Track A value: Turkish clinician led evaluation material for national health AI safety, clinician literacy, assurance review, benchmark style reviewer questions, intake examples, maintainer triage, public wording decisions, release gates, gate outcome review, release packet review, and changelog review for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility, BİLGE readiness with no access claim, no score claim, and no endorsement claim, and TÜBİTAK 1711 collaboration readiness with no submission claim.
 
-Track B value: reusable multilingual safety benchmark seed, public reviewer questions, intake examples, maintainer triage, wording decisions, release gates, gate outcome dashboard, and release packet without scoring or compatibility claims, no access readiness queue pattern, and collaboration readiness packet pattern for global medical AI evaluation without model ranking claims.
+Track B value: reusable multilingual safety benchmark seed, public reviewer questions, intake examples, maintainer triage, wording decisions, release gates, gate outcome dashboard, release packet, and public changelog without scoring or compatibility claims, no access readiness queue pattern, and collaboration readiness packet pattern for global medical AI evaluation without model ranking claims.
 
-Next build: add a reviewer question public changelog without scoring or compatibility claims.
+Next build: add a reviewer question public release index without scoring or compatibility claims.
 
 ### 2. Medical AI Failure Atlas Global
 
@@ -184,6 +190,8 @@ Public files:
 18. [Reviewer question release gate outcome dashboard JSON](reviewer_question_release_gate_outcome_dashboard_v0_1.json)
 19. [Reviewer question public release packet](REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md)
 20. [Reviewer question public release packet JSON](reviewer_question_public_release_packet_v0_1.json)
+21. [Reviewer question public changelog](REVIEWER_QUESTION_PUBLIC_CHANGELOG_V0_1.md)
+22. [Reviewer question public changelog JSON](reviewer_question_public_changelog_v0_1.json)
 
 Runnable checks:
 
@@ -200,13 +208,14 @@ make reviewer_question_wording_log
 make reviewer_question_release_gates
 make reviewer_question_gate_outcomes
 make reviewer_question_release_packet
+make reviewer_question_changelog
 ```
 
 Track A value: source material for Turkish health AI risk education and assurance gates, including benchmark style reviewer questions for escalation, medication safety, missing context, and warning sign visibility.
 
-Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions, issue template intake fields, intake examples, maintainer triage, public wording decisions, release gates, gate outcome rows, and a release packet that do not add scores or compatibility claims.
+Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions, issue template intake fields, intake examples, maintainer triage, public wording decisions, release gates, gate outcome rows, a release packet, and a public changelog that do not add scores or compatibility claims.
 
-Next build: add a reviewer question public changelog without scoring or compatibility claims.
+Next build: add a reviewer question public release index without scoring or compatibility claims.
 
 ### 3. Turkish Clinical AI Assurance Lab
 
@@ -293,6 +302,8 @@ Public files:
 31. [Reviewer question release gate outcome dashboard JSON](../docs/reviewer_question_release_gate_outcome_dashboard_v0_1.json)
 32. [Reviewer question public release packet](../docs/REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md)
 33. [Reviewer question public release packet JSON](../docs/reviewer_question_public_release_packet_v0_1.json)
+34. [Reviewer question public changelog](../docs/REVIEWER_QUESTION_PUBLIC_CHANGELOG_V0_1.md)
+35. [Reviewer question public changelog JSON](../docs/reviewer_question_public_changelog_v0_1.json)
 
 Runnable checks:
 
@@ -318,13 +329,14 @@ make reviewer_question_wording_log
 make reviewer_question_release_gates
 make reviewer_question_gate_outcomes
 make reviewer_question_release_packet
+make reviewer_question_changelog
 ```
 
-Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions, intake examples, maintainer triage, wording decisions, release gates, outcome rows, and release packet rows for policy wording and source support, and one runnable SourceCheckup path for local review.
+Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions, intake examples, maintainer triage, wording decisions, release gates, outcome rows, release packet rows, and changelog rows for policy wording and source support, and one runnable SourceCheckup path for local review.
 
-Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, issue template intake fields, intake examples, maintainer triage, wording decisions, release gates, outcome dashboards, and release packets without scoring or compatibility claims.
+Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, issue template intake fields, intake examples, maintainer triage, wording decisions, release gates, outcome dashboards, release packets, and public changelogs without scoring or compatibility claims.
 
-Next build: add a reviewer question public changelog without scoring or compatibility claims.
+Next build: add a reviewer question public release index without scoring or compatibility claims.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 

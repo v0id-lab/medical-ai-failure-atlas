@@ -74,6 +74,7 @@ New visible build surfaces are now staged in this public repository:
 64. [Reviewer question release gate checklist v0.1](docs/REVIEWER_QUESTION_RELEASE_GATE_CHECKLIST_V0_1.md)
 65. [Reviewer question release gate outcome dashboard v0.1](docs/REVIEWER_QUESTION_RELEASE_GATE_OUTCOME_DASHBOARD_V0_1.md)
 66. [Reviewer question public release packet v0.1](docs/REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md)
+67. [Reviewer question public changelog v0.1](docs/REVIEWER_QUESTION_PUBLIC_CHANGELOG_V0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -108,6 +109,7 @@ The goal is to help model builders, clinical AI teams, and academic collaborator
 21. Reviewer question release gate checklist for pass and block states without scoring or compatibility claims.
 22. Reviewer question release gate outcome dashboard for current pass and block outcomes without scoring or compatibility claims.
 23. Reviewer question public release packet for one maintainer facing surface without scoring or compatibility claims.
+24. Reviewer question public changelog for chronological maintainer record without scoring or compatibility claims.
 
 ## What this is
 
@@ -289,6 +291,12 @@ Generate reviewer question public release packet:
 
 ```bash
 make reviewer_question_release_packet
+```
+
+Generate reviewer question public changelog:
+
+```bash
+make reviewer_question_changelog
 ```
 
 Validate the assurance card template:
@@ -550,6 +558,8 @@ docs/
   reviewer_question_release_gate_outcome_dashboard_v0_1.json
   REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md
   reviewer_question_public_release_packet_v0_1.json
+  REVIEWER_QUESTION_PUBLIC_CHANGELOG_V0_1.md
+  reviewer_question_public_changelog_v0_1.json
   ASSURANCE_CARD_TEMPLATE_V0_1.md
   ASSURANCE_RELEASE_GATE_EXAMPLE_MAP_V0_1.md
   SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md
@@ -654,6 +664,8 @@ scripts/
   validate_reviewer_question_release_gate_outcome_dashboard_v0_1.py
   generate_reviewer_question_public_release_packet_v0_1.py
   validate_reviewer_question_public_release_packet_v0_1.py
+  generate_reviewer_question_public_changelog_v0_1.py
+  validate_reviewer_question_public_changelog_v0_1.py
   validate_tr_medllm_specialty_spread_v0_1.py
   validate_tr_medllm_specialty_dashboard_v0_1.py
   validate_sourcecheckup_example_expansion_dashboard_v0_2.py

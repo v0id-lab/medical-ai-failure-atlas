@@ -72,6 +72,7 @@ REQUIRED_PHRASES = [
     "4 reviewer question release gate rows",
     "4 reviewer question release gate outcome rows",
     "7 reviewer question public release packet rows",
+    "8 reviewer question public changelog rows",
     "not clinical advice",
     "not patient data",
     "not clinical deployment",
@@ -104,6 +105,7 @@ REQUIRED_PHRASES = [
     "make reviewer_question_release_gates",
     "make reviewer_question_gate_outcomes",
     "make reviewer_question_release_packet",
+    "make reviewer_question_changelog",
     "make sourcecheckup_public_issue",
     "make sourcecheckup_expansion_dashboard",
     "make clinician_literacy_map",
@@ -152,7 +154,8 @@ REQUIRED_PHRASES = [
     "Reviewer question release gate checklist",
     "Reviewer question release gate outcome dashboard",
     "Reviewer question public release packet",
-    "Add a reviewer question public changelog without scoring or compatibility claims",
+    "Reviewer question public changelog",
+    "Add a reviewer question public release index without scoring or compatibility claims",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -180,6 +183,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/reviewer_question_release_gate_outcome_dashboard_v0_1.json",
     "docs/REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md",
     "docs/reviewer_question_public_release_packet_v0_1.json",
+    "docs/REVIEWER_QUESTION_PUBLIC_CHANGELOG_V0_1.md",
+    "docs/reviewer_question_public_changelog_v0_1.json",
     "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
     "docs/ROADMAP_2026_06.md",
     "tr_medllm_safetybench/README.md",

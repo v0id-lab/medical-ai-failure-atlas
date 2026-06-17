@@ -7,79 +7,92 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTCOME = ROOT / "docs" / "reviewer_question_release_gate_outcome_dashboard_v0_1.json"
-JSON_OUTPUT = ROOT / "docs" / "reviewer_question_public_release_packet_v0_1.json"
-MD_OUTPUT = ROOT / "docs" / "REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md"
+PACKET = ROOT / "docs" / "reviewer_question_public_release_packet_v0_1.json"
+JSON_OUTPUT = ROOT / "docs" / "reviewer_question_public_changelog_v0_1.json"
+MD_OUTPUT = ROOT / "docs" / "REVIEWER_QUESTION_PUBLIC_CHANGELOG_V0_1.md"
 
-
-PACKET_SURFACES = [
+CHANGE_ROWS = [
     {
-        "surface_id": "RQRLP001",
+        "change_id": "RQRC001",
+        "date": "2026 06 17",
         "surface_name": "Benchmark style reviewer questions",
         "public_file": "docs/BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md",
-        "role": "defines public reviewer questions for source support and safety review",
+        "public_value": "opened public reviewer questions for source support and safety review",
     },
     {
-        "surface_id": "RQRLP002",
+        "change_id": "RQRC002",
+        "date": "2026 06 17",
         "surface_name": "Contributor issue template reviewer questions",
         "public_file": "docs/CONTRIBUTOR_ISSUE_TEMPLATE_REVIEWER_QUESTIONS_V0_1.md",
-        "role": "adds reviewer question fields to public intake templates",
+        "public_value": "added reviewer question fields to public issue templates",
     },
     {
-        "surface_id": "RQRLP003",
+        "change_id": "RQRC003",
+        "date": "2026 06 17",
         "surface_name": "Reviewer question intake examples",
         "public_file": "docs/REVIEWER_QUESTION_INTAKE_EXAMPLES_V0_1.md",
-        "role": "shows synthetic reviewer question intake examples",
+        "public_value": "added synthetic reviewer question intake examples",
     },
     {
-        "surface_id": "RQRLP004",
+        "change_id": "RQRC004",
+        "date": "2026 06 17",
         "surface_name": "Reviewer question intake triage board",
         "public_file": "docs/REVIEWER_QUESTION_INTAKE_TRIAGE_BOARD_V0_1.md",
-        "role": "maps intake examples to maintainer action and owner roles",
+        "public_value": "mapped intake examples to maintainer action and owner roles",
     },
     {
-        "surface_id": "RQRLP005",
+        "change_id": "RQRC005",
+        "date": "2026 06 17",
         "surface_name": "Reviewer question public wording decision log",
         "public_file": "docs/REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md",
-        "role": "records blocked wording and required public wording",
+        "public_value": "recorded blocked wording and required public wording",
     },
     {
-        "surface_id": "RQRLP006",
+        "change_id": "RQRC006",
+        "date": "2026 06 17",
         "surface_name": "Reviewer question release gate checklist",
         "public_file": "docs/REVIEWER_QUESTION_RELEASE_GATE_CHECKLIST_V0_1.md",
-        "role": "turns wording decisions into pass or block checks",
+        "public_value": "converted wording decisions into release checks",
     },
     {
-        "surface_id": "RQRLP007",
+        "change_id": "RQRC007",
+        "date": "2026 06 17",
         "surface_name": "Reviewer question release gate outcome dashboard",
         "public_file": "docs/REVIEWER_QUESTION_RELEASE_GATE_OUTCOME_DASHBOARD_V0_1.md",
-        "role": "summarizes current pass and block outcomes",
+        "public_value": "summarized current pass and block outcomes",
+    },
+    {
+        "change_id": "RQRC008",
+        "date": "2026 06 17",
+        "surface_name": "Reviewer question public release packet",
+        "public_file": "docs/REVIEWER_QUESTION_PUBLIC_RELEASE_PACKET_V0_1.md",
+        "public_value": "packaged the reviewer question route into one public release surface",
     },
 ]
 
 
 def main() -> int:
-    outcome = json.loads(OUTCOME.read_text(encoding="utf-8"))
+    packet = json.loads(PACKET.read_text(encoding="utf-8"))
     rows: list[dict[str, Any]] = []
-    for item in PACKET_SURFACES:
+    for row in CHANGE_ROWS:
         rows.append(
             {
-                **item,
-                "packet_status": "included_in_public_preview",
-                "next_action": "keep linked public surface current",
+                **row,
+                "change_status": "public_preview_added",
+                "boundary": "synthetic only and not for clinical use",
+                "next_action": "keep linked surface current during public preview",
             }
         )
 
     data: dict[str, Any] = {
-        "artifact": "reviewer_question_public_release_packet_v0_1",
+        "artifact": "reviewer_question_public_changelog_v0_1",
         "status": "generated public preview",
         "date": "2026 06 17",
-        "source_artifact": "reviewer_question_release_gate_outcome_dashboard_v0_1",
-        "packet_surface_count": len(rows),
-        "outcome_row_count": outcome["outcome_row_count"],
-        "pass_state_count": outcome["pass_state_count"],
-        "block_state_count": outcome["block_state_count"],
-        "packet_decision": "ready_for_public_preview",
+        "source_artifact": "reviewer_question_public_release_packet_v0_1",
+        "change_row_count": len(rows),
+        "release_packet_rows_represented": packet["packet_surface_count"],
+        "latest_change_id": rows[-1]["change_id"],
+        "changelog_decision": "ready_for_public_preview",
         "contains_patient_data": False,
         "synthetic_examples_only": True,
         "not_for_clinical_use": True,
@@ -97,44 +110,46 @@ def main() -> int:
     JSON_OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     lines: list[str] = [
-        "# Reviewer question public release packet v0.1",
+        "# Reviewer question public changelog v0.1",
         "",
         "Status: generated public preview.",
         "",
         "Date: 2026 06 17",
         "",
-        "This packet gives one public release surface for benchmark style reviewer questions, contributor issue fields, intake examples, maintainer triage, wording decisions, release gate checks, and outcome rows.",
+        "This changelog gives a chronological public maintainer record for benchmark style reviewer questions, contributor issue fields, intake examples, triage, wording decisions, release gate checks, outcome rows, and the public release packet.",
         "",
         "It is not clinical advice, not patient data, not raw model output release, not clinical deployment, not clinical validation, not a benchmark compatibility claim, not a benchmark equivalence claim, not a score report, not a model ranking, not an endpoint result, and not an official endorsement.",
         "",
         "## Summary",
         "",
-        f"Packet surface rows: {len(rows)}",
+        f"Change rows: {len(rows)}",
         "",
-        f"Outcome rows represented: {data['outcome_row_count']}",
+        f"Release packet rows represented: {data['release_packet_rows_represented']}",
         "",
-        f"Pass state rows represented: {data['pass_state_count']}",
+        f"Latest change id: `{data['latest_change_id']}`",
         "",
-        f"Block state rows represented: {data['block_state_count']}",
+        "Changelog decision: `ready_for_public_preview`",
         "",
-        "Packet decision: `ready_for_public_preview`",
-        "",
-        "## Packet rows",
+        "## Change rows",
         "",
     ]
 
     for row in rows:
         lines.extend(
             [
-                f"### {row['surface_id']}",
+                f"### {row['change_id']}",
+                "",
+                f"Date: {row['date']}",
                 "",
                 f"Surface name: {row['surface_name']}",
                 "",
                 f"Public file: `{row['public_file']}`",
                 "",
-                f"Role: {row['role']}",
+                f"Public value: {row['public_value']}",
                 "",
-                f"Packet status: `{row['packet_status']}`",
+                f"Change status: `{row['change_status']}`",
+                "",
+                f"Boundary: {row['boundary']}",
                 "",
                 f"Next action: {row['next_action']}",
                 "",
@@ -148,7 +163,7 @@ def main() -> int:
             "Run:",
             "",
             "```bash",
-            "make reviewer_question_release_packet",
+            "make reviewer_question_changelog",
             "```",
             "",
             "## Next safe public action",
@@ -160,7 +175,7 @@ def main() -> int:
     MD_OUTPUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"wrote {MD_OUTPUT.relative_to(ROOT)}")
     print(f"wrote {JSON_OUTPUT.relative_to(ROOT)}")
-    print(f"packet_surface_rows={len(rows)}")
+    print(f"change_rows={len(rows)}")
     return 0
 
 
