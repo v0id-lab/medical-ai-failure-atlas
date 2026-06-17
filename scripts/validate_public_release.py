@@ -191,6 +191,10 @@ REQUIRED_FILES = [
     "docs/reviewer_question_maintainer_public_preview_contributor_route_note_v0_1.json",
     "scripts/generate_reviewer_question_maintainer_public_preview_contributor_route_note_v0_1.py",
     "scripts/validate_reviewer_question_maintainer_public_preview_contributor_route_note_v0_1.py",
+    "docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ISSUE_TEMPLATE_ROUTE_NOTE_V0_1.md",
+    "docs/reviewer_question_maintainer_public_preview_issue_template_route_note_v0_1.json",
+    "scripts/generate_reviewer_question_maintainer_public_preview_issue_template_route_note_v0_1.py",
+    "scripts/validate_reviewer_question_maintainer_public_preview_issue_template_route_note_v0_1.py",
     "docs/MEDHELM_BOUNDARY_NOTE_V0_1.md",
     "docs/MEDMARKS_BOUNDARY_NOTE_V0_1.md",
     "docs/ASSURANCE_CARD_TEMPLATE_V0_1.md",
@@ -567,6 +571,10 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
             fail(errors, "README must link to the reviewer question maintainer public preview contributor route note")
         if "make reviewer_question_maintainer_public_preview_contributor_route_note" not in readme_text:
             fail(errors, "README must document the reviewer question maintainer public preview contributor route note command")
+        if "docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ISSUE_TEMPLATE_ROUTE_NOTE_V0_1.md" not in readme_text:
+            fail(errors, "README must link to the reviewer question maintainer public preview issue template route note")
+        if "make reviewer_question_maintainer_public_preview_issue_template_route_note" not in readme_text:
+            fail(errors, "README must document the reviewer question maintainer public preview issue template route note command")
         if "docs/LABEL_AUDIT_REVIEWER_ROLE_TABLE_V0_1.md" not in readme_text:
             fail(errors, "README must link to the label audit reviewer role table")
         if "make label_audit_role_table" not in readme_text:
