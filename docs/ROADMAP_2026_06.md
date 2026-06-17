@@ -78,6 +78,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 46. TÜBİTAK 1711 collaboration readiness packet v0.1.
 47. SourceCheckup Turkish institutional wording examples v0.1.
 48. SourceCheckup repo run guide v0.1.
+49. HealthBench and MedHELM mapping note v0.1.
 
 ## External visibility sequence
 
@@ -102,6 +103,6 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Add a HealthBench and MedHELM mapping note with no compatibility claim.
+1. Add benchmark style reviewer questions without scoring or compatibility claims.
 2. Prepare external maintainer issue drafts only after exact owner clearance.
 3. Add model run plan files only after endpoint terms and cost are explicitly cleared.

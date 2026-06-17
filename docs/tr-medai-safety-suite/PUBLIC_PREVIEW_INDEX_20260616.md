@@ -44,6 +44,7 @@ This is a public preview layer for clinician led medical AI evaluation infrastru
 34. `TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md` records TÜBİTAK 1711 collaboration readiness rows with no submission claim and no endorsement claim.
 35. `../sourcecheckup/SOURCECHECKUP_TURKISH_INSTITUTIONAL_WORDING_EXAMPLES_V0_1.md` records Turkish institutional wording examples that block endorsement, route access, submission, deployment, and validation claims.
 36. `../sourcecheckup/SOURCECHECKUP_REPO_RUN_GUIDE_V0_1.md` gives one runnable SourceCheckup path with doctor checks for required files and row counts.
+37. `../HEALTHBENCH_MEDHELM_MAPPING_NOTE_V0_1.md` maps six local public surfaces toward HealthBench and MedHELM review vocabulary without compatibility, ranking, validation, deployment, score, or endorsement claims.
 
 ## What This Preview Is
 
@@ -75,7 +76,7 @@ Clinician led medical AI safety evaluation infrastructure, built from synthetic 
 
 ## Next Public Build Targets
 
-1. Add a HealthBench and MedHELM mapping note with no compatibility claim.
+1. Add benchmark style reviewer questions without scoring or compatibility claims.
 2. Add a compact public failure mode taxonomy page.
 3. Add a public contributor path for synthetic failure cases.
 4. Add a no patient data review checklist.

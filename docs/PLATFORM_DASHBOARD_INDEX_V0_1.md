@@ -55,6 +55,7 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 43. 5 TÜBİTAK 1711 collaboration readiness packet rows.
 44. 5 SourceCheckup Turkish institutional wording examples.
 45. 6 SourceCheckup repo run guide rows.
+46. 6 HealthBench and MedHELM mapping rows.
 
 ## Top public entry files
 
@@ -67,6 +68,8 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 7. [BİLGE readiness queue JSON](tr%2Dmedai%2Dsafety%2Dsuite/bilge_readiness_queue_v0_1.json)
 8. [TÜBİTAK 1711 collaboration readiness packet](tr%2Dmedai%2Dsafety%2Dsuite/TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md)
 9. [TÜBİTAK 1711 collaboration readiness packet JSON](tr%2Dmedai%2Dsafety%2Dsuite/tubitak_1711_collaboration_readiness_packet_v0_1.json)
+10. [HealthBench and MedHELM mapping note](HEALTHBENCH_MEDHELM_MAPPING_NOTE_V0_1.md)
+11. [HealthBench and MedHELM mapping JSON](healthbench_medhelm_mapping_note_v0_1.json)
 
 ## Platform map
 
@@ -145,16 +148,18 @@ Public files:
 3. [Assurance governance matrix](tr%2Dmedai%2Dsafety%2Dsuite/ASSURANCE_LAB_TPLC_GOVERNANCE_MATRIX_20260616.md)
 4. [MedHELM boundary note](MEDHELM_BOUNDARY_NOTE_V0_1.md)
 5. [Medmarks boundary note](MEDMARKS_BOUNDARY_NOTE_V0_1.md)
-6. [Assurance release gate example map](ASSURANCE_RELEASE_GATE_EXAMPLE_MAP_V0_1.md)
-7. [Assurance release gate example JSON](assurance_release_gate_example_map_v0_1.json)
-8. [SourceCheckup TR MedLLM assurance routing map](SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md)
-9. [SourceCheckup TR MedLLM assurance routing JSON](sourcecheckup_tr_medllm_assurance_routing_map_v0_1.json)
-10. [Source review worksheets](SOURCE_REVIEW_WORKSHEETS_V0_1.md)
-11. [Source review worksheets JSON](source_review_worksheets_v0_1.json)
-12. [Red flag source locator and warning sign checklist](RED_FLAG_WARNING_CHECKLIST_V0_1.md)
-13. [Red flag source locator and warning sign checklist JSON](red_flag_warning_checklist_v0_1.json)
-14. [Warning sign reviewer role table](WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md)
-15. [Warning sign reviewer role table JSON](warning_sign_reviewer_role_table_v0_1.json)
+6. [HealthBench and MedHELM mapping note](HEALTHBENCH_MEDHELM_MAPPING_NOTE_V0_1.md)
+7. [HealthBench and MedHELM mapping JSON](healthbench_medhelm_mapping_note_v0_1.json)
+8. [Assurance release gate example map](ASSURANCE_RELEASE_GATE_EXAMPLE_MAP_V0_1.md)
+9. [Assurance release gate example JSON](assurance_release_gate_example_map_v0_1.json)
+10. [SourceCheckup TR MedLLM assurance routing map](SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md)
+11. [SourceCheckup TR MedLLM assurance routing JSON](sourcecheckup_tr_medllm_assurance_routing_map_v0_1.json)
+12. [Source review worksheets](SOURCE_REVIEW_WORKSHEETS_V0_1.md)
+13. [Source review worksheets JSON](source_review_worksheets_v0_1.json)
+14. [Red flag source locator and warning sign checklist](RED_FLAG_WARNING_CHECKLIST_V0_1.md)
+15. [Red flag source locator and warning sign checklist JSON](red_flag_warning_checklist_v0_1.json)
+16. [Warning sign reviewer role table](WARNING_SIGN_REVIEWER_ROLE_TABLE_V0_1.md)
+17. [Warning sign reviewer role table JSON](warning_sign_reviewer_role_table_v0_1.json)
 
 Runnable checks:
 
@@ -166,13 +171,14 @@ make source_review_worksheets
 make red_flag_warning_checklist
 make warning_sign_role_table
 make boundary_notes
+make healthbench_medhelm_mapping
 ```
 
-Track A value: release gate language for Turkish health AI sandbox readiness discussions without claiming sandbox access.
+Track A value: release gate language and benchmark style mapping language for Turkish health AI sandbox readiness discussions without claiming sandbox access, compatibility, validation, or endorsement.
 
-Track B value: reusable assurance artifact pattern for public medical language model evaluation releases.
+Track B value: reusable assurance artifact pattern and bounded HealthBench and MedHELM mapping note for public medical language model evaluation releases.
 
-Next build: add label audit reviewer role table and escalation gate rows.
+Next build: add reviewer questions to SourceCheckup and Failure Atlas rows without scoring.
 
 ### 4. SourceCheckup Medical
 
@@ -221,7 +227,7 @@ Track A value: public source support discipline for Turkish medical LLM review e
 
 Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, and contributor onboarding.
 
-Next build: add a HealthBench and MedHELM mapping note with no compatibility claim.
+Next build: add benchmark style reviewer questions without scoring or compatibility claims.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 

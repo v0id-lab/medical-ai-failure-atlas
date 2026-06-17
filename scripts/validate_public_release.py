@@ -94,6 +94,8 @@ REQUIRED_FILES = [
     "docs/tr-medai-safety-suite/bilge_readiness_queue_v0_1.json",
     "docs/tr-medai-safety-suite/TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md",
     "docs/tr-medai-safety-suite/tubitak_1711_collaboration_readiness_packet_v0_1.json",
+    "docs/HEALTHBENCH_MEDHELM_MAPPING_NOTE_V0_1.md",
+    "docs/healthbench_medhelm_mapping_note_v0_1.json",
     "docs/MEDHELM_BOUNDARY_NOTE_V0_1.md",
     "docs/MEDMARKS_BOUNDARY_NOTE_V0_1.md",
     "docs/ASSURANCE_CARD_TEMPLATE_V0_1.md",
@@ -210,6 +212,8 @@ REQUIRED_FILES = [
     "scripts/sourcecheckup_repo_doctor_v0_1.py",
     "scripts/generate_sourcecheckup_repo_run_guide_v0_1.py",
     "scripts/validate_sourcecheckup_repo_run_guide_v0_1.py",
+    "scripts/generate_healthbench_medhelm_mapping_note_v0_1.py",
+    "scripts/validate_healthbench_medhelm_mapping_note_v0_1.py",
     "scripts/validate_tr_medllm_specialty_spread_v0_1.py",
     "scripts/generate_tr_medllm_specialty_spread_dashboard_v0_1.py",
     "scripts/validate_tr_medllm_specialty_dashboard_v0_1.py",
@@ -309,7 +313,12 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
         if relative.parts and relative.parts[0] == "results":
             fail(errors, f"Internal result path present in public candidate: {relative}")
             continue
-        if len(relative.parts) >= 2 and relative.parts[0] == "docs" and path.name.startswith("HEALTHBENCH_"):
+        if (
+            len(relative.parts) >= 2
+            and relative.parts[0] == "docs"
+            and path.name.startswith("HEALTHBENCH_")
+            and path.name != "HEALTHBENCH_MEDHELM_MAPPING_NOTE_V0_1.md"
+        ):
             fail(errors, f"Internal HealthBench workflow doc present in public candidate: {relative}")
             continue
         if path.is_dir() and path.name in BLOCKED_DIR_NAMES:

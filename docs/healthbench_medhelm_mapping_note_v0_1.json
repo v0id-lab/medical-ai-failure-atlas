@@ -1,0 +1,115 @@
+{
+  "artifact": "healthbench_medhelm_mapping_note_v0_1",
+  "date": "2026 06 17",
+  "status": "public preview",
+  "contains_patient_data": false,
+  "not_for_clinical_use": true,
+  "no_model_calls": true,
+  "no_endpoint_calls": true,
+  "no_ranking": true,
+  "no_compatibility_claim": true,
+  "source_anchors": [
+    {
+      "source_id": "openai_healthbench",
+      "source_name": "OpenAI HealthBench public page",
+      "source_url": "https://openai.com/index/healthbench/",
+      "source_basis": "realistic health scenarios and physician expert rubric emphasis",
+      "mapping_use": "rubric discipline and clinically relevant response review"
+    },
+    {
+      "source_id": "healthbench_professional",
+      "source_name": "HealthBench Professional public abstract",
+      "source_url": "https://arxiv.org/abs/2604.27470",
+      "source_basis": "real clinician tasks, care consult, writing and documentation, medical research, physician authored conversations, and adjudicated rubrics",
+      "mapping_use": "clinician workflow surface and rubric adjudication boundaries"
+    },
+    {
+      "source_id": "medhelm_site",
+      "source_name": "MedHELM public site",
+      "source_url": "https://medhelm.org/",
+      "source_basis": "121 clinical tasks, 22 subcategories, 31 datasets, 5 categories, and measures across accuracy, calibration, robustness, and writing style",
+      "mapping_use": "task taxonomy and metric family orientation"
+    },
+    {
+      "source_id": "medhelm_leaderboard",
+      "source_name": "Stanford HELM MedHELM latest page",
+      "source_url": "https://crfm.stanford.edu/helm/medhelm/latest/",
+      "source_basis": "structured taxonomy, clinical task coverage, and benchmark surface reporting",
+      "mapping_use": "public taxonomy mapping without performance claims"
+    }
+  ],
+  "mapping_rows": [
+    {
+      "row_id": "HHM001",
+      "local_surface": "SourceCheckup Medical",
+      "healthbench_lens": "physician rubric discipline for answer support and uncertainty wording",
+      "medhelm_lens": "medical research assistance and writing style review",
+      "track_a_value": "Turkish source support review before any sandbox or workflow discussion",
+      "track_b_value": "global source verification contributor surface",
+      "blocked_claim": "benchmark compatibility",
+      "next_action": "keep source claim rows synthetic and add reviewer questions"
+    },
+    {
+      "row_id": "HHM002",
+      "local_surface": "Medical AI Failure Atlas",
+      "healthbench_lens": "realistic health scenario failure pattern review",
+      "medhelm_lens": "clinical decision support and patient communication task orientation",
+      "track_a_value": "Turkish clinical risk education without deployment claim",
+      "track_b_value": "open failure pattern taxonomy for public review",
+      "blocked_claim": "model ranking",
+      "next_action": "map failure modes to task families without scoring"
+    },
+    {
+      "row_id": "HHM003",
+      "local_surface": "TR MedLLM SafetyBench",
+      "healthbench_lens": "clinician rubric wording for missing context and escalation",
+      "medhelm_lens": "multilingual clinical task readiness discussion",
+      "track_a_value": "Turkish medical language model safety cases",
+      "track_b_value": "multilingual safety case contribution surface",
+      "blocked_claim": "clinical validation",
+      "next_action": "add task family labels without claiming benchmark status"
+    },
+    {
+      "row_id": "HHM004",
+      "local_surface": "Turkish Clinical AI Assurance Lab",
+      "healthbench_lens": "rubric gate and adjudication trail",
+      "medhelm_lens": "calibration, robustness, and writing style boundary review",
+      "track_a_value": "assurance card language for Turkish health AI review",
+      "track_b_value": "release gate pattern for public medical AI infrastructure",
+      "blocked_claim": "official endorsement",
+      "next_action": "connect assurance cards to benchmark style evidence fields"
+    },
+    {
+      "row_id": "HHM005",
+      "local_surface": "Health Data Quality and Label Audit Commons",
+      "healthbench_lens": "rubric item provenance and adjudication quality",
+      "medhelm_lens": "dataset and task surface quality review",
+      "track_a_value": "synthetic data quality gate for Turkish benchmark work",
+      "track_b_value": "open label audit pattern for medical AI eval datasets",
+      "blocked_claim": "dataset quality proof",
+      "next_action": "add label audit fields for source, rubric, and reviewer state"
+    },
+    {
+      "row_id": "HHM006",
+      "local_surface": "Clinician AI Literacy Academy Turkiye",
+      "healthbench_lens": "clinician rubric literacy and adversarial scenario reading",
+      "medhelm_lens": "clinician task taxonomy literacy",
+      "track_a_value": "clinician education on benchmark limits and review gates",
+      "track_b_value": "public teaching surface for benchmark literacy",
+      "blocked_claim": "safety proof",
+      "next_action": "turn mapping rows into short clinician review lessons"
+    }
+  ],
+  "boundaries": [
+    "No compatibility claim.",
+    "No benchmark equivalence claim.",
+    "No model ranking.",
+    "No model safety proof.",
+    "No clinical validation.",
+    "No clinical deployment.",
+    "No official endorsement.",
+    "No patient data.",
+    "No endpoint call.",
+    "No score report."
+  ]
+}

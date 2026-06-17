@@ -65,6 +65,7 @@ New visible build surfaces are now staged in this public repository:
 55. [TÜBİTAK 1711 collaboration readiness packet v0.1](docs/tr%2Dmedai%2Dsafety%2Dsuite/TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md)
 56. [SourceCheckup Turkish institutional wording examples v0.1](docs/sourcecheckup/SOURCECHECKUP_TURKISH_INSTITUTIONAL_WORDING_EXAMPLES_V0_1.md)
 57. [SourceCheckup repo run guide v0.1](docs/sourcecheckup/SOURCECHECKUP_REPO_RUN_GUIDE_V0_1.md)
+58. [HealthBench and MedHELM mapping note v0.1](docs/HEALTHBENCH_MEDHELM_MAPPING_NOTE_V0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -90,6 +91,7 @@ The goal is to help model builders, clinical AI teams, and academic collaborator
 12. Internal reviewer form, source key, and adjudication log templates for the pilot subset, held out of public release until raw output redistribution is cleared.
 13. Scripts for validation, model capture, scoring dry run, benchmark report generation, and public candidate sanitation.
 14. A 14 row Turkish synthetic risk pack with specialty spread rows across cardiology, endocrinology, nephrology, infectious diseases, geriatrics, and pregnancy medication safety.
+15. A HealthBench and MedHELM oriented mapping note that blocks compatibility, ranking, validation, deployment, and endorsement claims.
 
 ## What this is
 
@@ -217,6 +219,12 @@ Validate the MedHELM and Medmarks boundary notes:
 
 ```bash
 make boundary_notes
+```
+
+Generate the HealthBench and MedHELM mapping note:
+
+```bash
+make healthbench_medhelm_mapping
 ```
 
 Validate the assurance card template:
@@ -614,5 +622,5 @@ This remains preliminary until clinician review confirms the scoring and public 
 1. Review the 6 high priority rows.
 2. Review repeated medium priority clusters for Failure Atlas patterns.
 3. Add model output excerpts only if copyright and platform terms allow.
-4. Prepare separately audited MedHELM and Medmarks discussion posts.
+4. Prepare separately audited MedHELM, HealthBench, and Medmarks discussion posts only after exact owner clearance.
 5. Prepare the resource preprint only after clinician review status is stronger.

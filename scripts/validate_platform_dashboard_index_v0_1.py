@@ -63,6 +63,7 @@ REQUIRED_PHRASES = [
     "5 TÜBİTAK 1711 collaboration readiness packet rows",
     "5 SourceCheckup Turkish institutional wording examples",
     "6 SourceCheckup repo run guide rows",
+    "6 HealthBench and MedHELM mapping rows",
     "not clinical advice",
     "not patient data",
     "not clinical deployment",
@@ -86,6 +87,7 @@ REQUIRED_PHRASES = [
     "make red_flag_contributor_examples",
     "make sourcecheckup_turkish_institutional_wording",
     "make sourcecheckup_repo_run_guide",
+    "make healthbench_medhelm_mapping",
     "make sourcecheckup_public_issue",
     "make sourcecheckup_expansion_dashboard",
     "make clinician_literacy_map",
@@ -123,7 +125,8 @@ REQUIRED_PHRASES = [
     "SourceCheckup Turkish institutional wording examples",
     "without endorsement or route access claims",
     "one runnable SourceCheckup path",
-    "HealthBench and MedHELM mapping note with no compatibility claim",
+    "HealthBench and MedHELM mapping note",
+    "benchmark style reviewer questions without scoring or compatibility claims",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -134,6 +137,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/tr-medai-safety-suite/bilge_readiness_queue_v0_1.json",
     "docs/tr-medai-safety-suite/TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md",
     "docs/tr-medai-safety-suite/tubitak_1711_collaboration_readiness_packet_v0_1.json",
+    "docs/HEALTHBENCH_MEDHELM_MAPPING_NOTE_V0_1.md",
+    "docs/healthbench_medhelm_mapping_note_v0_1.json",
     "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
     "docs/ROADMAP_2026_06.md",
     "tr_medllm_safetybench/README.md",

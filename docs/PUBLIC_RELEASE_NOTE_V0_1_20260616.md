@@ -59,6 +59,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 47. TÜBİTAK 1711 collaboration readiness packet v0.1.
 48. SourceCheckup Turkish institutional wording examples v0.1.
 49. SourceCheckup repo run guide v0.1.
+50. HealthBench and MedHELM mapping note v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -112,6 +113,7 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 46. 5 TÜBİTAK 1711 collaboration readiness packet rows.
 47. 5 SourceCheckup Turkish institutional wording examples.
 48. 6 SourceCheckup repo run guide rows.
+49. 6 HealthBench and MedHELM mapping rows.
 
 ## Reproducible checks
 
@@ -155,6 +157,7 @@ make bilge_readiness_queue
 make tubitak_1711_readiness_packet
 make sourcecheckup_turkish_institutional_wording
 make sourcecheckup_repo_run_guide
+make healthbench_medhelm_mapping
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -213,6 +216,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 43. TÜBİTAK 1711 collaboration readiness packet that records no submission, no application, no funding, no partner, no health priority, no route access, and no endorsement preparation boundaries.
 44. SourceCheckup Turkish institutional wording examples that block endorsement, route access, submission, deployment, and validation wording.
 45. SourceCheckup repo run guide that gives one runnable path and doctor checks for required files and row counts.
+46. HealthBench and MedHELM mapping note that connects six local public surfaces to source anchored benchmark vocabulary without compatibility, ranking, validation, deployment, or endorsement claims.
 
 This does not claim official status, program participation, regulatory access, sandbox access, or institutional endorsement.
 
@@ -266,11 +270,12 @@ For global open source medical AI evaluation, this public preview gives:
 44. TÜBİTAK 1711 collaboration readiness packet pattern for public collaboration preparation without submission, funding, partner, route access, or endorsement claims.
 45. SourceCheckup Turkish institutional wording examples for public institutional wording without endorsement, route access, submission, deployment, or validation claims.
 46. SourceCheckup repo run guide for contributor onboarding without external calls, model calls, patient data, source truth certification, or clinical validation claims.
+47. HealthBench and MedHELM mapping note for benchmark maintainer readability without compatibility, equivalence, ranking, score, clinical deployment, clinical validation, or endorsement claims.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Add a HealthBench and MedHELM mapping note with no compatibility claim.
+1. Add benchmark style reviewer questions without scoring or compatibility claims.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.
