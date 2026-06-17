@@ -145,3 +145,11 @@ Run:
 ```bash
 make label_audit_contributor_digest
 ```
+
+The maintainer handoff notes are available at `docs/label_audit/LABEL_AUDIT_MAINTAINER_HANDOFF_NOTES_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_maintainer_handoff
+```

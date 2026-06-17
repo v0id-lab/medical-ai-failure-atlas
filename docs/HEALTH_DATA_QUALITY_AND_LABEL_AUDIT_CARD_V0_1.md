@@ -357,6 +357,26 @@ Run:
 make label_audit_contributor_digest
 ```
 
+## Label audit maintainer handoff notes
+
+Current maintainer handoff notes:
+
+`docs/label_audit/LABEL_AUDIT_MAINTAINER_HANDOFF_NOTES_V0_1.md`
+
+Machine readable maintainer handoff source:
+
+`docs/label_audit/label_audit_maintainer_handoff_notes_v0_1.json`
+
+Handoff rows: 5.
+
+The handoff notes give maintainers a short checklist for reviewing synthetic label audit contributor proposals before public closeout. They do not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
+
+Run:
+
+```bash
+make label_audit_maintainer_handoff
+```
+
 ## Maintenance owner
 
 Maintainer: Dr. Goktug Ozkan, Internal Medicine Specialist.
