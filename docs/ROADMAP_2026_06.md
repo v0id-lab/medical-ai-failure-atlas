@@ -83,6 +83,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 51. Contributor issue template reviewer questions v0.1.
 52. Reviewer question intake examples v0.1.
 53. Reviewer question intake triage board v0.1.
+54. Reviewer question public wording decision log v0.1.
 
 ## External visibility sequence
 
@@ -107,6 +108,6 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Add a public wording decision log for reviewer question intake triage without scoring or compatibility claims.
+1. Add a release gate checklist for reviewer question public wording decisions without scoring or compatibility claims.
 2. Prepare external maintainer issue drafts only after exact owner clearance.
 3. Add model run plan files only after endpoint terms and cost are explicitly cleared.

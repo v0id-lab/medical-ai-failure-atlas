@@ -68,6 +68,7 @@ REQUIRED_PHRASES = [
     "2 reviewer question issue templates",
     "4 reviewer question intake example rows",
     "4 reviewer question intake triage rows",
+    "4 reviewer question public wording decision rows",
     "not clinical advice",
     "not patient data",
     "not clinical deployment",
@@ -96,6 +97,7 @@ REQUIRED_PHRASES = [
     "make reviewer_question_issue_templates",
     "make reviewer_question_intake_examples",
     "make reviewer_question_intake_triage",
+    "make reviewer_question_wording_log",
     "make sourcecheckup_public_issue",
     "make sourcecheckup_expansion_dashboard",
     "make clinician_literacy_map",
@@ -140,7 +142,8 @@ REQUIRED_PHRASES = [
     "issue template intake fields without scoring or compatibility claims",
     "Reviewer question intake examples",
     "Reviewer question intake triage board",
-    "Add a public wording decision log for reviewer question intake triage without scoring or compatibility claims",
+    "Reviewer question public wording decision log",
+    "Add a release gate checklist for reviewer question public wording decisions without scoring or compatibility claims",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -160,6 +163,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/reviewer_question_intake_examples_v0_1.json",
     "docs/REVIEWER_QUESTION_INTAKE_TRIAGE_BOARD_V0_1.md",
     "docs/reviewer_question_intake_triage_board_v0_1.json",
+    "docs/REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md",
+    "docs/reviewer_question_public_wording_decision_log_v0_1.json",
     "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
     "docs/ROADMAP_2026_06.md",
     "tr_medllm_safetybench/README.md",

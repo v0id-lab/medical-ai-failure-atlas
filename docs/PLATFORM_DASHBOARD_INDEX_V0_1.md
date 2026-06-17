@@ -64,6 +64,7 @@ They remain issue template intake fields without scoring or compatibility claims
 48. 2 reviewer question issue templates.
 49. 4 reviewer question intake example rows.
 50. 4 reviewer question intake triage rows.
+51. 4 reviewer question public wording decision rows.
 
 ## Top public entry files
 
@@ -85,6 +86,8 @@ They remain issue template intake fields without scoring or compatibility claims
 16. [Reviewer question intake examples JSON](reviewer_question_intake_examples_v0_1.json)
 17. [Reviewer question intake triage board](REVIEWER_QUESTION_INTAKE_TRIAGE_BOARD_V0_1.md)
 18. [Reviewer question intake triage board JSON](reviewer_question_intake_triage_board_v0_1.json)
+19. [Reviewer question public wording decision log](REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md)
+20. [Reviewer question public wording decision log JSON](reviewer_question_public_wording_decision_log_v0_1.json)
 
 ## Platform map
 
@@ -107,6 +110,8 @@ Public files:
 11. [Reviewer question intake examples JSON](reviewer_question_intake_examples_v0_1.json)
 12. [Reviewer question intake triage board](REVIEWER_QUESTION_INTAKE_TRIAGE_BOARD_V0_1.md)
 13. [Reviewer question intake triage board JSON](reviewer_question_intake_triage_board_v0_1.json)
+14. [Reviewer question public wording decision log](REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md)
+15. [Reviewer question public wording decision log JSON](reviewer_question_public_wording_decision_log_v0_1.json)
 9. [BİLGE readiness queue](tr%2Dmedai%2Dsafety%2Dsuite/BILGE_READINESS_QUEUE_V0_1.md)
 10. [BİLGE readiness queue JSON](tr%2Dmedai%2Dsafety%2Dsuite/bilge_readiness_queue_v0_1.json)
 11. [TÜBİTAK 1711 collaboration readiness packet](tr%2Dmedai%2Dsafety%2Dsuite/TUBITAK_1711_COLLABORATION_READINESS_PACKET_V0_1.md)
@@ -122,17 +127,18 @@ make sourcecheckup_tr_medllm_routing
 make benchmark_reviewer_questions
 make reviewer_question_intake_examples
 make reviewer_question_intake_triage
+make reviewer_question_wording_log
 make bilge_readiness_queue
 make tubitak_1711_readiness_packet
 make taxonomy_dashboard
 make clinician_review_queue
 ```
 
-Track A value: Turkish clinician led evaluation material for national health AI safety, clinician literacy, assurance review, benchmark style reviewer questions, intake examples, and maintainer triage for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility, BİLGE readiness with no access claim, no score claim, and no endorsement claim, and TÜBİTAK 1711 collaboration readiness with no submission claim.
+Track A value: Turkish clinician led evaluation material for national health AI safety, clinician literacy, assurance review, benchmark style reviewer questions, intake examples, maintainer triage, and public wording decisions for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility, BİLGE readiness with no access claim, no score claim, and no endorsement claim, and TÜBİTAK 1711 collaboration readiness with no submission claim.
 
-Track B value: reusable multilingual safety benchmark seed, public reviewer questions, intake examples, and maintainer triage without scoring or compatibility claims, no access readiness queue pattern, and collaboration readiness packet pattern for global medical AI evaluation without model ranking claims.
+Track B value: reusable multilingual safety benchmark seed, public reviewer questions, intake examples, maintainer triage, and wording decisions without scoring or compatibility claims, no access readiness queue pattern, and collaboration readiness packet pattern for global medical AI evaluation without model ranking claims.
 
-Next build: add a public wording decision log for reviewer question intake triage without scoring or compatibility claims.
+Next build: add a release gate checklist for reviewer question public wording decisions without scoring or compatibility claims.
 
 ### 2. Medical AI Failure Atlas Global
 
@@ -152,6 +158,8 @@ Public files:
 10. [Reviewer question intake examples JSON](reviewer_question_intake_examples_v0_1.json)
 11. [Reviewer question intake triage board](REVIEWER_QUESTION_INTAKE_TRIAGE_BOARD_V0_1.md)
 12. [Reviewer question intake triage board JSON](reviewer_question_intake_triage_board_v0_1.json)
+13. [Reviewer question public wording decision log](REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md)
+14. [Reviewer question public wording decision log JSON](reviewer_question_public_wording_decision_log_v0_1.json)
 
 Runnable checks:
 
@@ -164,13 +172,14 @@ make benchmark_reviewer_questions
 make reviewer_question_issue_templates
 make reviewer_question_intake_examples
 make reviewer_question_intake_triage
+make reviewer_question_wording_log
 ```
 
 Track A value: source material for Turkish health AI risk education and assurance gates, including benchmark style reviewer questions for escalation, medication safety, missing context, and warning sign visibility.
 
-Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions, issue template intake fields, intake examples, and maintainer triage that do not add scores or compatibility claims.
+Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions, issue template intake fields, intake examples, maintainer triage, and public wording decisions that do not add scores or compatibility claims.
 
-Next build: add a public wording decision log for reviewer question intake triage without scoring or compatibility claims.
+Next build: add a release gate checklist for reviewer question public wording decisions without scoring or compatibility claims.
 
 ### 3. Turkish Clinical AI Assurance Lab
 
@@ -249,6 +258,8 @@ Public files:
 23. [Reviewer question intake examples JSON](../docs/reviewer_question_intake_examples_v0_1.json)
 24. [Reviewer question intake triage board](../docs/REVIEWER_QUESTION_INTAKE_TRIAGE_BOARD_V0_1.md)
 25. [Reviewer question intake triage board JSON](../docs/reviewer_question_intake_triage_board_v0_1.json)
+26. [Reviewer question public wording decision log](../docs/REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md)
+27. [Reviewer question public wording decision log JSON](../docs/reviewer_question_public_wording_decision_log_v0_1.json)
 
 Runnable checks:
 
@@ -270,13 +281,14 @@ make benchmark_reviewer_questions
 make reviewer_question_issue_templates
 make reviewer_question_intake_examples
 make reviewer_question_intake_triage
+make reviewer_question_wording_log
 ```
 
-Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions, intake examples, and maintainer triage for policy wording and source support, and one runnable SourceCheckup path for local review.
+Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions, intake examples, maintainer triage, and wording decisions for policy wording and source support, and one runnable SourceCheckup path for local review.
 
-Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, issue template intake fields, intake examples, and maintainer triage without scoring or compatibility claims.
+Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, issue template intake fields, intake examples, maintainer triage, and wording decisions without scoring or compatibility claims.
 
-Next build: add a public wording decision log for reviewer question intake triage without scoring or compatibility claims.
+Next build: add a release gate checklist for reviewer question public wording decisions without scoring or compatibility claims.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 
