@@ -8,24 +8,25 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "docs" / "reviewer_question_maintainer_release_candidate_summary_v0_1.json"
-MARKDOWN = ROOT / "docs" / "REVIEWER_QUESTION_MAINTAINER_RELEASE_CANDIDATE_SUMMARY_V0_1.md"
+SOURCE = ROOT / "docs" / "reviewer_question_maintainer_public_preview_decision_log_v0_1.json"
+MARKDOWN = ROOT / "docs" / "REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_DECISION_LOG_V0_1.md"
 
-REQUIRED_SUMMARY_IDS = {"RQMC001", "RQMC002", "RQMC003", "RQMC004", "RQMC005"}
-REQUIRED_SOURCE_TRAIL_IDS = {"RQMT001", "RQMT002", "RQMT003", "RQMT004", "RQMT005"}
+REQUIRED_DECISION_IDS = {"RQMP001", "RQMP002", "RQMP003", "RQMP004", "RQMP005"}
+REQUIRED_SOURCE_SUMMARY_IDS = {"RQMC001", "RQMC002", "RQMC003", "RQMC004", "RQMC005"}
 REQUIRED_FILES = [
+    "docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_DECISION_LOG_V0_1.md",
+    "docs/reviewer_question_maintainer_public_preview_decision_log_v0_1.json",
     "docs/REVIEWER_QUESTION_MAINTAINER_RELEASE_CANDIDATE_SUMMARY_V0_1.md",
     "docs/reviewer_question_maintainer_release_candidate_summary_v0_1.json",
-    "docs/REVIEWER_QUESTION_MAINTAINER_AUDIT_TRAIL_PACKET_V0_1.md",
-    "docs/reviewer_question_maintainer_audit_trail_packet_v0_1.json",
     "docs/BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md",
     "docs/REVIEWER_QUESTION_PUBLIC_WORDING_DECISION_LOG_V0_1.md",
     "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
     "Makefile",
 ]
 REQUIRED_PHRASES = [
-    "Reviewer question maintainer release candidate summary v0.1",
-    "Candidate summary rows: 5",
+    "Reviewer question maintainer public preview decision log v0.1",
+    "Decision rows: 5",
+    "Candidate summary rows represented: 5",
     "Audit trail rows represented: 5",
     "Evidence rows represented: 5",
     "Readiness rows represented: 5",
@@ -34,16 +35,16 @@ REQUIRED_PHRASES = [
     "Contributor digest rows represented: 5",
     "Release index surface rows represented: 9",
     "Issue history rows represented: 11",
-    "Previous public issue represented: 60",
+    "Previous public issue represented: 61",
     "current public preview route only",
-    "public_preview_candidate_only",
-    "Synthetic boundary candidate",
-    "Reviewer question lane candidate",
-    "Public wording candidate",
-    "Release surface candidate",
-    "Validation candidate",
-    "public_preview_release_candidate_summary",
-    "current_preview_candidate",
+    "allow_public_preview_only",
+    "Synthetic boundary decision",
+    "Reviewer question lane decision",
+    "Public wording decision",
+    "Release surface decision",
+    "Validation decision",
+    "allowed_for_public_preview_only",
+    "current_preview_decision",
     "synthetic only and not for clinical use",
     "not clinical advice",
     "not patient data",
@@ -56,7 +57,7 @@ REQUIRED_PHRASES = [
     "not a model ranking",
     "not an endpoint result",
     "not an official endorsement",
-    "make reviewer_question_maintainer_release_candidate_summary",
+    "make reviewer_question_maintainer_public_preview_decision_log",
     "Add a reviewer question maintainer public preview handoff summary without scoring",
 ]
 FORBIDDEN_PHRASES = [
@@ -86,8 +87,10 @@ def main() -> int:
     if not isinstance(rows, list):
         errors.append("rows must be a list")
         rows = []
-    if data.get("candidate_summary_row_count") != 5:
-        errors.append("candidate_summary_row_count must be 5")
+    if data.get("decision_row_count") != 5:
+        errors.append("decision_row_count must be 5")
+    if data.get("candidate_summary_rows_represented") != 5:
+        errors.append("candidate_summary_rows_represented must be 5")
     if data.get("audit_trail_rows_represented") != 5:
         errors.append("audit_trail_rows_represented must be 5")
     if data.get("evidence_rows_represented") != 5:
@@ -104,14 +107,14 @@ def main() -> int:
         errors.append("release_index_surface_rows_represented must be 9")
     if data.get("issue_history_rows_represented") != 11:
         errors.append("issue_history_rows_represented must be 11")
-    if data.get("previous_public_issue_number") != 60:
-        errors.append("previous_public_issue_number must be 60")
-    if data.get("release_candidate_decision") != "public_preview_candidate_only":
-        errors.append("release_candidate_decision must be public_preview_candidate_only")
+    if data.get("previous_public_issue_number") != 61:
+        errors.append("previous_public_issue_number must be 61")
+    if data.get("public_preview_decision") != "allow_public_preview_only":
+        errors.append("public_preview_decision must be allow_public_preview_only")
     if data.get("maintainer_review_scope") != "current public preview route only":
         errors.append("maintainer_review_scope must be current public preview route only")
     if len(rows) != 5:
-        errors.append(f"Expected 5 candidate summary rows, found {len(rows)}")
+        errors.append(f"Expected 5 decision rows, found {len(rows)}")
 
     for field in [
         "contains_patient_data",
@@ -131,22 +134,22 @@ def main() -> int:
         if data.get(field) is not expected:
             errors.append(f"{field} must be {expected}")
 
-    summary_ids = {str(row.get("summary_id")) for row in rows}
-    if summary_ids != REQUIRED_SUMMARY_IDS:
-        errors.append("summary id set must match required ids")
-    source_trail_ids = {str(row.get("source_trail_id")) for row in rows}
-    if source_trail_ids != REQUIRED_SOURCE_TRAIL_IDS:
-        errors.append("source trail id set must match required ids")
-    if {str(row.get("candidate_status")) for row in rows} != {"public_preview_release_candidate_summary"}:
-        errors.append("all candidate statuses must be public_preview_release_candidate_summary")
-    if {str(row.get("candidate_state")) for row in rows} != {"current_preview_candidate"}:
-        errors.append("all candidate states must be current_preview_candidate")
+    decision_ids = {str(row.get("decision_id")) for row in rows}
+    if decision_ids != REQUIRED_DECISION_IDS:
+        errors.append("decision id set must match required ids")
+    source_summary_ids = {str(row.get("source_summary_id")) for row in rows}
+    if source_summary_ids != REQUIRED_SOURCE_SUMMARY_IDS:
+        errors.append("source summary id set must match required ids")
+    if {str(row.get("decision_status")) for row in rows} != {"allowed_for_public_preview_only"}:
+        errors.append("all decision statuses must be allowed_for_public_preview_only")
+    if {str(row.get("decision_state")) for row in rows} != {"current_preview_decision"}:
+        errors.append("all decision states must be current_preview_decision")
 
     for row in rows:
-        summary_id = str(row.get("summary_id", ""))
-        for key in ["summary_name", "source_trail_id", "candidate_surface", "maintainer_decision", "candidate_status", "candidate_state", "boundary"]:
+        decision_id = str(row.get("decision_id", ""))
+        for key in ["decision_name", "source_summary_id", "decision_surface", "public_preview_decision", "decision_status", "decision_state", "boundary"]:
             if key not in row:
-                errors.append(f"{summary_id}: missing {key}")
+                errors.append(f"{decision_id}: missing {key}")
 
     for relative_path in REQUIRED_FILES:
         if not (ROOT / relative_path).exists():
@@ -165,17 +168,17 @@ def main() -> int:
         if phrase in lower_text:
             errors.append(f"Forbidden phrase present: {phrase}")
     if "-" in text:
-        errors.append("Generated outward facing maintainer release candidate summary must not contain hyphen characters")
+        errors.append("Generated outward facing maintainer public preview decision log must not contain hyphen characters")
 
     if errors:
-        print("FAIL reviewer question maintainer release candidate summary validation")
+        print("FAIL reviewer question maintainer public preview decision log validation")
         for error in errors:
             print(f"- {error}")
         return 1
 
-    print("PASS reviewer question maintainer release candidate summary validation")
+    print("PASS reviewer question maintainer public preview decision log validation")
     print(f"markdown={MARKDOWN.relative_to(ROOT)}")
-    print(f"candidate_summary_rows={len(rows)}")
+    print(f"decision_rows={len(rows)}")
     return 0
 
 

@@ -126,4 +126,4 @@ make reviewer_question_maintainer_release_candidate_summary
 
 ## Next safe public action
 
-Add a reviewer question maintainer public preview decision log without scoring, compatibility, endpoint, patient data, clinical validation, or endorsement claims.
+Add a reviewer question maintainer public preview handoff summary without scoring, compatibility, endpoint, patient data, clinical validation, or endorsement claims.

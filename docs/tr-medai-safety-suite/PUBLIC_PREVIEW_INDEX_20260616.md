@@ -62,6 +62,7 @@ This is a public preview layer for clinician led medical AI evaluation infrastru
 52. `../REVIEWER_QUESTION_MAINTAINER_EVIDENCE_MAP_V0_1.md` gives a reviewer question maintainer evidence map without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 53. `../REVIEWER_QUESTION_MAINTAINER_AUDIT_TRAIL_PACKET_V0_1.md` gives a reviewer question maintainer audit trail packet without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 54. `../REVIEWER_QUESTION_MAINTAINER_RELEASE_CANDIDATE_SUMMARY_V0_1.md` gives a reviewer question maintainer release candidate summary without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
+55. `../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_DECISION_LOG_V0_1.md` gives a reviewer question maintainer public preview decision log without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 
 ## What This Preview Is
 
@@ -93,7 +94,7 @@ Clinician led medical AI safety evaluation infrastructure, built from synthetic 
 
 ## Next Public Build Targets
 
-1. Add a reviewer question maintainer public preview decision log without scoring or compatibility claims.
+1. Add a reviewer question maintainer public preview handoff summary without scoring or compatibility claims.
 2. Add a compact public failure mode taxonomy page.
 3. Add a public contributor path for synthetic failure cases.
 4. Add a no patient data review checklist.
