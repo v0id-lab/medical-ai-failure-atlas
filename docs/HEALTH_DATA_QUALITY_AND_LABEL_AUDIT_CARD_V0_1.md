@@ -429,6 +429,24 @@ Evidence rows: 5
 
 The evidence map lets maintainers trace each readiness row to the public evidence surface it depends on. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
 
+## Label audit maintainer audit trail packet
+
+Current maintainer audit trail packet:
+
+`docs/label_audit/LABEL_AUDIT_MAINTAINER_AUDIT_TRAIL_PACKET_V0_1.md`
+
+Machine readable maintainer audit trail source:
+
+`docs/label_audit/label_audit_maintainer_audit_trail_packet_v0_1.json`
+
+Runnable check:
+
+`make label_audit_maintainer_audit_trail_packet`
+
+Audit trail rows: 5
+
+The audit trail packet lets maintainers trace each evidence row to the public audit surface it depends on. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
+
 Run:
 
 ```bash

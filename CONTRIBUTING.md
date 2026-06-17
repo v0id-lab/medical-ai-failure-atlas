@@ -177,3 +177,11 @@ Run:
 ```bash
 make label_audit_maintainer_evidence_map
 ```
+
+The maintainer audit trail packet is available at `docs/label_audit/LABEL_AUDIT_MAINTAINER_AUDIT_TRAIL_PACKET_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_maintainer_audit_trail_packet
+```
