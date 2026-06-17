@@ -137,3 +137,11 @@ Run:
 ```bash
 make label_audit_release_index
 ```
+
+The public contributor digest is available at `docs/label_audit/LABEL_AUDIT_PUBLIC_CONTRIBUTOR_DIGEST_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_contributor_digest
+```

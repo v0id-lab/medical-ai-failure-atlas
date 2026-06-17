@@ -1,0 +1,62 @@
+{
+  "contains_patient_data": false,
+  "date": "2026 06 17",
+  "digest_decision": "ready_for_public_preview",
+  "digest_step_count": 5,
+  "issue_history_rows_represented": 10,
+  "no_clinical_deployment_claim": true,
+  "no_clinical_validation_claim": true,
+  "no_dataset_quality_proof": true,
+  "no_model_ranking": true,
+  "no_model_safety_claim": true,
+  "no_official_endorsement_claim": true,
+  "no_raw_model_output_release": true,
+  "not_for_clinical_use": true,
+  "release_index_surface_rows_represented": 9,
+  "rows": [
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "contributor_action": "start from the durable route index",
+      "digest_status": "included_in_public_contributor_digest",
+      "public_file": "docs/label_audit/LABEL_AUDIT_PUBLIC_RELEASE_INDEX_V0_1.md",
+      "step_id": "LACD001",
+      "step_name": "Read the release index"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "contributor_action": "confirm that the example is synthetic and allowed",
+      "digest_status": "included_in_public_contributor_digest",
+      "public_file": "docs/label_audit/PUBLIC_LABEL_AUDIT_CONTRIBUTOR_ISSUE_V0_1.md",
+      "step_id": "LACD002",
+      "step_name": "Check the contributor route"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "contributor_action": "match the proposed row to an existing intake pattern",
+      "digest_status": "included_in_public_contributor_digest",
+      "public_file": "docs/label_audit/LABEL_AUDIT_EXAMPLE_INTAKE_V0_1.md",
+      "step_id": "LACD003",
+      "step_name": "Compare example intake rows"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "contributor_action": "avoid dataset quality proof and clinical validation wording",
+      "digest_status": "included_in_public_contributor_digest",
+      "public_file": "docs/label_audit/LABEL_AUDIT_PUBLIC_WORDING_DECISION_LOG_V0_1.md",
+      "step_id": "LACD004",
+      "step_name": "Review blocked wording"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "contributor_action": "run make label_audit_release_index before opening or updating an issue",
+      "digest_status": "included_in_public_contributor_digest",
+      "public_file": "Makefile",
+      "step_id": "LACD005",
+      "step_name": "Run the release index check"
+    }
+  ],
+  "source": "docs/label_audit/label_audit_public_release_index_v0_1.json",
+  "status": "public_preview",
+  "synthetic_examples_only": true,
+  "version": "label_audit_public_contributor_digest_v0_1"
+}

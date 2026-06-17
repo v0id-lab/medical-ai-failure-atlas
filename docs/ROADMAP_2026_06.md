@@ -64,6 +64,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 32. Label audit release note packet v0.1.
 33. Label audit public changelog v0.1.
 34. Label audit public release index v0.1.
+35. Label audit public contributor digest v0.1.
 
 ## External visibility sequence
 
@@ -88,6 +89,6 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Add a label audit public contributor digest after maintainer review.
+1. Add label audit maintainer handoff notes after maintainer review.
 2. Prepare external maintainer issue drafts only after exact owner clearance.
 3. Add model run plan files only after endpoint terms and cost are explicitly cleared.

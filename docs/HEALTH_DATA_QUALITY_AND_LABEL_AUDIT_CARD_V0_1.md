@@ -337,6 +337,26 @@ Run:
 make label_audit_release_index
 ```
 
+## Label audit public contributor digest
+
+Current public contributor digest:
+
+`docs/label_audit/LABEL_AUDIT_PUBLIC_CONTRIBUTOR_DIGEST_V0_1.md`
+
+Machine readable contributor digest source:
+
+`docs/label_audit/label_audit_public_contributor_digest_v0_1.json`
+
+Digest step rows: 5.
+
+The digest gives contributors a short orientation path before opening or updating a synthetic label audit issue. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
+
+Run:
+
+```bash
+make label_audit_contributor_digest
+```
+
 ## Maintenance owner
 
 Maintainer: Dr. Goktug Ozkan, Internal Medicine Specialist.

@@ -40,7 +40,8 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 28. 8 label audit public changelog rows.
 29. 9 label audit public release index surface rows.
 30. 10 label audit issue history rows.
-31. 3 red flag source locator contributor examples.
+31. 5 label audit public contributor digest rows.
+32. 3 red flag source locator contributor examples.
 
 ## Top public entry files
 
@@ -249,13 +250,15 @@ Public files:
 20. [Label audit public changelog JSON](label_audit/label_audit_public_changelog_v0_1.json)
 21. [Label audit public release index](label_audit/LABEL_AUDIT_PUBLIC_RELEASE_INDEX_V0_1.md)
 22. [Label audit public release index JSON](label_audit/label_audit_public_release_index_v0_1.json)
-23. [Label audit GitHub issue template](../.github/ISSUE_TEMPLATE/label_audit_review.yml)
-24. [Dataset evaluation card draft](../DATASET_EVALUATION_CARD_V0_1_DRAFT.md)
-25. [Data dictionary](../DATA_DICTIONARY.md)
-26. [Pilot inter rater review rows](../data/inter_rater_review_subset_v0_1.tsv)
-27. [Labeling workflow](../LABELING.md)
-28. [Label definition lock](LABEL_DEFINITION_LOCK_V0_1.md)
-29. [Labeling package index](LABELING_PACKAGE_INDEX_V0_1.md)
+23. [Label audit public contributor digest](label_audit/LABEL_AUDIT_PUBLIC_CONTRIBUTOR_DIGEST_V0_1.md)
+24. [Label audit public contributor digest JSON](label_audit/label_audit_public_contributor_digest_v0_1.json)
+25. [Label audit GitHub issue template](../.github/ISSUE_TEMPLATE/label_audit_review.yml)
+26. [Dataset evaluation card draft](../DATASET_EVALUATION_CARD_V0_1_DRAFT.md)
+27. [Data dictionary](../DATA_DICTIONARY.md)
+28. [Pilot inter rater review rows](../data/inter_rater_review_subset_v0_1.tsv)
+29. [Labeling workflow](../LABELING.md)
+30. [Label definition lock](LABEL_DEFINITION_LOCK_V0_1.md)
+31. [Labeling package index](LABELING_PACKAGE_INDEX_V0_1.md)
 
 Runnable checks:
 
@@ -272,18 +275,19 @@ make label_audit_outcome_dashboard
 make label_audit_release_packet
 make label_audit_changelog
 make label_audit_release_index
+make label_audit_contributor_digest
 ```
 
 Track A value: data quality and label audit surface for Turkish health AI readiness discussions without patient data use.
 
 Track B value: reusable public checklist for synthetic medical AI dataset release readiness.
 
-Next build: add a label audit public contributor digest after maintainer review.
+Next build: add label audit maintainer handoff notes after maintainer review.
 
 ## Public build order
 
 1. Keep dashboard links and validators green.
-2. Add a label audit public contributor digest after maintainer wording review.
+2. Add label audit maintainer handoff notes after maintainer wording review.
 3. Add lab target packets only after exact target review.
 
 ## Visibility rule
