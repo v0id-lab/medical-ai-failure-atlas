@@ -1,0 +1,77 @@
+{
+  "block_state_count": 0,
+  "contains_patient_data": false,
+  "date": "2026 06 17",
+  "no_clinical_deployment_claim": true,
+  "no_clinical_validation_claim": true,
+  "no_dataset_quality_proof": true,
+  "no_model_ranking": true,
+  "no_model_safety_claim": true,
+  "no_official_endorsement_claim": true,
+  "no_raw_model_output_release": true,
+  "not_for_clinical_use": true,
+  "outcome_row_count": 5,
+  "pass_state_count": 5,
+  "release_decision_count": 1,
+  "rows": [
+    {
+      "blocked_wording": "covers real care records",
+      "current_state": "pass",
+      "evidence_surface": "Health data quality card",
+      "gate_name": "Synthetic provenance gate",
+      "next_action": "keep public preview wording",
+      "outcome_id": "LAGO001",
+      "release_decision": "allowed_for_public_preview",
+      "release_gate_id": "LARG001",
+      "required_public_wording": "synthetic example only"
+    },
+    {
+      "blocked_wording": "clinically validated labels",
+      "current_state": "pass",
+      "evidence_surface": "Label definition lock",
+      "gate_name": "Label definition review gate",
+      "next_action": "keep public preview wording",
+      "outcome_id": "LAGO002",
+      "release_decision": "allowed_for_public_preview",
+      "release_gate_id": "LARG002",
+      "required_public_wording": "pending clinician review"
+    },
+    {
+      "blocked_wording": "representative of deployment performance",
+      "current_state": "pass",
+      "evidence_surface": "Platform dashboard",
+      "gate_name": "Pilot subset scope gate",
+      "next_action": "keep public preview wording",
+      "outcome_id": "LAGO003",
+      "release_decision": "allowed_for_public_preview",
+      "release_gate_id": "LARG003",
+      "required_public_wording": "protocol testing only"
+    },
+    {
+      "blocked_wording": "raw outputs are available in public",
+      "current_state": "pass",
+      "evidence_surface": "Public release boundary",
+      "gate_name": "Raw output release gate",
+      "next_action": "keep public preview wording",
+      "outcome_id": "LAGO004",
+      "release_decision": "allowed_for_public_preview",
+      "release_gate_id": "LARG004",
+      "required_public_wording": "raw outputs are withheld"
+    },
+    {
+      "blocked_wording": "proves dataset quality",
+      "current_state": "pass",
+      "evidence_surface": "Release note",
+      "gate_name": "Dataset quality proof gate",
+      "next_action": "keep public preview wording",
+      "outcome_id": "LAGO005",
+      "release_decision": "allowed_for_public_preview",
+      "release_gate_id": "LARG005",
+      "required_public_wording": "dataset quality is not proven"
+    }
+  ],
+  "source": "docs/label_audit/label_audit_release_gate_checklist_v0_1.json",
+  "status": "public_preview",
+  "synthetic_examples_only": true,
+  "version": "label_audit_release_gate_outcome_dashboard_v0_1"
+}

@@ -105,3 +105,11 @@ Run:
 ```bash
 make label_audit_release_gates
 ```
+
+The release gate outcome dashboard is available at `docs/label_audit/LABEL_AUDIT_RELEASE_GATE_OUTCOME_DASHBOARD_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_outcome_dashboard
+```

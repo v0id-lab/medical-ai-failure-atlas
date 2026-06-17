@@ -255,6 +255,26 @@ Run:
 make label_audit_release_gates
 ```
 
+## Label audit release gate outcome dashboard
+
+Current release gate outcome dashboard:
+
+`docs/label_audit/LABEL_AUDIT_RELEASE_GATE_OUTCOME_DASHBOARD_V0_1.md`
+
+Machine readable outcome source:
+
+`docs/label_audit/label_audit_release_gate_outcome_dashboard_v0_1.json`
+
+Outcome rows: 5.
+
+The dashboard summarizes pass and block outcomes across label audit release gate rows. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
+
+Run:
+
+```bash
+make label_audit_outcome_dashboard
+```
+
 ## Maintenance owner
 
 Maintainer: Dr. Goktug Ozkan, Internal Medicine Specialist.
