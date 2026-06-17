@@ -153,3 +153,11 @@ Run:
 ```bash
 make label_audit_maintainer_handoff
 ```
+
+The maintainer closeout digest is available at `docs/label_audit/LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_maintainer_closeout_digest
+```

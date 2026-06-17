@@ -42,7 +42,8 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 30. 10 label audit issue history rows.
 31. 5 label audit public contributor digest rows.
 32. 5 label audit maintainer handoff rows.
-33. 3 red flag source locator contributor examples.
+33. 5 label audit maintainer closeout digest rows.
+34. 3 red flag source locator contributor examples.
 
 ## Top public entry files
 
@@ -255,13 +256,15 @@ Public files:
 24. [Label audit public contributor digest JSON](label_audit/label_audit_public_contributor_digest_v0_1.json)
 25. [Label audit maintainer handoff notes](label_audit/LABEL_AUDIT_MAINTAINER_HANDOFF_NOTES_V0_1.md)
 26. [Label audit maintainer handoff JSON](label_audit/label_audit_maintainer_handoff_notes_v0_1.json)
-27. [Label audit GitHub issue template](../.github/ISSUE_TEMPLATE/label_audit_review.yml)
-28. [Dataset evaluation card draft](../DATASET_EVALUATION_CARD_V0_1_DRAFT.md)
-29. [Data dictionary](../DATA_DICTIONARY.md)
-30. [Pilot inter rater review rows](../data/inter_rater_review_subset_v0_1.tsv)
-31. [Labeling workflow](../LABELING.md)
-32. [Label definition lock](LABEL_DEFINITION_LOCK_V0_1.md)
-33. [Labeling package index](LABELING_PACKAGE_INDEX_V0_1.md)
+27. [Label audit maintainer closeout digest](label_audit/LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md)
+28. [Label audit maintainer closeout JSON](label_audit/label_audit_maintainer_closeout_digest_v0_1.json)
+29. [Label audit GitHub issue template](../.github/ISSUE_TEMPLATE/label_audit_review.yml)
+30. [Dataset evaluation card draft](../DATASET_EVALUATION_CARD_V0_1_DRAFT.md)
+31. [Data dictionary](../DATA_DICTIONARY.md)
+32. [Pilot inter rater review rows](../data/inter_rater_review_subset_v0_1.tsv)
+33. [Labeling workflow](../LABELING.md)
+34. [Label definition lock](LABEL_DEFINITION_LOCK_V0_1.md)
+35. [Labeling package index](LABELING_PACKAGE_INDEX_V0_1.md)
 
 Runnable checks:
 
@@ -280,18 +283,19 @@ make label_audit_changelog
 make label_audit_release_index
 make label_audit_contributor_digest
 make label_audit_maintainer_handoff
+make label_audit_maintainer_closeout_digest
 ```
 
 Track A value: data quality and label audit surface for Turkish health AI readiness discussions without patient data use.
 
 Track B value: reusable public checklist for synthetic medical AI dataset release readiness.
 
-Next build: add label audit maintainer closeout digest after maintainer review.
+Next build: add label audit maintainer release readiness digest after closeout review.
 
 ## Public build order
 
 1. Keep dashboard links and validators green.
-2. Add label audit maintainer closeout digest after maintainer wording review.
+2. Add label audit maintainer release readiness digest after closeout review.
 3. Add lab target packets only after exact target review.
 
 ## Visibility rule

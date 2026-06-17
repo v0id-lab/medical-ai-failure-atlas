@@ -377,6 +377,26 @@ Run:
 make label_audit_maintainer_handoff
 ```
 
+## Label audit maintainer closeout digest
+
+Current maintainer closeout digest:
+
+`docs/label_audit/LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md`
+
+Machine readable maintainer closeout source:
+
+`docs/label_audit/label_audit_maintainer_closeout_digest_v0_1.json`
+
+Closeout rows: 5.
+
+The closeout digest gives maintainers a compact closeout trail for synthetic label audit public preview updates after handoff review. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
+
+Run:
+
+```bash
+make label_audit_maintainer_closeout_digest
+```
+
 ## Maintenance owner
 
 Maintainer: Dr. Goktug Ozkan, Internal Medicine Specialist.

@@ -50,6 +50,7 @@ REQUIRED_PHRASES = [
     "10 label audit issue history rows",
     "5 label audit public contributor digest rows",
     "5 label audit maintainer handoff rows",
+    "5 label audit maintainer closeout digest rows",
     "3 red flag source locator contributor examples",
     "not clinical advice",
     "not patient data",
@@ -90,6 +91,7 @@ REQUIRED_PHRASES = [
     "make label_audit_release_index",
     "make label_audit_contributor_digest",
     "make label_audit_maintainer_handoff",
+    "make label_audit_maintainer_closeout_digest",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -159,6 +161,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/label_audit/label_audit_public_contributor_digest_v0_1.json",
     "docs/label_audit/LABEL_AUDIT_MAINTAINER_HANDOFF_NOTES_V0_1.md",
     "docs/label_audit/label_audit_maintainer_handoff_notes_v0_1.json",
+    "docs/label_audit/LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md",
+    "docs/label_audit/label_audit_maintainer_closeout_digest_v0_1.json",
     ".github/ISSUE_TEMPLATE/label_audit_review.yml",
     "DATASET_EVALUATION_CARD_V0_1_DRAFT.md",
     "DATA_DICTIONARY.md",
