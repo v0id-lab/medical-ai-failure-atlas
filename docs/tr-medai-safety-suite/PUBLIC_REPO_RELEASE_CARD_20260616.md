@@ -36,6 +36,7 @@ This preview adds twenty six concrete build surfaces:
 24. Label audit maintainer handoff notes.
 25. Label audit maintainer closeout digest.
 26. Label audit maintainer release readiness digest.
+27. Label audit maintainer evidence map.
 
 ## What This Is
 
@@ -95,7 +96,8 @@ It focuses on source support, synthetic case review, failure modes, clinician li
 24. [Label audit maintainer handoff notes](../label_audit/LABEL_AUDIT_MAINTAINER_HANDOFF_NOTES_V0_1.md)
 25. [Label audit maintainer closeout digest](../label_audit/LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md)
 26. [Label audit maintainer release readiness digest](../label_audit/LABEL_AUDIT_MAINTAINER_RELEASE_READINESS_DIGEST_V0_1.md)
+27. [Label audit maintainer evidence map](../label_audit/LABEL_AUDIT_MAINTAINER_EVIDENCE_MAP_V0_1.md)
 
 ## Next Public Build
 
-The next useful public build is label audit maintainer evidence map after readiness review.
+The next useful public build is label audit maintainer audit trail packet after evidence map review.

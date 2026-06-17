@@ -169,3 +169,11 @@ Run:
 ```bash
 make label_audit_maintainer_release_readiness_digest
 ```
+
+The maintainer evidence map is available at `docs/label_audit/LABEL_AUDIT_MAINTAINER_EVIDENCE_MAP_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_maintainer_evidence_map
+```

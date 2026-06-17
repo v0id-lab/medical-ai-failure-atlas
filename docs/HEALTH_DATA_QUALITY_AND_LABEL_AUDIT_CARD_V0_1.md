@@ -411,6 +411,24 @@ Readiness rows: 5.
 
 The release readiness digest gives maintainers a compact public preview readiness trail after label audit closeout review. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
 
+## Label audit maintainer evidence map
+
+Current maintainer evidence map:
+
+`docs/label_audit/LABEL_AUDIT_MAINTAINER_EVIDENCE_MAP_V0_1.md`
+
+Machine readable maintainer evidence source:
+
+`docs/label_audit/label_audit_maintainer_evidence_map_v0_1.json`
+
+Runnable check:
+
+`make label_audit_maintainer_evidence_map`
+
+Evidence rows: 5
+
+The evidence map lets maintainers trace each readiness row to the public evidence surface it depends on. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
+
 Run:
 
 ```bash
