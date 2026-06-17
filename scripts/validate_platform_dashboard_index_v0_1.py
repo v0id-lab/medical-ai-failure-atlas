@@ -81,6 +81,7 @@ REQUIRED_PHRASES = [
     "5 reviewer question maintainer release readiness digest rows",
     "5 reviewer question maintainer evidence map rows",
     "5 reviewer question maintainer audit trail packet rows",
+    "5 reviewer question maintainer release candidate summary rows",
     "not clinical advice",
     "not patient data",
     "not clinical deployment",
@@ -121,6 +122,7 @@ REQUIRED_PHRASES = [
     "make reviewer_question_maintainer_release_readiness_digest",
     "make reviewer_question_maintainer_evidence_map",
     "make reviewer_question_maintainer_audit_trail_packet",
+    "make reviewer_question_maintainer_release_candidate_summary",
     "make sourcecheckup_public_issue",
     "make sourcecheckup_expansion_dashboard",
     "make clinician_literacy_map",
@@ -177,7 +179,8 @@ REQUIRED_PHRASES = [
     "Reviewer question maintainer release readiness digest",
     "Reviewer question maintainer evidence map",
     "Reviewer question maintainer audit trail packet",
-    "Add a reviewer question maintainer release candidate summary without scoring or compatibility claims",
+    "Reviewer question maintainer release candidate summary",
+    "Add a reviewer question maintainer public preview decision log without scoring or compatibility claims",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -221,6 +224,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/reviewer_question_maintainer_evidence_map_v0_1.json",
     "docs/REVIEWER_QUESTION_MAINTAINER_AUDIT_TRAIL_PACKET_V0_1.md",
     "docs/reviewer_question_maintainer_audit_trail_packet_v0_1.json",
+    "docs/REVIEWER_QUESTION_MAINTAINER_RELEASE_CANDIDATE_SUMMARY_V0_1.md",
+    "docs/reviewer_question_maintainer_release_candidate_summary_v0_1.json",
     "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
     "docs/ROADMAP_2026_06.md",
     "tr_medllm_safetybench/README.md",

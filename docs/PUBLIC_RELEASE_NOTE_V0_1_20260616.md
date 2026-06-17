@@ -76,6 +76,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 64. Reviewer question maintainer release readiness digest v0.1.
 65. Reviewer question maintainer evidence map v0.1.
 66. Reviewer question maintainer audit trail packet v0.1.
+67. Reviewer question maintainer release candidate summary v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -147,6 +148,7 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 64. 5 reviewer question maintainer release readiness digest rows.
 65. 5 reviewer question maintainer evidence map rows.
 66. 5 reviewer question maintainer audit trail packet rows.
+67. 5 reviewer question maintainer release candidate summary rows.
 
 ## Reproducible checks
 
@@ -348,11 +350,12 @@ For global open source medical AI evaluation, this public preview gives:
 61. Reviewer question maintainer release readiness digest for public preview readiness without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 62. Reviewer question maintainer evidence map for public preview evidence tracing without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 63. Reviewer question maintainer audit trail packet for public preview audit tracing without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
+64. Reviewer question maintainer release candidate summary for public preview candidate review without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Add a reviewer question maintainer release candidate summary without scoring or compatibility claims.
+1. Add a reviewer question maintainer public preview decision log without scoring or compatibility claims.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

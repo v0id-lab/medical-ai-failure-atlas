@@ -77,6 +77,7 @@ They remain issue template intake fields without scoring or compatibility claims
 61. 5 reviewer question maintainer release readiness digest rows.
 62. 5 reviewer question maintainer evidence map rows.
 63. 5 reviewer question maintainer audit trail packet rows.
+64. 5 reviewer question maintainer release candidate summary rows.
 
 ## Top public entry files
 
@@ -122,6 +123,8 @@ They remain issue template intake fields without scoring or compatibility claims
 40. [Reviewer question maintainer evidence map JSON](reviewer_question_maintainer_evidence_map_v0_1.json)
 41. [Reviewer question maintainer audit trail packet](REVIEWER_QUESTION_MAINTAINER_AUDIT_TRAIL_PACKET_V0_1.md)
 42. [Reviewer question maintainer audit trail packet JSON](reviewer_question_maintainer_audit_trail_packet_v0_1.json)
+43. [Reviewer question maintainer release candidate summary](REVIEWER_QUESTION_MAINTAINER_RELEASE_CANDIDATE_SUMMARY_V0_1.md)
+44. [Reviewer question maintainer release candidate summary JSON](reviewer_question_maintainer_release_candidate_summary_v0_1.json)
 
 ## Platform map
 
@@ -183,17 +186,18 @@ make reviewer_question_maintainer_closeout_digest
 make reviewer_question_maintainer_release_readiness_digest
 make reviewer_question_maintainer_evidence_map
 make reviewer_question_maintainer_audit_trail_packet
+make reviewer_question_maintainer_release_candidate_summary
 make bilge_readiness_queue
 make tubitak_1711_readiness_packet
 make taxonomy_dashboard
 make clinician_review_queue
 ```
 
-Track A value: Turkish clinician led evaluation material for national health AI safety, clinician literacy, assurance review, benchmark style reviewer questions, intake examples, maintainer triage, public wording decisions, release gates, gate outcome review, release packet review, changelog review, release index review, contributor digest review, maintainer handoff review, maintainer closeout review, release readiness review, evidence map review, and audit trail review for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility, BİLGE readiness with no access claim, no score claim, and no endorsement claim, and TÜBİTAK 1711 collaboration readiness with no submission claim.
+Track A value: Turkish clinician led evaluation material for national health AI safety, clinician literacy, assurance review, benchmark style reviewer questions, intake examples, maintainer triage, public wording decisions, release gates, gate outcome review, release packet review, changelog review, release index review, contributor digest review, maintainer handoff review, maintainer closeout review, release readiness review, evidence map review, audit trail review, and release candidate review for source support, escalation, medication safety, missing context, policy wording, and warning sign visibility, BİLGE readiness with no access claim, no score claim, and no endorsement claim, and TÜBİTAK 1711 collaboration readiness with no submission claim.
 
-Track B value: reusable multilingual safety benchmark seed, public reviewer questions, intake examples, maintainer triage, wording decisions, release gates, gate outcome dashboard, release packet, public changelog, public release index, contributor digest, maintainer handoff notes, maintainer closeout digest, maintainer release readiness digest, maintainer evidence map, and maintainer audit trail packet without scoring or compatibility claims, no access readiness queue pattern, and collaboration readiness packet pattern for global medical AI evaluation without model ranking claims.
+Track B value: reusable multilingual safety benchmark seed, public reviewer questions, intake examples, maintainer triage, wording decisions, release gates, gate outcome dashboard, release packet, public changelog, public release index, contributor digest, maintainer handoff notes, maintainer closeout digest, maintainer release readiness digest, maintainer evidence map, maintainer audit trail packet, and maintainer release candidate summary without scoring or compatibility claims, no access readiness queue pattern, and collaboration readiness packet pattern for global medical AI evaluation without model ranking claims.
 
-Next build: add a reviewer question maintainer release candidate summary without scoring or compatibility claims.
+Next build: add a reviewer question maintainer public preview decision log without scoring or compatibility claims.
 
 ### 2. Medical AI Failure Atlas Global
 
@@ -249,13 +253,14 @@ make reviewer_question_maintainer_closeout_digest
 make reviewer_question_maintainer_release_readiness_digest
 make reviewer_question_maintainer_evidence_map
 make reviewer_question_maintainer_audit_trail_packet
+make reviewer_question_maintainer_release_candidate_summary
 ```
 
 Track A value: source material for Turkish health AI risk education and assurance gates, including benchmark style reviewer questions for escalation, medication safety, missing context, and warning sign visibility.
 
-Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions, issue template intake fields, intake examples, maintainer triage, public wording decisions, release gates, gate outcome rows, a release packet, public changelog, public release index, contributor digest, maintainer handoff notes, maintainer closeout digest, maintainer release readiness digest, maintainer evidence map, and maintainer audit trail packet that do not add scores or compatibility claims.
+Track B value: global public taxonomy for medical AI failure pattern review and contributor discussion with reviewer questions, issue template intake fields, intake examples, maintainer triage, public wording decisions, release gates, gate outcome rows, a release packet, public changelog, public release index, contributor digest, maintainer handoff notes, maintainer closeout digest, maintainer release readiness digest, maintainer evidence map, maintainer audit trail packet, and maintainer release candidate summary that do not add scores or compatibility claims.
 
-Next build: add a reviewer question maintainer release candidate summary without scoring or compatibility claims.
+Next build: add a reviewer question maintainer public preview decision log without scoring or compatibility claims.
 
 ### 3. Turkish Clinical AI Assurance Lab
 
@@ -379,13 +384,14 @@ make reviewer_question_maintainer_closeout_digest
 make reviewer_question_maintainer_release_readiness_digest
 make reviewer_question_maintainer_evidence_map
 make reviewer_question_maintainer_audit_trail_packet
+make reviewer_question_maintainer_release_candidate_summary
 ```
 
-Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions, intake examples, maintainer triage, wording decisions, release gates, outcome rows, release packet rows, changelog rows, release index rows, contributor digest rows, maintainer handoff rows, maintainer closeout rows, release readiness rows, evidence map rows, and audit trail packet rows for policy wording and source support, and one runnable SourceCheckup path for local review.
+Track A value: public source support discipline for Turkish medical LLM review examples, clinician AI literacy, Turkish institutional wording without endorsement or route access claims, benchmark style reviewer questions, intake examples, maintainer triage, wording decisions, release gates, outcome rows, release packet rows, changelog rows, release index rows, contributor digest rows, maintainer handoff rows, maintainer closeout rows, release readiness rows, evidence map rows, audit trail packet rows, and release candidate rows for policy wording and source support, and one runnable SourceCheckup path for local review.
 
-Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, issue template intake fields, intake examples, maintainer triage, wording decisions, release gates, outcome dashboards, release packets, public changelogs, public release indexes, contributor digests, maintainer handoff notes, maintainer closeout digests, release readiness digests, evidence maps, and audit trail packets without scoring or compatibility claims.
+Track B value: open source source quality infrastructure that can grow into source review examples, queues, contributor workflows, public institutional wording gates, contributor onboarding, benchmark style reviewer questions, issue template intake fields, intake examples, maintainer triage, wording decisions, release gates, outcome dashboards, release packets, public changelogs, public release indexes, contributor digests, maintainer handoff notes, maintainer closeout digests, release readiness digests, evidence maps, audit trail packets, and release candidate summaries without scoring or compatibility claims.
 
-Next build: add a reviewer question maintainer release candidate summary without scoring or compatibility claims.
+Next build: add a reviewer question maintainer public preview decision log without scoring or compatibility claims.
 
 ### 5. Clinician AI Literacy Academy Turkiye
 
