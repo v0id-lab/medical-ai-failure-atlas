@@ -1,0 +1,127 @@
+{
+  "audit_trail_rows_represented": 5,
+  "candidate_summary_rows_represented": 5,
+  "closeout_rows_represented": 5,
+  "closure_row_count": 5,
+  "contains_patient_data": false,
+  "contributor_digest_rows_represented": 5,
+  "date": "2026 06 17",
+  "decision_rows_represented": 5,
+  "evidence_rows_represented": 5,
+  "handoff_rows_represented": 5,
+  "maintainer_review_scope": "current public preview route only",
+  "no_clinical_deployment_claim": true,
+  "no_clinical_validation_claim": true,
+  "no_dataset_quality_proof": true,
+  "no_model_ranking": true,
+  "no_model_safety_claim": true,
+  "no_official_endorsement_claim": true,
+  "no_raw_model_output_release": true,
+  "no_sandbox_access_claim": true,
+  "not_for_clinical_use": true,
+  "previous_public_issue_number": 38,
+  "public_preview_closure": "ready_to_close_public_preview_item",
+  "readiness_rows_represented": 5,
+  "release_index_surface_rows_represented": 9,
+  "rows": [
+    {
+      "blocked_claims": [
+        "dataset quality proof",
+        "clinical readiness",
+        "clinical validation",
+        "clinical deployment",
+        "model safety proof",
+        "model ranking",
+        "official endorsement",
+        "sandbox access"
+      ],
+      "closure_boundary": "synthetic only and not for clinical use",
+      "closure_check": "confirm public preview text says synthetic only and not for clinical use",
+      "closure_decision": "close public preview checklist item only",
+      "closure_id": "LAPC001",
+      "closure_name": "Synthetic boundary closure",
+      "closure_state": "ready_to_close_public_preview_item",
+      "source_handoff_id": "LAPH001"
+    },
+    {
+      "blocked_claims": [
+        "dataset quality proof",
+        "clinical readiness",
+        "clinical validation",
+        "clinical deployment",
+        "model safety proof",
+        "model ranking",
+        "official endorsement",
+        "sandbox access"
+      ],
+      "closure_boundary": "synthetic only and not for clinical use",
+      "closure_check": "confirm intake examples do not imply dataset quality proof",
+      "closure_decision": "close public preview checklist item only",
+      "closure_id": "LAPC002",
+      "closure_name": "Intake pattern closure",
+      "closure_state": "ready_to_close_public_preview_item",
+      "source_handoff_id": "LAPH002"
+    },
+    {
+      "blocked_claims": [
+        "dataset quality proof",
+        "clinical readiness",
+        "clinical validation",
+        "clinical deployment",
+        "model safety proof",
+        "model ranking",
+        "official endorsement",
+        "sandbox access"
+      ],
+      "closure_boundary": "synthetic only and not for clinical use",
+      "closure_check": "confirm public wording blocks clinical validation and model safety claims",
+      "closure_decision": "close public preview checklist item only",
+      "closure_id": "LAPC003",
+      "closure_name": "Public wording closure",
+      "closure_state": "ready_to_close_public_preview_item",
+      "source_handoff_id": "LAPH003"
+    },
+    {
+      "blocked_claims": [
+        "dataset quality proof",
+        "clinical readiness",
+        "clinical validation",
+        "clinical deployment",
+        "model safety proof",
+        "model ranking",
+        "official endorsement",
+        "sandbox access"
+      ],
+      "closure_boundary": "synthetic only and not for clinical use",
+      "closure_check": "confirm release surfaces do not imply official endorsement or sandbox access",
+      "closure_decision": "close public preview checklist item only",
+      "closure_id": "LAPC004",
+      "closure_name": "Release surface closure",
+      "closure_state": "ready_to_close_public_preview_item",
+      "source_handoff_id": "LAPH004"
+    },
+    {
+      "blocked_claims": [
+        "dataset quality proof",
+        "clinical readiness",
+        "clinical validation",
+        "clinical deployment",
+        "model safety proof",
+        "model ranking",
+        "official endorsement",
+        "sandbox access"
+      ],
+      "closure_boundary": "synthetic only and not for clinical use",
+      "closure_check": "confirm runnable checks fail when closure rows or safety boundaries are missing",
+      "closure_decision": "close public preview checklist item only",
+      "closure_id": "LAPC005",
+      "closure_name": "Validation closure",
+      "closure_state": "ready_to_close_public_preview_item",
+      "source_handoff_id": "LAPH005"
+    }
+  ],
+  "source": "docs/label_audit/label_audit_maintainer_public_preview_handoff_summary_v0_1.json",
+  "status": "public_preview",
+  "synthetic_examples_only": true,
+  "version": "label_audit_maintainer_public_preview_closure_checklist_v0_1"
+}

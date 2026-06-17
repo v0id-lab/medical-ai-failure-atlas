@@ -209,3 +209,11 @@ Run:
 ```bash
 make label_audit_maintainer_public_preview_handoff_summary
 ```
+
+The maintainer public preview closure checklist is available at `docs/label_audit/LABEL_AUDIT_MAINTAINER_PUBLIC_PREVIEW_CLOSURE_CHECKLIST_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_maintainer_public_preview_closure_checklist
+```

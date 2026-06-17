@@ -49,7 +49,8 @@ It uses synthetic examples only. It is not clinical advice, not patient data, no
 37. 5 label audit maintainer release candidate summary rows.
 38. 5 label audit maintainer public preview decision rows.
 39. 5 label audit maintainer public preview handoff rows.
-40. 3 red flag source locator contributor examples.
+40. 5 label audit maintainer public preview closure rows.
+41. 3 red flag source locator contributor examples.
 
 ## Top public entry files
 
@@ -276,13 +277,15 @@ Public files:
 38. [Label audit maintainer public preview decision JSON](label_audit/label_audit_maintainer_public_preview_decision_log_v0_1.json)
 39. [Label audit maintainer public preview handoff summary](label_audit/LABEL_AUDIT_MAINTAINER_PUBLIC_PREVIEW_HANDOFF_SUMMARY_V0_1.md)
 40. [Label audit maintainer public preview handoff JSON](label_audit/label_audit_maintainer_public_preview_handoff_summary_v0_1.json)
-41. [Label audit GitHub issue template](../.github/ISSUE_TEMPLATE/label_audit_review.yml)
-42. [Dataset evaluation card draft](../DATASET_EVALUATION_CARD_V0_1_DRAFT.md)
-43. [Data dictionary](../DATA_DICTIONARY.md)
-44. [Pilot inter rater review rows](../data/inter_rater_review_subset_v0_1.tsv)
-45. [Labeling workflow](../LABELING.md)
-46. [Label definition lock](LABEL_DEFINITION_LOCK_V0_1.md)
-47. [Labeling package index](LABELING_PACKAGE_INDEX_V0_1.md)
+41. [Label audit maintainer public preview closure checklist](label_audit/LABEL_AUDIT_MAINTAINER_PUBLIC_PREVIEW_CLOSURE_CHECKLIST_V0_1.md)
+42. [Label audit maintainer public preview closure JSON](label_audit/label_audit_maintainer_public_preview_closure_checklist_v0_1.json)
+43. [Label audit GitHub issue template](../.github/ISSUE_TEMPLATE/label_audit_review.yml)
+44. [Dataset evaluation card draft](../DATASET_EVALUATION_CARD_V0_1_DRAFT.md)
+45. [Data dictionary](../DATA_DICTIONARY.md)
+46. [Pilot inter rater review rows](../data/inter_rater_review_subset_v0_1.tsv)
+47. [Labeling workflow](../LABELING.md)
+48. [Label definition lock](LABEL_DEFINITION_LOCK_V0_1.md)
+49. [Labeling package index](LABELING_PACKAGE_INDEX_V0_1.md)
 
 Runnable checks:
 
@@ -308,18 +311,19 @@ make label_audit_maintainer_audit_trail_packet
 make label_audit_maintainer_release_candidate_summary
 make label_audit_maintainer_public_preview_decision_log
 make label_audit_maintainer_public_preview_handoff_summary
+make label_audit_maintainer_public_preview_closure_checklist
 ```
 
 Track A value: data quality and label audit surface for Turkish health AI readiness discussions without patient data use.
 
-Track B value: reusable public checklist, public preview decision log, and maintainer handoff summary for synthetic medical AI dataset release readiness.
+Track B value: reusable public checklist, public preview decision log, maintainer handoff summary, and closure checklist for synthetic medical AI dataset release readiness.
 
-Next build: add label audit maintainer public preview closure checklist after handoff summary review.
+Next build: add BİLGE readiness queue with no access, no score, and no endorsement claim.
 
 ## Public build order
 
 1. Keep dashboard links and validators green.
-2. Add label audit maintainer public preview closure checklist after handoff summary review.
+2. Add BİLGE readiness queue with no access, no score, and no endorsement claim.
 3. Add lab target packets only after exact target review.
 
 ## Visibility rule

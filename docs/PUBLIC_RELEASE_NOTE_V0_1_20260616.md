@@ -54,6 +54,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 42. Label audit maintainer release candidate summary v0.1.
 43. Label audit maintainer public preview decision log v0.1.
 44. Label audit maintainer public preview handoff summary v0.1.
+45. Label audit maintainer public preview closure checklist v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -101,7 +102,8 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 40. 5 label audit maintainer release candidate summary rows.
 41. 5 label audit maintainer public preview decision rows.
 42. 5 label audit maintainer public preview handoff rows.
-43. 3 red flag source locator contributor examples.
+43. 5 label audit maintainer public preview closure rows.
+44. 3 red flag source locator contributor examples.
 
 ## Reproducible checks
 
@@ -194,6 +196,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 38. Label audit maintainer release candidate summary that records the current public preview candidate state.
 39. Label audit maintainer public preview decision log that records current public preview decision rows.
 40. Label audit maintainer public preview handoff summary that turns current public preview decisions into reviewer actions.
+41. Label audit maintainer public preview closure checklist that turns reviewer actions into closeable public preview checks.
 
 This does not claim official status, program participation, regulatory access, sandbox access, or institutional endorsement.
 
@@ -242,11 +245,12 @@ For global open source medical AI evaluation, this public preview gives:
 39. Label audit maintainer release candidate summary that records current public preview candidate rows.
 40. Label audit maintainer public preview decision log that records current public preview decision rows.
 41. Label audit maintainer public preview handoff summary that records current public preview reviewer actions.
+42. Label audit maintainer public preview closure checklist that records current public preview closure checks.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Label audit maintainer public preview closure checklist after handoff summary review.
+1. BİLGE readiness queue with no access, no score, and no endorsement claim.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

@@ -501,6 +501,24 @@ Handoff rows: 5
 
 The public preview handoff summary turns current public preview decisions into reviewer actions. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
 
+## Label audit maintainer public preview closure checklist
+
+Current maintainer public preview closure checklist:
+
+`docs/label_audit/LABEL_AUDIT_MAINTAINER_PUBLIC_PREVIEW_CLOSURE_CHECKLIST_V0_1.md`
+
+Machine readable maintainer public preview closure source:
+
+`docs/label_audit/label_audit_maintainer_public_preview_closure_checklist_v0_1.json`
+
+Runnable check:
+
+`make label_audit_maintainer_public_preview_closure_checklist`
+
+Closure rows: 5
+
+The public preview closure checklist turns reviewer actions into closeable public preview checks. It does not approve dataset quality, clinical readiness, clinical validation, model safety, sandbox access, or formal approval.
+
 Run:
 
 ```bash

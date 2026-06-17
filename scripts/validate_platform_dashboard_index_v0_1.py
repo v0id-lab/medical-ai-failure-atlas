@@ -57,6 +57,7 @@ REQUIRED_PHRASES = [
     "5 label audit maintainer release candidate summary rows",
     "5 label audit maintainer public preview decision rows",
     "5 label audit maintainer public preview handoff rows",
+    "5 label audit maintainer public preview closure rows",
     "3 red flag source locator contributor examples",
     "not clinical advice",
     "not patient data",
@@ -104,6 +105,7 @@ REQUIRED_PHRASES = [
     "make label_audit_maintainer_release_candidate_summary",
     "make label_audit_maintainer_public_preview_decision_log",
     "make label_audit_maintainer_public_preview_handoff_summary",
+    "make label_audit_maintainer_public_preview_closure_checklist",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -187,6 +189,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/label_audit/label_audit_maintainer_public_preview_decision_log_v0_1.json",
     "docs/label_audit/LABEL_AUDIT_MAINTAINER_PUBLIC_PREVIEW_HANDOFF_SUMMARY_V0_1.md",
     "docs/label_audit/label_audit_maintainer_public_preview_handoff_summary_v0_1.json",
+    "docs/label_audit/LABEL_AUDIT_MAINTAINER_PUBLIC_PREVIEW_CLOSURE_CHECKLIST_V0_1.md",
+    "docs/label_audit/label_audit_maintainer_public_preview_closure_checklist_v0_1.json",
     ".github/ISSUE_TEMPLATE/label_audit_review.yml",
     "DATASET_EVALUATION_CARD_V0_1_DRAFT.md",
     "DATA_DICTIONARY.md",
