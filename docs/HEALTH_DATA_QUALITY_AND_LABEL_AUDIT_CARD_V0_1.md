@@ -397,6 +397,26 @@ Run:
 make label_audit_maintainer_closeout_digest
 ```
 
+## Label audit maintainer release readiness digest
+
+Current maintainer release readiness digest:
+
+`docs/label_audit/LABEL_AUDIT_MAINTAINER_RELEASE_READINESS_DIGEST_V0_1.md`
+
+Machine readable maintainer release readiness source:
+
+`docs/label_audit/label_audit_maintainer_release_readiness_digest_v0_1.json`
+
+Readiness rows: 5.
+
+The release readiness digest gives maintainers a compact public preview readiness trail after label audit closeout review. It does not approve dataset quality, clinical readiness, clinical validation, model safety, or formal approval.
+
+Run:
+
+```bash
+make label_audit_maintainer_release_readiness_digest
+```
+
 ## Maintenance owner
 
 Maintainer: Dr. Goktug Ozkan, Internal Medicine Specialist.

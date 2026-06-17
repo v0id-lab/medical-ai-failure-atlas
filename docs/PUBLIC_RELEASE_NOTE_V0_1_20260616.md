@@ -48,6 +48,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 36. Label audit public contributor digest v0.1.
 37. Label audit maintainer handoff notes v0.1.
 38. Label audit maintainer closeout digest v0.1.
+39. Label audit maintainer release readiness digest v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -89,7 +90,8 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 34. 5 label audit public contributor digest rows.
 35. 5 label audit maintainer handoff rows.
 36. 5 label audit maintainer closeout digest rows.
-37. 3 red flag source locator contributor examples.
+37. 5 label audit maintainer release readiness digest rows.
+38. 3 red flag source locator contributor examples.
 
 ## Reproducible checks
 
@@ -128,6 +130,7 @@ make label_audit_release_index
 make label_audit_contributor_digest
 make label_audit_maintainer_handoff
 make label_audit_maintainer_closeout_digest
+make label_audit_maintainer_release_readiness_digest
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -175,6 +178,7 @@ For Türkiye health AI safety infrastructure, this public preview gives a concre
 32. Label audit public contributor digest that gives contributors a short orientation path.
 33. Label audit maintainer handoff notes that give maintainers a closeout checklist.
 34. Label audit maintainer closeout digest that gives maintainers a compact closeout trail.
+35. Label audit maintainer release readiness digest that gives maintainers a public preview readiness trail.
 
 This does not claim official status, program participation, regulatory access, sandbox access, or institutional endorsement.
 
@@ -217,11 +221,12 @@ For global open source medical AI evaluation, this public preview gives:
 33. Label audit public contributor digest that turns the release index into a compact contributor path.
 34. Label audit maintainer handoff notes that turn contributor proposals into bounded maintainer actions.
 35. Label audit maintainer closeout digest that records current public preview closeout rows.
+36. Label audit maintainer release readiness digest that records current public preview readiness rows.
 
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Label audit maintainer release readiness digest after closeout review.
+1. Label audit maintainer evidence map after readiness review.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

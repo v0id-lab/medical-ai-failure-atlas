@@ -1,0 +1,71 @@
+{
+  "closeout_rows_represented": 5,
+  "contains_patient_data": false,
+  "contributor_digest_rows_represented": 5,
+  "date": "2026 06 17",
+  "handoff_rows_represented": 5,
+  "maintainer_review_scope": "current public preview route only",
+  "no_clinical_deployment_claim": true,
+  "no_clinical_validation_claim": true,
+  "no_dataset_quality_proof": true,
+  "no_model_ranking": true,
+  "no_model_safety_claim": true,
+  "no_official_endorsement_claim": true,
+  "no_raw_model_output_release": true,
+  "not_for_clinical_use": true,
+  "previous_public_issue_number": 32,
+  "readiness_decision": "ready_for_public_preview",
+  "readiness_row_count": 5,
+  "release_index_surface_rows_represented": 9,
+  "rows": [
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "docs/label_audit/LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md",
+      "readiness_action": "confirm closeout keeps public examples synthetic only",
+      "readiness_id": "LAMR001",
+      "readiness_name": "Synthetic boundary readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "docs/label_audit/LABEL_AUDIT_EXAMPLE_INTAKE_V0_1.md",
+      "readiness_action": "confirm intake rows remain mapped to synthetic patterns",
+      "readiness_id": "LAMR002",
+      "readiness_name": "Intake pattern readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "docs/label_audit/LABEL_AUDIT_PUBLIC_WORDING_DECISION_LOG_V0_1.md",
+      "readiness_action": "confirm blocked wording stays out of public surfaces",
+      "readiness_id": "LAMR003",
+      "readiness_name": "Public wording readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
+      "readiness_action": "confirm release surfaces mention boundaries and runnable checks",
+      "readiness_id": "LAMR004",
+      "readiness_name": "Release surface readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    },
+    {
+      "boundary": "synthetic only and not for clinical use",
+      "evidence_file": "Makefile",
+      "readiness_action": "run make label_audit_maintainer_release_readiness_digest before issue closure",
+      "readiness_id": "LAMR005",
+      "readiness_name": "Validation readiness",
+      "readiness_state": "current_preview_ready",
+      "readiness_status": "included_in_public_maintainer_release_readiness_digest"
+    }
+  ],
+  "source": "docs/label_audit/label_audit_maintainer_closeout_digest_v0_1.json",
+  "status": "public_preview",
+  "synthetic_examples_only": true,
+  "version": "label_audit_maintainer_release_readiness_digest_v0_1"
+}

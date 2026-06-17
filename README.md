@@ -54,6 +54,7 @@ New visible build surfaces are now staged in this public repository:
 44. [Label audit public contributor digest v0.1](docs/label_audit/LABEL_AUDIT_PUBLIC_CONTRIBUTOR_DIGEST_V0_1.md)
 45. [Label audit maintainer handoff notes v0.1](docs/label_audit/LABEL_AUDIT_MAINTAINER_HANDOFF_NOTES_V0_1.md)
 46. [Label audit maintainer closeout digest v0.1](docs/label_audit/LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md)
+47. [Label audit maintainer release readiness digest v0.1](docs/label_audit/LABEL_AUDIT_MAINTAINER_RELEASE_READINESS_DIGEST_V0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -340,6 +341,12 @@ Generate the label audit maintainer closeout digest:
 make label_audit_maintainer_closeout_digest
 ```
 
+Generate the label audit maintainer release readiness digest:
+
+```bash
+make label_audit_maintainer_release_readiness_digest
+```
+
 Validate the SourceCheckup public contributor issue route:
 
 ```bash
@@ -432,6 +439,8 @@ docs/
     label_audit_maintainer_handoff_notes_v0_1.json
     LABEL_AUDIT_MAINTAINER_CLOSEOUT_DIGEST_V0_1.md
     label_audit_maintainer_closeout_digest_v0_1.json
+    LABEL_AUDIT_MAINTAINER_RELEASE_READINESS_DIGEST_V0_1.md
+    label_audit_maintainer_release_readiness_digest_v0_1.json
 sourcecheckup/
   build/
     source_claim_example_expansion_v0_2.md

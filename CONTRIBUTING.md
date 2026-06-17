@@ -161,3 +161,11 @@ Run:
 ```bash
 make label_audit_maintainer_closeout_digest
 ```
+
+The maintainer release readiness digest is available at `docs/label_audit/LABEL_AUDIT_MAINTAINER_RELEASE_READINESS_DIGEST_V0_1.md`.
+
+Run:
+
+```bash
+make label_audit_maintainer_release_readiness_digest
+```
