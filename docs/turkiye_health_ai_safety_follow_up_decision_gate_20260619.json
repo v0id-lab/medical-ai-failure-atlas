@@ -1,0 +1,133 @@
+{
+  "artifact": "Türkiye Health AI Safety Follow Up Decision Gate",
+  "date": "2026 06 19",
+  "status": "public follow up decision gate",
+  "current_state": "wait_without_new_outreach",
+  "checked_after_reading_baglam2": true,
+  "checked_after_reading_trackers": true,
+  "gmail_threads_checked": [
+    {
+      "thread_id": "19edcafe5c2dfa60",
+      "route": "TÜSEB route fit",
+      "state": "sent only no reply"
+    },
+    {
+      "thread_id": "19eda863ce89f083",
+      "route": "Hacettepe health informatics",
+      "state": "prior acknowledgement no new substantive reply"
+    },
+    {
+      "thread_id": "19edaa3a3868fd0f",
+      "route": "Hacettepe health management",
+      "state": "sent only no reply"
+    },
+    {
+      "thread_id": "19edac07e13052fa",
+      "route": "Acibadem medical ethics",
+      "state": "sent only no reply"
+    },
+    {
+      "thread_id": "19edb2e645ca1f6d",
+      "route": "SEBIT route owner",
+      "state": "sent only no reply"
+    },
+    {
+      "thread_id": "19edb491af3d687b",
+      "route": "Acibadem CASE demand side",
+      "state": "sent only no reply"
+    },
+    {
+      "thread_id": "19edb64c4ae9fec6",
+      "route": "TÜYZE or TÜSEB education route owner",
+      "state": "sent only no reply"
+    },
+    {
+      "thread_id": "19edb8289b165cc0",
+      "route": "DEÜ Digital Medicine Board",
+      "state": "sent only no reply"
+    },
+    {
+      "thread_id": "19edb9dc297ad804",
+      "route": "KTÜ AI simulation congress route",
+      "state": "sent only no reply"
+    }
+  ],
+  "decision_states": [
+    {
+      "name": "wait_without_new_outreach",
+      "trigger": "no direct reply and no new source change",
+      "allowed_actions": [
+        "build_public_artifact",
+        "update_issue_or_release",
+        "monitor_next_run"
+      ],
+      "blocked_actions": [
+        "duplicate_email_to_same_route",
+        "claim_rejection_from_silence"
+      ]
+    },
+    {
+      "name": "send_handoff_index_after_direct_trigger",
+      "trigger": "route owner asks what to inspect or asks for forwarding material",
+      "allowed_actions": [
+        "send_handoff_index",
+        "send_concept_note_if_scope_requested"
+      ],
+      "blocked_actions": [
+        "claim_partnership",
+        "claim_validation",
+        "request_patient_data"
+      ]
+    },
+    {
+      "name": "open_new_route_after_new_factual_trigger",
+      "trigger": "new official route owner call event working group or submission surface is verified",
+      "allowed_actions": [
+        "build_fit_memo",
+        "publish_public_issue_or_release",
+        "send_short_route_question_if_target_verified"
+      ],
+      "blocked_actions": [
+        "copy_existing_unanswered_outreach",
+        "claim_approval"
+      ]
+    },
+    {
+      "name": "prepare_application_package_after_eligibility_proof",
+      "trigger": "call text eligibility executor route authority budget rules and deadline are verified",
+      "allowed_actions": [
+        "prepare_concept_note",
+        "prepare_work_package",
+        "prepare_risk_register",
+        "prepare_source_support_table"
+      ],
+      "blocked_actions": [
+        "formal_submit_without_factual_route",
+        "claim_institutional_support_without_verification"
+      ]
+    }
+  ],
+  "public_entry_points": [
+    "docs/TURKIYE_HEALTH_AI_SAFETY_HANDOFF_INDEX_20260619.md",
+    "docs/TUSEB_A4_UM_TUYZE_NON_PATIENT_DATA_CONCEPT_NOTE_20260619.md",
+    "docs/TUSEB_ROUTE_FIT_QUESTION_PACKET_20260619.md"
+  ],
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_tuseb_application": false,
+  "claims_tbys_submission": false,
+  "claims_tuyze_proposal": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_institutional_approval": false,
+  "claims_budget": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_medical_advice": false,
+  "claims_endorsement": false,
+  "allows_repeated_outreach_without_new_trigger": false
+}
