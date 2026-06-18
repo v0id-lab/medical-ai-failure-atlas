@@ -83,6 +83,7 @@ This is a public preview layer for clinician led medical AI evaluation infrastru
 73. `../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_STEWARDSHIP_CLOSEOUT_V0_1.md` gives a reviewer question maintainer public preview acceptance archive stewardship closeout without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 74. `../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_STEWARDSHIP_DIGEST_V0_1.md` gives a reviewer question maintainer public preview acceptance archive stewardship digest without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 75. `../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_PUBLIC_HANDOFF_NOTE_V0_1.md` gives a reviewer question maintainer public preview acceptance archive public handoff note without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
+76. `../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_PUBLIC_HANDOFF_DIGEST_V0_1.md` gives a reviewer question maintainer public preview acceptance archive public handoff digest without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 
 ## What This Preview Is
 
@@ -114,7 +115,7 @@ Clinician led medical AI safety evaluation infrastructure, built from synthetic 
 
 ## Next Public Build Targets
 
-1. Add a reviewer question maintainer public preview acceptance archive public handoff digest without scoring or compatibility claims.
+1. Add a reviewer question maintainer public preview acceptance archive public handoff release index without scoring or compatibility claims.
 2. Add a compact public failure mode taxonomy page.
 3. Add a public contributor path for synthetic failure cases.
 4. Add a no patient data review checklist.
