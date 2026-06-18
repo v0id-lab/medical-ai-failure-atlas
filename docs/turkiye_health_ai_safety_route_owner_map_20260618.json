@@ -1,0 +1,76 @@
+{
+  "artifact": "TURKIYE_HEALTH_AI_SAFETY_ROUTE_OWNER_MAP_20260618",
+  "date": "2026 06 18",
+  "status": "public field route map, not an application",
+  "as_of": "2026 06 18 20:07 TRT",
+  "purpose": "Separate acknowledged, active silent, and source ready Türkiye health AI safety routes so the next action is based on reply state and source fit.",
+  "routes": [
+    {
+      "route": "Hacettepe health informatics",
+      "issue": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/96",
+      "artifact": "docs/HACETTEPE_HEALTH_INFORMATICS_OUTREACH_PACKET_20260618.md",
+      "response_state": "acknowledged review",
+      "route_value": "health informatics education surface"
+    },
+    {
+      "route": "Hacettepe health management",
+      "issue": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/97",
+      "artifact": "docs/HACETTEPE_HEALTH_MANAGEMENT_AI_OUTREACH_PACKET_20260618.md",
+      "response_state": "active silent",
+      "route_value": "health management education surface"
+    },
+    {
+      "route": "Acibadem medical ethics",
+      "issue": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/98",
+      "artifact": "docs/ACIBADEM_MEDICAL_ETHICS_AI_OUTREACH_PACKET_20260618.md",
+      "response_state": "active silent",
+      "route_value": "medical ethics and responsible AI surface"
+    },
+    {
+      "route": "SEBİT smart education",
+      "issue": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/101",
+      "artifact": "docs/TUBITAK_1711_SEBIT_ROUTE_OWNER_SCOUT_20260618.md",
+      "response_state": "active silent",
+      "route_value": "smart education provider gate"
+    },
+    {
+      "route": "Acibadem CASE simulation education",
+      "issue": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/102",
+      "artifact": "docs/TUBITAK_1711_ACIBADEM_CASE_DEMAND_SIDE_SCOUT_20260618.md",
+      "response_state": "active silent",
+      "route_value": "clinical simulation demand side gate"
+    },
+    {
+      "route": "TÜYZE or TÜSEB education route",
+      "issue": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/103",
+      "artifact": "docs/TUYZE_EDUCATION_ROUTE_OWNER_SCOUT_20260618.md",
+      "response_state": "active silent",
+      "route_value": "national health AI education route"
+    },
+    {
+      "route": "DEÜ Digital Medicine Board",
+      "issue": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/105",
+      "artifact": "docs/DEU_DIGITAL_MEDICINE_BOARD_ROUTE_OWNER_SCOUT_20260618.md",
+      "response_state": "active silent",
+      "route_value": "medical faculty digital medicine and responsible LLM surface"
+    },
+    {
+      "route": "KTÜ AI simulation congress route",
+      "issue": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/106",
+      "artifact": "docs/KTU_AI_SIMULATION_CONGRESS_ROUTE_OWNER_SCOUT_20260618.md",
+      "response_state": "active silent",
+      "route_value": "national health professions AI and simulation education surface"
+    }
+  ],
+  "contains_patient_data": false,
+  "claims_application": false,
+  "claims_proposal": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_terms_acceptance": false,
+  "claims_payment": false,
+  "next_action": "Check all active Gmail threads first. If no substantive reply exists, verify one new route or publish a deeper route synthesis instead of repeating the same email."
+}
