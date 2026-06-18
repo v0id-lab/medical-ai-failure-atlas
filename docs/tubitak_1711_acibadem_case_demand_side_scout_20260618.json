@@ -1,0 +1,48 @@
+{
+  "artifact": "tubitak_1711_acibadem_case_demand_side_scout_20260618",
+  "date": "2026 06 18",
+  "status": "demand side scout, not an application",
+  "direct_health_fit": "weak",
+  "only_priority_fit": "smart education technologies",
+  "target_contact": "infocase@acibadem.edu.tr",
+  "target_source": "https://www.acibadem.edu.tr/merkezler/case",
+  "public_sources": [
+    "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1711-yapay-zeka-ekosistem-cagrisi",
+    "https://www.acibadem.edu.tr/merkezler/case",
+    "https://case.acibadem.edu.tr/tr",
+    "https://www.acibadem.edu.tr/etkinlikler/hemsirelik-egitiminde-simulasyon-uygulamalari-2026"
+  ],
+  "route_gates": [
+    {
+      "gate": "customer organization",
+      "state": "scouting",
+      "reason": "Acibadem CASE has a public health professional simulation and education center surface"
+    },
+    {
+      "gate": "technology provider company",
+      "state": "closed",
+      "reason": "no technology provider commitment exists"
+    },
+    {
+      "gate": "research route",
+      "state": "closed",
+      "reason": "no university lab, center, public research center, or institute route is committed"
+    },
+    {
+      "gate": "clinical boundary",
+      "state": "education only",
+      "reason": "the work is clinician AI literacy and health AI safety education, not diagnosis, treatment, deployment, validation, or certification"
+    }
+  ],
+  "contains_patient_data": false,
+  "claims_submission": false,
+  "claims_intent_declaration": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_health_priority_fit": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_terms_acceptance": false,
+  "claims_payment": false
+}
