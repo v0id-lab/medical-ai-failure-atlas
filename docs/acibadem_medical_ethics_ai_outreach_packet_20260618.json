@@ -1,0 +1,28 @@
+{
+  "artifact_id": "acibadem_medical_ethics_ai_outreach_packet_20260618",
+  "date": "2026 06 18",
+  "status": "named target outreach packet not sent",
+  "institution": "Acibadem University",
+  "unit": "Faculty of Medicine, Department of History of Medicine and Ethics",
+  "primary_named_route": "Prof. Dr. Fatma Yeşim Işıl Ülman",
+  "primary_public_email_route": "yesim.ulman@acibadem.edu.tr",
+  "source_count": 4,
+  "message_count": 1,
+  "sources": [
+    "https://www.acibadem.edu.tr/haberler/yapay-zeka-tip-ve-etik",
+    "https://www.acibadem.edu.tr/akademik/lisans/tip-fakultesi/bolumler/temel-tip-bilimleri/tip-tarihi-ve-etik-ad",
+    "https://avesis.acibadem.edu.tr/yesim.ulman",
+    "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/94"
+  ],
+  "claims_email_sent": false,
+  "claims_contact_made": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_partner_relationship": false,
+  "claims_application": false,
+  "claims_submission": false,
+  "contains_patient_data": false,
+  "claims_medical_advice": false,
+  "claims_clinical_deployment": false,
+  "claims_clinical_validation": false
+}
