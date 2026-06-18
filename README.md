@@ -22,11 +22,14 @@ Public readiness companion for Turkish health AI teams aligning safety checks wi
 
 Start here:
 
-1. [TÜYZE Health AI Safety Readiness Companion](docs/TUYZE_HEALTH_AI_SAFETY_READINESS_COMPANION_20260618.md)
-2. [Türkiye Health AI Safety Readiness Kit](docs/TURKIYE_HEALTH_AI_SAFETY_READINESS_KIT_20260618.md)
-3. [TEKNOFEST Health AI Safety Addendum](docs/TEKNOFEST_HEALTH_AI_SAFETY_ADDENDUM_20260618.md)
+1. [Türkiye Health AI Safety Outreach Roadmap](docs/TURKIYE_HEALTH_AI_SAFETY_OUTREACH_ROADMAP_20260618.md)
+2. [TÜYZE Health AI Safety Readiness Companion](docs/TUYZE_HEALTH_AI_SAFETY_READINESS_COMPANION_20260618.md)
+3. [Türkiye Health AI Safety Readiness Kit](docs/TURKIYE_HEALTH_AI_SAFETY_READINESS_KIT_20260618.md)
+4. [TEKNOFEST Health AI Safety Addendum](docs/TEKNOFEST_HEALTH_AI_SAFETY_ADDENDUM_20260618.md)
 
 Focus: health data fitness, decision support limits, source support, Turkish clinical context, failure mode disclosure, data governance route, and public claim hygiene.
+
+Field surfaces: TÜYZE adjacent readiness, Turkish medical faculty clinician AI literacy, Turkish hospital AI readiness, TÜSEB proposal readiness, TÜBİTAK public AI ecosystem monitoring, TEKNOFEST health AI team safety, and open source medical AI contributors.
 
 ## 2026 06 16 public preview update
 

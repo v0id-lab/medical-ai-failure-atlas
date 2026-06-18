@@ -1,0 +1,35 @@
+{
+  "artifact_id": "turkiye_health_ai_safety_outreach_roadmap_20260618",
+  "date": "2026 06 18",
+  "status": "public roadmap and outreach packet",
+  "source_count": 6,
+  "outreach_surface_count": 7,
+  "sources": [
+    "https://tuyze.tuseb.gov.tr/",
+    "https://tubitak.gov.tr/tr/duyuru/kamu-yapay-zeka-ekosistemi-2026-cagrisinda-son-asamaya-gecildi",
+    "https://www.tuseb.gov.tr/haberler/2026-yili-tuseb-proje-desteklerine-iliskin-cagri-ayrintilari-yayimlandi-20260127",
+    "https://tbys.tuseb.gov.tr/",
+    "https://www.teknofest.org/tr/yarismalar/saglikta-yapay-zeka-yarismasi/"
+  ],
+  "outreach_surfaces": [
+    "tuyze_adjacent_readiness_route",
+    "turkish_medical_faculty_clinician_ai_literacy_route",
+    "turkish_hospital_ai_readiness_route",
+    "tuseb_proposal_readiness_route",
+    "tubitak_public_ai_ecosystem_monitoring_route",
+    "teknofest_health_ai_team_safety_route",
+    "open_source_medical_ai_contributor_route"
+  ],
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_partner_relationship": false,
+  "claims_application": false,
+  "claims_submission": false,
+  "claims_contact_made": false,
+  "contains_patient_data": false,
+  "claims_medical_advice": false,
+  "claims_clinical_deployment": false,
+  "claims_clinical_validation": false,
+  "claims_benchmark_ranking": false,
+  "claims_model_certification": false
+}
