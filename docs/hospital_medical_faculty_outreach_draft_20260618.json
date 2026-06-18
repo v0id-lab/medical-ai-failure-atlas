@@ -1,0 +1,34 @@
+{
+  "artifact_id": "hospital_medical_faculty_outreach_draft_20260618",
+  "date": "2026 06 18",
+  "status": "target adaptable outreach draft not sent",
+  "source_count": 6,
+  "message_count": 2,
+  "sources": [
+    "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/94",
+    "https://tuyze.tuseb.gov.tr/",
+    "https://etkinlikler.hacettepe.edu.tr/tr/saglik_yonetiminde_yapay_zeka-2788",
+    "https://bilisim.hacettepe.edu.tr/tr/saglik_bilisimi_tezli_yl_programi-277",
+    "https://www.acibadem.edu.tr/haberler/dr-sinasi-can-tibbi-etik-gunleri-3-yapay-zeka-ve-etik-sempozyumu",
+    "https://www.acibadem.edu.tr/etkinlikler/acuhit-gelecegin-saglik-teknolojileri-hackathon"
+  ],
+  "target_types": [
+    "hospital",
+    "medical_faculty",
+    "clinician_ai_literacy_group",
+    "health_informatics_group",
+    "bioethics_group",
+    "health_ai_builder_group"
+  ],
+  "claims_message_sent": false,
+  "claims_contact_made": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_partner_relationship": false,
+  "claims_application": false,
+  "claims_submission": false,
+  "contains_patient_data": false,
+  "claims_medical_advice": false,
+  "claims_clinical_deployment": false,
+  "claims_clinical_validation": false
+}

@@ -49,6 +49,7 @@ validate:
 	$(PYTHON) scripts/validate_teknofest_public_share_clearance_packet_20260618.py
 	$(PYTHON) scripts/validate_tuyze_health_ai_safety_readiness_companion_20260618.py
 	$(PYTHON) scripts/validate_turkiye_health_ai_safety_outreach_roadmap_20260618.py
+	$(PYTHON) scripts/validate_hospital_medical_faculty_outreach_draft_20260618.py
 	$(PYTHON) scripts/validate_benchmark_style_reviewer_questions_v0_1.py
 	$(PYTHON) scripts/validate_benchmark_reviewer_question_issue_templates_v0_1.py
 	$(PYTHON) scripts/validate_reviewer_question_intake_examples_v0_1.py
@@ -148,6 +149,9 @@ tuyze_health_ai_safety_readiness_companion:
 
 turkiye_health_ai_safety_outreach_roadmap:
 	$(PYTHON) scripts/validate_turkiye_health_ai_safety_outreach_roadmap_20260618.py
+
+hospital_medical_faculty_outreach_draft:
+	$(PYTHON) scripts/validate_hospital_medical_faculty_outreach_draft_20260618.py
 
 current_medical_ai_intelligence_priority_update:
 	$(PYTHON) scripts/generate_current_medical_ai_intelligence_priority_update_20260618_v0_1.py
