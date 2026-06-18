@@ -116,7 +116,7 @@ Platform: TR MedLLM SafetyBench
 
 Priority update: Add local ethics status check fields and separate national readiness language from local ethics page observations.
 
-Next safe build: Türkiye AI ethics status gate note
+Next safe build: reviewer question maintainer public preview acceptance archive public handoff closure note
 
 ### 2. CMIPUP002
 
@@ -178,7 +178,7 @@ Decision needed: Dr. Ozkan must decide whether to pursue a non medical pivot, pa
 
 ## Next safe public build
 
-Add a Türkiye AI ethics status gate note and a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring, compatibility, endpoint, patient data, clinical validation, route access, or endorsement claims.
+Add a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring, compatibility, endpoint, patient data, clinical validation, route access, or endorsement claims.
 
 ## Runnable check
 

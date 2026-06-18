@@ -98,6 +98,7 @@ It is not clinical advice, not patient data, not clinical deployment, not clinic
 86. Reviewer question maintainer public preview acceptance archive public handoff release index v0.1.
 87. Reviewer question maintainer public preview acceptance archive public handoff release note v0.1.
 88. Current medical AI intelligence priority update v0.1.
+89. Türkiye AI ethics status gate note v0.1.
 
 Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 
@@ -192,6 +193,8 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 87. 6 reviewer question maintainer public preview acceptance archive public handoff release note rows.
 88. 8 current medical AI intelligence source rows.
 89. 6 current medical AI intelligence priority update rows.
+90. 3 Türkiye AI ethics status source rows.
+91. 6 Türkiye AI ethics status gate rows.
 
 ## Reproducible checks
 
@@ -278,6 +281,7 @@ make reviewer_question_maintainer_public_preview_acceptance_archive_public_hando
 make reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_index
 make reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_note
 make current_medical_ai_intelligence_priority_update
+make turkiye_ai_ethics_status_gate_note
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
@@ -445,6 +449,7 @@ For global open source medical AI evaluation, this public preview gives:
 87. Reviewer question maintainer public preview acceptance archive public handoff release index for public maintainer archive handoff navigation without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 88. Reviewer question maintainer public preview acceptance archive public handoff release note for public maintainer archive handoff notation without scoring, ranking, endpoint calls, patient data, compatibility claims, clinical validation, or endorsement claims.
 89. Current medical AI intelligence priority update for source checked public priority revision without submission, application, partner, official role, endorsement, endpoint, patient data, clinical validation, clinical deployment, ranking, score, or compatibility claims.
+90. Türkiye AI ethics status gate note for local ethics signal separation without submission, approval, national rule, official role, patient data, clinical validation, clinical deployment, route access, or endorsement claims.
 
 6 reviewer question maintainer public preview acceptance archive steward note rows.
 
@@ -466,10 +471,14 @@ For global open source medical AI evaluation, this public preview gives:
 
 6 current medical AI intelligence priority update rows.
 
+3 Türkiye AI ethics status source rows.
+
+6 Türkiye AI ethics status gate rows.
+
 This does not claim benchmark equivalence, clinical validation, or model superiority.
 
 ## Next public build gates
 
-1. Add a Türkiye AI ethics status gate note and a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring or compatibility claims.
+1. Add a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring or compatibility claims.
 2. External maintainer issue draft only after exact owner clearance.
 3. Model run plan files only after endpoint terms and cost are explicitly cleared.

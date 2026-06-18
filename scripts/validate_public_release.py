@@ -259,6 +259,10 @@ REQUIRED_FILES = [
     "docs/current_medical_ai_intelligence_priority_update_20260618_v0_1.json",
     "scripts/generate_current_medical_ai_intelligence_priority_update_20260618_v0_1.py",
     "scripts/validate_current_medical_ai_intelligence_priority_update_20260618_v0_1.py",
+    "docs/TURKIYE_AI_ETHICS_STATUS_GATE_NOTE_V0_1.md",
+    "docs/turkiye_ai_ethics_status_gate_note_v0_1.json",
+    "scripts/generate_turkiye_ai_ethics_status_gate_note_v0_1.py",
+    "scripts/validate_turkiye_ai_ethics_status_gate_note_v0_1.py",
     "docs/MEDHELM_BOUNDARY_NOTE_V0_1.md",
     "docs/MEDMARKS_BOUNDARY_NOTE_V0_1.md",
     "docs/ASSURANCE_CARD_TEMPLATE_V0_1.md",
@@ -703,6 +707,10 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
             fail(errors, "README must link to the current medical AI intelligence priority update")
         if "make current_medical_ai_intelligence_priority_update" not in readme_text:
             fail(errors, "README must document the current medical AI intelligence priority update command")
+        if "docs/TURKIYE_AI_ETHICS_STATUS_GATE_NOTE_V0_1.md" not in readme_text:
+            fail(errors, "README must link to the Türkiye AI ethics status gate note")
+        if "make turkiye_ai_ethics_status_gate_note" not in readme_text:
+            fail(errors, "README must document the Türkiye AI ethics status gate note command")
         if "docs/LABEL_AUDIT_REVIEWER_ROLE_TABLE_V0_1.md" not in readme_text:
             fail(errors, "README must link to the label audit reviewer role table")
         if "make label_audit_role_table" not in readme_text:

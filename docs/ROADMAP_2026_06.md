@@ -90,6 +90,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 58. Reviewer question public changelog v0.1.
 59. Reviewer question public release index v0.1.
 60. Current medical AI intelligence priority update v0.1.
+61. Türkiye AI ethics status gate note v0.1.
 
 ## External visibility sequence
 
@@ -114,6 +115,6 @@ This project will not claim:
 
 ## Next concrete build steps
 
-1. Add a Türkiye AI ethics status gate note and a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring or compatibility claims.
+1. Add a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring or compatibility claims.
 2. Prepare external maintainer issue drafts only after exact owner clearance.
 3. Add model run plan files only after endpoint terms and cost are explicitly cleared.

@@ -1,0 +1,100 @@
+{
+  "artifact": "turkiye_ai_ethics_status_gate_note_v0_1",
+  "status": "public_preview",
+  "date": "2026 06 18",
+  "source_row_count": 3,
+  "gate_row_count": 6,
+  "source_rows": [
+    {
+      "source_id": "TAESG001",
+      "source_name": "Ankara İl Sağlık Müdürlüğü AI studies ethics page",
+      "source_url": "https://ankaraism.saglik.gov.tr/TR-371527/yapay-zeka-ile-ilgili-calismalar.html",
+      "source_date": "30 January 2026",
+      "observed_claim": "The page says AI related studies presented to that ethics committee will be suspended until new regulation.",
+      "gate_use": "treat as a local ethics status gate signal before any AI study route claim",
+      "blocked_claim": "national ethics rule claim"
+    },
+    {
+      "source_id": "TAESG002",
+      "source_name": "Sağlık Bilgi Sistemleri Genel Müdürlüğü AI department page",
+      "source_url": "https://sbsgm.saglik.gov.tr/TR-104172/yapay-zeka-ve-yenilikci-teknolojiler-daire-baskanligi.html",
+      "source_date": "21 August 2024",
+      "observed_claim": "The page lists ministry AI department tasks around AI improvable processes, solutions, collaborations, interoperability, and education materials.",
+      "gate_use": "keep public Track A wording aligned with education, interoperability, and assurance preparation without official role claims",
+      "blocked_claim": "official ministry role claim"
+    },
+    {
+      "source_id": "TAESG003",
+      "source_name": "Current medical AI intelligence priority update",
+      "source_url": "docs/current_medical_ai_intelligence_priority_update_20260618_v0_1.json",
+      "source_date": "18 June 2026",
+      "observed_claim": "The current intelligence pass elevated Türkiye ethics status gates as a safe next public build.",
+      "gate_use": "connect ethics status verification to the public medical AI portfolio roadmap",
+      "blocked_claim": "clinical readiness claim"
+    }
+  ],
+  "gate_rows": [
+    {
+      "gate_id": "TAESGATE001",
+      "gate": "local ethics page scope",
+      "question": "Which ethics committee page or portal is being referenced",
+      "required_evidence": "committee specific page, portal notice, or official email",
+      "public_action": "record local status only",
+      "blocked_claim": "Türkiye wide rule claim"
+    },
+    {
+      "gate_id": "TAESGATE002",
+      "gate": "study type scope",
+      "question": "Is the work synthetic infrastructure, retrospective data work, prospective clinical study, or deployment",
+      "required_evidence": "study type and committee route statement",
+      "public_action": "keep synthetic infrastructure separate from clinical study language",
+      "blocked_claim": "clinical study submission claim"
+    },
+    {
+      "gate_id": "TAESGATE003",
+      "gate": "patient data scope",
+      "question": "Will any identifiable, deidentified, or institutional patient data be used",
+      "required_evidence": "data use decision and approval route",
+      "public_action": "keep no patient data boundary visible",
+      "blocked_claim": "patient data readiness claim"
+    },
+    {
+      "gate_id": "TAESGATE004",
+      "gate": "clinical validation scope",
+      "question": "Is anyone claiming clinical validation, clinical usefulness, or clinical deployment readiness",
+      "required_evidence": "formal study protocol and approvals before any claim",
+      "public_action": "block validation and deployment language",
+      "blocked_claim": "clinical validation claim"
+    },
+    {
+      "gate_id": "TAESGATE005",
+      "gate": "institutional role scope",
+      "question": "Is any ministry, hospital, university, or ethics committee role being claimed",
+      "required_evidence": "written authorization before role wording",
+      "public_action": "use public source and no endorsement wording",
+      "blocked_claim": "official role or endorsement claim"
+    },
+    {
+      "gate_id": "TAESGATE006",
+      "gate": "public build route",
+      "question": "Can the next action be public infrastructure without portal submission",
+      "required_evidence": "repo artifact and validation log",
+      "public_action": "publish gate note, validator, and issue closeout only",
+      "blocked_claim": "submission or approval claim"
+    }
+  ],
+  "contains_patient_data": false,
+  "not_for_clinical_use": true,
+  "no_submission_claim": true,
+  "no_application_claim": true,
+  "no_ethics_approval_claim": true,
+  "no_national_rule_claim": true,
+  "no_official_role_claim": true,
+  "no_endorsement_claim": true,
+  "no_patient_data_claim": true,
+  "no_clinical_validation_claim": true,
+  "no_clinical_deployment_claim": true,
+  "no_terms_acceptance": true,
+  "no_payment": true,
+  "next_safe_public_build": "Add reviewer question maintainer public preview acceptance archive public handoff closure note without scoring, compatibility, endpoint, patient data, clinical validation, route access, or endorsement claims."
+}

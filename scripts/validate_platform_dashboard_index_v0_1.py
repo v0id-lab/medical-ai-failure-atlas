@@ -256,7 +256,11 @@ REQUIRED_PHRASES = [
     "make current_medical_ai_intelligence_priority_update",
     "8 current medical AI intelligence source rows",
     "6 current medical AI intelligence priority update rows",
-    "Add a Türkiye AI ethics status gate note and a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring or compatibility claims",
+    "Türkiye AI ethics status gate note",
+    "make turkiye_ai_ethics_status_gate_note",
+    "3 Türkiye AI ethics status source rows",
+    "6 Türkiye AI ethics status gate rows",
+    "Add a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring or compatibility claims",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -352,6 +356,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_note_v0_1.json",
     "docs/CURRENT_MEDICAL_AI_INTELLIGENCE_PRIORITY_UPDATE_20260618_V0_1.md",
     "docs/current_medical_ai_intelligence_priority_update_20260618_v0_1.json",
+    "docs/TURKIYE_AI_ETHICS_STATUS_GATE_NOTE_V0_1.md",
+    "docs/turkiye_ai_ethics_status_gate_note_v0_1.json",
     "docs/PUBLIC_RELEASE_NOTE_V0_1_20260616.md",
     "docs/ROADMAP_2026_06.md",
     "tr_medllm_safetybench/README.md",

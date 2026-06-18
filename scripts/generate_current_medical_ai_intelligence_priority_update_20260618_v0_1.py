@@ -91,7 +91,7 @@ PRIORITY_ROWS = [
         "priority_id": "CMIPUP001",
         "platform": "TR MedLLM SafetyBench",
         "priority_update": "Add local ethics status check fields and separate national readiness language from local ethics page observations.",
-        "next_safe_build": "Türkiye AI ethics status gate note",
+        "next_safe_build": "reviewer question maintainer public preview acceptance archive public handoff closure note",
     },
     {
         "priority_id": "CMIPUP002",
@@ -164,7 +164,7 @@ def build_payload() -> dict:
         **FLAGS,
         "sources": SOURCE_ROWS,
         "priority_updates": PRIORITY_ROWS,
-        "next_safe_public_build": "Add a Türkiye AI ethics status gate note and a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring, compatibility, endpoint, patient data, clinical validation, route access, or endorsement claims.",
+        "next_safe_public_build": "Add a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring, compatibility, endpoint, patient data, clinical validation, route access, or endorsement claims.",
     }
 
 
