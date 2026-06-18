@@ -1,0 +1,31 @@
+{
+  "artifact_id": "hacettepe_health_informatics_outreach_packet_20260618",
+  "date": "2026 06 18",
+  "status": "named target outreach packet not sent",
+  "institution": "Hacettepe University",
+  "unit": "Bilişim Enstitüsü",
+  "program_route": "Sağlık Bilişimi Tezli Yüksek Lisans Programı",
+  "primary_named_route": "Dr. Öğr. Üyesi Gözdem Dural",
+  "primary_public_email_route": "gozdemdural@hacettepe.edu.tr",
+  "backup_public_email_route": "bilisim@hacettepe.edu.tr",
+  "source_count": 5,
+  "message_count": 2,
+  "sources": [
+    "https://bilisim.hacettepe.edu.tr/tr/iletisim-38",
+    "https://bilisim.hacettepe.edu.tr/tr/enstitu_kurulu-6",
+    "https://bilisim.hacettepe.edu.tr/tr/saglik_bilisimi_tezli_yl_programi-277",
+    "https://bilisim.hacettepe.edu.tr/tr/yapay_zeka_tezli_yl_programi-340",
+    "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/94"
+  ],
+  "claims_email_sent": false,
+  "claims_contact_made": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_partner_relationship": false,
+  "claims_application": false,
+  "claims_submission": false,
+  "contains_patient_data": false,
+  "claims_medical_advice": false,
+  "claims_clinical_deployment": false,
+  "claims_clinical_validation": false
+}
