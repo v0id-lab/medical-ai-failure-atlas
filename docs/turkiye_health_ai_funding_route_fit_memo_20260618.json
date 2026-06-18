@@ -1,0 +1,73 @@
+{
+  "title": "Türkiye Health AI Funding Route Fit Memo",
+  "date": "2026 06 18",
+  "status": "public route fit memo for funding and collaboration readiness, not an application",
+  "source_signals": [
+    {
+      "id": "THAF001",
+      "name": "TÜBİTAK 1711 Yapay Zekâ Ekosistem 2026 call",
+      "url": "https://tubitak.gov.tr/tr/duyuru/1711-yapay-zeka-ekosistem-2026-yili-cagrisi-acildi",
+      "fit_read": "smart education technology route is conditionally possible for clinician AI literacy and safety training"
+    },
+    {
+      "id": "THAF002",
+      "name": "TÜSEB 2026 project support details",
+      "url": "https://www.tuseb.gov.tr/haberler/2026-yili-tuseb-proje-desteklerine-iliskin-cagri-ayrintilari-yayimlandi-20260127",
+      "fit_read": "national health research route is plausible but exact call text and eligibility are needed"
+    },
+    {
+      "id": "THAF003",
+      "name": "TÜSEB A group route surface",
+      "url": "https://proje-destek.tuseb.gov.tr/a-grubu-proje-destekleri",
+      "fit_read": "A4 style route may fit specialists and academic research when institutional route is clear"
+    },
+    {
+      "id": "THAF004",
+      "name": "TÜYZE public institute signal",
+      "url": "https://tuyze.tuseb.gov.tr/duyurular",
+      "fit_read": "education and health data route owner question is plausible but unconfirmed"
+    },
+    {
+      "id": "THAF005",
+      "name": "TÜBİTAK generative AI guide signal",
+      "url": "https://tubitak.gov.tr/tr/kurumsal/hakkimizda/uretken-yapay-zeka-rehberi",
+      "fit_read": "future proposal work needs transparent human accountability and source audit trail"
+    }
+  ],
+  "route_decisions": [
+    {
+      "route": "TÜBİTAK 1711 smart education technology",
+      "status": "conditionally possible, not ready",
+      "best_fit": "clinician AI literacy and simulation based safety training"
+    },
+    {
+      "route": "TÜSEB A group health research support",
+      "status": "plausible, needs call text and institutional route check",
+      "best_fit": "medical LLM safety evaluation and health data quality"
+    },
+    {
+      "route": "TÜYZE education or report route",
+      "status": "strong route owner question, not a proposal",
+      "best_fit": "clinician AI literacy and health data stewardship"
+    }
+  ],
+  "next_public_action": "prepare one source checked route fit note if no route owner replies",
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_tubitak_submission": false,
+  "claims_tuseb_submission": false,
+  "claims_tuyze_proposal": false,
+  "claims_official_role": false,
+  "claims_partner": false,
+  "claims_consortium": false,
+  "claims_route_access": false,
+  "claims_budget": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_medical_advice": false,
+  "claims_endorsement": false
+}
