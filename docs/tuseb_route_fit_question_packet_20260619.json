@@ -1,0 +1,52 @@
+{
+  "title": "TÜSEB Route Fit Question Packet",
+  "date": "2026 06 19",
+  "status": "public route fit question packet for a non patient data medical AI safety concept, not an application",
+  "target_surface": "TUSEB TUYZE information route",
+  "source_signals": [
+    {
+      "id": "TRFQ001",
+      "name": "TÜSEB A4 UM expert call notice",
+      "url": "https://www.tuseb.gov.tr/haberler/tuseb-2026-a4-um-uzman-mecburi-hizmet-grubuna-yonelik-proje-cagrisi-acildi-20260616",
+      "route_read": "possible only if eligibility, compulsory service, institutional executor route, and TBYS authority are real"
+    },
+    {
+      "id": "TRFQ002",
+      "name": "TÜSEB A group project support page",
+      "url": "https://proje-destek.tuseb.gov.tr/a-grubu-proje-destekleri",
+      "route_read": "A4 executor route must be verified before proposal writing"
+    },
+    {
+      "id": "TRFQ003",
+      "name": "TÜYZE health data and AI route surface",
+      "url": "https://tuyze.tuseb.gov.tr/kurullar/saglik-veri-organizasyonu-bilim-kurulu",
+      "route_read": "plausible routing surface, not a confirmed partner"
+    },
+    {
+      "id": "TRFQ004",
+      "name": "TÜBİTAK open calls contrast",
+      "url": "https://tubitak.gov.tr/tr/acik-cagrilar",
+      "route_read": "1711 remains live, but TUSEB or TUYZE is the more direct health route question"
+    }
+  ],
+  "route_question": "For a non patient data medical AI safety readiness concept with no clinical use or clinical validation claim, is the right first route A4 UM, TUYZE, or another TUSEB surface?",
+  "target_email_subject": "Non patient data medical AI safety concept route question",
+  "target_email_to": "info@tuseb.gov.tr",
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_tuseb_application": false,
+  "claims_tbys_submission": false,
+  "claims_tuyze_proposal": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_institutional_approval": false,
+  "claims_budget": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_medical_advice": false,
+  "claims_endorsement": false
+}
