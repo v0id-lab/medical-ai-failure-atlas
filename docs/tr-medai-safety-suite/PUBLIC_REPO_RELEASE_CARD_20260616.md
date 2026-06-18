@@ -158,7 +158,8 @@ It focuses on source support, synthetic case review, failure modes, clinician li
 66. [Reviewer question maintainer public preview acceptance archive index](../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_INDEX_V0_1.md)
 67. [Reviewer question maintainer public preview acceptance archive release note](../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_RELEASE_NOTE_V0_1.md)
 68. [Reviewer question maintainer public preview acceptance archive closure note](../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_CLOSURE_NOTE_V0_1.md)
+69. [Reviewer question maintainer public preview acceptance archive final index](../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_FINAL_INDEX_V0_1.md)
 
 ## Next Public Build
 
-The next useful public build is a reviewer question maintainer public preview acceptance archive final index without scoring or compatibility claims.
+The next useful public build is a reviewer question maintainer public preview acceptance archive handoff packet without scoring or compatibility claims.
