@@ -304,6 +304,10 @@ REQUIRED_FILES = [
     "docs/goktug_field_action_review_packet_20260618.json",
     "scripts/generate_goktug_field_action_review_packet_20260618.py",
     "scripts/validate_goktug_field_action_review_packet_20260618.py",
+    "docs/TEKNOFEST_PUBLIC_SHARE_CLEARANCE_PACKET_20260618.md",
+    "docs/teknofest_public_share_clearance_packet_20260618.json",
+    "scripts/generate_teknofest_public_share_clearance_packet_20260618.py",
+    "scripts/validate_teknofest_public_share_clearance_packet_20260618.py",
     "docs/MEDHELM_BOUNDARY_NOTE_V0_1.md",
     "docs/MEDMARKS_BOUNDARY_NOTE_V0_1.md",
     "docs/ASSURANCE_CARD_TEMPLATE_V0_1.md",
@@ -802,6 +806,10 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
             fail(errors, "README must link to the Goktug field action review packet")
         if "make goktug_field_action_review_packet" not in readme_text:
             fail(errors, "README must document the Goktug field action review packet command")
+        if "docs/TEKNOFEST_PUBLIC_SHARE_CLEARANCE_PACKET_20260618.md" not in readme_text:
+            fail(errors, "README must link to the TEKNOFEST public share clearance packet")
+        if "make teknofest_public_share_clearance_packet" not in readme_text:
+            fail(errors, "README must document the TEKNOFEST public share clearance packet command")
         if "docs/LABEL_AUDIT_REVIEWER_ROLE_TABLE_V0_1.md" not in readme_text:
             fail(errors, "README must link to the label audit reviewer role table")
         if "make label_audit_role_table" not in readme_text:

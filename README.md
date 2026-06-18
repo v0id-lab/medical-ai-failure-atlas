@@ -120,6 +120,7 @@ New visible build surfaces are now staged in this public repository:
 110. [TÜBİTAK 1711 AI Assurance Sidecar](docs/TUBITAK_1711_AI_ASSURANCE_SIDECAR_20260618.md)
 111. [Named outreach decision matrix](docs/NAMED_OUTREACH_DECISION_MATRIX_20260618.md)
 112. [Goktug Field Action Review Packet](docs/GOKTUG_FIELD_ACTION_REVIEW_PACKET_20260618.md)
+113. [TEKNOFEST Public Share Clearance Packet](docs/TEKNOFEST_PUBLIC_SHARE_CLEARANCE_PACKET_20260618.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -193,6 +194,7 @@ The goal is to help model builders, clinical AI teams, and academic collaborator
 60. TÜBİTAK 1711 AI Assurance Sidecar for adjacent AI assurance scouting without health priority fit, application, intent declaration, partner, budget, payment, terms, official role, endorsement, patient data, clinical validation, or deployment claims.
 61. Named outreach decision matrix for TÜYZE, TEKNOFEST, TÜBİTAK 1711, CHAI, and MedHELM routes without email, submission, application, partner, official role, endorsement, patient data, clinical validation, or deployment claims.
 62. Goktug Field Action Review Packet for choosing between TÜYZE readiness outreach, TEKNOFEST public share, and TÜBİTAK 1711 consortium scouting without email, public post, submission, application, partner, official role, endorsement, patient data, clinical validation, deployment, payment, or terms claims.
+63. TEKNOFEST Public Share Clearance Packet for reviewable public share text candidates without public post, email, submission, application, official TEKNOFEST role, endorsement, team relationship, patient data, medical advice, clinical validation, deployment, payment, or terms claims.
 
 ## What this is
 
@@ -404,6 +406,12 @@ Generate the Goktug field action review packet:
 
 ```bash
 make goktug_field_action_review_packet
+```
+
+Generate the TEKNOFEST public share clearance packet:
+
+```bash
+make teknofest_public_share_clearance_packet
 ```
 
 Generate the benchmark style reviewer questions:
