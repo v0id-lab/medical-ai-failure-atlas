@@ -1,0 +1,67 @@
+{
+  "artifact": "TURKIYE_CLINICIAN_AI_SAFETY_MINI_CURRICULUM_20260618",
+  "date": "2026 06 18",
+  "status": "public 30 minute clinician AI safety mini curriculum, not an official course",
+  "duration_minutes": 30,
+  "source_check_date": "2026 06 18",
+  "official_sources": [
+    {
+      "source": "TÜBİTAK 1711 Yapay Zekâ Ekosistem 2026 call",
+      "url": "https://tubitak.gov.tr/tr/duyuru/1711-yapay-zeka-ekosistem-2026-yili-cagrisi-acildi",
+      "observed_fit": "Akıllı Eğitim Teknolojileri priority exists",
+      "constraint": "No direct health AI priority listed on the checked page"
+    },
+    {
+      "source": "TÜSEB 2026 project support call details",
+      "url": "https://www.tuseb.gov.tr/haberler/2026-yili-tuseb-proje-desteklerine-iliskin-cagri-ayrintilari-yayimlandi-20260127",
+      "observed_fit": "2026 project support details and TBYS route are public",
+      "constraint": "This artifact is not a proposal"
+    },
+    {
+      "source": "TÜYZE health AI education surface",
+      "url": "https://tuyze.tuseb.gov.tr/",
+      "observed_fit": "Health AI seminars are publicly listed",
+      "constraint": "No TÜYZE review or partnership is claimed"
+    }
+  ],
+  "learning_goal": "separate source support review, clinician review, public build language, and clinical validation",
+  "segments": [
+    {
+      "minutes": "0 to 3",
+      "name": "boundary opening"
+    },
+    {
+      "minutes": "3 to 8",
+      "name": "source support review"
+    },
+    {
+      "minutes": "8 to 14",
+      "name": "failure mode capture"
+    },
+    {
+      "minutes": "14 to 20",
+      "name": "no ranking safety review"
+    },
+    {
+      "minutes": "20 to 26",
+      "name": "route owner decision"
+    },
+    {
+      "minutes": "26 to 30",
+      "name": "closeout"
+    }
+  ],
+  "contains_patient_data": false,
+  "claims_official_course": false,
+  "claims_application": false,
+  "claims_proposal": false,
+  "claims_congress_submission": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_terms_acceptance": false,
+  "claims_payment": false,
+  "next_action": "Use only as a public route owner review artifact until a substantive reply appears."
+}
