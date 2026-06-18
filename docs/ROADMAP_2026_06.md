@@ -91,6 +91,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 59. Reviewer question public release index v0.1.
 60. Current medical AI intelligence priority update v0.1.
 61. Türkiye AI ethics status gate note v0.1.
+62. Reviewer question maintainer public preview acceptance archive public handoff closure note v0.1.
 
 ## External visibility sequence
 

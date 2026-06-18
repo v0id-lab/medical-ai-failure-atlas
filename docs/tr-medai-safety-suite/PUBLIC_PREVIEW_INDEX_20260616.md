@@ -88,6 +88,7 @@ This is a public preview layer for clinician led medical AI evaluation infrastru
 78. `../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_PUBLIC_HANDOFF_RELEASE_NOTE_V0_1.md` gives a reviewer question maintainer public preview acceptance archive public handoff release note without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 79. `../CURRENT_MEDICAL_AI_INTELLIGENCE_PRIORITY_UPDATE_20260618_V0_1.md` gives a current medical AI intelligence priority update without submission, partner, official role, endpoint, patient data, validation, or endorsement claims.
 80. `../TURKIYE_AI_ETHICS_STATUS_GATE_NOTE_V0_1.md` gives a Türkiye AI ethics status gate note without submission, approval, national rule, official role, patient data, validation, or endorsement claims.
+81. `../REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_PUBLIC_HANDOFF_CLOSURE_NOTE_V0_1.md` gives a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring, compatibility, endpoint, patient data, validation, or endorsement claims.
 
 ## What This Preview Is
 

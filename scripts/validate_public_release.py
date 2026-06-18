@@ -255,6 +255,10 @@ REQUIRED_FILES = [
     "docs/reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_note_v0_1.json",
     "scripts/generate_reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_note_v0_1.py",
     "scripts/validate_reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_note_v0_1.py",
+    "docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_PUBLIC_HANDOFF_CLOSURE_NOTE_V0_1.md",
+    "docs/reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_closure_note_v0_1.json",
+    "scripts/generate_reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_closure_note_v0_1.py",
+    "scripts/validate_reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_closure_note_v0_1.py",
     "docs/CURRENT_MEDICAL_AI_INTELLIGENCE_PRIORITY_UPDATE_20260618_V0_1.md",
     "docs/current_medical_ai_intelligence_priority_update_20260618_v0_1.json",
     "scripts/generate_current_medical_ai_intelligence_priority_update_20260618_v0_1.py",
@@ -703,6 +707,10 @@ def validate(root: Path, strict: bool) -> tuple[list[str], list[str]]:
             fail(errors, "README must link to the reviewer question maintainer public preview acceptance archive public handoff release note")
         if "make reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_note" not in readme_text:
             fail(errors, "README must document the reviewer question maintainer public preview acceptance archive public handoff release note command")
+        if "docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_PUBLIC_HANDOFF_CLOSURE_NOTE_V0_1.md" not in readme_text:
+            fail(errors, "README must link to the reviewer question maintainer public preview acceptance archive public handoff closure note")
+        if "make reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_closure_note" not in readme_text:
+            fail(errors, "README must document the reviewer question maintainer public preview acceptance archive public handoff closure note command")
         if "docs/CURRENT_MEDICAL_AI_INTELLIGENCE_PRIORITY_UPDATE_20260618_V0_1.md" not in readme_text:
             fail(errors, "README must link to the current medical AI intelligence priority update")
         if "make current_medical_ai_intelligence_priority_update" not in readme_text:

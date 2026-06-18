@@ -252,6 +252,9 @@ REQUIRED_PHRASES = [
     "Reviewer question maintainer public preview acceptance archive public handoff release note",
     "make reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_note",
     "6 reviewer question maintainer public preview acceptance archive public handoff release note rows",
+    "Reviewer question maintainer public preview acceptance archive public handoff closure note",
+    "make reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_closure_note",
+    "6 reviewer question maintainer public preview acceptance archive public handoff closure note rows",
     "Current medical AI intelligence priority update",
     "make current_medical_ai_intelligence_priority_update",
     "8 current medical AI intelligence source rows",
@@ -260,7 +263,7 @@ REQUIRED_PHRASES = [
     "make turkiye_ai_ethics_status_gate_note",
     "3 Türkiye AI ethics status source rows",
     "6 Türkiye AI ethics status gate rows",
-    "Add a reviewer question maintainer public preview acceptance archive public handoff closure note without scoring or compatibility claims",
+    "Use the current BAGLAM2 and portfolio tracker state to choose the next Track A and Track B build branch before any external maintainer contact",
 ]
 
 REQUIRED_LINK_TARGETS = [
@@ -354,6 +357,8 @@ REQUIRED_LINK_TARGETS = [
     "docs/reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_index_v0_1.json",
     "docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_PUBLIC_HANDOFF_RELEASE_NOTE_V0_1.md",
     "docs/reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_release_note_v0_1.json",
+    "docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_PUBLIC_HANDOFF_CLOSURE_NOTE_V0_1.md",
+    "docs/reviewer_question_maintainer_public_preview_acceptance_archive_public_handoff_closure_note_v0_1.json",
     "docs/CURRENT_MEDICAL_AI_INTELLIGENCE_PRIORITY_UPDATE_20260618_V0_1.md",
     "docs/current_medical_ai_intelligence_priority_update_20260618_v0_1.json",
     "docs/TURKIYE_AI_ETHICS_STATUS_GATE_NOTE_V0_1.md",
