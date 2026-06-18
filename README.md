@@ -28,22 +28,23 @@ Start here:
 3. [Türkiye Health AI Safety Field Readiness Dashboard](docs/TURKIYE_HEALTH_AI_SAFETY_FIELD_READINESS_DASHBOARD_20260618.md)
 4. [Türkiye Clinician AI Safety Mini Curriculum](docs/TURKIYE_CLINICIAN_AI_SAFETY_MINI_CURRICULUM_20260618.md)
 5. [Türkiye No Ranking Medical AI Assurance Card](docs/TURKIYE_NO_RANKING_MEDICAL_AI_ASSURANCE_CARD_20260618.md)
-6. [TÜBİTAK 1711 Smart Education Fit Gate](docs/TUBITAK_1711_SMART_EDUCATION_FIT_GATE_20260618.md)
-7. [TÜBİTAK 1711 Smart Education Named Scout](docs/TUBITAK_1711_SMART_EDUCATION_NAMED_SCOUT_20260618.md)
-8. [TÜBİTAK 1711 SEBİT Route Owner Scout](docs/TUBITAK_1711_SEBIT_ROUTE_OWNER_SCOUT_20260618.md)
-9. [TÜBİTAK 1711 Acibadem CASE Demand Side Scout](docs/TUBITAK_1711_ACIBADEM_CASE_DEMAND_SIDE_SCOUT_20260618.md)
-10. [TÜYZE Education Route Owner Scout](docs/TUYZE_EDUCATION_ROUTE_OWNER_SCOUT_20260618.md)
-11. [TÜBİTAK 1711 Three Gate Consortium Fit Map](docs/TUBITAK_1711_THREE_GATE_CONSORTIUM_FIT_MAP_20260618.md)
-12. [DEÜ Digital Medicine Board Route Owner Scout](docs/DEU_DIGITAL_MEDICINE_BOARD_ROUTE_OWNER_SCOUT_20260618.md)
-13. [KTÜ AI Simulation Congress Route Owner Scout](docs/KTU_AI_SIMULATION_CONGRESS_ROUTE_OWNER_SCOUT_20260618.md)
-14. [Hospital and Medical Faculty Outreach Draft](docs/HOSPITAL_MEDICAL_FACULTY_OUTREACH_DRAFT_20260618.md)
-15. [Hacettepe Health Informatics Outreach Packet](docs/HACETTEPE_HEALTH_INFORMATICS_OUTREACH_PACKET_20260618.md)
-16. [Hacettepe Health Management AI Outreach Packet](docs/HACETTEPE_HEALTH_MANAGEMENT_AI_OUTREACH_PACKET_20260618.md)
-17. [Acibadem Medical Ethics AI Outreach Packet](docs/ACIBADEM_MEDICAL_ETHICS_AI_OUTREACH_PACKET_20260618.md)
-18. [TÜYZE Health AI Safety Readiness Companion](docs/TUYZE_HEALTH_AI_SAFETY_READINESS_COMPANION_20260618.md)
-19. [Türkiye Health AI Safety Readiness Kit](docs/TURKIYE_HEALTH_AI_SAFETY_READINESS_KIT_20260618.md)
-20. [TEKNOFEST Health AI Safety Addendum](docs/TEKNOFEST_HEALTH_AI_SAFETY_ADDENDUM_20260618.md)
-21. [TEKNOFEST Health AI Detail Report Final Gate](docs/TEKNOFEST_HEALTH_AI_DETAIL_REPORT_FINAL_GATE_20260618.md)
+6. [Türkiye Health Data Steward Scout](docs/TURKIYE_HEALTH_DATA_STEWARD_SCOUT_20260618.md)
+7. [TÜBİTAK 1711 Smart Education Fit Gate](docs/TUBITAK_1711_SMART_EDUCATION_FIT_GATE_20260618.md)
+8. [TÜBİTAK 1711 Smart Education Named Scout](docs/TUBITAK_1711_SMART_EDUCATION_NAMED_SCOUT_20260618.md)
+9. [TÜBİTAK 1711 SEBİT Route Owner Scout](docs/TUBITAK_1711_SEBIT_ROUTE_OWNER_SCOUT_20260618.md)
+10. [TÜBİTAK 1711 Acibadem CASE Demand Side Scout](docs/TUBITAK_1711_ACIBADEM_CASE_DEMAND_SIDE_SCOUT_20260618.md)
+11. [TÜYZE Education Route Owner Scout](docs/TUYZE_EDUCATION_ROUTE_OWNER_SCOUT_20260618.md)
+12. [TÜBİTAK 1711 Three Gate Consortium Fit Map](docs/TUBITAK_1711_THREE_GATE_CONSORTIUM_FIT_MAP_20260618.md)
+13. [DEÜ Digital Medicine Board Route Owner Scout](docs/DEU_DIGITAL_MEDICINE_BOARD_ROUTE_OWNER_SCOUT_20260618.md)
+14. [KTÜ AI Simulation Congress Route Owner Scout](docs/KTU_AI_SIMULATION_CONGRESS_ROUTE_OWNER_SCOUT_20260618.md)
+15. [Hospital and Medical Faculty Outreach Draft](docs/HOSPITAL_MEDICAL_FACULTY_OUTREACH_DRAFT_20260618.md)
+16. [Hacettepe Health Informatics Outreach Packet](docs/HACETTEPE_HEALTH_INFORMATICS_OUTREACH_PACKET_20260618.md)
+17. [Hacettepe Health Management AI Outreach Packet](docs/HACETTEPE_HEALTH_MANAGEMENT_AI_OUTREACH_PACKET_20260618.md)
+18. [Acibadem Medical Ethics AI Outreach Packet](docs/ACIBADEM_MEDICAL_ETHICS_AI_OUTREACH_PACKET_20260618.md)
+19. [TÜYZE Health AI Safety Readiness Companion](docs/TUYZE_HEALTH_AI_SAFETY_READINESS_COMPANION_20260618.md)
+20. [Türkiye Health AI Safety Readiness Kit](docs/TURKIYE_HEALTH_AI_SAFETY_READINESS_KIT_20260618.md)
+21. [TEKNOFEST Health AI Safety Addendum](docs/TEKNOFEST_HEALTH_AI_SAFETY_ADDENDUM_20260618.md)
+22. [TEKNOFEST Health AI Detail Report Final Gate](docs/TEKNOFEST_HEALTH_AI_DETAIL_REPORT_FINAL_GATE_20260618.md)
 
 Focus: health data fitness, decision support limits, source support, Turkish clinical context, failure mode disclosure, data governance route, and public claim hygiene.
 
@@ -241,6 +242,7 @@ The goal is to help model builders, clinical AI teams, and academic collaborator
 62. Goktug Field Action Review Packet for choosing between TÜYZE readiness outreach, TEKNOFEST public share, and TÜBİTAK 1711 consortium scouting without email, public post, submission, application, partner, official role, endorsement, patient data, clinical validation, deployment, payment, or terms claims.
 63. TEKNOFEST Public Share Clearance Packet for reviewable public share text candidates without public post, email, submission, application, official TEKNOFEST role, endorsement, team relationship, patient data, medical advice, clinical validation, deployment, payment, or terms claims.
 64. TEKNOFEST Health AI Detail Report Final Gate for report language review before the public detail report deadline without official TEKNOFEST role, endorsement, submission, application, partner, patient data, medical advice, clinical validation, deployment, model ranking, payment, or terms claims.
+65. Türkiye Health Data Steward Scout for source checked data quality route owner discovery without Ministry of Health endorsement, TÜSEB endorsement, official role, route access, partner, application, proposal, patient data, private operational data, clinical validation, deployment, ranking, payment, or terms claims.
 
 ## What this is
 

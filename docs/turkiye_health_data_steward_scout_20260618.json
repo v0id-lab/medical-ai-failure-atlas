@@ -1,0 +1,63 @@
+{
+  "artifact": "TURKIYE_HEALTH_DATA_STEWARD_SCOUT_20260618",
+  "date": "2026 06 18",
+  "status": "public route scout for health data quality and AI readiness, not an application",
+  "source_signals": [
+    {
+      "source_id": "THDSS001",
+      "source": "https://sbsgm.saglik.gov.tr",
+      "checked_fact": "The public site lists Büyük Veri Sistemleri ve Veri Yönetimi Koordinatörlüğü among the General Directorate coordination surfaces.",
+      "field_read": "A health data quality scout should route through data management and governance surfaces before any AI assurance claim is made."
+    },
+    {
+      "source_id": "THDSS002",
+      "source": "https://sbsgm.saglik.gov.tr/TR-104172/yapay-zeka-ve-yenilikci-teknolojiler-daire-baskanligi.html",
+      "checked_fact": "The page lists duties that include identifying processes and problems that can be improved with AI, producing or procuring AI solutions, tracking AI technology developments, working with universities, institutes, and health organizations, ensuring interoperability of projects, and preparing education materials.",
+      "field_read": "A useful public scout should connect data quality, interoperability, AI readiness, and education without claiming official access."
+    },
+    {
+      "source_id": "THDSS003",
+      "source": "https://kayittescil.saglik.gov.tr/",
+      "checked_fact": "The public site lists registered software surfaces and announcements for health information management systems and related software categories.",
+      "field_read": "Health AI readiness depends on registered software, data flow, provenance, and auditability before model claims."
+    },
+    {
+      "source_id": "THDSS004",
+      "source": "https://www.tuseb.gov.tr/",
+      "checked_fact": "The public site lists Türkiye Sağlık Veri Araştırmaları ve Yapay Zeka Uygulamaları Enstitüsü among TÜSEB institutes.",
+      "field_read": "Health data research and AI application surfaces are relevant to a future data quality review packet, but this scout does not claim TÜSEB review or partnership."
+    }
+  ],
+  "steward_questions": [
+    "data source ownership",
+    "data permission and public boundary",
+    "schema and coding provenance",
+    "missingness and drift",
+    "label audit",
+    "AI readiness gate",
+    "public claim hygiene"
+  ],
+  "decision_states": [
+    "route unknown",
+    "route identified",
+    "steward review requested",
+    "data quality review possible",
+    "blocked"
+  ],
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_ministry_endorsement": false,
+  "claims_tuseb_endorsement": false,
+  "claims_official_role": false,
+  "claims_route_access": false,
+  "claims_partner": false,
+  "claims_application": false,
+  "claims_proposal": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_terms_acceptance": false,
+  "claims_payment": false,
+  "next_action": "Use this scout to prepare a non patient data data quality worksheet or a route owner fit note."
+}
