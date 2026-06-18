@@ -100,6 +100,7 @@ New visible build surfaces are now staged in this public repository:
 90. [Reviewer question maintainer public preview acceptance archive final index v0.1](docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_FINAL_INDEX_V0_1.md)
 91. [Reviewer question maintainer public preview acceptance archive handoff packet v0.1](docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_HANDOFF_PACKET_V0_1.md)
 92. [Reviewer question maintainer public preview acceptance archive steward note v0.1](docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_STEWARD_NOTE_V0_1.md)
+93. [Reviewer question maintainer public preview acceptance archive steward index v0.1](docs/REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_STEWARD_INDEX_V0_1.md)
 
 These are public preview artifacts for open medical AI evaluation infrastructure. They use synthetic examples only. They are not clinical advice, not patient data, not clinical deployment, not clinical validation, not a model safety proof, and not an official institutional or national program endorsement.
 
@@ -498,6 +499,12 @@ Generate reviewer question maintainer public preview acceptance archive steward 
 make reviewer_question_maintainer_public_preview_acceptance_archive_steward_note
 ```
 
+Generate reviewer question maintainer public preview acceptance archive steward index:
+
+```bash
+make reviewer_question_maintainer_public_preview_acceptance_archive_steward_index
+```
+
 Validate the assurance card template:
 
 ```bash
@@ -809,6 +816,8 @@ docs/
   reviewer_question_maintainer_public_preview_acceptance_archive_handoff_packet_v0_1.json
   REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_STEWARD_NOTE_V0_1.md
   reviewer_question_maintainer_public_preview_acceptance_archive_steward_note_v0_1.json
+  REVIEWER_QUESTION_MAINTAINER_PUBLIC_PREVIEW_ACCEPTANCE_ARCHIVE_STEWARD_INDEX_V0_1.md
+  reviewer_question_maintainer_public_preview_acceptance_archive_steward_index_v0_1.json
   ASSURANCE_CARD_TEMPLATE_V0_1.md
   ASSURANCE_RELEASE_GATE_EXAMPLE_MAP_V0_1.md
   SOURCECHECKUP_TR_MEDLLM_ASSURANCE_ROUTING_MAP_V0_1.md
