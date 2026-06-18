@@ -1,0 +1,85 @@
+{
+  "title": "Türkiye Health AI Safety Handoff Index",
+  "date": "2026 06 19",
+  "status": "public handoff index for hospitals, medical faculties, health informatics units, ethics groups, education teams, and route owners",
+  "route_groups": [
+    {
+      "name": "National route owner scope",
+      "artifacts": [
+        "TUSEB_A4_UM_TUYZE_NON_PATIENT_DATA_CONCEPT_NOTE_20260619.md",
+        "TUSEB_ROUTE_FIT_QUESTION_PACKET_20260619.md",
+        "TUSEB_A4_UM_MEDICAL_AI_SAFETY_CONCEPT_GATE_20260619.md",
+        "TURKIYE_HEALTH_AI_FUNDING_ROUTE_FIT_MEMO_20260618.md"
+      ]
+    },
+    {
+      "name": "Hospital and medical faculty first read",
+      "artifacts": [
+        "TURKIYE_HEALTH_AI_SAFETY_FIELD_READINESS_DASHBOARD_20260618.md",
+        "HOSPITAL_MEDICAL_FACULTY_OUTREACH_DRAFT_20260618.md",
+        "TURKIYE_HEALTH_AI_SAFETY_ROUTE_OWNER_MAP_20260618.md",
+        "TURKIYE_HEALTH_AI_SAFETY_OUTREACH_ROADMAP_20260618.md"
+      ]
+    },
+    {
+      "name": "Clinician AI literacy and review",
+      "artifacts": [
+        "TURKIYE_CLINICIAN_AI_SAFETY_MINI_CURRICULUM_20260618.md",
+        "CLINICIAN_REVIEW_PROTOCOL_V0_1.md",
+        "CLINICIAN_AI_LITERACY_SANDBOX_HANDOFF_MICRO_MODULE_V0_1.md",
+        "CLINICIAN_LITERACY_RELEASE_GATE_LESSON_MAP_V0_1.md"
+      ]
+    },
+    {
+      "name": "Health data quality and label audit",
+      "artifacts": [
+        "HEALTH_DATA_QUALITY_AND_LABEL_AUDIT_CARD_V0_1.md",
+        "TURKIYE_HEALTH_DATA_STEWARD_SCOUT_20260618.md",
+        "SOURCE_REVIEW_WORKSHEETS_V0_1.md",
+        "LABEL_AUDIT_REVIEWER_ROLE_TABLE_V0_1.md"
+      ]
+    },
+    {
+      "name": "No ranking safety reporting",
+      "artifacts": [
+        "TURKIYE_NO_RANKING_MEDICAL_AI_ASSURANCE_CARD_20260618.md",
+        "LEADERBOARD_DESIGN_V0_1.md",
+        "BENCHMARK_STYLE_REVIEWER_QUESTIONS_V0_1.md",
+        "SOURCECHECKUP_MEDICAL_BENCHMARK_BOUNDARY_DELTA_NOTE_V0_1.md"
+      ]
+    },
+    {
+      "name": "Public tool and contribution entry point",
+      "artifacts": [
+        "sourcecheckup/README.md",
+        "sourcecheckup/PUBLIC_DEMO_MATRIX_20260616.md",
+        "sourcecheckup/CONTRIBUTOR_CHECKLIST_V0_2.md",
+        "failure_atlas/public/CASE_INTAKE_CHECKLIST_V0_1.md"
+      ]
+    }
+  ],
+  "current_external_state": {
+    "tuseb_route_fit_question_waiting": true,
+    "hacettepe_health_informatics_acknowledged_review": true,
+    "other_active_turkiye_routes_silent": true,
+    "silence_is_rejection": false,
+    "acknowledgement_is_endorsement": false
+  },
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_tuseb_application": false,
+  "claims_tbys_submission": false,
+  "claims_tuyze_proposal": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_institutional_approval": false,
+  "claims_budget": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_medical_advice": false,
+  "claims_endorsement": false
+}
