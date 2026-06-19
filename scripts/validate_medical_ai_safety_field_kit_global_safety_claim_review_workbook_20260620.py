@@ -42,6 +42,15 @@ REQUIRED_URLS = [
 
 REQUIRED_SFC = [f"SFC{i:03d}" for i in range(1, 11)]
 
+REQUIRED_SFC_MAPPINGS = [
+    "SFC005 maps to synthetic evidence boundary",
+    "SFC006 maps to policy wording",
+    "SFC007 maps to data fitness",
+    "SFC008 maps to human review role",
+    "SFC009 maps to vendor language",
+    "SFC010 maps to sandbox boundary",
+]
+
 FORBIDDEN = [
     "patient data used",
     "real patient",
@@ -118,6 +127,9 @@ def main() -> int:
     for card_id in REQUIRED_SFC:
         if card_id not in doc_text:
             errors.append(f"Doc missing card id: {card_id}")
+    for mapping in REQUIRED_SFC_MAPPINGS:
+        if mapping.lower() not in doc_text.lower():
+            errors.append(f"Doc missing canonical card mapping: {mapping}")
     for phrase in ["Route:", "Risk:", "Missing gate:", "Safer wording:"]:
         if phrase not in issue_text:
             errors.append(f"Issue comment missing phrase: {phrase}")

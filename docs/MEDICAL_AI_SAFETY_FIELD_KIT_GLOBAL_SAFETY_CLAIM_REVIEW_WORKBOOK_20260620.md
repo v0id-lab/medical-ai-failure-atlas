@@ -106,17 +106,17 @@ SFC003 maps to Turkish wording. Review whether language shifts urgency, certaint
 
 SFC004 maps to hospital readiness. Review whether a demo sounds like workflow readiness.
 
-SFC005 maps to human review. Review whether a human gate is real, named, and useful.
+SFC005 maps to synthetic evidence boundary. Review whether a synthetic card is being used as real case evidence.
 
-SFC006 maps to data quality. Review whether data fitness is assumed without a visible check.
+SFC006 maps to policy wording. Review whether broad policy language becomes patient instruction.
 
-SFC007 maps to governance wording. Review whether policy language becomes approval language.
+SFC007 maps to data fitness. Review whether public dataset access is treated as medical AI safety fitness.
 
-SFC008 maps to release wording. Review whether a public release sounds like deployment clearance.
+SFC008 maps to human review role. Review whether a human gate has a named role, trigger, authority, and record.
 
-SFC009 maps to education claims. Review whether literacy material sounds like certification.
+SFC009 maps to vendor language. Review whether general capability wording becomes medical assurance.
 
-SFC010 maps to escalation. Review whether unsafe output has a clear stop and escalation gate.
+SFC010 maps to sandbox boundary. Review whether route exploration sounds like deployment readiness.
 
 ## Synthetic walkthrough
 
