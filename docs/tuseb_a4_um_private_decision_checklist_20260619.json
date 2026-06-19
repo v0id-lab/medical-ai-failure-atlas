@@ -1,0 +1,79 @@
+{
+  "artifact": "TÜSEB A4 UM Private Decision Checklist",
+  "date": "2026 06 19",
+  "status": "public private decision checklist, not an application",
+  "checked_after_reading_baglam2": true,
+  "checked_after_reading_trackers": true,
+  "checked_gmail_before_build": true,
+  "gmail_reply_state": "no new route owner reply",
+  "prior_acknowledgement_state": "Hacettepe health informatics acknowledgement only",
+  "source_signals": [
+    {
+      "id": "PDC001",
+      "source_url": "https://www.tuseb.gov.tr/haberler/tuseb-2026-a4-um-uzman-mecburi-hizmet-grubuna-yonelik-proje-cagrisi-acildi-20260616",
+      "support_state": "supports call existence and target group"
+    },
+    {
+      "id": "PDC002",
+      "source_url": "https://files.tuseb.gov.tr/tuseb/files/dokumanlar/tuseb-2026projecagrilari-agrubu.pdf",
+      "support_state": "supports A4 UM timing"
+    },
+    {
+      "id": "PDC003",
+      "source_url": "https://proje-destek.tuseb.gov.tr/a-grubu-proje-destekleri",
+      "support_state": "supports public A group support surface"
+    }
+  ],
+  "private_answer_states": [
+    "Yes privately verified",
+    "No",
+    "Unknown",
+    "Not needed",
+    "Stop"
+  ],
+  "checklist_rows": [
+    "PDC101",
+    "PDC102",
+    "PDC103",
+    "PDC104",
+    "PDC105",
+    "PDC106",
+    "PDC107",
+    "PDC108",
+    "PDC109",
+    "PDC110",
+    "PDC111",
+    "PDC112"
+  ],
+  "required_private_go_rows": [
+    "PDC101",
+    "PDC102",
+    "PDC103",
+    "PDC104",
+    "PDC106",
+    "PDC107",
+    "PDC108",
+    "PDC109",
+    "PDC110",
+    "PDC111"
+  ],
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "contains_private_answers": false,
+  "claims_tuseb_application": false,
+  "claims_tbys_submission": false,
+  "claims_tuyze_proposal": false,
+  "claims_partner": false,
+  "claims_institutional_approval": false,
+  "claims_budget_approval": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_ethics_approval": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_endorsement": false,
+  "current_decision": "private decision pending, not TBYS action",
+  "next_public_action": "SourceCheckup Turkish language source support dashboard"
+}
