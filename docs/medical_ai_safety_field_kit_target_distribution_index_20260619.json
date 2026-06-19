@@ -1,0 +1,204 @@
+{
+  "artifact_id": "medical_ai_safety_field_kit_target_distribution_index_20260619",
+  "created_at_trt": "2026 06 19 19:15 TRT",
+  "source_issue_number": 149,
+  "source_issue_url": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/149",
+  "public_call_doc": "docs/MEDICAL_AI_SAFETY_FIELD_KIT_PUBLIC_CALL_20260619.md",
+  "distribution_mode": "targeted public distribution index",
+  "checked_after_reading_baglam2": true,
+  "checked_after_reading_trackers": true,
+  "checked_gmail_before_build": true,
+  "gmail_reply_state": "Earlier Hacettepe health informatics acknowledgement only. No new substantive route owner reply.",
+  "active_thread_ids_checked": [
+    "19edcafe5c2dfa60",
+    "19eda863ce89f083",
+    "19edaa3a3868fd0f",
+    "19edac07e13052fa",
+    "19edb2e645ca1f6d",
+    "19edb491af3d687b",
+    "19edb64c4ae9fec6",
+    "19edb8289b165cc0",
+    "19edb9dc297ad804"
+  ],
+  "targeted_search_count": 5,
+  "target_count": 5,
+  "targets": [
+    {
+      "target_id": "TD001",
+      "name": "TUSEB and TUYZE route owner",
+      "route_type": "route owner clarification",
+      "status": "reply pending from prior TUSEB address outreach",
+      "why_this_target": "TUSEB A4 UM call is live and TUYZE is the natural health AI education and data surface, but no application or eligibility claim is safe.",
+      "source_basis": [
+        "TUSEB announced the 2026 A4 UM call on 16 June 2026.",
+        "TUSEB A group page says active calls and details are accessed through TBYS."
+      ],
+      "source_urls": [
+        "https://www.tuseb.gov.tr/haberler/tuseb-2026-a4-um-uzman-mecburi-hizmet-grubuna-yonelik-proje-cagrisi-acildi-20260616",
+        "https://proje-destek.tuseb.gov.tr/a-grubu-proje-destekleri"
+      ],
+      "issue149_use": "Use issue 149 as the single public review link for a non patient data safety field kit.",
+      "safe_ask": "Who is the right route owner for a non patient data medical AI safety field kit review surface.",
+      "do_not_claim": [
+        "application",
+        "eligibility",
+        "TUSEB support",
+        "TUYZE support",
+        "partner status",
+        "clinical validation"
+      ],
+      "send_state": "draft only until Goktug approves exact follow up text",
+      "clearance_needed": true
+    },
+    {
+      "target_id": "TD002",
+      "name": "SBSGM Yapay Zeka ve Yenilikçi Teknolojiler Daire Başkanlığı",
+      "route_type": "public sector route clarification",
+      "status": "live official unit verified",
+      "why_this_target": "The official unit lists AI problem identification, solution work, AI developments, stakeholder collaboration, interoperability, and training material duties.",
+      "source_basis": [
+        "SBSGM page lists Yapay Zeka ve Yenilikçi Teknolojiler Daire Başkanlığı among directorates.",
+        "The unit duties include identifying AI improvable processes, following AI developments, stakeholder collaboration, interoperability, and training material preparation."
+      ],
+      "source_urls": [
+        "https://sbsgm.saglik.gov.tr/TR-104172/yapay-zeka-ve-yenilikci-teknolojiler-daire-baskanligi.html",
+        "https://sbsgm.saglik.gov.tr/TR-104215/mert-ozcan.html"
+      ],
+      "issue149_use": "Use issue 149 as a public field review surface, not as a ministry proposal.",
+      "safe_ask": "Is there a generic public route where a non patient data health AI safety checklist can be reviewed or pointed to the right unit.",
+      "do_not_claim": [
+        "ministry collaboration",
+        "public authority guidance",
+        "approval",
+        "route access",
+        "deployment readiness"
+      ],
+      "send_state": "draft only until channel and text are approved",
+      "clearance_needed": true
+    },
+    {
+      "target_id": "TD003",
+      "name": "TEKNOFEST Sağlıkta Yapay Zeka ecosystem",
+      "route_type": "public team safety awareness",
+      "status": "application closed, visibility still useful",
+      "why_this_target": "Official pages show the health AI competition and its aim, while the competition list marks Health AI application complete.",
+      "source_basis": [
+        "TEKNOFEST says the Health AI competition aims to support health problem solving and build knowledge and trained human capacity.",
+        "The official competition list marks Sağlıkta Yapay Zeka Yarışması application complete.",
+        "The February announcement listed 20 February 2026 as the application deadline."
+      ],
+      "source_urls": [
+        "https://www.teknofest.org/tr/yarismalar/saglikta-yapay-zeka-yarismasi/",
+        "https://www.teknofest.org/tr/yarismalar/",
+        "https://www.teknofest.org/tr/duyurular/saglikta-dijital-donusum-saglikta-yapay-zeka-yarismasi/"
+      ],
+      "issue149_use": "Use issue 149 as a public safety checklist for teams and mentors, not as a competition submission.",
+      "safe_ask": "Teams can use the field kit to catch source support gaps, failure modes, wording risk, and no ranking misuse before public trust language.",
+      "do_not_claim": [
+        "competition participation",
+        "late submission",
+        "mentor relationship",
+        "award relevance",
+        "organizer approval"
+      ],
+      "send_state": "generic public post seed only, no tagged outreach without approval",
+      "clearance_needed": false
+    },
+    {
+      "target_id": "TD004",
+      "name": "Hacettepe health informatics",
+      "route_type": "warm academic reviewer route",
+      "status": "prior acknowledgement only",
+      "why_this_target": "Hacettepe has a visible health informatics surface and an existing acknowledgement from the health informatics route.",
+      "source_basis": [
+        "Hacettepe Bilişim Enstitüsü lists Sağlık Bilişimi among its academic units.",
+        "Hacettepe academic personnel page lists the Health Informatics department and public contact context.",
+        "Gmail shows an acknowledgement that the prior note will be reviewed, but no substantive route owner reply yet."
+      ],
+      "source_urls": [
+        "https://bilisim.hacettepe.edu.tr/tr/akademik_personel-8",
+        "https://bilisim.hacettepe.edu.tr/tr/saglik_bilisimi_tezli_yl_programi-277"
+      ],
+      "issue149_use": "Use issue 149 as the single public link if a short warm follow up is approved.",
+      "safe_ask": "Would a health informatics reviewer be willing to leave one public objection or missing safety gate.",
+      "do_not_claim": [
+        "Hacettepe review",
+        "Hacettepe support",
+        "institutional relationship",
+        "endorsement"
+      ],
+      "send_state": "warm follow up draft only until Goktug approves exact text",
+      "clearance_needed": true
+    },
+    {
+      "target_id": "TD005",
+      "name": "Open medical AI maintainer and reviewer community",
+      "route_type": "global open source reviewer intake",
+      "status": "safe public distribution lane",
+      "why_this_target": "This lane needs no institutional claim and can ask maintainers to find benchmark misuse, source support gaps, and failure mode blind spots.",
+      "source_basis": [
+        "Public repository issue 149 is already the reviewer front door.",
+        "No private route owner or institutional claim is needed for generic open source calls."
+      ],
+      "source_urls": [
+        "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/149"
+      ],
+      "issue149_use": "Use issue 149 as the only public intake point.",
+      "safe_ask": "Leave one concrete failure mode, source support gap, Turkish wording risk, field readiness gate, or benchmark misuse concern.",
+      "do_not_claim": [
+        "maintainer endorsement",
+        "ranking",
+        "score certification",
+        "clinical proof"
+      ],
+      "send_state": "safe as generic public post seed, no tags without approval",
+      "clearance_needed": false
+    }
+  ],
+  "reviewer_lanes": [
+    "clinician reviewer",
+    "health informatics reviewer",
+    "hospital quality reviewer",
+    "Turkish medical language reviewer",
+    "source support reviewer",
+    "open model maintainer"
+  ],
+  "permitted_public_actions": [
+    "public repository commit",
+    "issue 149 maintainer comment",
+    "release note",
+    "generic public post seed prepared but not posted"
+  ],
+  "blocked_claims": [
+    "patient data",
+    "clinical validation",
+    "clinical deployment",
+    "diagnosis or treatment advice",
+    "benchmark ranking",
+    "score certification",
+    "source truth certification",
+    "partner claim",
+    "institution claim",
+    "endorsement",
+    "formal application",
+    "payment",
+    "terms acceptance"
+  ],
+  "contains_patient_data": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_diagnosis_or_treatment_advice": false,
+  "claims_benchmark_ranking": false,
+  "claims_score_certification": false,
+  "claims_source_truth_certification": false,
+  "claims_partner": false,
+  "claims_institutional_approval": false,
+  "claims_endorsement": false,
+  "claims_formal_application": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "issue_comment_safe_after_audit": true,
+  "email_or_dm_requires_goktug_clearance": true,
+  "social_post_requires_goktug_clearance": true,
+  "next_action": "Use issue 149 comment as the public intake push, then prepare exact Goktug approved drafts for TUSEB TUYZE and Hacettepe."
+}
