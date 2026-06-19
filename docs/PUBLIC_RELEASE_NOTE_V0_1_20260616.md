@@ -205,6 +205,7 @@ Dashboard file: `docs/PLATFORM_DASHBOARD_INDEX_V0_1.md`
 94. 6 SourceCheckup Medical benchmark boundary delta rows.
 95. 6 clinician AI literacy sandbox handoff micro module steps.
 96. 6 SourceCheckup Medical source support delta queue rows.
+97. SourceCheckup Medical source claim walkthrough v0.1 with four synthetic decision path rows.
 
 ## Reproducible checks
 

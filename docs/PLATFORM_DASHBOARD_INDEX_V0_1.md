@@ -507,6 +507,8 @@ Public files:
 37. [Reviewer question public release index JSON](../docs/reviewer_question_public_release_index_v0_1.json)
 38. [SourceCheckup Medical benchmark boundary delta note](../docs/SOURCECHECKUP_MEDICAL_BENCHMARK_BOUNDARY_DELTA_NOTE_V0_1.md)
 39. [SourceCheckup Medical benchmark boundary delta note JSON](../docs/sourcecheckup_medical_benchmark_boundary_delta_note_v0_1.json)
+40. [SourceCheckup Medical source claim walkthrough](sourcecheckup/SOURCECHECKUP_MEDICAL_SOURCE_CLAIM_WALKTHROUGH_V0_1.md)
+41. [SourceCheckup Medical source claim walkthrough JSON](../sourcecheckup/demo/sourcecheckup_medical_source_claim_walkthrough_v0_1.json)
 
 Runnable checks:
 
@@ -516,6 +518,7 @@ make sourcecheckup_v02
 make sourcecheckup_contrib_v02
 make sourcecheckup_public_issue
 make sourcecheckup_expansion_dashboard
+make sourcecheckup_medical_source_claim_walkthrough
 make sourcecheckup_tr_medllm_routing
 make source_review_worksheets
 make red_flag_warning_checklist

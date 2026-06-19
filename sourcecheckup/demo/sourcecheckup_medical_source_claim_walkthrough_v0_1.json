@@ -1,0 +1,91 @@
+{
+  "artifact": "sourcecheckup_medical_source_claim_walkthrough_v0_1",
+  "status": "public static demo",
+  "source_report": "sourcecheckup/build/source_surface_examples_v0_2_report.json",
+  "source_examples": "sourcecheckup/examples/source_surface_examples_v0_2.jsonl",
+  "boundary": "Synthetic examples only. This walkthrough is not clinical advice, not patient data, not clinical validation, not clinical deployment, not a source truth judgment, not model ranking, not institutional approval, and not endorsement.",
+  "case_count": 4,
+  "cases": [
+    {
+      "answer_id": "sc_v02_locator_inventory_003",
+      "lane": "Locator shape is not evidence",
+      "prompt": "Synthetic review prompt: inspect an answer that contains locator like strings and an incomplete source inventory.",
+      "answer": "The answer cites 10.5555/sourcecheckup.synthetic.v02a and PMID: 123456789 as parser test strings. These locators are synthetic examples for format checking only and are not presented as real evidence.",
+      "claim_detected": "The answer includes DOI and PMID style locator strings.",
+      "source_surface_identified": "DOI style string and PMID style string.",
+      "current_gate": "blocked_pending_source_verification",
+      "flag_codes": [
+        "source_not_externally_verified",
+        "undeclared_locator_in_answer"
+      ],
+      "verification_queue_count": 2,
+      "evidence_state": "Format can be parsed, but source existence, metadata, and exact claim support are not checked.",
+      "release_action": "Hold until source existence, metadata, and exact claim support are checked.",
+      "reviewer_question": "Does any locator resolve to the exact cited item and support the exact claim?",
+      "external_action_ready": false,
+      "patient_data": false,
+      "clinical_claim_cleared": false
+    },
+    {
+      "answer_id": "sc_v02_url_missing_inventory_004",
+      "lane": "URL presence is not claim support",
+      "prompt": "Synthetic review prompt: inspect an answer with an undeclared URL.",
+      "answer": "A model answer points readers to https://example.org/synthetic/source_a and then says official sources support the recommendation. This is a synthetic URL for parser testing and not an evidence source.",
+      "claim_detected": "The answer says official sources support a recommendation.",
+      "source_surface_identified": "Synthetic URL in the answer, missing declared inventory.",
+      "current_gate": "blocked_missing_source_support",
+      "flag_codes": [
+        "undeclared_locator_in_answer",
+        "unsupported_source_language",
+        "guideline_claim_missing_structured_support"
+      ],
+      "verification_queue_count": 2,
+      "evidence_state": "The URL is a parser test surface, not checked source support.",
+      "release_action": "Rewrite the claim or link a verified source that supports the exact statement.",
+      "reviewer_question": "What exact words in the source support the recommendation?",
+      "external_action_ready": false,
+      "patient_data": false,
+      "clinical_claim_cleared": false
+    },
+    {
+      "answer_id": "sc_v02_policy_sandbox_008",
+      "lane": "Policy wording can create false authority",
+      "prompt": "Synthetic review prompt: inspect national route wording that sounds like sandbox access.",
+      "answer": "A ministry approved route assigns this project a national sandbox role. This synthetic policy wording has no document name, jurisdiction, recipient, date, clause, or written invitation.",
+      "claim_detected": "The answer says a ministry approved route assigns a sandbox role.",
+      "source_surface_identified": "Policy style phrase without document name, clause, date, or recipient.",
+      "current_gate": "blocked_missing_source_support",
+      "flag_codes": [
+        "policy_claim_missing_structured_support"
+      ],
+      "verification_queue_count": 1,
+      "evidence_state": "No written route evidence is attached.",
+      "release_action": "Hold the sentence. Do not publish role language until written evidence exists.",
+      "reviewer_question": "Which public or private written record grants the role?",
+      "external_action_ready": false,
+      "patient_data": false,
+      "clinical_claim_cleared": false
+    },
+    {
+      "answer_id": "sc_v02_clean_uncertainty_010",
+      "lane": "Detector friction is a product signal",
+      "prompt": "Synthetic review prompt: inspect a clean answer with no external source claim.",
+      "answer": "This is a synthetic educational row. It names no DOI, PMID, URL, guideline, policy, study, or official source, and it asks for clinician review before any real use.",
+      "claim_detected": "The row tries to say no source claim is made.",
+      "source_surface_identified": "No DOI, PMID, URL, guideline, policy, study, or official source is used as evidence.",
+      "current_gate": "blocked_missing_source_support",
+      "flag_codes": [
+        "guideline_claim_missing_structured_support",
+        "policy_claim_missing_structured_support"
+      ],
+      "verification_queue_count": 0,
+      "evidence_state": "The current local detector still flags wording because blocked source terms appear in a negative context.",
+      "release_action": "Keep as a detector improvement row, not a cleared positive control.",
+      "reviewer_question": "Should negative context terms be exempt, or should wording avoid those terms?",
+      "external_action_ready": false,
+      "patient_data": false,
+      "clinical_claim_cleared": false
+    }
+  ],
+  "next_external_ask": "Leave one public issue comment with lane, risk, and fix for a synthetic source overclaim this checklist should catch."
+}

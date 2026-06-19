@@ -154,6 +154,7 @@ validate:
 	$(PYTHON) scripts/validate_current_medical_ai_intelligence_priority_update_20260618_v0_1.py
 	$(PYTHON) scripts/validate_turkiye_ai_ethics_status_gate_note_v0_1.py
 	$(PYTHON) scripts/validate_sourcecheckup_example_expansion_dashboard_v0_2.py
+	$(PYTHON) scripts/validate_sourcecheckup_medical_source_claim_walkthrough_v0_1.py
 	$(PYTHON) scripts/validate_health_data_quality_card_v0_1.py
 	$(PYTHON) scripts/validate_boundary_notes_v0_1.py
 	$(PYTHON) scripts/validate_assurance_card_template_v0_1.py
@@ -709,6 +710,11 @@ sourcecheckup_expansion_dashboard:
 	$(PYTHON) scripts/validate_source_claim_review_queue_v0_1.py
 	$(PYTHON) scripts/generate_sourcecheckup_example_expansion_dashboard_v0_2.py
 	$(PYTHON) scripts/validate_sourcecheckup_example_expansion_dashboard_v0_2.py
+
+.PHONY: sourcecheckup_medical_source_claim_walkthrough
+sourcecheckup_medical_source_claim_walkthrough:
+	$(PYTHON) scripts/generate_sourcecheckup_medical_source_claim_walkthrough_v0_1.py
+	$(PYTHON) scripts/validate_sourcecheckup_medical_source_claim_walkthrough_v0_1.py
 
 sourcecheckup_tr_medllm_routing:
 	$(PYTHON) scripts/generate_sourcecheckup_tr_medllm_assurance_routing_map_v0_1.py

@@ -96,6 +96,7 @@ The repository is moving from a static failure atlas into a visible medical AI a
 64. SourceCheckup Medical benchmark boundary delta note v0.1.
 65. Clinician AI literacy sandbox handoff micro module v0.1.
 66. SourceCheckup Medical source support delta queue v0.1.
+67. SourceCheckup Medical source claim walkthrough v0.1.
 
 ## External visibility sequence
 
@@ -123,3 +124,4 @@ This project will not claim:
 1. Add a Health Data Quality source support handoff card and Failure Atlas no ranking report boundary update without scoring, compatibility, endpoint, patient data, clinical validation, route access, official role, submission, payment, terms, partner, or endorsement claims.
 2. Prepare external maintainer issue drafts only after exact owner clearance.
 3. Add model run plan files only after endpoint terms and cost are explicitly cleared.
+4. Use the source claim walkthrough as the public demo link for reviewer critique requests.
