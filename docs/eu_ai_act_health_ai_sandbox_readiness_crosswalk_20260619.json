@@ -1,0 +1,117 @@
+{
+  "artifact": "EU AI Act Health AI Sandbox Readiness Crosswalk",
+  "date": "2026 06 19",
+  "status": "public readiness crosswalk",
+  "checked_after_reading_baglam2": true,
+  "checked_after_reading_trackers": true,
+  "checked_gmail_before_build": true,
+  "gmail_reply_state": "no new route owner reply",
+  "source_anchors": [
+    {
+      "name": "European Commission AI Act timeline",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "supports": "AI literacy, GPAI, general application, and high risk timeline readiness"
+    },
+    {
+      "name": "European Commission AI Act question page",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act",
+      "supports": "high risk obligations, medical treatment example, medical device boundary, and deployer oversight"
+    },
+    {
+      "name": "European Commission AI Act Service Desk Article 57",
+      "source_url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-57",
+      "supports": "regulatory sandbox controlled environment, guidance, supervision, legal certainty, and compliance support"
+    }
+  ],
+  "crosswalk_rows": [
+    {
+      "domain": "Intended use",
+      "public_artifact_question": "Is the artifact limited to evaluation assurance education or claim hygiene",
+      "evidence_to_prepare": "Scope paragraph blocked use paragraph user role list",
+      "blocked_claim": "Clinical deployment"
+    },
+    {
+      "domain": "AI literacy",
+      "public_artifact_question": "Are clinician and builder roles explained before model output use",
+      "evidence_to_prepare": "Literacy module role checklist review worksheet",
+      "blocked_claim": "Autonomous clinical use"
+    },
+    {
+      "domain": "Risk management",
+      "public_artifact_question": "Are failure modes harms and escalation paths listed before scores",
+      "evidence_to_prepare": "Failure atlas rows escalation table release gate",
+      "blocked_claim": "Safety certification"
+    },
+    {
+      "domain": "Data quality",
+      "public_artifact_question": "Are source label representativeness leakage and missingness checks visible",
+      "evidence_to_prepare": "Data quality card label audit row dataset boundary note",
+      "blocked_claim": "Patient data clearance"
+    },
+    {
+      "domain": "Documentation",
+      "public_artifact_question": "Is every public claim tied to source support and audit state",
+      "evidence_to_prepare": "SourceCheckup output manual source support audit note",
+      "blocked_claim": "Verified compliance"
+    },
+    {
+      "domain": "Transparency",
+      "public_artifact_question": "Can an external reviewer see what is and is not claimed",
+      "evidence_to_prepare": "README link issue body release note boundary section",
+      "blocked_claim": "Endorsement"
+    },
+    {
+      "domain": "Human oversight",
+      "public_artifact_question": "Is clinician review treated as a gate rather than decoration",
+      "evidence_to_prepare": "Clinician review protocol reviewer role table",
+      "blocked_claim": "Clinical validation"
+    },
+    {
+      "domain": "Robustness",
+      "public_artifact_question": "Are failure cases uncertainty and abstention language present",
+      "evidence_to_prepare": "Synthetic risk pack warning sign checklist",
+      "blocked_claim": "Performance guarantee"
+    },
+    {
+      "domain": "Cybersecurity",
+      "public_artifact_question": "Are secrets private data and operational systems excluded",
+      "evidence_to_prepare": "No secrets statement no private operational data statement",
+      "blocked_claim": "Production readiness"
+    },
+    {
+      "domain": "Monitoring",
+      "public_artifact_question": "Is post release public review possible without patient data",
+      "evidence_to_prepare": "Public issue template contributor guide triage board",
+      "blocked_claim": "Real world monitoring claim"
+    },
+    {
+      "domain": "Incident handling",
+      "public_artifact_question": "Is there a route for unsafe claims broken sources or misuse reports",
+      "evidence_to_prepare": "Public issue label maintainer handoff correction log",
+      "blocked_claim": "Clinical incident management"
+    },
+    {
+      "domain": "Sandbox route",
+      "public_artifact_question": "Is any sandbox language below access application and approval",
+      "evidence_to_prepare": "Route gate source checked eligibility memo",
+      "blocked_claim": "Sandbox access"
+    }
+  ],
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_legal_advice": false,
+  "claims_eu_sandbox_application": false,
+  "claims_regulatory_submission": false,
+  "claims_conformity_assessment": false,
+  "claims_ce_marking": false,
+  "claims_medical_device_status": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false
+}
