@@ -1,0 +1,178 @@
+{
+  "artifact": "No Ranking Benchmark Misuse Warning",
+  "date": "2026 06 19",
+  "status": "public benchmark misuse warning",
+  "checked_after_reading_baglam2": true,
+  "checked_after_reading_trackers": true,
+  "checked_gmail_before_build": true,
+  "gmail_reply_state": "no new route owner reply",
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "contains_healthbench_examples": false,
+  "claims_benchmark_result": false,
+  "claims_model_comparison": false,
+  "claims_model_ranking": false,
+  "claims_leaderboard_status": false,
+  "claims_score_certification": false,
+  "claims_procurement_evidence": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "source_anchors": [
+    {
+      "name": "MedHELM",
+      "source_url": "https://medhelm.org/",
+      "supports": "task, workflow, metric, contribution, and leaderboard context for benchmark literacy"
+    },
+    {
+      "name": "OpenAI HealthBench",
+      "source_url": "https://openai.com/index/healthbench/",
+      "supports": "realistic health conversation evaluation, physician rubric context, and leakage control framing"
+    },
+    {
+      "name": "BRIDGE",
+      "source_url": "https://github.com/YLab-Open/BRIDGE",
+      "supports": "multilingual clinical text task, specialty, document type, care stage, and data access boundary context"
+    },
+    {
+      "name": "CHAI AI Governance",
+      "source_url": "https://www.chai.org/workgroup/cross-cutting/ai-governance",
+      "supports": "governance lane framing for policy, structure, lifecycle, risk, data, third party review, education, and feedback"
+    },
+    {
+      "name": "CHAI draft responsible health AI framework release",
+      "source_url": "https://www.chai.org/blog/chai-releases-draft-responsible-health-ai-framework-for-public-comment",
+      "supports": "risk, evidence, lifecycle, and uncertainty framing for responsible health AI reporting"
+    }
+  ],
+  "misuse_patterns": [
+    {
+      "pattern": "Score becomes safety proof",
+      "public_warning": "a high benchmark score does not prove safe use in a clinical workflow",
+      "reviewer_question": "what exact task, user, care setting, failure mode, and human review route were checked",
+      "required_evidence": [
+        "task map",
+        "risk note",
+        "reviewer role",
+        "failure mode row",
+        "release boundary"
+      ],
+      "blocked_claim": "safety proof"
+    },
+    {
+      "pattern": "Leaderboard becomes procurement evidence",
+      "public_warning": "a leaderboard position is not procurement evidence",
+      "reviewer_question": "what local governance, data, cost, vendor, monitoring, and accountability records exist",
+      "required_evidence": [
+        "governance intake row",
+        "third party review",
+        "data boundary note",
+        "maintenance owner"
+      ],
+      "blocked_claim": "procurement readiness"
+    },
+    {
+      "pattern": "Benchmark pass becomes clinical validation",
+      "public_warning": "passing a benchmark is not clinical validation",
+      "reviewer_question": "what prospective or retrospective clinical validation was actually performed and by whom",
+      "required_evidence": [
+        "validation protocol",
+        "reviewer credentials",
+        "study setting",
+        "outcome definition",
+        "audit record"
+      ],
+      "blocked_claim": "clinical validation"
+    },
+    {
+      "pattern": "Public demo becomes deployment readiness",
+      "public_warning": "a public demo can show behavior but does not show operational readiness",
+      "reviewer_question": "who owns monitoring, correction, escalation, and retirement after release",
+      "required_evidence": [
+        "lifecycle route",
+        "monitoring plan",
+        "correction route",
+        "escalation owner",
+        "stop condition"
+      ],
+      "blocked_claim": "deployment readiness"
+    },
+    {
+      "pattern": "Single language score hides Turkish readiness",
+      "public_warning": "a score in one language does not prove Turkish medical readiness",
+      "reviewer_question": "what Turkish terminology, specialty, setting, abbreviation, and patient communication cases were reviewed",
+      "required_evidence": [
+        "Turkish language scope",
+        "terminology review",
+        "specialty spread",
+        "clinician review question"
+      ],
+      "blocked_claim": "Turkish representativeness"
+    },
+    {
+      "pattern": "Specialty average hides care stage risk",
+      "public_warning": "an average score can hide failures by specialty, document type, or care stage",
+      "reviewer_question": "which specialty, document type, and care stage produced the risk",
+      "required_evidence": [
+        "specialty label",
+        "document type label",
+        "care stage label",
+        "stratified risk note"
+      ],
+      "blocked_claim": "broad medical coverage"
+    },
+    {
+      "pattern": "Source support is missing",
+      "public_warning": "a medically fluent answer is not safe if the source claim cannot be checked",
+      "reviewer_question": "which claim needs a source and what level of support exists",
+      "required_evidence": [
+        "SourceCheckup row",
+        "source URL",
+        "support state",
+        "uncertainty state",
+        "blocked wording"
+      ],
+      "blocked_claim": "source truth certification"
+    },
+    {
+      "pattern": "Health data quality is unreviewed",
+      "public_warning": "benchmark reporting without label provenance, missingness, leakage, and access context can hide data risk",
+      "reviewer_question": "what is known about data origin, label source, missing fields, leakage risk, and regulated access limits",
+      "required_evidence": [
+        "data quality card",
+        "label audit row",
+        "leakage statement",
+        "access boundary"
+      ],
+      "blocked_claim": "patient data clearance"
+    },
+    {
+      "pattern": "Human review role is absent",
+      "public_warning": "automated scoring without a visible clinical reviewer role is not a safety conclusion",
+      "reviewer_question": "who can interpret the result, challenge it, and stop public safety language",
+      "required_evidence": [
+        "reviewer role table",
+        "disagreement route",
+        "adjudication question",
+        "release gate"
+      ],
+      "blocked_claim": "clinician endorsed safety"
+    },
+    {
+      "pattern": "Example leakage or benchmark contamination is unclear",
+      "public_warning": "public examples, prompts, answers, or hidden test content can contaminate future evaluation",
+      "reviewer_question": "has the artifact avoided protected examples, answer keys, hidden prompts, and copied test rows",
+      "required_evidence": [
+        "example protection statement",
+        "public safe summary",
+        "contamination check",
+        "release note"
+      ],
+      "blocked_claim": "clean benchmark evidence"
+    }
+  ]
+}
