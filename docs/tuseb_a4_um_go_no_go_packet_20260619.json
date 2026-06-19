@@ -1,0 +1,74 @@
+{
+  "title": "TÜSEB A4 UM Go No Go Packet",
+  "date": "2026 06 19",
+  "status": "public yes or no decision packet for possible TUSEB A4 UM aligned medical AI safety route before 30 June pre application cutoff, not an application",
+  "source_signals": [
+    {
+      "id": "GNG001",
+      "name": "TÜSEB A4 UM official notice",
+      "url": "https://www.tuseb.gov.tr/haberler/tuseb-2026-a4-um-uzman-mecburi-hizmet-grubuna-yonelik-proje-cagrisi-acildi-20260616",
+      "checked_fact": "notice published on 16 June 2026 and aimed at medical branch specialists still fulfilling compulsory state service",
+      "field_read": "urgency exists only if private personal status is real"
+    },
+    {
+      "id": "GNG002",
+      "name": "TÜSEB A group call document",
+      "url": "https://files.tuseb.gov.tr/tuseb/files/dokumanlar/tuseb-2026projecagrilari-agrubu.pdf",
+      "checked_fact": "pre application 15 June to 30 June, result notification 10 July, full application 13 July to 14 August, result notification 16 September",
+      "field_read": "useful next action is a private yes or no decision before 30 June"
+    },
+    {
+      "id": "GNG003",
+      "name": "TÜSEB A group project support surface",
+      "url": "https://proje-destek.tuseb.gov.tr/a-grubu-proje-destekleri",
+      "checked_fact": "public A group support surface exists while A4 UM notice points detailed action toward TBYS",
+      "field_read": "TBYS action requires verified account and route authority"
+    }
+  ],
+  "private_go_conditions": [
+    "personal A4 UM eligibility real today",
+    "current institution naming authority explicit",
+    "TBYS account role correct for this call",
+    "concept remains fully non patient data",
+    "budget entry can be reviewed before formal action",
+    "route fit strong enough from official call logic or route owner reply"
+  ],
+  "private_no_go_conditions": [
+    "personal eligibility false or unverified before 30 June",
+    "institution cannot be named",
+    "TBYS access or role missing",
+    "concept needs patient data or clinical claims",
+    "budget or terms need unauthorised acceptance",
+    "route fit remains too uncertain"
+  ],
+  "decision_outcomes": [
+    "go",
+    "conditional wait",
+    "no go"
+  ],
+  "minimum_concept_scope": [
+    "Turkish medical LLM failure mode capture using public or synthetic examples",
+    "source support checks for clinical claims",
+    "no ranking safety reporting",
+    "clinician AI literacy micro module",
+    "health data quality and label audit worksheet",
+    "human review protocol for non deployment evaluation"
+  ],
+  "current_decision": "private yes or no decision, not TBYS action",
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_tuseb_application": false,
+  "claims_tbys_submission": false,
+  "claims_tuyze_proposal": false,
+  "claims_partner": false,
+  "claims_institutional_approval": false,
+  "claims_budget_approval": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_ethics_approval": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_endorsement": false
+}
