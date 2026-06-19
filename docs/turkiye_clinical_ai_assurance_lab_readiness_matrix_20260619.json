@@ -1,0 +1,77 @@
+{
+  "artifact": "Türkiye Clinical AI Assurance Lab Readiness Matrix",
+  "date": "2026 06 19",
+  "status": "public readiness matrix for a possible Türkiye clinical AI assurance lab route",
+  "checked_after_reading_baglam2": true,
+  "checked_after_reading_trackers": true,
+  "checked_gmail_before_build": true,
+  "gmail_reply_state": "no new route owner reply",
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_tuseb_application": false,
+  "claims_tbys_submission": false,
+  "claims_tubitak_application": false,
+  "claims_prodis_submission": false,
+  "claims_tuyze_partner": false,
+  "claims_hospital_partner": false,
+  "claims_official_role": false,
+  "claims_institutional_approval": false,
+  "claims_budget": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_procurement_evidence": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_medical_advice": false,
+  "claims_endorsement": false,
+  "source_anchors": [
+    {
+      "name": "TÜSEB A4 UM notice",
+      "source_url": "https://www.tuseb.gov.tr/haberler/tuseb-2026-a4-um-uzman-mecburi-hizmet-grubuna-yonelik-proje-cagrisi-acildi-20260616",
+      "supports": "live 2026 A4 UM route notice and TBYS detail direction"
+    },
+    {
+      "name": "TÜSEB A group call document",
+      "source_url": "https://files.tuseb.gov.tr/tuseb/files/dokumanlar/tuseb-2026projecagrilari-agrubu.pdf",
+      "supports": "A group framing, A4 UM timing, upper limit, eligible medical specialist framing, and listed A4 UM fields"
+    },
+    {
+      "name": "TÜBİTAK 1711 2026 call notice",
+      "source_url": "https://tubitak.gov.tr/tr/duyuru/1711-yapay-zeka-ekosistem-2026-yili-cagrisi-acildi",
+      "supports": "live AI ecosystem call, priority areas, consortium need, intent statement need, and application window"
+    },
+    {
+      "name": "Ministry of Health Information Systems General Directorate",
+      "source_url": "https://sbsgm.saglik.gov.tr",
+      "supports": "public health information systems surface for later route mapping"
+    },
+    {
+      "name": "TÜSEB institute listing",
+      "source_url": "https://www.tuseb.gov.tr/",
+      "supports": "TÜYZE institute appears in public TÜSEB institute list"
+    }
+  ],
+  "readiness_lanes": [
+    "Route owner and eligibility",
+    "Non patient data assurance scope",
+    "Turkish medical LLM evaluation",
+    "Clinician AI literacy",
+    "Health data quality and label audit",
+    "Governance and no ranking report",
+    "Sandbox readiness boundary",
+    "Opportunity package"
+  ],
+  "stop_conditions": [
+    "no proposal language until eligibility and route owner are verified",
+    "patient data requires separate decision gate",
+    "no benchmark score or model rank claim without reviewed evidence",
+    "no endorsement adoption or course approval claim",
+    "no dataset clearance claim",
+    "score misuse language is blocked",
+    "no sandbox access or deployment readiness claim",
+    "no formal application or partner commitment without verified route"
+  ],
+  "next_outward_action": "if no route owner reply appears build one page hospital AI literacy collaboration packet"
+}
