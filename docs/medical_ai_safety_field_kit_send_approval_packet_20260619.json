@@ -1,0 +1,83 @@
+{
+  "artifact_id": "medical_ai_safety_field_kit_send_approval_packet_20260619",
+  "created_at_trt": "2026 06 19 19:50 TRT",
+  "source_issue_number": 149,
+  "source_issue_url": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/149",
+  "target_distribution_index_url": "https://github.com/v0id-lab/medical-ai-failure-atlas/blob/main/docs/MEDICAL_AI_SAFETY_FIELD_KIT_TARGET_DISTRIBUTION_INDEX_20260619.md",
+  "checked_after_reading_baglam2": true,
+  "checked_after_reading_trackers": true,
+  "checked_gmail_before_build": true,
+  "gmail_reply_state": "Prior Hacettepe health informatics acknowledgement only. No new substantive route owner reply.",
+  "active_thread_ids_checked": [
+    "19edcafe5c2dfa60",
+    "19eda863ce89f083",
+    "19edaa3a3868fd0f",
+    "19edac07e13052fa",
+    "19edb2e645ca1f6d",
+    "19edb491af3d687b",
+    "19edb64c4ae9fec6",
+    "19edb8289b165cc0",
+    "19edb9dc297ad804"
+  ],
+  "targeted_search_count": 6,
+  "message_drafts": [
+    {
+      "draft_id": "SEND001",
+      "target": "TUSEB and TUYZE route owner",
+      "recipient_state": "prior messages sent to info at tuseb.gov.tr, no new reply found",
+      "send_state": "not sent",
+      "requires_goktug_clearance": true,
+      "subject": "Medical AI Safety Field Kit route owner question",
+      "body": "Sayin TUSEB ve TUYZE ekibi,\n\nBen Dr. Goktug Ozkan. Hasta verisi kullanmayan, klinik kullanim ya da klinik dogrulama iddiasi tasimayan bir Medical AI Safety Field Kit calismasini acik kaynak olarak gelistiriyorum.\n\nPublic inceleme yuzeyi burada:\n\nhttps://github.com/v0id-lab/medical-ai-failure-atlas/issues/149\n\nTek ricam sudur: Bu tur bir non patient data saglik yapay zekasi guvenlik hazirlik yuzeyi icin dogru ilk rota TUSEB, TUYZE ya da baska bir birim midir?\n\nBu mesaj basvuru, TBYS islemi, teklif, ortaklik, butce, resmi rol, hasta verisi, klinik kullanim ya da klinik dogrulama talebi degildir. Sadece dogru route owner bilgisini ogrenmek istiyorum.\n\nUygun kisi ya da ekip siz degilseniz, dogru yonlendirme yapabilirseniz memnun olurum.\n\nSaygilarimla,\n\nDr. Goktug Ozkan",
+      "blocked_claims": [
+        "application",
+        "TBYS action",
+        "proposal",
+        "partnership",
+        "budget",
+        "official role",
+        "patient data",
+        "clinical use",
+        "clinical validation"
+      ]
+    },
+    {
+      "draft_id": "SEND002",
+      "target": "Hacettepe health informatics warm follow up",
+      "recipient_state": "prior acknowledgement from Gozdem Dural, no substantive reply yet",
+      "send_state": "not sent",
+      "requires_goktug_clearance": true,
+      "subject": "Kisa takip: Medical AI Safety Field Kit public review yuzeyi",
+      "body": "Sayin Dr. Ogretim Uyesi Gozdem Dural,\n\nNazik yanitiniz icin tesekkur ederim.\n\nOnceki mesajdaki acik kaynak calismayi tek bir public review yuzeyinde topladim:\n\nhttps://github.com/v0id-lab/medical-ai-failure-atlas/issues/149\n\nEger uygun gorurseniz, saglik bilisimi acisindan tek bir public itiraz ya da eksik guvenlik kapisi birakmaniz bile cok degerli olur.\n\nBu calisma Hacettepe destegi, kurumsal iliski, klinik kullanim, klinik dogrulama ya da hasta verisi iddiasi tasimamaktadir. Amac, saglik yapay zekasi projelerinde kaynak destegi, veri uygunlugu, insan degerlendirmesi ve kamuya acik iddia dili icin eksik riskleri erken yakalamaktir.\n\nSaygilarimla,\n\nDr. Goktug Ozkan",
+      "blocked_claims": [
+        "Hacettepe support",
+        "institutional relationship",
+        "clinical use",
+        "clinical validation",
+        "patient data",
+        "endorsement"
+      ]
+    }
+  ],
+  "public_post_seed": "I am turning the Medical AI Safety Field Kit into a public review surface.\n\nNeed one concrete objection from clinicians, health informatics reviewers, hospital quality teams, Turkish medical language reviewers, source support reviewers, and open model maintainers.\n\nUseful comments:\n\n1. One missing failure mode.\n2. One Turkish medical wording risk.\n3. One source support gap.\n4. One field readiness gate.\n5. One way a benchmark or score could be misused.\n\nNo patient data. No clinical validation claim. No clinical deployment claim. No ranking.\n\nPublic call:\n\nhttps://github.com/v0id-lab/medical-ai-failure-atlas/issues/149\n",
+  "emails_sent": false,
+  "social_posted": false,
+  "issue_comment_prepared_not_posted": true,
+  "release_notes_prepared_not_published": true,
+  "requires_goktug_clearance_before_send": true,
+  "contains_patient_data": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_diagnosis_or_treatment_advice": false,
+  "claims_benchmark_ranking": false,
+  "claims_score_certification": false,
+  "claims_source_truth_certification": false,
+  "claims_partner": false,
+  "claims_institutional_approval": false,
+  "claims_official_role": false,
+  "claims_endorsement": false,
+  "claims_formal_application": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "next_action": "Goktug may approve one exact draft for sending, or keep all drafts parked while issue 149 gathers public comments."
+}

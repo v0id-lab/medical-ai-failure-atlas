@@ -47,6 +47,8 @@ validate:
 	$(PYTHON) scripts/validate_tubitak_1711_consortium_readiness_no_partner_gate_20260619.py
 	$(PYTHON) scripts/validate_medical_ai_safety_field_kit_public_call_20260619.py
 	$(PYTHON) scripts/validate_medical_ai_safety_field_kit_target_distribution_index_20260619.py
+	$(PYTHON) scripts/validate_medical_ai_safety_field_kit_send_approval_packet_20260619.py
+	$(PYTHON) scripts/validate_medical_ai_safety_field_kit_public_objection_ledger_20260619.py
 	$(PYTHON) scripts/validate_tubitak_1711_smart_education_fit_gate_20260618.py
 	$(PYTHON) scripts/validate_tubitak_1711_smart_education_named_scout_20260618.py
 	$(PYTHON) scripts/validate_tubitak_1711_sebit_route_owner_scout_20260618.py
@@ -311,6 +313,14 @@ medical_ai_safety_field_kit_public_call:
 medical_ai_safety_field_kit_target_distribution_index:
 	$(PYTHON) scripts/generate_medical_ai_safety_field_kit_target_distribution_index_20260619.py
 	$(PYTHON) scripts/validate_medical_ai_safety_field_kit_target_distribution_index_20260619.py
+
+medical_ai_safety_field_kit_send_approval_packet:
+	$(PYTHON) scripts/generate_medical_ai_safety_field_kit_send_approval_packet_20260619.py
+	$(PYTHON) scripts/validate_medical_ai_safety_field_kit_send_approval_packet_20260619.py
+
+medical_ai_safety_field_kit_public_objection_ledger:
+	$(PYTHON) scripts/generate_medical_ai_safety_field_kit_public_objection_ledger_20260619.py
+	$(PYTHON) scripts/validate_medical_ai_safety_field_kit_public_objection_ledger_20260619.py
 
 tubitak_1711_smart_education_fit_gate:
 	$(PYTHON) scripts/validate_tubitak_1711_smart_education_fit_gate_20260618.py
