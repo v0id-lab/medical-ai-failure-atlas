@@ -126,6 +126,8 @@ def main() -> int:
         errors.append("CONTRIBUTING missing outside review boundary")
     if boundary_phrase not in issue_154_text:
         errors.append("Issue 154 body record missing outside review boundary")
+    if "Outside Reviewer Micro Brief" not in issue_154_text:
+        errors.append("Issue 154 body record missing micro brief title")
 
     check_text("Doc", doc_text, errors)
     check_text("Audit", audit_text, errors)

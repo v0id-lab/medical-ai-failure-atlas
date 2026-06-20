@@ -6,7 +6,7 @@ Open with one sentence if that is all you have. Do not read the full repo first.
 
 Pick one claim, issue body, README line, release note, or card and challenge it.
 
-Start here if you want the shortest brief:
+Start here with the Outside Reviewer Micro Brief if you want the shortest brief:
 
 https://github.com/v0id-lab/medical-ai-failure-atlas/blob/main/docs/MEDICAL_AI_SAFETY_FIELD_KIT_OUTSIDE_REVIEWER_MICRO_BRIEF_20260620.md
 
