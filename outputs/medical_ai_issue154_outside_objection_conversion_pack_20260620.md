@@ -18,9 +18,9 @@ Issue 154:
 
 https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
 
-Outside reviewer micro brief:
+Outside Reviewer Micro Brief release:
 
-https://github.com/v0id-lab/medical-ai-failure-atlas/blob/main/docs/MEDICAL_AI_SAFETY_FIELD_KIT_OUTSIDE_REVIEWER_MICRO_BRIEF_20260620.md
+https://github.com/v0id-lab/medical-ai-failure-atlas/releases/tag/medical-ai-safety-field-kit-outside-reviewer-micro-brief-20260620
 
 ## LinkedIn Short Post
 
@@ -37,9 +37,9 @@ Leave one sentence with safer wording or a missing gate:
 
 https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
 
-Short brief:
+Short release:
 
-https://github.com/v0id-lab/medical-ai-failure-atlas/blob/main/docs/MEDICAL_AI_SAFETY_FIELD_KIT_OUTSIDE_REVIEWER_MICRO_BRIEF_20260620.md
+https://github.com/v0id-lab/medical-ai-failure-atlas/releases/tag/medical-ai-safety-field-kit-outside-reviewer-micro-brief-20260620
 
 Synthetic or public examples only. No patient data. No clinical validation. No deployment claim. No ranking. No endorsement.
 
@@ -63,9 +63,9 @@ Main issue:
 
 https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
 
-Short brief:
+Short release:
 
-https://github.com/v0id-lab/medical-ai-failure-atlas/blob/main/docs/MEDICAL_AI_SAFETY_FIELD_KIT_OUTSIDE_REVIEWER_MICRO_BRIEF_20260620.md
+https://github.com/v0id-lab/medical-ai-failure-atlas/releases/tag/medical-ai-safety-field-kit-outside-reviewer-micro-brief-20260620
 
 Best fit: benchmark wording, source support, synthetic evidence, or safety claim language.
 
@@ -85,9 +85,9 @@ Issue:
 
 https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
 
-Shortest brief:
+Shortest release:
 
-https://github.com/v0id-lab/medical-ai-failure-atlas/blob/main/docs/MEDICAL_AI_SAFETY_FIELD_KIT_OUTSIDE_REVIEWER_MICRO_BRIEF_20260620.md
+https://github.com/v0id-lab/medical-ai-failure-atlas/releases/tag/medical-ai-safety-field-kit-outside-reviewer-micro-brief-20260620
 
 Synthetic or public examples only. No patient data. No clinical validation. No deployment. No ranking. No endorsement.
 ```
