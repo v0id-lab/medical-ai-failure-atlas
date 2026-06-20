@@ -109,6 +109,10 @@ def main() -> int:
         errors.append("Release source support missing draft readback")
     if "Release is not prerelease." not in release_support_text:
         errors.append("Release source support missing prerelease readback")
+    if "Release tag SHA is `ab4451401c680a935f84a59be953e36a1ba886ee`." not in release_support_text:
+        errors.append("Release source support missing tag SHA readback")
+    if "Issue 154 remained open with zero comments after release." not in release_support_text:
+        errors.append("Release source support missing issue 154 post release readback")
 
     if RELEASE_REFS.exists():
         import json

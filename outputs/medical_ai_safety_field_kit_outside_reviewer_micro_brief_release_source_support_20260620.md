@@ -26,3 +26,6 @@ Checked after release:
 2. Release is not draft.
 3. Release is not prerelease.
 4. Release target branch is main.
+5. Release tag SHA is `ab4451401c680a935f84a59be953e36a1ba886ee`.
+6. Issue 154 remained open with zero comments after release.
+7. Issue 154 updated timestamp at readback was 2026 06 20 04:13:25 UTC.

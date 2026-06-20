@@ -37,3 +37,9 @@ Release readback after action:
 https://github.com/v0id-lab/medical-ai-failure-atlas/releases/tag/medical-ai-safety-field-kit-outside-reviewer-micro-brief-20260620
 
 State: public release, not draft, not prerelease, target branch main.
+
+Release published at: 2026 06 20 04:34:23 UTC.
+
+Release tag SHA: `ab4451401c680a935f84a59be953e36a1ba886ee`.
+
+Readback audit commit on main: `0e31ef0d9df45ac1a6f37fbedd549e93e2f96bb4`.
