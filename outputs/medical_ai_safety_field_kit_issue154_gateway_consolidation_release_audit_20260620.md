@@ -24,6 +24,20 @@ Pre publish state:
 
 Gateway validator passed, public validation passed, audit passed, issue `#154` was open with zero comments, and the release tag did not exist.
 
+Post publish state:
+
+Release published and read back as not draft and not prerelease.
+
+Release URL:
+
+https://github.com/v0id-lab/medical-ai-failure-atlas/releases/tag/medical-ai-safety-field-kit-issue154-gateway-consolidation-20260620
+
+Release target commit:
+
+`68749d6f99a46ddcef5acba83c4a2e6c691afa0d`
+
+Issue `#154` remained open with zero comments after release readback.
+
 Allowed action:
 
 Public GitHub release only. No e mail, social post, issue comment, formal application, partner claim, institution claim, patient data, clinical validation, clinical deployment, payment, terms acceptance, TBYS action, or PRODIS action.
