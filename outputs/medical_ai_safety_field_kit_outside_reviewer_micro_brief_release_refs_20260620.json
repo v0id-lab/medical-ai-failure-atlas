@@ -1,0 +1,22 @@
+{
+  "artifact": "medical_ai_safety_field_kit_outside_reviewer_micro_brief_release",
+  "formal_references": [],
+  "official_claims": [],
+  "source_support_boundary": "navigation claims only",
+  "release_target": "medical-ai-safety-field-kit-outside-reviewer-micro-brief-20260620",
+  "primary_issue": 154,
+  "contains_patient_data": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_benchmark_ranking": false,
+  "claims_score_certification": false,
+  "claims_source_truth_certification": false,
+  "claims_partner": false,
+  "claims_institutional_approval": false,
+  "claims_endorsement": false,
+  "claims_formal_application": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "requires_tbys_action": false,
+  "requires_prodis_action": false
+}
