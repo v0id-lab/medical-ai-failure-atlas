@@ -37,3 +37,29 @@ Release target commit:
 `00a0090f915505c19af75e5c44f13343b13ca219`
 
 No owner comment was added to issue `#149` or issue `#154`.
+
+## 2026 06 20 05:40 TRT release target refresh evaluation
+
+Reason:
+
+After the initial release, commits `ba6a03a78ce5d2f7f90d58552d53df8502c2c364` and `d5bacc51961a398875e192a49006e89df6fa6e98` made the README, CONTRIBUTING file, New Issue contact link, gateway document, gateway JSON, source support note, and validator converge on issue `#154` as the single first outside objection route.
+
+Decision:
+
+Do not silently retarget this historical release. Publish a separate Issue 154 Gateway Consolidation release so the new public routing patch is visible and auditable.
+
+Checks before separate release:
+
+1. Gateway validator passed.
+2. Git diff check passed.
+3. Issue `#154` was open and had zero comments.
+4. Release body remained the existing narrow navigation and boundary text.
+5. No owner comment, new issue, e mail, social post, patient data, clinical validation, clinical deployment, benchmark ranking, source truth certification, partner claim, institution claim, endorsement, formal application, payment, terms action, TBYS action, or PRODİS action was introduced.
+
+Expected new release readback:
+
+The historical release URL remains:
+
+https://github.com/v0id-lab/medical-ai-failure-atlas/releases/tag/medical-ai-safety-field-kit-one-objection-gateway-20260620
+
+The separate release packet records the new routing patch target.

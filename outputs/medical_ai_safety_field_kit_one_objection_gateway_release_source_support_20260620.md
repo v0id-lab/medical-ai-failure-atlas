@@ -12,7 +12,7 @@ Manual source support for the public One Objection Gateway release.
    https://github.com/v0id-lab/medical-ai-failure-atlas/blob/main/docs/MEDICAL_AI_SAFETY_FIELD_KIT_ONE_OBJECTION_GATEWAY_20260620.md
 2. Related SFC005 issue exists and is open:
    https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
-3. Remote commit used as release target:
+3. Remote commit used as this release target:
    `00a0090f915505c19af75e5c44f13343b13ca219`
 4. README places the One Objection Gateway as the first Field Kit route.
 
@@ -30,3 +30,5 @@ The release notes make only navigation and boundary claims:
 Allowed action: public GitHub release after validation and readback.
 
 Not allowed in this release: email send, issue comment, social post, formal application, partner claim, institution claim, patient data, clinical validation, clinical deployment, payment, terms acceptance, TBYS action, or PRODIS action.
+
+Later routing changes are recorded in the separate Issue 154 Gateway Consolidation release packet.
