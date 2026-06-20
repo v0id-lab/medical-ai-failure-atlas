@@ -8,6 +8,23 @@ Date: 2026 06 13
 
 Start here if you are a clinician, health informatics reviewer, hospital quality reviewer, Turkish medical language reviewer, source support reviewer, or open model maintainer.
 
+## Two minute outside objection
+
+The current priority is one outside comment on issue 154:
+
+https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
+
+Use this shape:
+
+```text
+1. Link or section:
+2. What seems weak, confusing, overstated, or missing:
+3. What would make it clearer or more defensible:
+4. Optional evidence or example:
+```
+
+Synthetic or public examples only.
+
 This is the public review front door for the project:
 
 1. [Medical AI Safety Field Kit One Objection Gateway](docs/MEDICAL_AI_SAFETY_FIELD_KIT_ONE_OBJECTION_GATEWAY_20260620.md)
