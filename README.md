@@ -39,20 +39,21 @@ Use synthetic or public examples only. Do not include patient data, private clin
 This is the public review front door for the project:
 
 1. [Medical AI Safety Field Kit Outside Reviewer Micro Brief](docs/MEDICAL_AI_SAFETY_FIELD_KIT_OUTSIDE_REVIEWER_MICRO_BRIEF_20260620.md)
-2. [Medical AI Safety Field Kit One Objection Gateway](docs/MEDICAL_AI_SAFETY_FIELD_KIT_ONE_OBJECTION_GATEWAY_20260620.md)
-3. [Medical AI Safety Field Kit Reviewer Start Here](docs/MEDICAL_AI_SAFETY_FIELD_KIT_REVIEWER_START_HERE_20260619.md)
-4. [Medical AI Safety Field Kit Global Safety Claim Review Workbook](docs/MEDICAL_AI_SAFETY_FIELD_KIT_GLOBAL_SAFETY_CLAIM_REVIEW_WORKBOOK_20260620.md)
-5. [Medical AI Safety Field Kit Reviewer Sprint Board](docs/MEDICAL_AI_SAFETY_FIELD_KIT_REVIEWER_SPRINT_BOARD_20260620.md)
-6. [Medical AI Safety Field Kit External Route Scout Board](docs/MEDICAL_AI_SAFETY_FIELD_KIT_EXTERNAL_ROUTE_SCOUT_BOARD_20260620.md)
-7. [Medical AI Safety Field Kit SFC005 Synthetic Evidence Starter](docs/MEDICAL_AI_SAFETY_FIELD_KIT_SFC005_SYNTHETIC_EVIDENCE_STARTER_20260620.md)
-8. [Medical AI Safety Field Kit Public Call](docs/MEDICAL_AI_SAFETY_FIELD_KIT_PUBLIC_CALL_20260619.md)
-9. [Medical AI Safety Field Kit Target Distribution Index](docs/MEDICAL_AI_SAFETY_FIELD_KIT_TARGET_DISTRIBUTION_INDEX_20260619.md)
-10. [Medical AI Safety Field Kit Send Approval Packet](docs/MEDICAL_AI_SAFETY_FIELD_KIT_SEND_APPROVAL_PACKET_20260619.md)
-11. [Medical AI Safety Field Kit Public Objection Ledger](docs/MEDICAL_AI_SAFETY_FIELD_KIT_PUBLIC_OBJECTION_LEDGER_20260619.md)
-12. [Medical AI Safety Field Kit Public Objection Intake](docs/MEDICAL_AI_SAFETY_FIELD_KIT_PUBLIC_OBJECTION_INTAKE_20260619.md)
-13. [Public Safe Failure Cards](docs/PUBLIC_SAFE_FAILURE_CARDS_20260619.md)
-14. [Public Safe Failure Cards launch seed](docs/PUBLIC_SAFE_FAILURE_CARDS_LAUNCH_SEED_20260619.md)
-15. [Safe Failure Card issue template](.github/ISSUE_TEMPLATE/safe_failure_card_objection.yml)
+2. [Medical AI Safety Field Kit Issue 154 Public Comment Router](docs/MEDICAL_AI_SAFETY_FIELD_KIT_ISSUE154_PUBLIC_COMMENT_ROUTER_20260620.md)
+3. [Medical AI Safety Field Kit One Objection Gateway](docs/MEDICAL_AI_SAFETY_FIELD_KIT_ONE_OBJECTION_GATEWAY_20260620.md)
+4. [Medical AI Safety Field Kit Reviewer Start Here](docs/MEDICAL_AI_SAFETY_FIELD_KIT_REVIEWER_START_HERE_20260619.md)
+5. [Medical AI Safety Field Kit Global Safety Claim Review Workbook](docs/MEDICAL_AI_SAFETY_FIELD_KIT_GLOBAL_SAFETY_CLAIM_REVIEW_WORKBOOK_20260620.md)
+6. [Medical AI Safety Field Kit Reviewer Sprint Board](docs/MEDICAL_AI_SAFETY_FIELD_KIT_REVIEWER_SPRINT_BOARD_20260620.md)
+7. [Medical AI Safety Field Kit External Route Scout Board](docs/MEDICAL_AI_SAFETY_FIELD_KIT_EXTERNAL_ROUTE_SCOUT_BOARD_20260620.md)
+8. [Medical AI Safety Field Kit SFC005 Synthetic Evidence Starter](docs/MEDICAL_AI_SAFETY_FIELD_KIT_SFC005_SYNTHETIC_EVIDENCE_STARTER_20260620.md)
+9. [Medical AI Safety Field Kit Public Call](docs/MEDICAL_AI_SAFETY_FIELD_KIT_PUBLIC_CALL_20260619.md)
+10. [Medical AI Safety Field Kit Target Distribution Index](docs/MEDICAL_AI_SAFETY_FIELD_KIT_TARGET_DISTRIBUTION_INDEX_20260619.md)
+11. [Medical AI Safety Field Kit Send Approval Packet](docs/MEDICAL_AI_SAFETY_FIELD_KIT_SEND_APPROVAL_PACKET_20260619.md)
+12. [Medical AI Safety Field Kit Public Objection Ledger](docs/MEDICAL_AI_SAFETY_FIELD_KIT_PUBLIC_OBJECTION_LEDGER_20260619.md)
+13. [Medical AI Safety Field Kit Public Objection Intake](docs/MEDICAL_AI_SAFETY_FIELD_KIT_PUBLIC_OBJECTION_INTAKE_20260619.md)
+14. [Public Safe Failure Cards](docs/PUBLIC_SAFE_FAILURE_CARDS_20260619.md)
+15. [Public Safe Failure Cards launch seed](docs/PUBLIC_SAFE_FAILURE_CARDS_LAUNCH_SEED_20260619.md)
+16. [Safe Failure Card issue template](.github/ISSUE_TEMPLATE/safe_failure_card_objection.yml)
 
 The call is simple: pick one reviewer role, pick one platform lane, and add one concrete objection, missing safety check, failure mode, source support gap, Turkish wording risk, or field readiness gap.
 
@@ -69,7 +70,8 @@ Use one issue template:
 1. [Safe Failure Card objection](.github/ISSUE_TEMPLATE/safe_failure_card_objection.yml): one card id, risk, missing gate, and safer wording.
 2. [Synthetic medical AI failure case](.github/ISSUE_TEMPLATE/synthetic_failure_case.yml): one synthetic failure mode and safer answer expectation.
 3. [SourceCheckup source review](.github/ISSUE_TEMPLATE/sourcecheckup_review.yml): one source support gap and required evidence check.
-4. [Label audit review](.github/ISSUE_TEMPLATE/label_audit_review.yml): one data fitness or label boundary gap.
+4. [Evidence concern](.github/ISSUE_TEMPLATE/evidence_concern.yml): one reproducible concern about model behavior, evaluation design, documentation, release quality, or evidence support.
+5. [Label audit review](.github/ISSUE_TEMPLATE/label_audit_review.yml): one data fitness or label boundary gap.
 
 Use synthetic examples only. Do not include patient data, private clinical text, raw model outputs, endpoint results, scores, rankings, clinical validation, clinical deployment, partner claims, institution claims, endorsement claims, payment claims, or terms claims. A submitted issue creates a maintainer review queue only.
 
