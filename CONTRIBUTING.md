@@ -12,6 +12,27 @@ It is not a clinical validation study.
 
 It must not include patient data.
 
+## First outside objection
+
+If you only have two minutes, do not open a new issue first.
+
+Use the current first objection issue:
+
+https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
+
+One sentence is enough.
+
+Useful shape:
+
+```text
+Weak spot:
+Safer wording or missing gate:
+```
+
+This counts even if you have not read the full repository. Pick one README line, card, issue body, workbook row, source support note, Turkish wording example, or readiness phrase that sounds too strong, unclear, unsupported, or too easy to trust.
+
+Use synthetic or public examples only. Do not include patient data, private clinical text, raw private model output, clinical advice, validation, deployment, ranking, score certification, source truth certification, partner claims, institution claims, endorsement, payment, or terms action.
+
 ## Contribution rules
 
 1. Do not submit real patient cases.
