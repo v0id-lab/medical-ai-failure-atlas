@@ -1,0 +1,114 @@
+name: Evidence concern
+description: Report a reproducible concern about model behavior, evaluation design, documentation, or release quality.
+title: "Evidence concern: "
+labels: ["help wanted"]
+body:
+  [
+    {
+      type: markdown,
+      attributes:
+        {
+          value: "Use this route for a reproducible concern about model behavior, evaluation design, documentation, or release quality. Use synthetic or public information only. Do not include patient data, private clinical data, private case detail, raw clinical notes, private model outputs, clinical care deployment results, institutional claims, partnership claims, endorsement claims, clinical validation claims, clinical deployment claims, benchmark ranking, score certification, payment, terms, or formal application claims.",
+        },
+    },
+    {
+      type: textarea,
+      id: concern_summary,
+      attributes:
+        {
+          label: Concern summary,
+          description: "State the concern in one or two sentences.",
+          placeholder: "The release note could be read as clinical readiness rather than a documentation quality signal.",
+        },
+      validations: { required: true },
+    },
+    {
+      type: textarea,
+      id: what_tested,
+      attributes:
+        {
+          label: What you tested,
+          description: "Name the model behavior, evaluation design, documentation section, release note, issue, or workflow you reviewed.",
+          placeholder: "I reviewed the source support wording in the current public intake.",
+        },
+      validations: { required: true },
+    },
+    {
+      type: textarea,
+      id: exact_input,
+      attributes:
+        {
+          label: Exact prompt or input, if safe to share,
+          description: "Use only synthetic or public text. Leave blank if the input is private or unsafe to share.",
+          placeholder: "Synthetic prompt or public link only.",
+        },
+    },
+    {
+      type: textarea,
+      id: expected_behavior,
+      attributes:
+        {
+          label: Expected behavior,
+          description: "What should the project, text, workflow, or evaluation make clear?",
+          placeholder: "The text should say this is a safety review prompt, not a clinical validation result.",
+        },
+      validations: { required: true },
+    },
+    {
+      type: textarea,
+      id: observed_behavior,
+      attributes:
+        {
+          label: Observed behavior,
+          description: "What did you see that creates the concern?",
+          placeholder: "The current wording could be interpreted as stronger than the evidence supports.",
+        },
+      validations: { required: true },
+    },
+    {
+      type: textarea,
+      id: release_quality_effect,
+      attributes:
+        {
+          label: Why this affects release quality,
+          description: "Explain the release quality, documentation, evaluation, or safety framing risk.",
+          placeholder: "A reader could mistake a public example for evidence of clinical readiness.",
+        },
+      validations: { required: true },
+    },
+    {
+      type: textarea,
+      id: environment_or_version,
+      attributes:
+        {
+          label: Environment or version,
+          description: "Name the public release, commit, issue, document, or environment if relevant.",
+          placeholder: "Public release tag, issue number, commit, or document link.",
+        },
+    },
+    {
+      type: textarea,
+      id: public_evidence_links,
+      attributes:
+        {
+          label: Links to public evidence, if any,
+          description: "Use public links only.",
+          placeholder: "Public URL only.",
+        },
+    },
+    {
+      type: checkboxes,
+      id: boundaries,
+      attributes:
+        {
+          label: Boundary check,
+          options:
+            [
+              { label: "This uses synthetic or public information only.", required: true },
+              { label: "This includes no patient data, private clinical data, private case detail, raw clinical note, or private model output.", required: true },
+              { label: "This does not report deployment results from clinical care.", required: true },
+              { label: "This does not claim clinical validation, clinical deployment, benchmark ranking, score certification, institutional endorsement, partnership, formal application, payment, or terms acceptance.", required: true },
+            ],
+        },
+    },
+  ]
