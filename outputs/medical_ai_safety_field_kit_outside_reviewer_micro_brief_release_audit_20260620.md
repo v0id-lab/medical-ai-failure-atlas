@@ -31,3 +31,9 @@ Risk state before release:
 Purpose: create a clean release URL for the Outside Reviewer Micro Brief so Goktug can use one controlled social surface to request a true third party issue 154 objection.
 
 Not allowed: owner issue comment, duplicate route owner email, patient data, clinical validation, deployment, ranking, partner claim, institution claim, endorsement, application, payment, or terms action.
+
+Release readback after action:
+
+https://github.com/v0id-lab/medical-ai-failure-atlas/releases/tag/medical-ai-safety-field-kit-outside-reviewer-micro-brief-20260620
+
+State: public release, not draft, not prerelease, target branch main.

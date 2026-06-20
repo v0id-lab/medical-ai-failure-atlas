@@ -19,3 +19,10 @@ Source surfaces:
 No formal references are used in the release notes.
 
 No claim support beyond navigation and boundary presence is asserted.
+
+Checked after release:
+
+1. Release URL exists.
+2. Release is not draft.
+3. Release is not prerelease.
+4. Release target branch is main.

@@ -103,6 +103,12 @@ def main() -> int:
         errors.append("Release source support missing navigation claim boundary")
     if "No formal references are used in the release notes." not in release_support_text:
         errors.append("Release source support missing reference boundary")
+    if "Release readback after action" not in release_audit_text:
+        errors.append("Release audit missing release readback")
+    if "Release is not draft." not in release_support_text:
+        errors.append("Release source support missing draft readback")
+    if "Release is not prerelease." not in release_support_text:
+        errors.append("Release source support missing prerelease readback")
 
     if RELEASE_REFS.exists():
         import json
