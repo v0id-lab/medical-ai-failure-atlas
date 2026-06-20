@@ -20,7 +20,6 @@ REQUIRED_DOC_PHRASES = [
     "Medical AI Safety Field Kit One Objection Gateway",
     "The whole ask is one objection.",
     "Pick one role. Pick one lane. Leave one bounded objection",
-    "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/149",
     "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/150",
     "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/151",
     "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/152",
@@ -120,6 +119,8 @@ def main() -> int:
             errors.append("Unexpected artifact id")
         if payload.get("primary_goal") != "convert outside readers into one bounded public objection":
             errors.append("Unexpected primary goal")
+        if payload.get("primary_issue") != 154:
+            errors.append("Expected primary issue 154")
         if len(payload.get("routes", [])) != 6:
             errors.append("Expected six reviewer routes")
         for flag in REQUIRED_FALSE_FLAGS:

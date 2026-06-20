@@ -6,7 +6,7 @@ The gateway uses existing repository surfaces only.
 
 ## Source support
 
-1. Main public intake is issue `#149`.
+1. Current main public intake is issue `#154`.
 2. Source support starter is issue `#150`.
 3. Turkish wording starter is issue `#151`.
 4. Hospital readiness starter is issue `#152`.

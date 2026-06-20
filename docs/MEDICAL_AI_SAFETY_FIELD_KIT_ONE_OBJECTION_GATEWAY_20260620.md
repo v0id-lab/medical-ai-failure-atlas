@@ -16,9 +16,11 @@ This gateway is the first link for clinicians, health informatics reviewers, Tur
 
 Open the main intake:
 
-https://github.com/v0id-lab/medical-ai-failure-atlas/issues/149
+https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
 
-Or pick the best lane below.
+If you only have one sentence, put it there. The maintainer will route useful objections into the right card or gate.
+
+Or pick a specialist lane below.
 
 Use this shape:
 
@@ -32,7 +34,15 @@ Safer wording:
 
 ## Choose One Lane
 
-1. Clinician reviewer
+1. Synthetic evidence reviewer
+
+Go here:
+
+https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
+
+Attack this: a synthetic card is mistaken for evidence.
+
+2. Clinician reviewer
 
 Go here:
 
@@ -40,7 +50,7 @@ https://github.com/v0id-lab/medical-ai-failure-atlas/issues/152
 
 Attack this: demo success starts to sound like hospital readiness.
 
-2. Turkish medical language reviewer
+3. Turkish medical language reviewer
 
 Go here:
 
@@ -48,21 +58,13 @@ https://github.com/v0id-lab/medical-ai-failure-atlas/issues/151
 
 Attack this: Turkish clinical wording changes urgency, certainty, action boundary, or responsibility.
 
-3. Source support reviewer
+4. Source support reviewer
 
 Go here:
 
 https://github.com/v0id-lab/medical-ai-failure-atlas/issues/150
 
 Attack this: a public source link is treated as support for a stronger claim than it can carry.
-
-4. Synthetic evidence reviewer
-
-Go here:
-
-https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
-
-Attack this: a synthetic card is mistaken for evidence.
 
 5. Governance wording reviewer
 

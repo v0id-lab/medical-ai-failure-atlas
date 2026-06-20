@@ -3,8 +3,13 @@
   "date": "2026-06-20",
   "primary_goal": "convert outside readers into one bounded public objection",
   "public_doc": "docs/MEDICAL_AI_SAFETY_FIELD_KIT_ONE_OBJECTION_GATEWAY_20260620.md",
-  "primary_issue": 149,
+  "primary_issue": 154,
   "routes": [
+    {
+      "role": "synthetic evidence reviewer",
+      "target": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154",
+      "attack": "synthetic card is mistaken for evidence"
+    },
     {
       "role": "clinician reviewer",
       "target": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/152",
@@ -19,11 +24,6 @@
       "role": "source support reviewer",
       "target": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/150",
       "attack": "source link is treated as support for a stronger claim"
-    },
-    {
-      "role": "synthetic evidence reviewer",
-      "target": "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154",
-      "attack": "synthetic card is mistaken for evidence"
     },
     {
       "role": "governance wording reviewer",

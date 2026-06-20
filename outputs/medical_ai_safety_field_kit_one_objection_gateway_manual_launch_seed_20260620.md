@@ -8,13 +8,13 @@ Status: manual post seed only. Not posted.
 
 I made the Medical AI Safety Field Kit easier to attack.
 
-One link. One role. One objection.
+One link. One sentence is enough.
 
-https://github.com/v0id-lab/medical-ai-failure-atlas/blob/main/docs/MEDICAL_AI_SAFETY_FIELD_KIT_ONE_OBJECTION_GATEWAY_20260620.md
+https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154
 
 If you work around medical AI, health informatics, clinical language, source support, governance, or open model evaluation, the useful contribution is small:
 
-Pick one lane and leave one bounded objection with a missing gate and safer wording.
+Name one weak spot and give one safer wording or missing gate.
 
 No patient data. No clinical validation claim. No deployment claim. No ranking. No endorsement.
 
