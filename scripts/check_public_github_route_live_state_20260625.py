@@ -5,6 +5,7 @@ import json
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -69,8 +70,8 @@ def issue_state(repo: str, number: int) -> dict[str, object]:
     }
 
 
-def pull_request_state(repo: str, number: int) -> dict[str, object]:
-    payload = run_json(
+def pull_request_payload(repo: str, number: int) -> dict[str, Any]:
+    return run_json(
         [
             "gh",
             "pr",
@@ -82,6 +83,13 @@ def pull_request_state(repo: str, number: int) -> dict[str, object]:
             "state,reviewDecision,mergeStateStatus,comments,reviews,updatedAt",
         ]
     )
+
+
+def pull_request_state(repo: str, number: int) -> dict[str, object]:
+    payload = pull_request_payload(repo, number)
+    if normalize(payload.get("mergeStateStatus")) == "unknown":
+        time.sleep(2)
+        payload = pull_request_payload(repo, number)
     return {
         "live_state": normalize(payload.get("state")),
         "review_state": normalize(payload.get("reviewDecision")),
