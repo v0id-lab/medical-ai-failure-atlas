@@ -90,7 +90,7 @@ Focus: genetic variant model risk checks, label uncertainty, data leakage, sourc
 
 ## 2026 06 25 public route and report hygiene surfaces
 
-Current public navigation for the latest medical AI assurance work:
+Current public navigation for the latest medical AI intelligence work:
 
 1. [Health AI Assurance Opportunity Radar](docs/HEALTH_AI_ASSURANCE_OPPORTUNITY_RADAR_20260625.md): source checked opportunity map for TEKNOFEST, TÜBİTAK, TÜSEB, HealthBench, MedHELM, BRIDGE, CHAI, FDA, and EU health AI signals without application, partner, device, clinical validation, or compliance claims.
 2. [TEKNOFEST Health AI Report Claim Hygiene Checklist](docs/TEKNOFEST_HEALTH_AI_REPORT_CLAIM_HYGIENE_CHECKLIST_20260625.md): ten gate checklist for safer project report language before public report claims become stronger than the evidence supports.
@@ -100,8 +100,15 @@ Current public navigation for the latest medical AI assurance work:
 6. [Public Review Operating System](docs/PUBLIC_REVIEW_OPERATING_SYSTEM_20260625.md): generated public review flow that connects BAGLAM2, Gmail, LinkedIn, GitHub route state, issue 154, validators, and one artifact per loop.
 7. [Repo Acceleration North Star](docs/REPO_ACCELERATION_NORTH_STAR_20260625.md): generated repo direction system that compresses six month strategy into a clinician severity layer, source support layer, claim hygiene layer, Turkish clinical context layer, open source eval bridge, product spec, proof ledger, and 72 hour queue.
 8. [Clinician Severity Layer Seed Rows](docs/CLINICIAN_SEVERITY_LAYER_SEED_ROWS_20260625.md): ten generated seed rows from Public Safe Failure Cards that turn unsafe patterns into scenario scope, failure mode, clinical severity, missing variable, source support gap, safe rewrite, and reviewer state.
+9. [Medical AI Field Command Plan](docs/MEDICAL_AI_FIELD_COMMAND_PLAN_20260625.md): source checked field plan that turns FDA, WHO, IMDRF, HealthBench, MedGemma, MedHELM, AgentClinic, TÜYZE, KDS, NeyimVar, TÜBİTAK, and TEKNOFEST signals into the internal medicine safety evaluation lane.
+10. [Turkish Internal Medicine Safety Eval v0.1](docs/TURKISH_INTERNAL_MEDICINE_SAFETY_EVAL_V0_1_20260625.md): generated 30 row synthetic Turkish internal medicine safety eval path from the v0.3 synthetic case set, with escalation, medication safety, laboratory interpretation, source support, and safe Turkish wording gates.
+11. [Clinical Intelligence Stack Manifesto](docs/CLINICAL_INTELLIGENCE_STACK_MANIFESTO_20260625.md): public thesis that medical AI needs a clinical intelligence stack, with source anchors, stack layers, boundaries, and the first build command.
+12. [Clinical State Language v0.1](docs/CLINICAL_STATE_LANGUAGE_V0_1_20260625.md): field level language for representing patient state, timeline, missing data, hypotheses, evidence, action boundary, follow up triggers, and source support.
+13. [Clinical Trajectory Engine v0.1](docs/CLINICAL_TRAJECTORY_ENGINE_V0_1_20260625.md): twenty synthetic trajectory seed rows across clinical domains, designed to test state tracking over time without patient data or clinical use claims.
+14. [Medical Reasoning Verifier v0.1](docs/MEDICAL_REASONING_VERIFIER_V0_1_20260625.md): verifier dimensions for state completeness, timeline tracking, missing variable discipline, uncertainty handling, action sequencing, source support, and forbidden claim avoidance.
+15. [Agentic Medicine Sandbox v0.1](docs/AGENTIC_MEDICINE_SANDBOX_V0_1_20260625.md): first process map for patient, clinician, test, source support, consultant, and follow up agents.
 
-Before using any route state in public text, run `make public_github_route_preflight`. It checks the watchlist, live GitHub route state, README surface links, and public release sanitation.
+Before using any route state in public text, run `make public_github_route_preflight`. It checks the watchlist, live GitHub route state, README surface links, and public release sanitation. Before using the internal medicine safety lane in public work, run `make internal_medicine_ai_safety_strategy`. Before using Clinical Intelligence Stack language in public work, run `make clinical_intelligence_stack`.
 
 Boundary: these are public navigation and claim hygiene materials only. They are not submissions, applications, merge decisions, clinical validation, clinical deployment, partner status, institutional approval, endorsement, benchmark results, model rankings, payment, or terms action.
 

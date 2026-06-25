@@ -8,6 +8,8 @@ PYTHON ?= python3
 validate:
 	$(PYTHON) scripts/validate_public_repo_owner_links_v0_1.py
 	$(PYTHON) scripts/validate_readme_current_surface_links_20260625.py
+	$(PYTHON) scripts/validate_internal_medicine_ai_safety_strategy_20260625.py
+	$(PYTHON) scripts/validate_clinical_intelligence_stack_20260625.py
 	$(PYTHON) scripts/validate_public_visibility_claim_gate_20260625.py
 	$(PYTHON) scripts/validate_public_review_operating_system_20260625.py
 	$(PYTHON) scripts/validate_repo_acceleration_system_20260625.py
@@ -215,6 +217,16 @@ repo_acceleration_system:
 clinician_severity_layer_seed_rows:
 	$(PYTHON) scripts/build_clinician_severity_layer_seed_rows_20260625.py --check
 	$(PYTHON) scripts/validate_clinician_severity_layer_seed_rows_20260625.py
+
+.PHONY: internal_medicine_ai_safety_strategy
+internal_medicine_ai_safety_strategy:
+	$(PYTHON) scripts/build_internal_medicine_ai_safety_strategy_20260625.py --check
+	$(PYTHON) scripts/validate_internal_medicine_ai_safety_strategy_20260625.py
+
+.PHONY: clinical_intelligence_stack
+clinical_intelligence_stack:
+	$(PYTHON) scripts/build_clinical_intelligence_stack_20260625.py --check
+	$(PYTHON) scripts/validate_clinical_intelligence_stack_20260625.py
 
 validate-public: validate
 
