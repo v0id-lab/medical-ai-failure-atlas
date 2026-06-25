@@ -217,6 +217,50 @@
       "synthetic_only": true,
       "patient_data_used": false,
       "clinical_use_allowed": false
+    },
+    "mmi_public_wording_rewrite_candidates": {
+      "path": "data/multilingual_medical_intelligence_public_wording_rewrite_candidates_v0_1_20260625.jsonl",
+      "kind": "synthetic public wording rewrite candidate fixture",
+      "record_count": 16,
+      "expected_pass_candidates": 8,
+      "expected_fail_candidates": 8,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "score_certification_claim_made": false
+    },
+    "mmi_public_wording_rewrite_candidate_score_report": {
+      "path": "data/multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.json",
+      "kind": "machine readable rewrite candidate drift score report",
+      "candidate_count": 16,
+      "observed_pass_candidates": 8,
+      "observed_blocked_candidates": 8,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "score_certification_claim_made": false
+    },
+    "mmi_public_wording_rewrite_candidate_score_report_doc": {
+      "path": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_REWRITE_CANDIDATE_SCORE_REPORT_V0_1_20260625.md",
+      "kind": "rewrite candidate drift score documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "score_certification_claim_made": false
+    },
+    "mmi_public_wording_rewrite_candidate_scorer": {
+      "path": "scripts/score_multilingual_medical_intelligence_rewrite_candidates_v0_1_20260625.py",
+      "kind": "rewrite candidate drift scorer",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "mmi_public_wording_rewrite_candidate_score_validator": {
+      "path": "scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py",
+      "kind": "rewrite candidate score report validator",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
     }
   },
   "coverage_rows": [
@@ -410,6 +454,11 @@
         "mmi_public_wording_drift_score_report_doc",
         "mmi_public_wording_drift_score_report_builder",
         "mmi_public_wording_drift_score_report_validator",
+        "mmi_public_wording_rewrite_candidates",
+        "mmi_public_wording_rewrite_candidate_score_report",
+        "mmi_public_wording_rewrite_candidate_score_report_doc",
+        "mmi_public_wording_rewrite_candidate_scorer",
+        "mmi_public_wording_rewrite_candidate_score_validator",
         "stack_manifesto"
       ],
       "coverage_focus": [
@@ -429,13 +478,19 @@
         "failure reason count triage",
         "source row coverage for expected fail controls",
         "source pair coverage for public wording rows",
+        "rewrite candidate source row coverage",
+        "rewrite candidate pass and blocked counts",
+        "rewrite candidate drift signal checks",
+        "rewrite candidate external publication clearance boundary",
         "score certification absence boundary"
       ],
       "local_validation_refs": [
         "scripts/validate_multilingual_medical_intelligence_paired_state_examples_v0_1_20260625.py",
         "scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py",
         "scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
-        "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py"
+        "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+        "scripts/score_multilingual_medical_intelligence_rewrite_candidates_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py"
       ],
       "coverage_status": "direct fixture coverage"
     },

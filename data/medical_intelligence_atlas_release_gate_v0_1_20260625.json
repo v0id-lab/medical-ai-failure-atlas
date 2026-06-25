@@ -128,7 +128,12 @@
         "data/multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.json",
         "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_PUBLIC_WORDING_DRIFT_SCORE_REPORT_V0_1_20260625.md",
         "scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
-        "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py"
+        "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+        "data/multilingual_medical_intelligence_public_wording_rewrite_candidates_v0_1_20260625.jsonl",
+        "data/multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.json",
+        "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_REWRITE_CANDIDATE_SCORE_REPORT_V0_1_20260625.md",
+        "scripts/score_multilingual_medical_intelligence_rewrite_candidates_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py"
       ],
       "risk_gate": "public release cannot outrun validators",
       "next_action": "keep repo local checker and boundary evidence current before release change",
@@ -300,7 +305,12 @@
         "data/multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.json",
         "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_PUBLIC_WORDING_DRIFT_SCORE_REPORT_V0_1_20260625.md",
         "scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
-        "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py"
+        "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+        "data/multilingual_medical_intelligence_public_wording_rewrite_candidates_v0_1_20260625.jsonl",
+        "data/multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.json",
+        "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_REWRITE_CANDIDATE_SCORE_REPORT_V0_1_20260625.md",
+        "scripts/score_multilingual_medical_intelligence_rewrite_candidates_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py"
       ],
       "synthetic_boundary": {
         "synthetic_only": true,
@@ -317,6 +327,8 @@
         "diagnosis_or_treatment_instruction_absent": true,
         "public_wording_drift_negative_controls_ready": true,
         "public_wording_drift_score_report_ready": true,
+        "rewrite_candidate_score_report_ready": true,
+        "rewrite_candidate_external_publication_clearance": false,
         "score_certification_claim_made": false,
         "source_truth_certification_claim_made": false,
         "external_publication_clearance": false
@@ -343,9 +355,15 @@
         "public_wording_drift_score_report_rows": 8,
         "public_wording_drift_score_report_expected_fail_controls": 8,
         "public_wording_drift_score_report_critical_action_boundary_fail_controls": 4,
-        "public_wording_drift_score_report_signal_types": 5
+        "public_wording_drift_score_report_signal_types": 5,
+        "rewrite_candidate_checker_result": "pass",
+        "rewrite_candidate_rows": 16,
+        "rewrite_candidate_pass_candidates": 8,
+        "rewrite_candidate_blocked_candidates": 8,
+        "rewrite_candidate_source_row_coverage": 8,
+        "rewrite_candidate_critical_action_boundary_candidates": 4
       },
-      "decision_reason": "The paired Turkish English synthetic state fixture, public wording bank, drift negative controls, and local drift triage report pass validation while preserving missing data, action boundaries, source support needs, no added clinical certainty, and no score certification claim.",
+      "decision_reason": "The paired Turkish English synthetic state fixture, public wording bank, drift negative controls, local drift triage report, and rewrite candidate scorer pass validation while preserving missing data, action boundaries, source support needs, no added clinical certainty, no external publication clearance, and no score certification claim.",
       "blockers": [],
       "source_check_items": []
     },

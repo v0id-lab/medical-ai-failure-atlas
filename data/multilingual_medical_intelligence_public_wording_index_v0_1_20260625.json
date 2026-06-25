@@ -21,7 +21,12 @@
     "drift_score_report_json": "data/multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.json",
     "drift_score_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_PUBLIC_WORDING_DRIFT_SCORE_REPORT_V0_1_20260625.md",
     "drift_score_report_builder": "scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
-    "drift_score_report_validator": "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py"
+    "drift_score_report_validator": "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+    "rewrite_candidate_fixture": "data/multilingual_medical_intelligence_public_wording_rewrite_candidates_v0_1_20260625.jsonl",
+    "rewrite_candidate_score_report_json": "data/multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.json",
+    "rewrite_candidate_score_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_REWRITE_CANDIDATE_SCORE_REPORT_V0_1_20260625.md",
+    "rewrite_candidate_scorer": "scripts/score_multilingual_medical_intelligence_rewrite_candidates_v0_1_20260625.py",
+    "rewrite_candidate_score_validator": "scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -36,7 +41,14 @@
     "expected_drift_score_report_status": "local_fixture_pass",
     "expected_drift_score_report_pass_rows": 8,
     "expected_drift_score_report_fail_controls": 8,
-    "expected_critical_action_boundary_fail_controls": 4
+    "expected_critical_action_boundary_fail_controls": 4,
+    "rewrite_candidate_score_command": "python3 scripts/score_multilingual_medical_intelligence_rewrite_candidates_v0_1_20260625.py --check",
+    "rewrite_candidate_score_validation_command": "python3 scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py",
+    "expected_rewrite_candidate_score_status": "local_fixture_pass",
+    "expected_rewrite_candidate_count": 16,
+    "expected_rewrite_candidate_pass_count": 8,
+    "expected_rewrite_candidate_blocked_count": 8,
+    "expected_rewrite_candidate_source_row_coverage": 8
   },
   "safety_boundaries": {
     "synthetic_only": true,
@@ -92,6 +104,16 @@
       "source row coverage",
       "source pair coverage",
       "reviewer triage without score certification"
+    ],
+    "rewrite_candidate_score_report": [
+      "sixteen synthetic rewrite candidates",
+      "eight pass candidates",
+      "eight blocked candidates",
+      "source row coverage",
+      "candidate drift signal counts",
+      "candidate failure reason counts",
+      "reviewer triage without score certification",
+      "external publication clearance absence"
     ]
   },
   "planned_rows": [
@@ -254,7 +276,7 @@
     }
   ],
   "next_build_suggestion": {
-    "suggested_action": "Add a rewrite candidate drift scorer that compares future public wording attempts against the local drift score profile.",
+    "suggested_action": "Expand the rewrite candidate scorer with cross language ambiguity controls that detect added certainty across translation variants.",
     "required_before_public_use": [
       "local row count check",
       "ASCII text check",
@@ -265,6 +287,9 @@
       "public wording negative control check",
       "drift score report check",
       "public wording drift score report freshness check",
+      "rewrite candidate fixture check",
+      "rewrite candidate score report check",
+      "rewrite candidate blocked count check",
       "score certification absence check",
       "source truth certification absence check"
     ]
