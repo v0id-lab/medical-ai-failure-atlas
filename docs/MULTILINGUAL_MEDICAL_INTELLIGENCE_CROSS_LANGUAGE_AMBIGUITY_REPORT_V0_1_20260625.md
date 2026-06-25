@@ -60,4 +60,4 @@ Direct check:
 
 ## Exact Next Action
 
-Add cross language scope anchor controls so each translated variant preserves missing variables, actor role, and action boundary in the same record.
+Add cross language temporal progression controls so translated variants preserve duration, sequence, and follow up timing without creating care instructions.

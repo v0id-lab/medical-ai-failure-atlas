@@ -34,7 +34,7 @@
     "config": "data/medical_intelligence_atlas_v0_1_20260625.json",
     "checker": "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py",
     "expected_layer_count": 6,
-    "expected_node_count": 13
+    "expected_node_count": 14
   },
   "release_gate_summary": {
     "layer_count": 6,
@@ -143,7 +143,12 @@
         "data/multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.json",
         "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_NEGATION_AUDIENCE_REPORT_V0_1_20260625.md",
         "scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py",
-        "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py"
+        "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py",
+        "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_scope_anchor_controls_v0_1_20260625.jsonl",
+        "data/multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.json",
+        "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_SCOPE_ANCHOR_REPORT_V0_1_20260625.md",
+        "scripts/score_multilingual_medical_intelligence_cross_language_scope_anchor_controls_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.py"
       ],
       "risk_gate": "public release cannot outrun validators",
       "next_action": "keep repo local checker and boundary evidence current before release change",
@@ -296,7 +301,8 @@
       "atlas_node_ids": [
         "mia_mmi_001",
         "mia_mmi_002",
-        "mia_mmi_003"
+        "mia_mmi_003",
+        "mia_mmi_004"
       ],
       "local_artifacts": [
         "data/tr_medllm_synthetic_eval_set_v0_3.jsonl",
@@ -331,7 +337,12 @@
         "data/multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.json",
         "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_NEGATION_AUDIENCE_REPORT_V0_1_20260625.md",
         "scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py",
-        "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py"
+        "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py",
+        "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_scope_anchor_controls_v0_1_20260625.jsonl",
+        "data/multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.json",
+        "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_SCOPE_ANCHOR_REPORT_V0_1_20260625.md",
+        "scripts/score_multilingual_medical_intelligence_cross_language_scope_anchor_controls_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.py"
       ],
       "synthetic_boundary": {
         "synthetic_only": true,
@@ -360,7 +371,13 @@
         "negation_inversion_blocked": true,
         "warning_softening_blocked": true,
         "audience_role_shift_blocked": true,
-        "audience_role_clearance_claim_made": false
+        "audience_role_clearance_claim_made": false,
+        "cross_language_scope_anchor_report_ready": true,
+        "missing_variable_anchor_erasure_blocked": true,
+        "actor_role_change_blocked": true,
+        "action_boundary_drift_blocked": true,
+        "local_context_detachment_blocked": true,
+        "scope_anchor_clearance_claim_made": false
       },
       "gate_inputs": {
         "tr_medllm_rows": 44,
@@ -400,9 +417,14 @@
         "cross_language_negation_audience_controls": 12,
         "cross_language_negation_audience_pass_controls": 6,
         "cross_language_negation_audience_blocked_controls": 6,
-        "cross_language_negation_audience_signal_types": 6
+        "cross_language_negation_audience_signal_types": 6,
+        "cross_language_scope_anchor_checker_result": "pass",
+        "cross_language_scope_anchor_controls": 12,
+        "cross_language_scope_anchor_pass_controls": 6,
+        "cross_language_scope_anchor_blocked_controls": 6,
+        "cross_language_scope_anchor_signal_types": 6
       },
-      "decision_reason": "The paired Turkish English synthetic state fixture, public wording bank, drift negative controls, local drift triage report, rewrite candidate scorer, cross language ambiguity controls, and cross language negation audience controls pass validation while preserving missing data, action boundaries, source support needs, no added clinical certainty, no translation clearance, no audience role clearance, no external publication clearance, and no score certification claim.",
+      "decision_reason": "The paired Turkish English synthetic state fixture, public wording bank, drift negative controls, local drift triage report, rewrite candidate scorer, cross language ambiguity controls, cross language negation audience controls, and cross language scope anchor controls pass validation while preserving missing data, action boundaries, source support needs, no added clinical certainty, no translation clearance, no audience role clearance, no scope anchor clearance, no external publication clearance, and no score certification claim.",
       "blockers": [],
       "source_check_items": []
     },
@@ -428,7 +450,7 @@
       },
       "gate_inputs": {
         "checker_result": "pass",
-        "atlas_nodes": 13,
+        "atlas_nodes": 14,
         "relationships": 5,
         "release_states": 3,
         "release_gate_fixture_present": true

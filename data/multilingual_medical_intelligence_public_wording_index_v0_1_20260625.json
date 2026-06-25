@@ -36,7 +36,12 @@
     "cross_language_negation_audience_report_json": "data/multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.json",
     "cross_language_negation_audience_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_NEGATION_AUDIENCE_REPORT_V0_1_20260625.md",
     "cross_language_negation_audience_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py",
-    "cross_language_negation_audience_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py"
+    "cross_language_negation_audience_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py",
+    "cross_language_scope_anchor_controls": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_scope_anchor_controls_v0_1_20260625.jsonl",
+    "cross_language_scope_anchor_report_json": "data/multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.json",
+    "cross_language_scope_anchor_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_SCOPE_ANCHOR_REPORT_V0_1_20260625.md",
+    "cross_language_scope_anchor_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_scope_anchor_controls_v0_1_20260625.py",
+    "cross_language_scope_anchor_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -72,7 +77,14 @@
     "expected_cross_language_negation_audience_control_count": 12,
     "expected_cross_language_negation_audience_pass_controls": 6,
     "expected_cross_language_negation_audience_blocked_controls": 6,
-    "expected_cross_language_negation_audience_signal_types": 6
+    "expected_cross_language_negation_audience_signal_types": 6,
+    "cross_language_scope_anchor_score_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_scope_anchor_controls_v0_1_20260625.py --check",
+    "cross_language_scope_anchor_validation_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.py",
+    "expected_cross_language_scope_anchor_status": "local_fixture_pass",
+    "expected_cross_language_scope_anchor_control_count": 12,
+    "expected_cross_language_scope_anchor_pass_controls": 6,
+    "expected_cross_language_scope_anchor_blocked_controls": 6,
+    "expected_cross_language_scope_anchor_signal_types": 6
   },
   "safety_boundaries": {
     "synthetic_only": true,
@@ -114,7 +126,15 @@
       "patient audience shift detection",
       "clinician audience shift detection",
       "model audience shift detection",
-      "audience role clearance absence"
+      "audience role clearance absence",
+      "cross language scope anchor control",
+      "English missing variable erasure detection",
+      "Turkish ASCII missing variable erasure detection",
+      "actor role change detection",
+      "action boundary expansion detection",
+      "action boundary removal detection",
+      "local context detachment detection",
+      "scope anchor clearance absence"
     ],
     "not_covered": [
       "clinical validation",
@@ -176,6 +196,20 @@
       "model audience shift signal",
       "translation clearance absence",
       "audience role clearance absence",
+      "external publication clearance absence"
+    ],
+    "cross_language_scope_anchor_report": [
+      "twelve synthetic cross language scope anchor controls",
+      "six pass controls",
+      "six blocked controls",
+      "English missing variable erasure signal",
+      "Turkish ASCII missing variable erasure signal",
+      "actor role change signal",
+      "action boundary expanded signal",
+      "action boundary removed signal",
+      "local context detached signal",
+      "translation clearance absence",
+      "scope anchor clearance absence",
       "external publication clearance absence"
     ]
   },
@@ -339,7 +373,7 @@
     }
   ],
   "next_build_suggestion": {
-    "suggested_action": "Add cross language scope anchor controls so each translated variant preserves missing variables, actor role, and action boundary in the same record.",
+    "suggested_action": "Add cross language temporal progression controls so translated variants preserve duration, sequence, and follow up timing without creating care instructions.",
     "required_before_public_use": [
       "local row count check",
       "ASCII text check",
@@ -360,7 +394,10 @@
       "translation clearance absence check",
       "cross language negation audience controls check",
       "cross language negation audience report freshness check",
-      "audience role clearance absence check"
+      "audience role clearance absence check",
+      "cross language scope anchor controls check",
+      "cross language scope anchor report freshness check",
+      "scope anchor clearance absence check"
     ]
   }
 }

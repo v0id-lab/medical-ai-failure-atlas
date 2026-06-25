@@ -580,7 +580,7 @@ def build_report(
             "not_clinical_validation": True,
         },
         "blockers": [],
-        "exact_next_action": "Add cross language scope anchor controls so each translated variant preserves missing variables, actor role, and action boundary in the same record.",
+        "exact_next_action": "Add cross language temporal progression controls so translated variants preserve duration, sequence, and follow up timing without creating care instructions.",
     }
 
 
