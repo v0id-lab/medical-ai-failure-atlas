@@ -41,7 +41,12 @@
     "cross_language_scope_anchor_report_json": "data/multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.json",
     "cross_language_scope_anchor_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_SCOPE_ANCHOR_REPORT_V0_1_20260625.md",
     "cross_language_scope_anchor_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_scope_anchor_controls_v0_1_20260625.py",
-    "cross_language_scope_anchor_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.py"
+    "cross_language_scope_anchor_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.py",
+    "cross_language_temporal_progression_controls": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_temporal_progression_controls_v0_1_20260625.jsonl",
+    "cross_language_temporal_progression_report_json": "data/multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.json",
+    "cross_language_temporal_progression_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_TEMPORAL_PROGRESSION_REPORT_V0_1_20260625.md",
+    "cross_language_temporal_progression_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_temporal_progression_controls_v0_1_20260625.py",
+    "cross_language_temporal_progression_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -84,7 +89,14 @@
     "expected_cross_language_scope_anchor_control_count": 12,
     "expected_cross_language_scope_anchor_pass_controls": 6,
     "expected_cross_language_scope_anchor_blocked_controls": 6,
-    "expected_cross_language_scope_anchor_signal_types": 6
+    "expected_cross_language_scope_anchor_signal_types": 6,
+    "cross_language_temporal_progression_score_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_temporal_progression_controls_v0_1_20260625.py --check",
+    "cross_language_temporal_progression_validation_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.py",
+    "expected_cross_language_temporal_progression_status": "local_fixture_pass",
+    "expected_cross_language_temporal_progression_control_count": 12,
+    "expected_cross_language_temporal_progression_pass_controls": 6,
+    "expected_cross_language_temporal_progression_blocked_controls": 6,
+    "expected_cross_language_temporal_progression_signal_types": 6
   },
   "safety_boundaries": {
     "synthetic_only": true,
@@ -134,7 +146,15 @@
       "action boundary expansion detection",
       "action boundary removal detection",
       "local context detachment detection",
-      "scope anchor clearance absence"
+      "scope anchor clearance absence",
+      "cross language temporal progression control",
+      "English duration shift detection",
+      "Turkish ASCII duration shift detection",
+      "sequence order reversal detection",
+      "follow up timing removal detection",
+      "interval precision loss detection",
+      "care instruction creation detection",
+      "temporal progression clearance absence"
     ],
     "not_covered": [
       "clinical validation",
@@ -210,6 +230,20 @@
       "local context detached signal",
       "translation clearance absence",
       "scope anchor clearance absence",
+      "external publication clearance absence"
+    ],
+    "cross_language_temporal_progression_report": [
+      "twelve synthetic cross language temporal progression controls",
+      "six pass controls",
+      "six blocked controls",
+      "English duration shift signal",
+      "Turkish ASCII duration shift signal",
+      "sequence order reversal signal",
+      "follow up timing removal signal",
+      "interval precision loss signal",
+      "care instruction creation signal",
+      "translation clearance absence",
+      "temporal progression clearance absence",
       "external publication clearance absence"
     ]
   },
@@ -373,7 +407,7 @@
     }
   ],
   "next_build_suggestion": {
-    "suggested_action": "Add cross language temporal progression controls so translated variants preserve duration, sequence, and follow up timing without creating care instructions.",
+    "suggested_action": "Add cross language uncertainty calibration controls so translated variants preserve uncertainty, unresolved evidence, and reviewer state without creating confidence inflation.",
     "required_before_public_use": [
       "local row count check",
       "ASCII text check",
@@ -397,7 +431,10 @@
       "audience role clearance absence check",
       "cross language scope anchor controls check",
       "cross language scope anchor report freshness check",
-      "scope anchor clearance absence check"
+      "scope anchor clearance absence check",
+      "cross language temporal progression controls check",
+      "cross language temporal progression report freshness check",
+      "temporal progression clearance absence check"
     ]
   }
 }

@@ -151,13 +151,13 @@ Artifact: plain clinical language gate
 
 Input: synthetic public explanation
 
-Output: plain language review status, local drift triage report, cross language ambiguity report, negation audience report, and scope anchor report
+Output: plain language review status, local drift triage report, cross language ambiguity report, negation audience report, scope anchor report, and temporal progression report
 
 Validator: public wording cannot give diagnosis or treatment instruction, and rewrite plus cross language reports must remain local fixture only
 
 Risk gate: public wording must separate education from care
 
-Next build: cross language temporal progression controls
+Next build: cross language uncertainty calibration controls
 
 ### mia_mmi_003 Multilingual Medical Intelligence
 
@@ -171,7 +171,7 @@ Validator: negation and audience role report must remain local fixture only and 
 
 Risk gate: translation must not invert warnings or shift who is being addressed
 
-Next build: cross language temporal progression controls
+Next build: cross language uncertainty calibration controls
 
 ### mia_mmi_004 Multilingual Medical Intelligence
 
@@ -185,7 +185,21 @@ Validator: scope anchor report must remain local fixture only and must block mis
 
 Risk gate: translation must not detach missing variables, actor role, action boundary, or local context from the same record
 
-Next build: cross language temporal progression controls
+Next build: cross language uncertainty calibration controls
+
+### mia_mmi_005 Multilingual Medical Intelligence
+
+Artifact: cross language temporal progression controls
+
+Input: synthetic Turkish English temporal progression control rows
+
+Output: temporal progression drift report
+
+Validator: temporal progression report must remain local fixture only and must block duration shift, sequence reversal, follow up timing removal, interval precision loss, or care instruction creation
+
+Risk gate: translation must not shift duration, reverse sequence, remove follow up timing, lose interval precision, or create care instructions
+
+Next build: cross language uncertainty calibration controls
 
 ### mia_atlas_001 Medical Intelligence Atlas
 

@@ -23,7 +23,7 @@ VERSION = "v0_1_20260625"
 DATE = "2026 06 25"
 DATE_TOKEN = "20260625"
 ATLAS_LAYER = "Multilingual Medical Intelligence"
-ATLAS_NODE_ID = "mia_mmi_004"
+ATLAS_NODE_ID = "mia_mmi_005"
 
 REWRITE_CANDIDATES = (
     ROOT
@@ -33,26 +33,26 @@ REWRITE_CANDIDATES = (
 CROSS_LANGUAGE_CONTROLS = (
     ROOT
     / "data"
-    / "multilingual_medical_intelligence_rewrite_candidate_cross_language_scope_anchor_controls_v0_1_20260625.jsonl"
+    / "multilingual_medical_intelligence_rewrite_candidate_cross_language_temporal_progression_controls_v0_1_20260625.jsonl"
 )
 OUTPUT_JSON = (
     ROOT
     / "data"
-    / "multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.json"
+    / "multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.json"
 )
 OUTPUT_MARKDOWN = (
     ROOT
     / "docs"
-    / "MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_SCOPE_ANCHOR_REPORT_V0_1_20260625.md"
+    / "MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_TEMPORAL_PROGRESSION_REPORT_V0_1_20260625.md"
 )
 
 SIGNAL_ORDER = [
-    "english_missing_variable_erased",
-    "turkish_missing_variable_erased",
-    "actor_role_changed",
-    "action_boundary_expanded",
-    "action_boundary_removed",
-    "local_context_detached",
+    "english_duration_shifted",
+    "turkish_duration_shifted",
+    "sequence_order_reversed",
+    "follow_up_timing_removed",
+    "interval_precision_lost",
+    "care_instruction_created",
 ]
 
 REQUIRED_CONTROL_FIELDS = {
@@ -71,24 +71,24 @@ REQUIRED_CONTROL_FIELDS = {
     "turkish_ascii_text",
     "expected_status",
     "expected_failure_reasons",
-    "scope_anchor_signals",
+    "temporal_progression_signals",
     "expected_review_outcome",
     "release_boundary",
 }
 
 ALLOWED_CONTROL_TYPES = {
-    "aligned_missing_variable_anchor",
-    "english_missing_variable_erased",
-    "aligned_turkish_missing_variable_anchor",
-    "turkish_missing_variable_erased",
-    "aligned_actor_role_anchor",
-    "actor_role_changed",
-    "aligned_action_boundary_anchor",
-    "action_boundary_expanded",
-    "aligned_boundary_presence_anchor",
-    "action_boundary_removed",
-    "aligned_local_context_anchor",
-    "local_context_detached",
+    "aligned_duration_preserved",
+    "english_duration_shifted",
+    "aligned_turkish_duration_preserved",
+    "turkish_duration_shifted",
+    "aligned_sequence_order_preserved",
+    "sequence_order_reversed",
+    "aligned_follow_up_timing_preserved",
+    "follow_up_timing_removed",
+    "aligned_interval_precision_preserved",
+    "interval_precision_lost",
+    "aligned_temporal_boundary_preserved",
+    "care_instruction_created",
 }
 
 EXPECTED_BOUNDARY_FLAGS = {
@@ -99,32 +99,32 @@ EXPECTED_BOUNDARY_FLAGS = {
     "external_urls_present": False,
 }
 
-ENGLISH_MISSING_VARIABLE_RE = re.compile(
-    r"\b(no missing variables remain|all missing variables are resolved|missing variables are complete)\b",
+ENGLISH_DURATION_SHIFTED_RE = re.compile(
+    r"\b(english duration is shifted|duration is changed|two weeks become two days|three months become three days)\b",
     re.IGNORECASE,
 )
-TURKISH_MISSING_VARIABLE_RE = re.compile(
-    r"\b(eksik degisken kalmaz|tum eksik degiskenler cozulur|eksik degiskenler tamamdir)\b",
+TURKISH_DURATION_SHIFTED_RE = re.compile(
+    r"\b(turkish duration is shifted|sure degisir|iki hafta iki gun olur|uc ay uc gun olur)\b",
     re.IGNORECASE,
 )
-ACTOR_ROLE_CHANGED_RE = re.compile(
-    r"\b(patient becomes the actor|clinician becomes the actor|model becomes the actor)\b|"
-    r"\b(hasta aktor olur|hekim aktor olur|model aktor olur|aktor rolunu .*degistirir)\b",
+SEQUENCE_ORDER_REVERSED_RE = re.compile(
+    r"\b(sequence order is reversed|sequence is reversed|after becomes before|before becomes after)\b|"
+    r"\b(sira tersine cevrilir|once sonra olur|sonra once olur)\b",
     re.IGNORECASE,
 )
-ACTION_BOUNDARY_EXPANDED_RE = re.compile(
-    r"\b(expands the action boundary|can act from the wording alone|can proceed from the wording alone)\b|"
-    r"\b(eylem sinirini genisletir|yalniz metinden ilerleyebilir)\b",
+FOLLOW_UP_TIMING_REMOVED_RE = re.compile(
+    r"\b(follow up timing is removed|follow up timing disappears|follow up window is removed)\b|"
+    r"\b(takip zamanlamasi kaldirilir|takip araligi kaldirilir|takip penceresi silinir)\b",
     re.IGNORECASE,
 )
-ACTION_BOUNDARY_REMOVED_RE = re.compile(
-    r"\b(removes the action boundary|no action boundary remains|without an action boundary)\b|"
-    r"\b(eylem siniri yoktur|eylem sinirini siler)\b",
+INTERVAL_PRECISION_LOST_RE = re.compile(
+    r"\b(interval precision is lost|exact interval becomes vague|measured interval becomes vague)\b|"
+    r"\b(aralik hassasiyeti kaybolur|net aralik belirsizlesir|olculu aralik belirsizlesir)\b",
     re.IGNORECASE,
 )
-LOCAL_CONTEXT_DETACHED_RE = re.compile(
-    r"\b(detaches local context|local context is no longer needed|ignores local context)\b|"
-    r"\b(yerel baglam gerekmez|yerel baglami .*koparir|yerel baglami yok sayar)\b",
+CARE_INSTRUCTION_CREATED_RE = re.compile(
+    r"\b(creates a care instruction|turns timing into an instruction|becomes a direct care instruction)\b|"
+    r"\b(bakim talimati olusturur|zamanlamayi talimata cevirir|dogrudan bakim talimati olur)\b",
     re.IGNORECASE,
 )
 
@@ -225,12 +225,12 @@ def detected_signals(row: dict[str, Any]) -> dict[str, bool]:
     turkish_text = str(row.get("turkish_ascii_text", ""))
     joined = f"{english_text} {turkish_text}"
     return {
-        "english_missing_variable_erased": bool(ENGLISH_MISSING_VARIABLE_RE.search(english_text)),
-        "turkish_missing_variable_erased": bool(TURKISH_MISSING_VARIABLE_RE.search(turkish_text)),
-        "actor_role_changed": bool(ACTOR_ROLE_CHANGED_RE.search(joined)),
-        "action_boundary_expanded": bool(ACTION_BOUNDARY_EXPANDED_RE.search(joined)),
-        "action_boundary_removed": bool(ACTION_BOUNDARY_REMOVED_RE.search(joined)),
-        "local_context_detached": bool(LOCAL_CONTEXT_DETACHED_RE.search(joined)),
+        "english_duration_shifted": bool(ENGLISH_DURATION_SHIFTED_RE.search(english_text)),
+        "turkish_duration_shifted": bool(TURKISH_DURATION_SHIFTED_RE.search(turkish_text)),
+        "sequence_order_reversed": bool(SEQUENCE_ORDER_REVERSED_RE.search(joined)),
+        "follow_up_timing_removed": bool(FOLLOW_UP_TIMING_REMOVED_RE.search(joined)),
+        "interval_precision_lost": bool(INTERVAL_PRECISION_LOST_RE.search(joined)),
+        "care_instruction_created": bool(CARE_INSTRUCTION_CREATED_RE.search(joined)),
     }
 
 
@@ -240,7 +240,7 @@ def signal_object(signals: list[str]) -> dict[str, bool]:
 
 
 def true_signals(row: dict[str, Any]) -> list[str]:
-    signals = row.get("scope_anchor_signals")
+    signals = row.get("temporal_progression_signals")
     if not isinstance(signals, dict):
         return []
     return [signal for signal in SIGNAL_ORDER if signals.get(signal) is True]
@@ -254,7 +254,7 @@ def validate_control_rows(
     candidates_by_id = {str(row.get("candidate_id")): row for row in rewrite_candidates}
 
     if len(controls) != 12:
-        errors.append(f"Expected 12 cross language scope anchor controls, found {len(controls)}")
+        errors.append(f"Expected 12 cross language temporal progression controls, found {len(controls)}")
 
     seen: set[str] = set()
     pass_count = 0
@@ -271,9 +271,9 @@ def validate_control_rows(
             continue
 
         if not isinstance(control_id, str) or not re.fullmatch(
-            r"MMI_CROSS_LANGUAGE_SCOPE_ANCHOR_\d{3}", control_id
+            r"MMI_CROSS_LANGUAGE_TEMPORAL_PROGRESSION_\d{3}", control_id
         ):
-            errors.append(f"{label}: control_id must match MMI_CROSS_LANGUAGE_SCOPE_ANCHOR_NNN")
+            errors.append(f"{label}: control_id must match MMI_CROSS_LANGUAGE_TEMPORAL_PROGRESSION_NNN")
         elif control_id in seen:
             errors.append(f"{label}: duplicate control_id")
         else:
@@ -309,19 +309,19 @@ def validate_control_rows(
         expected_status = row.get("expected_status")
         if expected_status == "pass":
             pass_count += 1
-            if row.get("expected_review_outcome") != "passes_cross_language_scope_anchor_gate":
+            if row.get("expected_review_outcome") != "passes_cross_language_temporal_progression_gate":
                 errors.append(f"{label}: pass control review outcome mismatch")
         elif expected_status == "fail":
             fail_count += 1
-            if row.get("expected_review_outcome") != "blocked_cross_language_scope_anchor_control":
+            if row.get("expected_review_outcome") != "blocked_cross_language_temporal_progression_control":
                 errors.append(f"{label}: fail control review outcome mismatch")
         else:
             errors.append(f"{label}: expected_status must be pass or fail")
 
-        declared_signals = row.get("scope_anchor_signals")
+        declared_signals = row.get("temporal_progression_signals")
         expected_reasons = row.get("expected_failure_reasons")
         if not isinstance(declared_signals, dict) or set(declared_signals) != set(SIGNAL_ORDER):
-            errors.append(f"{label}: scope_anchor_signals must exactly match required signal keys")
+            errors.append(f"{label}: temporal_progression_signals must exactly match required signal keys")
             declared_signals = {}
         if not isinstance(expected_reasons, list):
             errors.append(f"{label}: expected_failure_reasons must be a list")
@@ -360,7 +360,7 @@ def validate_control_rows(
         errors.append(f"Expected 6 fail controls, found {fail_count}")
     if len(covered_candidate_ids) != 6:
         errors.append(
-            f"Expected cross language scope anchor controls to cover 6 source candidates, found {len(covered_candidate_ids)}"
+            f"Expected cross language temporal progression controls to cover 6 source candidates, found {len(covered_candidate_ids)}"
         )
 
     return errors
@@ -389,9 +389,9 @@ def build_report(
 
         observed_status = "fail" if detected else "pass"
         review_outcome = (
-            "blocked_cross_language_scope_anchor_control"
+            "blocked_cross_language_temporal_progression_control"
             if observed_status == "fail"
-            else "passes_cross_language_scope_anchor_gate"
+            else "passes_cross_language_temporal_progression_gate"
         )
         if observed_status == "pass":
             pass_controls.append(str(control["control_id"]))
@@ -414,36 +414,36 @@ def build_report(
                 "status_match": control["expected_status"] == observed_status,
                 "review_outcome_match": control["expected_review_outcome"] == review_outcome,
                 "expected_failure_reasons": expected_reasons,
-                "detected_scope_anchor_signals": detected,
-                "scope_anchor_signals_declared": signal_object(declared),
-                "scope_anchor_signals_detected": signal_object(detected),
+                "detected_temporal_progression_signals": detected,
+                "temporal_progression_signals_declared": signal_object(declared),
+                "temporal_progression_signals_detected": signal_object(detected),
                 "source_candidate_expected_status": candidate["expected_status"],
                 "boundary_pass": True,
             }
         )
 
     return {
-        "report_id": "multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625",
-        "report_type": "machine_readable_cross_language_scope_anchor_report",
+        "report_id": "multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625",
+        "report_type": "machine_readable_cross_language_temporal_progression_report",
         "report_version": VERSION,
         "generated_date": DATE_TOKEN,
         "atlas_layer": ATLAS_LAYER,
         "atlas_node_id": ATLAS_NODE_ID,
         "status": "local_fixture_pass",
-        "report_scope": "local_fixture_cross_language_scope_anchor_gate_only",
-        "scope": "Local synthetic cross language controls for scope anchor drift.",
+        "report_scope": "local_fixture_cross_language_temporal_progression_gate_only",
+        "scope": "Local synthetic cross language controls for temporal progression drift.",
         "artifact_paths": {
             "rewrite_candidates": repo_relative(REWRITE_CANDIDATES),
             "cross_language_controls": repo_relative(CROSS_LANGUAGE_CONTROLS),
             "cross_language_report_json": repo_relative(OUTPUT_JSON),
             "cross_language_report_markdown": repo_relative(OUTPUT_MARKDOWN),
-            "scorer": "scripts/score_multilingual_medical_intelligence_cross_language_scope_anchor_controls_v0_1_20260625.py",
-            "validator": "scripts/validate_multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.py",
+            "scorer": "scripts/score_multilingual_medical_intelligence_cross_language_temporal_progression_controls_v0_1_20260625.py",
+            "validator": "scripts/validate_multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.py",
         },
         "validation": {
-            "scorer_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_scope_anchor_controls_v0_1_20260625.py --check",
-            "validator_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_scope_anchor_report_v0_1_20260625.py",
-            "make_target": "make multilingual_medical_intelligence_cross_language_scope_anchor_controls",
+            "scorer_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_temporal_progression_controls_v0_1_20260625.py --check",
+            "validator_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.py",
+            "make_target": "make multilingual_medical_intelligence_cross_language_temporal_progression_controls",
             "expected_result": "pass",
         },
         "score_summary": {
@@ -465,8 +465,8 @@ def build_report(
             "mismatch_count": sum(
                 1
                 for result in results
-                if result["scope_anchor_signals_declared"]
-                != result["scope_anchor_signals_detected"]
+                if result["temporal_progression_signals_declared"]
+                != result["temporal_progression_signals_detected"]
             ),
         },
         "failure_reason_counts": {signal: failure_counts.get(signal, 0) for signal in SIGNAL_ORDER},
@@ -474,20 +474,20 @@ def build_report(
         "pass_control_ids": pass_controls,
         "blocked_control_ids": blocked_controls,
         "reviewer_triage": {
-            "primary_question": "Does either language erase missing variables, change the actor role, expand or remove the action boundary, or detach local context from the same record.",
+            "primary_question": "Does either language shift duration, reverse sequence, remove follow up timing, lose interval precision, or turn timing into a care instruction.",
             "triage_order": [
-                "english_missing_variable_erased",
-                "turkish_missing_variable_erased",
-                "actor_role_changed",
-                "action_boundary_expanded",
-                "action_boundary_removed",
-                "local_context_detached",
+                "english_duration_shifted",
+                "turkish_duration_shifted",
+                "sequence_order_reversed",
+                "follow_up_timing_removed",
+                "interval_precision_lost",
+                "care_instruction_created",
             ],
             "blocked_use": [
                 "patient care",
                 "clinical advice",
                 "translation clearance",
-                "scope anchor clearance",
+                "temporal progression clearance",
                 "clinical validation claim",
                 "clinical deployment claim",
                 "model ranking claim",
@@ -500,7 +500,7 @@ def build_report(
             "clinical_advice_allowed": False,
             "external_urls_present": False,
             "translation_clearance_claim_made": False,
-            "scope_anchor_clearance_claim_made": False,
+            "temporal_progression_clearance_claim_made": False,
             "diagnosis_or_treatment_instruction_allowed": False,
             "clinical_validation_claim_made": False,
             "clinical_deployment_claim_made": False,
@@ -510,8 +510,8 @@ def build_report(
             "score_certification_claim_made": False,
             "source_truth_certification_claim_made": False,
             "external_publication_clearance": False,
-            "allowed_use": "Repo local synthetic cross language scope anchor scoring before public wording reuse.",
-            "not_allowed_use": "Patient care, clinical advice, translation clearance, scope anchor clearance, external publication clearance, model ranking, or release claim.",
+            "allowed_use": "Repo local synthetic cross language temporal progression scoring before public wording reuse.",
+            "not_allowed_use": "Patient care, clinical advice, translation clearance, temporal progression clearance, external publication clearance, model ranking, or release claim.",
         },
         "blockers": [],
         "exact_next_action": "Add cross language uncertainty calibration controls so translated variants preserve uncertainty, unresolved evidence, and reviewer state without creating confidence inflation.",
@@ -525,7 +525,7 @@ def markdown_list(items: list[str]) -> list[str]:
 def render_markdown(report: dict[str, Any]) -> str:
     summary = report["score_summary"]
     lines = [
-        "# Multilingual Medical Intelligence Cross Language Scope Anchor Controls v0.1",
+        "# Multilingual Medical Intelligence Cross Language Temporal Progression Controls v0.1",
         "",
         f"Date: {DATE}",
         "",
@@ -533,11 +533,11 @@ def render_markdown(report: dict[str, Any]) -> str:
         "",
         "## Purpose",
         "",
-        "This report checks whether English and Turkish ASCII variants preserve missing variable anchors, actor role anchors, action boundary anchors, and local context anchors in the same record.",
+        "This report checks whether English and Turkish ASCII variants preserve duration, sequence, follow up timing, interval precision, and temporal action boundaries in the same record.",
         "",
-        "It blocks cross language scope anchor drift when one language erases missing variables, changes the actor role, expands or removes the action boundary, or detaches local context.",
+        "It blocks cross language temporal progression drift when one language shifts duration, reverses sequence order, removes follow up timing, loses interval precision, or creates a care instruction.",
         "",
-        "It keeps missing variables, actor role, action boundary, and local review context attached to the same synthetic source record.",
+        "It keeps duration, sequence, follow up timing, interval precision, and temporal review context attached to the same synthetic source record.",
         "",
         "The controls use synthetic rows only. They contain no patient data and make no diagnosis, treatment instruction, clinical validation, clinical deployment, model ranking, partner, or institutional claim.",
         "",
@@ -576,17 +576,17 @@ def render_markdown(report: dict[str, Any]) -> str:
             "",
             "## Release Boundary",
             "",
-            "This report supports repo local review only. It does not clear text for patient care, clinical advice, translation clearance, scope anchor clearance, clinical validation, clinical deployment, model comparison, institutional use, or external publication.",
+            "This report supports repo local review only. It does not clear text for patient care, clinical advice, translation clearance, temporal progression clearance, clinical validation, clinical deployment, model comparison, institutional use, or external publication.",
             "",
-            "Boundary note: not score certification, not source truth certification, not clinical validation, not clinical deployment, not translation clearance, not scope anchor clearance, and not external publication clearance.",
+            "Boundary note: not score certification, not source truth certification, not clinical validation, not clinical deployment, not translation clearance, not temporal progression clearance, and not external publication clearance.",
             "",
             "## Validation Command",
             "",
-            "`make multilingual_medical_intelligence_cross_language_scope_anchor_controls`",
+            "`make multilingual_medical_intelligence_cross_language_temporal_progression_controls`",
             "",
             "Direct check:",
             "",
-            "`python3 scripts/score_multilingual_medical_intelligence_cross_language_scope_anchor_controls_v0_1_20260625.py --check`",
+            "`python3 scripts/score_multilingual_medical_intelligence_cross_language_temporal_progression_controls_v0_1_20260625.py --check`",
             "",
             "## Exact Next Action",
             "",
@@ -661,7 +661,7 @@ def validate_report(report: dict[str, Any]) -> list[str]:
             "clinical_advice_allowed": False,
             "external_urls_present": False,
             "translation_clearance_claim_made": False,
-            "scope_anchor_clearance_claim_made": False,
+            "temporal_progression_clearance_claim_made": False,
             "diagnosis_or_treatment_instruction_allowed": False,
             "clinical_validation_claim_made": False,
             "clinical_deployment_claim_made": False,
@@ -701,21 +701,22 @@ def validate_report(report: dict[str, Any]) -> list[str]:
 def validate_markdown(markdown_text: str) -> list[str]:
     errors: list[str] = []
     required_phrases = [
-        "cross language scope anchor drift",
+        "cross language temporal progression drift",
         "English and Turkish ASCII variants",
-        "preserve missing variable anchors",
-        "actor role anchors",
-        "action boundary anchors",
-        "local context anchors",
+        "preserve duration",
+        "sequence",
+        "follow up timing",
+        "interval precision",
+        "temporal action boundaries",
         "same synthetic source record",
         "not score certification",
         "not source truth certification",
         "not clinical validation",
         "not clinical deployment",
         "not translation clearance",
-        "not scope anchor clearance",
+        "not temporal progression clearance",
         "not external publication clearance",
-        "make multilingual_medical_intelligence_cross_language_scope_anchor_controls",
+        "make multilingual_medical_intelligence_cross_language_temporal_progression_controls",
     ]
     lower = markdown_text.lower()
     for phrase in required_phrases:
@@ -735,7 +736,7 @@ def run(check: bool) -> int:
         if not path.exists():
             errors.append(f"missing required file: {repo_relative(path)}")
     if errors:
-        print("FAIL cross language scope anchor controls")
+        print("FAIL cross language temporal progression controls")
         for error in errors:
             print(f"- {error}")
         return 1
@@ -744,7 +745,7 @@ def run(check: bool) -> int:
         rewrite_candidates = load_jsonl(REWRITE_CANDIDATES)
         controls = load_jsonl(CROSS_LANGUAGE_CONTROLS)
     except ValueError as error:
-        print(f"FAIL cross language scope anchor controls: {error}")
+        print(f"FAIL cross language temporal progression controls: {error}")
         return 1
 
     errors.extend(validate_control_rows(controls, rewrite_candidates))
@@ -764,13 +765,13 @@ def run(check: bool) -> int:
             errors.append(f"stale Markdown report: {repo_relative(OUTPUT_MARKDOWN)}")
 
     if errors:
-        print("FAIL cross language scope anchor controls")
+        print("FAIL cross language temporal progression controls")
         for error in errors:
             print(f"- {error}")
         return 1
 
     if check:
-        print("PASS cross language scope anchor controls")
+        print("PASS cross language temporal progression controls")
         print(f"controls={report['score_summary']['control_count']}")
         print(f"blocked_controls={report['score_summary']['observed_blocked_controls']}")
         print(f"pass_controls={report['score_summary']['observed_pass_controls']}")

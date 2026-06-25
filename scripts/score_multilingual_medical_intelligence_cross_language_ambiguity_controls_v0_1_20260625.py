@@ -524,7 +524,7 @@ def build_report(
             "not_allowed_use": "Patient care, clinical advice, translation clearance, external publication clearance, model ranking, or release claim.",
         },
         "blockers": [],
-        "exact_next_action": "Add cross language temporal progression controls so translated variants preserve duration, sequence, and follow up timing without creating care instructions.",
+        "exact_next_action": "Add cross language uncertainty calibration controls so translated variants preserve uncertainty, unresolved evidence, and reviewer state without creating confidence inflation.",
     }
 
 

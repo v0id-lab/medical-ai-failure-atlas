@@ -140,4 +140,4 @@ Direct check:
 
 ## Exact Next Action
 
-Add cross language temporal progression controls so translated variants preserve duration, sequence, and follow up timing without creating care instructions.
+Add cross language uncertainty calibration controls so translated variants preserve uncertainty, unresolved evidence, and reviewer state without creating confidence inflation.

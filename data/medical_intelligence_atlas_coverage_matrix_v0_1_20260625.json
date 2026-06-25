@@ -17,7 +17,7 @@
     "atlas_registry": {
       "path": "data/medical_intelligence_atlas_v0_1_20260625.json",
       "kind": "atlas node registry",
-      "record_count": 14,
+      "record_count": 15,
       "synthetic_only": true,
       "patient_data_used": false,
       "clinical_use_allowed": false
@@ -410,6 +410,57 @@
       "synthetic_only": true,
       "patient_data_used": false,
       "clinical_use_allowed": false
+    },
+    "mmi_cross_language_temporal_progression_controls": {
+      "path": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_temporal_progression_controls_v0_1_20260625.jsonl",
+      "kind": "synthetic cross language temporal progression control fixture",
+      "record_count": 12,
+      "expected_pass_controls": 6,
+      "expected_fail_controls": 6,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "translation_clearance_claim_made": false,
+      "temporal_progression_clearance_claim_made": false,
+      "score_certification_claim_made": false
+    },
+    "mmi_cross_language_temporal_progression_report": {
+      "path": "data/multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.json",
+      "kind": "machine readable cross language temporal progression report",
+      "control_count": 12,
+      "observed_pass_controls": 6,
+      "observed_blocked_controls": 6,
+      "signal_type_count": 6,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "translation_clearance_claim_made": false,
+      "temporal_progression_clearance_claim_made": false,
+      "score_certification_claim_made": false
+    },
+    "mmi_cross_language_temporal_progression_report_doc": {
+      "path": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_TEMPORAL_PROGRESSION_REPORT_V0_1_20260625.md",
+      "kind": "cross language temporal progression report documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "translation_clearance_claim_made": false,
+      "temporal_progression_clearance_claim_made": false,
+      "score_certification_claim_made": false
+    },
+    "mmi_cross_language_temporal_progression_scorer": {
+      "path": "scripts/score_multilingual_medical_intelligence_cross_language_temporal_progression_controls_v0_1_20260625.py",
+      "kind": "cross language temporal progression scorer",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "mmi_cross_language_temporal_progression_validator": {
+      "path": "scripts/validate_multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.py",
+      "kind": "cross language temporal progression report validator",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
     }
   },
   "coverage_rows": [
@@ -724,6 +775,39 @@
       "coverage_status": "direct fixture coverage"
     },
     {
+      "node_id": "mia_mmi_005",
+      "layer": "Multilingual Medical Intelligence",
+      "node_artifact": "cross language temporal progression controls",
+      "stack_runtime_artifact_ids": [
+        "mmi_cross_language_temporal_progression_controls",
+        "mmi_cross_language_temporal_progression_report",
+        "mmi_cross_language_temporal_progression_report_doc",
+        "mmi_cross_language_temporal_progression_scorer",
+        "mmi_cross_language_temporal_progression_validator",
+        "mmi_public_wording_rewrite_candidates",
+        "mmi_cross_language_scope_anchor_report",
+        "stack_manifesto"
+      ],
+      "coverage_focus": [
+        "twelve synthetic temporal progression controls",
+        "six pass controls",
+        "six blocked controls",
+        "English duration shift detection",
+        "Turkish ASCII duration shift detection",
+        "sequence order reversal detection",
+        "follow up timing removal detection",
+        "interval precision loss detection",
+        "care instruction creation detection",
+        "translation clearance absence boundary",
+        "temporal progression clearance absence boundary"
+      ],
+      "local_validation_refs": [
+        "scripts/score_multilingual_medical_intelligence_cross_language_temporal_progression_controls_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
       "node_id": "mia_atlas_001",
       "layer": "Medical Intelligence Atlas",
       "node_artifact": "node registry",
@@ -733,7 +817,7 @@
         "atlas_markdown"
       ],
       "coverage_focus": [
-        "fourteen atlas nodes",
+        "fifteen atlas nodes",
         "input output validator risk gate and next build fields",
         "stack layer alignment"
       ],
@@ -764,7 +848,7 @@
     }
   ],
   "matrix_checks": {
-    "expected_atlas_node_count": 14,
+    "expected_atlas_node_count": 15,
     "expected_stack_layer_count": 6,
     "requires_all_referenced_artifacts_to_exist": true,
     "requires_each_atlas_node_once": true,
