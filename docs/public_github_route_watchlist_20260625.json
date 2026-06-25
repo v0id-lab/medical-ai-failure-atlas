@@ -1,0 +1,99 @@
+{
+  "artifact": "Public GitHub Route Watchlist",
+  "date": "2026 06 25",
+  "status": "local public route watchlist",
+  "checked_after_reading_baglam2": true,
+  "checked_gmail_before_build": true,
+  "checked_linkedin_tracker_before_build": true,
+  "checked_local_repository_before_build": true,
+  "checked_public_github_before_build": true,
+  "public_write_action_taken": false,
+  "contains_patient_data": false,
+  "contains_private_email_text": false,
+  "claims_maintainer_support": false,
+  "claims_review_completion": false,
+  "claims_merge": false,
+  "claims_acceptance": false,
+  "claims_endorsement": false,
+  "claims_partner": false,
+  "claims_institutional_approval": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_benchmark_result": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "routes": [
+    {
+      "id": "ai_alliance_issue_50",
+      "url": "https://github.com/The-AI-Alliance/trust-safety-evals/issues/50",
+      "live_state": "open",
+      "latest_signal": "maintainer acknowledged and said he would try to follow up tomorrow",
+      "current_action": "wait",
+      "allowed_next_action": "offer one docs oriented claim boundary checklist only if maintainer asks",
+      "blocked_claims": [
+        "AI Alliance review",
+        "adoption",
+        "partnership",
+        "endorsement",
+        "MedHELM compatibility",
+        "benchmark result",
+        "clinical validation",
+        "clinical deployment"
+      ]
+    },
+    {
+      "id": "lighteval_pr_1272",
+      "url": "https://github.com/huggingface/lighteval/pull/1272",
+      "live_state": "open",
+      "review_state": "review required",
+      "merge_state": "mergeable",
+      "current_action": "wait for maintainer review",
+      "allowed_next_action": "respond only if a maintainer comments or requests changes",
+      "blocked_claims": [
+        "merged contribution",
+        "accepted contribution",
+        "maintainer approval",
+        "release inclusion"
+      ]
+    },
+    {
+      "id": "inspect_ai_pr_4343",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai/pull/4343",
+      "live_state": "open",
+      "review_state": "review required",
+      "merge_state": "unknown",
+      "current_action": "wait for maintainer review",
+      "allowed_next_action": "respond only if a maintainer comments or requests changes",
+      "blocked_claims": [
+        "merged contribution",
+        "accepted contribution",
+        "maintainer approval",
+        "release inclusion"
+      ]
+    },
+    {
+      "id": "failure_atlas_issue_154",
+      "url": "https://github.com/goktugozkanmd/medical-ai-failure-atlas/issues/154",
+      "live_state": "open",
+      "latest_signal": "no outside comment found in live issue list",
+      "current_action": "keep as single outside objection intake point",
+      "allowed_next_action": "link from future posts only when asking for one concrete objection",
+      "blocked_claims": [
+        "external review",
+        "outside validation",
+        "public endorsement",
+        "clinical validation",
+        "clinical deployment"
+      ]
+    }
+  ],
+  "routing_decision": [
+    "do not push a new public GitHub comment today",
+    "do not ask for review again on open upstream pull requests",
+    "keep LinkedIn visibility separate from GitHub maintainer pressure",
+    "use issue 154 only when asking for a narrow outside objection",
+    "recheck all public routes before any future public claim"
+  ]
+}
