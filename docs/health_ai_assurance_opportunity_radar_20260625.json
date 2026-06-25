@@ -1,0 +1,115 @@
+{
+  "artifact": "Health AI assurance opportunity radar",
+  "date": "2026 06 25",
+  "status": "public preview and live source update",
+  "checked_after_reading_baglam2": true,
+  "checked_after_reading_trackers": true,
+  "checked_gmail_before_build": true,
+  "checked_github_before_build": true,
+  "source_pass_type": "live official and repository sources",
+  "recommended_next_build": "TEKNOFEST Health AI report claim hygiene checklist",
+  "source_signals": [
+    {
+      "id": "HAOR25001",
+      "name": "TEKNOFEST Health AI competition",
+      "source_url": "https://www.teknofest.org/tr/yarismalar/saglikta-yapay-zeka-yarismasi/",
+      "verified_claim": "2026 competition scope includes EKG classification for high school teams, variant pathogenicity prediction for university and above teams, and a project detail report deadline on 2026 06 29 at 17:00.",
+      "build_meaning": "report claim hygiene checklist"
+    },
+    {
+      "id": "HAOR25002",
+      "name": "TUBITAK 1711 AI ecosystem",
+      "source_url": "https://tubitak.gov.tr/tr/duyuru",
+      "verified_claim": "TUBITAK listed the 1711 AI ecosystem 2026 call on 2026 06 16 and said 2026 applications started.",
+      "build_meaning": "consortium evidence gate"
+    },
+    {
+      "id": "HAOR25003",
+      "name": "TUSEB project support news",
+      "source_url": "https://proje-destek.tuseb.gov.tr/tr/haberler",
+      "verified_claim": "TUSEB project support news lists 2026 A and B group call results and an undergraduate health ecosystem project competition call.",
+      "build_meaning": "eligibility and authority gate"
+    },
+    {
+      "id": "HAOR25004",
+      "name": "OpenAI HealthBench",
+      "source_url": "https://openai.com/index/healthbench/",
+      "verified_claim": "HealthBench is described as built with input from 262 physicians across 60 countries, with 5000 realistic health conversations and physician created rubrics.",
+      "build_meaning": "rubric literacy note"
+    },
+    {
+      "id": "HAOR25005",
+      "name": "MedHELM",
+      "source_url": "https://medhelm.org/",
+      "verified_claim": "MedHELM describes 121 clinical tasks, 22 subcategories, 31 datasets, 5 categories, and multi metric evaluation across clinical workflows.",
+      "build_meaning": "workflow blind spot companion"
+    },
+    {
+      "id": "HAOR25006",
+      "name": "BRIDGE",
+      "source_url": "https://github.com/YLab-Open/BRIDGE",
+      "verified_claim": "BRIDGE describes 87 clinical text tasks, 9 languages, more than one million samples, 9 task types, 14 clinical specialties, 7 document types, and 20 clinical applications.",
+      "build_meaning": "Turkish clinical language specialty spread gate"
+    },
+    {
+      "id": "HAOR25007",
+      "name": "CHAI",
+      "source_url": "https://www.chai.org/",
+      "verified_claim": "CHAI describes responsible AI adoption in health based on consensus from health systems, regulators, payors, clinicians, and industry leaders.",
+      "build_meaning": "governance companion note"
+    },
+    {
+      "id": "HAOR25008",
+      "name": "FDA AI enabled medical device list",
+      "source_url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices",
+      "verified_claim": "FDA says the list identifies AI enabled medical devices authorized for marketing in the United States, is not comprehensive, and will continue to be updated.",
+      "build_meaning": "device boundary language"
+    },
+    {
+      "id": "HAOR25009",
+      "name": "European Commission health AI and AI Act",
+      "source_url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/artificial-intelligence-healthcare_en",
+      "supporting_urls": [
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "https://digital-strategy.ec.europa.eu/en/policies/ecosystem-ai-innovation-europe"
+      ],
+      "verified_claim": "The Commission health AI page describes AI Act requirements for high risk medical AI systems, including risk mitigation, high quality data, user information, and human oversight. The AI Act page says transparency rules come into effect in August 2026. The innovation ecosystem page describes regulatory sandboxes under national competent authority supervision.",
+      "build_meaning": "EU health AI sandbox readiness gate"
+    }
+  ],
+  "priority_decisions": [
+    "build_teknofest_claim_hygiene_first",
+    "keep_tubitak_1711_alive_but_block_application_language",
+    "use_healthbench_medhelm_bridge_as_boundary_language_not_score_claims",
+    "use_fda_eu_sources_for_device_and_compliance_boundary_language",
+    "resolve_shifana_linkedin_state_before_contact_action"
+  ],
+  "next_repo_artifacts": [
+    "TEKNOFEST_HEALTH_AI_REPORT_CLAIM_HYGIENE_CHECKLIST_20260625.md",
+    "BENCHMARK_BOUNDARY_COMPANION_HEALTHBENCH_MEDHELM_BRIDGE_20260625.md",
+    "REGULATORY_BOUNDARY_LANGUAGE_PACK_FDA_EU_20260625.md"
+  ],
+  "contains_patient_data": false,
+  "contains_private_operational_data": false,
+  "claims_tubitak_application": false,
+  "claims_tuseb_application": false,
+  "claims_teknofest_submission": false,
+  "claims_chai_affiliation": false,
+  "claims_medhelm_collaboration": false,
+  "claims_healthbench_collaboration": false,
+  "claims_bridge_collaboration": false,
+  "claims_fda_authorization": false,
+  "claims_eu_compliance": false,
+  "claims_partner": false,
+  "claims_official_role": false,
+  "claims_institutional_approval": false,
+  "claims_budget": false,
+  "claims_payment": false,
+  "claims_terms_acceptance": false,
+  "claims_model_ranking": false,
+  "claims_score_certification": false,
+  "claims_clinical_validation": false,
+  "claims_clinical_deployment": false,
+  "claims_medical_advice": false,
+  "claims_endorsement": false
+}
