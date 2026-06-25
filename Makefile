@@ -228,6 +228,13 @@ public_github_route_watchlist:
 public_github_route_live_check:
 	$(PYTHON) scripts/check_public_github_route_live_state_20260625.py
 
+.PHONY: public_github_route_preflight
+public_github_route_preflight:
+	$(PYTHON) scripts/validate_public_github_route_watchlist_20260625.py
+	$(PYTHON) scripts/check_public_github_route_live_state_20260625.py
+	$(PYTHON) scripts/validate_readme_current_surface_links_20260625.py
+	$(PYTHON) scripts/validate_public_release.py --root .
+
 .PHONY: medical_ai_safety_field_kit_reviewer_start_here
 medical_ai_safety_field_kit_reviewer_start_here:
 	$(PYTHON) scripts/validate_medical_ai_safety_field_kit_reviewer_start_here_20260619.py

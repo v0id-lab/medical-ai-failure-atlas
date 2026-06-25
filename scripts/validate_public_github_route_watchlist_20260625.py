@@ -29,6 +29,7 @@ REQUIRED_DOC_PHRASES = [
     "Do not push a new public GitHub comment today.",
     "make public_github_route_watchlist",
     "make public_github_route_live_check",
+    "make public_github_route_preflight",
 ]
 
 REQUIRED_URLS = {
