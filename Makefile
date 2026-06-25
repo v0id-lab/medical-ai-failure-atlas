@@ -10,6 +10,7 @@ validate:
 	$(PYTHON) scripts/validate_readme_current_surface_links_20260625.py
 	$(PYTHON) scripts/validate_internal_medicine_ai_safety_strategy_20260625.py
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_20260625.py
+	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
 	$(PYTHON) scripts/validate_public_visibility_claim_gate_20260625.py
 	$(PYTHON) scripts/validate_public_review_operating_system_20260625.py
 	$(PYTHON) scripts/validate_repo_acceleration_system_20260625.py
@@ -227,6 +228,11 @@ internal_medicine_ai_safety_strategy:
 clinical_intelligence_stack:
 	$(PYTHON) scripts/build_clinical_intelligence_stack_20260625.py --check
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_20260625.py
+
+.PHONY: clinical_intelligence_stack_global_target_map
+clinical_intelligence_stack_global_target_map:
+	$(PYTHON) scripts/build_clinical_intelligence_stack_global_target_map_20260625.py --check
+	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
 
 validate-public: validate
 

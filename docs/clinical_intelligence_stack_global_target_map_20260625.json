@@ -1,0 +1,159 @@
+{
+  "artifact": "Clinical Intelligence Stack global target map v0.1",
+  "date": "2026 06 25",
+  "status": "source anchored distribution and audience map",
+  "public_hook": "Medical AI needs a clinical intelligence stack, not another chatbot benchmark.",
+  "distribution_rule": "Do not cold pitch a partnership. Publish a clear artifact, then point each audience to the part that solves their technical problem.",
+  "source_anchors": [
+    {
+      "id": "GTM001",
+      "name": "DeepSeek R1",
+      "url": "https://arxiv.org/abs/2501.12948",
+      "supported_signal": "Reasoning model work values reinforcement learning, verification, self reflection, and dynamic strategy adaptation.",
+      "target_angle": "Clinical reasoning needs verifier rows that capture state, time, missing variables, and source support."
+    },
+    {
+      "id": "GTM002",
+      "name": "OpenAI HealthBench",
+      "url": "https://openai.com/index/healthbench/",
+      "supported_signal": "HealthBench uses realistic health conversations and physician created rubrics.",
+      "target_angle": "Clinical Intelligence Stack extends the same direction into state language and trajectories."
+    },
+    {
+      "id": "GTM003",
+      "name": "Stanford MedHELM",
+      "url": "https://medhelm.org/",
+      "supported_signal": "MedHELM maps medical model evaluation across a clinician validated taxonomy and clinical tasks.",
+      "target_angle": "Clinical Intelligence Stack can add a state and trajectory layer to task taxonomies."
+    },
+    {
+      "id": "GTM004",
+      "name": "AgentClinic",
+      "url": "https://arxiv.org/abs/2405.07960",
+      "supported_signal": "AgentClinic evaluates simulated clinical environments with interaction, incomplete information, tools, specialties, and languages.",
+      "target_angle": "Clinical Intelligence Stack gives agentic medicine a compact patient state and verifier language."
+    },
+    {
+      "id": "GTM005",
+      "name": "Google MedGemma",
+      "url": "https://developers.google.com/health-ai-developer-foundations/medgemma",
+      "supported_signal": "MedGemma requires validation for the developer intended use case and may require adaptation.",
+      "target_angle": "Clinical Intelligence Stack offers use case specific state, trajectory, and verifier artifacts."
+    },
+    {
+      "id": "GTM006",
+      "name": "SBSGM Yapay Zeka ve Yenilikçi Teknolojiler Dairesi",
+      "url": "https://sbsgm.saglik.gov.tr/TR-104172/yapay-zeka-ve-yenilikci-teknolojiler-daire-baskanligi.html",
+      "supported_signal": "The official page defines duties around AI improvable processes, solution production, collaboration, and education materials.",
+      "target_angle": "Clinical Intelligence Stack can be framed as public research infrastructure, not official collaboration."
+    },
+    {
+      "id": "GTM007",
+      "name": "TEKNOFEST Sağlıkta Yapay Zeka",
+      "url": "https://teknofest.org/tr/yarismalar/saglikta-yapay-zeka-yarismasi/",
+      "supported_signal": "The public competition route makes health AI teams visible in Türkiye.",
+      "target_angle": "Clinical Intelligence Stack can supply language for safer project claims and trajectory based evaluation."
+    },
+    {
+      "id": "GTM008",
+      "name": "TÜYZE",
+      "url": "https://tuyze.tuseb.gov.tr/",
+      "supported_signal": "TÜYZE is the visible national health data and AI institute surface.",
+      "target_angle": "Clinical Intelligence Stack can speak to health data, AI, and clinical workflow representation without claiming institutional support."
+    }
+  ],
+  "audience_routes": [
+    {
+      "priority": 1,
+      "audience": "reasoning model teams",
+      "examples": ["DeepSeek style reasoning teams", "open reasoning model builders"],
+      "why_they_care": "They need verifiers beyond math and code. Clinical reasoning has state, time, missing data, and source support.",
+      "artifact_to_show": "Medical Reasoning Verifier v0.1",
+      "public_line": "Reasoning models need clinical verifiers that track state, time, missing data, and source support.",
+      "first_channel": "X thread after GitHub proof is visible"
+    },
+    {
+      "priority": 2,
+      "audience": "health benchmark builders",
+      "examples": ["HealthBench readers", "MedHELM readers", "AgentClinic readers"],
+      "why_they_care": "They already moved beyond exam style tasks toward realistic rubrics, task taxonomies, and simulated clinical environments.",
+      "artifact_to_show": "Clinical State Language and Clinical Trajectory Engine",
+      "public_line": "Medical evals need a patient state layer between a prompt and a score.",
+      "first_channel": "LinkedIn technical post with repo link"
+    },
+    {
+      "priority": 3,
+      "audience": "health foundation model developers",
+      "examples": ["MedGemma and open health model developers"],
+      "why_they_care": "Use case specific validation and adaptation need concrete state and trajectory artifacts.",
+      "artifact_to_show": "20 synthetic trajectory seed rows",
+      "public_line": "A developer model needs a clinical use case map before anyone can trust a smooth answer.",
+      "first_channel": "GitHub README and public forum friendly post"
+    },
+    {
+      "priority": 4,
+      "audience": "Turkiye health AI decision ecosystem",
+      "examples": ["SBSGM AI route", "TÜYZE", "TEKNOFEST health AI teams"],
+      "why_they_care": "Türkiye has visible AI and health AI routes. The missing public layer is clinical intelligence representation.",
+      "artifact_to_show": "Clinical Intelligence Stack Manifesto",
+      "public_line": "Türkiye can contribute clinical intelligence infrastructure, not only health AI applications.",
+      "first_channel": "Turkish LinkedIn post after English technical thread"
+    },
+    {
+      "priority": 5,
+      "audience": "AI hardware and national technology circles",
+      "examples": ["Baykar and T3 AI adjacent circles"],
+      "why_they_care": "National AI visibility needs hard technical artifacts with health relevance, not vague calls for innovation.",
+      "artifact_to_show": "repo architecture diagram and manifesto",
+      "public_line": "Clinical AI infrastructure is a national technology problem when it touches language, data, agents, and care workflows.",
+      "first_channel": "short Turkish post with one architecture visual"
+    }
+  ],
+  "launch_sequence": [
+    {
+      "step": 1,
+      "name": "technical proof post",
+      "goal": "show GitHub proof before asking for attention",
+      "surface": "X thread in English",
+      "gate": "repo link live and PR body aligned"
+    },
+    {
+      "step": 2,
+      "name": "clinician builder post",
+      "goal": "explain why a physician is building state language and trajectories",
+      "surface": "LinkedIn English",
+      "gate": "academic submission audit clean"
+    },
+    {
+      "step": 3,
+      "name": "Turkiye public frame",
+      "goal": "frame Türkiye as a contributor to clinical intelligence infrastructure",
+      "surface": "LinkedIn Turkish",
+      "gate": "no official support or partnership claim"
+    },
+    {
+      "step": 4,
+      "name": "targeted public replies",
+      "goal": "join relevant public discussions with one concrete artifact",
+      "surface": "public comments only after live profile and thread check",
+      "gate": "no cold claim, no private data, no endorsement language"
+    }
+  ],
+  "blocked_moves": [
+    "private email to public figures without a live reason",
+    "partner or institutional support wording",
+    "model superiority wording",
+    "clinical validation wording",
+    "clinical deployment wording",
+    "personal medical advice wording",
+    "Baykar or DeepSeek endorsement implication",
+    "claiming guaranteed reposts, likes, or approval"
+  ],
+  "next_artifacts": [
+    "English X launch thread",
+    "English LinkedIn clinician builder post",
+    "Turkish LinkedIn national frame post",
+    "one architecture visual",
+    "public reply snippets for model teams and health benchmark builders"
+  ]
+}

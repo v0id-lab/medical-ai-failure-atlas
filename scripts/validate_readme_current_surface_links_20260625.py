@@ -27,6 +27,7 @@ REQUIRED_LINKS = {
     "docs/CLINICAL_TRAJECTORY_ENGINE_V0_1_20260625.md",
     "docs/MEDICAL_REASONING_VERIFIER_V0_1_20260625.md",
     "docs/AGENTIC_MEDICINE_SANDBOX_V0_1_20260625.md",
+    "docs/CLINICAL_INTELLIGENCE_STACK_GLOBAL_TARGET_MAP_20260625.md",
 }
 
 REQUIRED_PHRASES = [
@@ -79,6 +80,11 @@ REQUIRED_PHRASES = [
     "Agentic Medicine Sandbox v0.1",
     "patient, clinician, test, source support, consultant, and follow up agents",
     "make clinical_intelligence_stack",
+    "Clinical Intelligence Stack Global Target Map",
+    "source anchored distribution map for reasoning model teams",
+    "health benchmark builders, health foundation model developers",
+    "Türkiye health AI decision ecosystem, and national technology circles",
+    "make clinical_intelligence_stack_global_target_map",
     "public navigation and claim hygiene materials only",
     "not submissions, applications, merge decisions",
 ]
