@@ -10,6 +10,8 @@ validate:
 	$(PYTHON) scripts/validate_readme_current_surface_links_20260625.py
 	$(PYTHON) scripts/validate_public_visibility_claim_gate_20260625.py
 	$(PYTHON) scripts/validate_public_review_operating_system_20260625.py
+	$(PYTHON) scripts/validate_repo_acceleration_system_20260625.py
+	$(PYTHON) scripts/validate_clinician_severity_layer_seed_rows_20260625.py
 	$(PYTHON) scripts/validate_health_ai_assurance_opportunity_radar_20260625.py
 	$(PYTHON) scripts/validate_teknofest_health_ai_report_claim_hygiene_checklist_20260625.py
 	$(PYTHON) scripts/validate_ai_alliance_medhelm_follow_up_prep_20260625.py
@@ -203,6 +205,16 @@ public_visibility_claim_gate:
 public_review_operating_system:
 	$(PYTHON) scripts/build_public_review_operating_system_20260625.py --check
 	$(PYTHON) scripts/validate_public_review_operating_system_20260625.py
+
+.PHONY: repo_acceleration_system
+repo_acceleration_system:
+	$(PYTHON) scripts/build_repo_acceleration_system_20260625.py --check
+	$(PYTHON) scripts/validate_repo_acceleration_system_20260625.py
+
+.PHONY: clinician_severity_layer_seed_rows
+clinician_severity_layer_seed_rows:
+	$(PYTHON) scripts/build_clinician_severity_layer_seed_rows_20260625.py --check
+	$(PYTHON) scripts/validate_clinician_severity_layer_seed_rows_20260625.py
 
 validate-public: validate
 

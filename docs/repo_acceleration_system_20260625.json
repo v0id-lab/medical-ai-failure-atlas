@@ -1,0 +1,338 @@
+{
+  "date": "2026 06 25",
+  "status": "public direction and build execution map",
+  "north_star": "Build a clinician led medical AI failure intelligence layer that turns model answers, benchmark claims, source claims, and public AI safety language into reviewable clinical risk signals without patient data or clinical use claims.",
+  "positioning": [
+    "The repo is not another leaderboard.",
+    "The repo is not a clinical product.",
+    "The repo is not a cold outreach archive.",
+    "The repo is the public workbench for clinical severity, source support, claim hygiene, Turkish clinical context, and open source eval contribution discipline."
+  ],
+  "product_stack": [
+    {
+      "layer": "Clinician severity layer",
+      "job": "Turn a medical AI failure into a short clinician reason, a severity grade, and a safer review question.",
+      "current_assets": "Failure Atlas rows, clinician review protocol, safe failure cards, scoring rubric.",
+      "next_build": "Ship a generated severity layer spec with required fields and reviewer states.",
+      "proof": "A reviewer can judge one synthetic failure row without reading the full repo."
+    },
+    {
+      "layer": "Source support layer",
+      "job": "Separate supported health claims from citation shaped text and missing evidence.",
+      "current_assets": "SourceCheckup rows, source review worksheets, source claim queue.",
+      "next_build": "Make source support fields visible in every public reviewer route.",
+      "proof": "A contributor can name the exact missing source support gap."
+    },
+    {
+      "layer": "Claim hygiene layer",
+      "job": "Stop open comments, benchmark mentions, views, replies, and drafts from becoming endorsement or validation claims.",
+      "current_assets": "Public visibility claim gate, public GitHub route watchlist, public route preflight.",
+      "next_build": "Keep public preflight as the gate before any public route state is reused.",
+      "proof": "Every public route statement has a blocked claim check."
+    },
+    {
+      "layer": "Turkish clinical context layer",
+      "job": "Translate global benchmark language into Turkish clinical wording risk, local workflow risk, and clinician literacy material.",
+      "current_assets": "TR MedLLM pack, Turkiye readiness kit, TEKNOFEST report checklist, Bilge readiness queue.",
+      "next_build": "Turn the scattered Turkish surfaces into a single path from scenario to review question to safe wording.",
+      "proof": "A Turkish medical AI team can use one page to avoid unsafe report language."
+    },
+    {
+      "layer": "Open source eval bridge",
+      "job": "Convert the repo from a solo medical archive into a contributor path for lighteval, inspect ai, issue 154, and later lm eval routes.",
+      "current_assets": "lighteval pull request 1272, inspect ai pull request 4343, public route watchlist, review operating system.",
+      "next_build": "Publish the repo acceleration map and keep the PR open as the public handoff.",
+      "proof": "The README shows where a reviewer, maintainer, clinician, and open source eval contributor should enter."
+    }
+  ],
+  "strategic_bets": [
+    {
+      "id": "B1",
+      "name": "Clinician judgment beats another benchmark",
+      "why": "Benchmark creation is crowded, but clinical severity judgment from a practicing physician is the defensible moat.",
+      "six_month_result": "A stable severity rubric and at least one public reviewer path that asks for risk, missing context, and safer wording.",
+      "hours_version": "Ship the severity layer product spec and connect it to the current review queue."
+    },
+    {
+      "id": "B2",
+      "name": "Small public objection beats broad outreach",
+      "why": "The repo needs external critique more than more internal artifacts.",
+      "six_month_result": "Issue 154 or successor route has repeatable outside objections and clear maintainer handling.",
+      "hours_version": "Expose the one sentence objection path and proof ledger in the acceleration docs."
+    },
+    {
+      "id": "B3",
+      "name": "Source support is the bridge between medicine and eval tooling",
+      "why": "Medical AI answers often sound useful while hiding missing source support, date risk, and guideline uncertainty.",
+      "six_month_result": "SourceCheckup becomes a visible reusable review lane tied to public contributor templates.",
+      "hours_version": "Make source support a required product stack layer and next queue lane."
+    },
+    {
+      "id": "B4",
+      "name": "Turkish clinical language is the local wedge",
+      "why": "Global health eval is crowded, but Turkish clinical wording, report hygiene, and local medical AI literacy are under served.",
+      "six_month_result": "A Turkish clinical AI safety mini path links scenario rows, reviewer questions, and report claim gates.",
+      "hours_version": "Add the Turkish context layer and three near term build tasks."
+    },
+    {
+      "id": "B5",
+      "name": "Open source proof matters more than ambition language",
+      "why": "The fastest credibility comes from small maintained public contributions and a repo that can be validated.",
+      "six_month_result": "At least two upstream routes, one maintained public issue route, and a README that shows the build system.",
+      "hours_version": "Push the acceleration system into PR 156 with validators and a README entry."
+    }
+  ],
+  "six_month_outcomes": [
+    {
+      "outcome": "Severity rubric becomes the repo center",
+      "evidence": "A public spec defines severity grade, harm mechanism, missing variable, safer action, and reviewer state.",
+      "risk": "If the rubric is not central, the repo remains a pile of documents."
+    },
+    {
+      "outcome": "SourceCheckup becomes a public review lane",
+      "evidence": "Every claim review path asks what source support is missing and what evidence would change the statement.",
+      "risk": "If source support stays separate, the repo loses the bridge to general open source eval work."
+    },
+    {
+      "outcome": "Issue 154 becomes the public objection gateway",
+      "evidence": "Outside comments are routed into severity, source, wording, or claim hygiene work.",
+      "risk": "If comments are treated as validation, public credibility drops."
+    },
+    {
+      "outcome": "Turkish clinical AI path becomes readable",
+      "evidence": "A team can move from Turkish scenario to reviewer question to report wording gate without reading the whole repository.",
+      "risk": "If local language work is buried, the repo competes in the crowded global benchmark lane."
+    },
+    {
+      "outcome": "Open source eval identity stays visible",
+      "evidence": "lighteval, inspect ai, and future eval routes stay in the public route watchlist with honest states.",
+      "risk": "If medical AI hides open source AI work, the second equal identity disappears."
+    },
+    {
+      "outcome": "Public claims stay smaller than evidence",
+      "evidence": "README and validators block endorsement, validation, deployment, partner, institution, score, acceptance, and merge claims.",
+      "risk": "If claims outrun evidence, the repo becomes unsafe to share."
+    }
+  ],
+  "compressed_build_waves": [
+    {
+      "wave": "Hour 0 to 1",
+      "goal": "Collapse direction into one public operating map.",
+      "outputs": [
+        "North star doc",
+        "Six month compressed build map",
+        "Product stack"
+      ]
+    },
+    {
+      "wave": "Hour 1 to 2",
+      "goal": "Turn direction into a product spec and queue.",
+      "outputs": [
+        "Clinician severity layer spec",
+        "Next 72 hour execution queue",
+        "External proof ledger"
+      ]
+    },
+    {
+      "wave": "Hour 2 to 3",
+      "goal": "Make the package hard to drift.",
+      "outputs": [
+        "Builder script",
+        "Validator script",
+        "Makefile target"
+      ]
+    },
+    {
+      "wave": "Hour 3 to 4",
+      "goal": "Ship the package into the live PR and BAGLAM2 record.",
+      "outputs": [
+        "README link",
+        "Full validation",
+        "Pushed PR update"
+      ]
+    }
+  ],
+  "severity_layer_fields": [
+    {
+      "field": "scenario_scope",
+      "definition": "What synthetic or public situation is being reviewed."
+    },
+    {
+      "field": "user_context",
+      "definition": "Whether the answer is for patient facing text, clinician support, report language, or maintainer review."
+    },
+    {
+      "field": "failure_mode",
+      "definition": "The smallest named way the answer could mislead, omit context, overstate evidence, or create unsafe action."
+    },
+    {
+      "field": "clinical_severity",
+      "definition": "A bounded grade for potential harm if the failure were trusted."
+    },
+    {
+      "field": "missing_variable",
+      "definition": "The patient, workflow, source, date, guideline, local protocol, or supervision fact that is missing."
+    },
+    {
+      "field": "source_support_gap",
+      "definition": "What source evidence is absent or too weak for the claim being made."
+    },
+    {
+      "field": "safe_rewrite",
+      "definition": "A shorter safer version that reduces the risk without pretending to validate the model."
+    },
+    {
+      "field": "reviewer_state",
+      "definition": "Draft, needs clinician review, needs source support, ready for public example, or blocked."
+    }
+  ],
+  "next_72_hour_queue": [
+    {
+      "id": "Q1",
+      "lane": "Severity",
+      "action": "Convert ten existing safe failure cards into severity layer rows.",
+      "deliverable": "Severity row pack",
+      "gate": "No patient data and no clinical use claim."
+    },
+    {
+      "id": "Q2",
+      "lane": "Severity",
+      "action": "Add a validator that requires every severity row to include missing variable and safe rewrite fields.",
+      "deliverable": "Severity row validator",
+      "gate": "Fail if any row claims clinical validation."
+    },
+    {
+      "id": "Q3",
+      "lane": "Source",
+      "action": "Map SourceCheckup rows to the severity fields where source support changes the risk.",
+      "deliverable": "Source support crosswalk",
+      "gate": "Do not certify source truth."
+    },
+    {
+      "id": "Q4",
+      "lane": "Turkish context",
+      "action": "Pick twelve Turkish clinical wording risks from existing TR MedLLM surfaces.",
+      "deliverable": "Turkish wording risk queue",
+      "gate": "Use synthetic examples only."
+    },
+    {
+      "id": "Q5",
+      "lane": "Turkish context",
+      "action": "Create a one page path for TEKNOFEST teams from model result to claim hygiene gate.",
+      "deliverable": "Report wording path",
+      "gate": "No finalist, official role, or competition claim."
+    },
+    {
+      "id": "Q6",
+      "lane": "Public review",
+      "action": "Add issue 154 routing language that sends comments to severity, source, wording, or claim hygiene.",
+      "deliverable": "Issue route note",
+      "gate": "No comment is called validation."
+    },
+    {
+      "id": "Q7",
+      "lane": "Open source eval",
+      "action": "Keep lighteval and inspect ai route states fresh with public preflight before public language.",
+      "deliverable": "Route refresh",
+      "gate": "No acceptance or merge claim."
+    },
+    {
+      "id": "Q8",
+      "lane": "Open source eval",
+      "action": "Write the next lm eval scope card only after the current PR states are checked.",
+      "deliverable": "Eval scope card",
+      "gate": "No new upstream comment without fresh reason."
+    },
+    {
+      "id": "Q9",
+      "lane": "README",
+      "action": "Make the first screen point to the new north star and the public objection route.",
+      "deliverable": "README navigation patch",
+      "gate": "Keep boundaries visible."
+    },
+    {
+      "id": "Q10",
+      "lane": "Validation",
+      "action": "Add one Makefile target per new public system and require it in validate.",
+      "deliverable": "Makefile guard",
+      "gate": "Generated docs must not be stale."
+    },
+    {
+      "id": "Q11",
+      "lane": "Proof",
+      "action": "Track PR 156 as the public acceleration proof path.",
+      "deliverable": "Proof ledger update",
+      "gate": "Draft PR is not merge or acceptance."
+    },
+    {
+      "id": "Q12",
+      "lane": "BAGLAM2",
+      "action": "Record only commit, PR, checks, blocker, and next action.",
+      "deliverable": "BAGLAM2 result note",
+      "gate": "Do not add routine no event logs."
+    }
+  ],
+  "external_proof_routes": [
+    {
+      "route": "PR 156",
+      "current_meaning": "Draft public handoff for the repo acceleration branch.",
+      "proof_value": "Shows the system is pushed and reviewable.",
+      "blocked_read": "It is not merge, acceptance, validation, or endorsement."
+    },
+    {
+      "route": "lighteval pull request 1272",
+      "current_meaning": "Open upstream eval contribution route.",
+      "proof_value": "Keeps open source AI builder identity visible.",
+      "blocked_read": "It is not accepted or merged."
+    },
+    {
+      "route": "inspect ai pull request 4343",
+      "current_meaning": "Open upstream documentation contribution route.",
+      "proof_value": "Adds credible open source AI maintenance work.",
+      "blocked_read": "It is not accepted or merged."
+    },
+    {
+      "route": "The AI Alliance issue 50",
+      "current_meaning": "Acknowledged public route owner signal.",
+      "proof_value": "Shows benchmark ecosystem contact without overclaim.",
+      "blocked_read": "It is not collaboration, adoption, or endorsement."
+    },
+    {
+      "route": "Issue 154",
+      "current_meaning": "Public objection gateway.",
+      "proof_value": "Turns outside critique into work rather than vanity metrics.",
+      "blocked_read": "A comment is not external validation."
+    }
+  ],
+  "blocked_claims": [
+    "clinical validation",
+    "clinical deployment",
+    "patient data use",
+    "model superiority",
+    "score certification",
+    "source truth certification",
+    "regulatory clearance",
+    "institutional approval",
+    "partner commitment",
+    "endorsement",
+    "acceptance",
+    "merge"
+  ],
+  "proof_metrics": [
+    "generated docs stay current",
+    "full validation passes",
+    "public route preflight passes",
+    "outside objection received",
+    "severity rows reviewed",
+    "source support gaps resolved",
+    "Turkish wording risks mapped",
+    "upstream route states refreshed",
+    "README entry remains visible",
+    "BAGLAM2 records only real outcomes"
+  ],
+  "validator_commands": [
+    "make repo_acceleration_system",
+    "make public_github_route_preflight",
+    "make validate"
+  ]
+}

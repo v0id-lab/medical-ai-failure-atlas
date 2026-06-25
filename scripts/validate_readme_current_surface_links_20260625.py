@@ -18,6 +18,8 @@ REQUIRED_LINKS = {
     "docs/PUBLIC_GITHUB_ROUTE_WATCHLIST_20260625.md",
     "docs/PUBLIC_VISIBILITY_CLAIM_GATE_20260625.md",
     "docs/PUBLIC_REVIEW_OPERATING_SYSTEM_20260625.md",
+    "docs/REPO_ACCELERATION_NORTH_STAR_20260625.md",
+    "docs/CLINICIAN_SEVERITY_LAYER_SEED_ROWS_20260625.md",
 }
 
 REQUIRED_PHRASES = [
@@ -35,6 +37,19 @@ REQUIRED_PHRASES = [
     "from turning into endorsement, acceptance, validation, or deployment claims",
     "generated public review flow",
     "one artifact per loop",
+    "generated repo direction system",
+    "clinician severity layer",
+    "source support layer",
+    "claim hygiene layer",
+    "Turkish clinical context layer",
+    "open source eval bridge",
+    "72 hour queue",
+    "ten generated seed rows",
+    "clinical severity",
+    "missing variable",
+    "source support gap",
+    "safe rewrite",
+    "reviewer state",
     "public navigation and claim hygiene materials only",
     "not submissions, applications, merge decisions",
 ]
