@@ -60,4 +60,4 @@ Direct check:
 
 ## Exact Next Action
 
-Add cross language source recency and applicability controls so translated variants preserve date, population, setting, and applicability limits before public reuse.
+Add cross language source conflict and provenance controls so translated variants preserve source conflict status, source version, and provenance chain before public reuse.

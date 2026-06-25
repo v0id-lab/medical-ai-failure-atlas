@@ -580,7 +580,7 @@ def build_report(
             "not_clinical_validation": True,
         },
         "blockers": [],
-        "exact_next_action": "Add cross language source recency and applicability controls so translated variants preserve date, population, setting, and applicability limits before public reuse.",
+        "exact_next_action": "Add cross language source conflict and provenance controls so translated variants preserve source conflict status, source version, and provenance chain before public reuse.",
     }
 
 

@@ -1,0 +1,723 @@
+{
+  "artifact_paths": {
+    "cross_language_controls": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_source_recency_applicability_controls_v0_1_20260625.jsonl",
+    "cross_language_report_json": "data/multilingual_medical_intelligence_cross_language_source_recency_applicability_report_v0_1_20260625.json",
+    "cross_language_report_markdown": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_REPORT_V0_1_20260625.md",
+    "rewrite_candidates": "data/multilingual_medical_intelligence_public_wording_rewrite_candidates_v0_1_20260625.jsonl",
+    "scorer": "scripts/score_multilingual_medical_intelligence_cross_language_source_recency_applicability_controls_v0_1_20260625.py",
+    "validator": "scripts/validate_multilingual_medical_intelligence_cross_language_source_recency_applicability_report_v0_1_20260625.py"
+  },
+  "atlas_layer": "Multilingual Medical Intelligence",
+  "atlas_node_id": "mia_mmi_008",
+  "blocked_control_ids": [
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_002",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_004",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_006",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_008",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_010",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_012"
+  ],
+  "blockers": [],
+  "control_results": [
+    {
+      "boundary_pass": true,
+      "clinical_domain": "emergency symptom wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_001",
+      "control_type": "aligned_source_date_preserved",
+      "detected_source_recency_applicability_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "expected_status": "pass",
+      "observed_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_001",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_001",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_001",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "emergency symptom public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_001",
+      "source_state_pair_id": "MMI_PAIR_001",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "emergency symptom wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_002",
+      "control_type": "english_source_date_shifted",
+      "detected_source_recency_applicability_signals": [
+        "english_source_date_shifted"
+      ],
+      "expected_failure_reasons": [
+        "english_source_date_shifted"
+      ],
+      "expected_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "expected_status": "fail",
+      "observed_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_001",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_001",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_001",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "emergency symptom public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": true,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": true,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_001",
+      "source_state_pair_id": "MMI_PAIR_001",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "medication safety wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_003",
+      "control_type": "aligned_turkish_source_date_preserved",
+      "detected_source_recency_applicability_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "expected_status": "pass",
+      "observed_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_003",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_002",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_002",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "medication safety public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_002",
+      "source_state_pair_id": "MMI_PAIR_002",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "medication safety wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_004",
+      "control_type": "turkish_source_date_shifted",
+      "detected_source_recency_applicability_signals": [
+        "turkish_source_date_shifted"
+      ],
+      "expected_failure_reasons": [
+        "turkish_source_date_shifted"
+      ],
+      "expected_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "expected_status": "fail",
+      "observed_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_003",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_002",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_002",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "medication safety public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": true
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": true
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_002",
+      "source_state_pair_id": "MMI_PAIR_002",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "laboratory result wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_005",
+      "control_type": "aligned_source_recency_status_preserved",
+      "detected_source_recency_applicability_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "expected_status": "pass",
+      "observed_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_009",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_005",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_005",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "laboratory result public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_005",
+      "source_state_pair_id": "MMI_PAIR_005",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "laboratory result wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_006",
+      "control_type": "source_recency_status_inflated",
+      "detected_source_recency_applicability_signals": [
+        "source_recency_status_inflated"
+      ],
+      "expected_failure_reasons": [
+        "source_recency_status_inflated"
+      ],
+      "expected_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "expected_status": "fail",
+      "observed_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_009",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_005",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_005",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "laboratory result public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": true,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": true,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_005",
+      "source_state_pair_id": "MMI_PAIR_005",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "follow up result wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_007",
+      "control_type": "aligned_population_scope_preserved",
+      "detected_source_recency_applicability_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "expected_status": "pass",
+      "observed_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_011",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_006",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_006",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "follow up result public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_006",
+      "source_state_pair_id": "MMI_PAIR_006",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "follow up result wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_008",
+      "control_type": "population_scope_broadened",
+      "detected_source_recency_applicability_signals": [
+        "population_scope_broadened"
+      ],
+      "expected_failure_reasons": [
+        "population_scope_broadened"
+      ],
+      "expected_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "expected_status": "fail",
+      "observed_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_011",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_006",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_006",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "follow up result public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": true,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": true,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_006",
+      "source_state_pair_id": "MMI_PAIR_006",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "source support excerpt wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_009",
+      "control_type": "aligned_setting_scope_preserved",
+      "detected_source_recency_applicability_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "expected_status": "pass",
+      "observed_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_013",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_007",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_007",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "source support excerpt public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_007",
+      "source_state_pair_id": "MMI_PAIR_005",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "source support excerpt wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_010",
+      "control_type": "setting_scope_broadened",
+      "detected_source_recency_applicability_signals": [
+        "setting_scope_broadened"
+      ],
+      "expected_failure_reasons": [
+        "setting_scope_broadened"
+      ],
+      "expected_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "expected_status": "fail",
+      "observed_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_013",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_007",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_007",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "source support excerpt public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": true,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": true,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_007",
+      "source_state_pair_id": "MMI_PAIR_005",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "multilingual translation wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_011",
+      "control_type": "aligned_applicability_limit_preserved",
+      "detected_source_recency_applicability_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "expected_status": "pass",
+      "observed_review_outcome": "passes_cross_language_source_recency_applicability_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_015",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_008",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_008",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "multilingual translation public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": false,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_008",
+      "source_state_pair_id": "MMI_PAIR_001",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "multilingual translation wording",
+      "control_id": "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_012",
+      "control_type": "applicability_limit_removed",
+      "detected_source_recency_applicability_signals": [
+        "applicability_limit_removed"
+      ],
+      "expected_failure_reasons": [
+        "applicability_limit_removed"
+      ],
+      "expected_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "expected_status": "fail",
+      "observed_review_outcome": "blocked_cross_language_source_recency_applicability_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_015",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_008",
+      "source_recency_applicability_map": [
+        {
+          "allowed_scope": "date population setting and applicability limits only",
+          "applicability_limit_to_preserve": "requires reviewer applicability check",
+          "claim_id": "mmi_recency_claim_008",
+          "forbidden_applicability_expansion": "current source all populations all settings or local applicability clearance",
+          "population_to_preserve": "original source population only",
+          "recency_status_to_preserve": "not currentness clearance",
+          "setting_to_preserve": "original source setting only",
+          "source_date_to_preserve": "source date remains explicit or unknown",
+          "source_scope": "multilingual translation public wording"
+        }
+      ],
+      "source_recency_applicability_signals_declared": {
+        "applicability_limit_removed": true,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_recency_applicability_signals_detected": {
+        "applicability_limit_removed": true,
+        "english_source_date_shifted": false,
+        "population_scope_broadened": false,
+        "setting_scope_broadened": false,
+        "source_recency_status_inflated": false,
+        "turkish_source_date_shifted": false
+      },
+      "source_row_id": "MMI_PUBLIC_WORDING_008",
+      "source_state_pair_id": "MMI_PAIR_001",
+      "status_match": true
+    }
+  ],
+  "cross_language_signal_counts": {
+    "declared_true": {
+      "applicability_limit_removed": 1,
+      "english_source_date_shifted": 1,
+      "population_scope_broadened": 1,
+      "setting_scope_broadened": 1,
+      "source_recency_status_inflated": 1,
+      "turkish_source_date_shifted": 1
+    },
+    "detected_true": {
+      "applicability_limit_removed": 1,
+      "english_source_date_shifted": 1,
+      "population_scope_broadened": 1,
+      "setting_scope_broadened": 1,
+      "source_recency_status_inflated": 1,
+      "turkish_source_date_shifted": 1
+    },
+    "mismatch_count": 0
+  },
+  "exact_next_action": "Add cross language source conflict and provenance controls so translated variants preserve source conflict status, source version, and provenance chain before public reuse.",
+  "failure_reason_counts": {
+    "applicability_limit_removed": 1,
+    "english_source_date_shifted": 1,
+    "population_scope_broadened": 1,
+    "setting_scope_broadened": 1,
+    "source_recency_status_inflated": 1,
+    "turkish_source_date_shifted": 1
+  },
+  "generated_date": "20260625",
+  "pass_control_ids": [
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_001",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_003",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_005",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_007",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_009",
+    "MMI_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_011"
+  ],
+  "release_boundary": {
+    "allowed_use": "Repo local synthetic cross language source recency and applicability scoring before public wording reuse.",
+    "clinical_advice_allowed": false,
+    "clinical_deployment_claim_made": false,
+    "clinical_use_allowed": false,
+    "clinical_validation_claim_made": false,
+    "diagnosis_or_treatment_instruction_allowed": false,
+    "external_publication_clearance": false,
+    "external_urls_present": false,
+    "model_ranking_claim_made": false,
+    "model_superiority_claim_made": false,
+    "not_allowed_use": "Patient care, clinical advice, translation clearance, source recency and applicability clearance, external publication clearance, model ranking, or release claim.",
+    "partner_or_institution_claim_made": false,
+    "patient_data_used": false,
+    "score_certification_claim_made": false,
+    "source_recency_applicability_clearance_claim_made": false,
+    "source_truth_certification_claim_made": false,
+    "synthetic_only": true,
+    "translation_clearance_claim_made": false
+  },
+  "report_id": "multilingual_medical_intelligence_cross_language_source_recency_applicability_report_v0_1_20260625",
+  "report_scope": "local_fixture_cross_language_source_recency_applicability_gate_only",
+  "report_type": "machine_readable_cross_language_source_recency_applicability_report",
+  "report_version": "v0_1_20260625",
+  "reviewer_triage": {
+    "blocked_use": [
+      "patient care",
+      "clinical advice",
+      "translation clearance",
+      "source recency and applicability clearance",
+      "clinical validation claim",
+      "clinical deployment claim",
+      "model ranking claim"
+    ],
+    "primary_question": "Does either language shift source date, inflate source recency status, broaden population or setting scope, or remove applicability limits.",
+    "triage_order": [
+      "english_source_date_shifted",
+      "turkish_source_date_shifted",
+      "source_recency_status_inflated",
+      "population_scope_broadened",
+      "setting_scope_broadened",
+      "applicability_limit_removed"
+    ]
+  },
+  "scope": "Local synthetic cross language controls for source date, population, setting, and applicability limit drift.",
+  "score_summary": {
+    "control_count": 12,
+    "expected_fail_controls": 6,
+    "expected_pass_controls": 6,
+    "observed_blocked_controls": 6,
+    "observed_pass_controls": 6,
+    "review_outcome_mismatch_count": 0,
+    "source_candidate_coverage_count": 6,
+    "source_row_coverage_count": 6,
+    "status_mismatch_count": 0
+  },
+  "status": "local_fixture_pass",
+  "validation": {
+    "expected_result": "pass",
+    "make_target": "make multilingual_medical_intelligence_cross_language_source_recency_applicability_controls",
+    "scorer_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_source_recency_applicability_controls_v0_1_20260625.py --check",
+    "validator_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_source_recency_applicability_report_v0_1_20260625.py"
+  }
+}

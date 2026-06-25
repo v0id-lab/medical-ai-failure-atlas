@@ -56,7 +56,12 @@
     "cross_language_source_support_scope_reconciliation_report_json": "data/multilingual_medical_intelligence_cross_language_source_support_scope_reconciliation_report_v0_1_20260625.json",
     "cross_language_source_support_scope_reconciliation_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_SOURCE_SUPPORT_SCOPE_RECONCILIATION_REPORT_V0_1_20260625.md",
     "cross_language_source_support_scope_reconciliation_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_source_support_scope_reconciliation_controls_v0_1_20260625.py",
-    "cross_language_source_support_scope_reconciliation_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_source_support_scope_reconciliation_report_v0_1_20260625.py"
+    "cross_language_source_support_scope_reconciliation_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_source_support_scope_reconciliation_report_v0_1_20260625.py",
+    "cross_language_source_recency_applicability_controls": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_source_recency_applicability_controls_v0_1_20260625.jsonl",
+    "cross_language_source_recency_applicability_report_json": "data/multilingual_medical_intelligence_cross_language_source_recency_applicability_report_v0_1_20260625.json",
+    "cross_language_source_recency_applicability_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_SOURCE_RECENCY_APPLICABILITY_REPORT_V0_1_20260625.md",
+    "cross_language_source_recency_applicability_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_source_recency_applicability_controls_v0_1_20260625.py",
+    "cross_language_source_recency_applicability_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_source_recency_applicability_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -120,7 +125,12 @@
     "expected_cross_language_source_support_scope_reconciliation_control_count": 12,
     "expected_cross_language_source_support_scope_reconciliation_pass_controls": 6,
     "expected_cross_language_source_support_scope_reconciliation_blocked_controls": 6,
-    "expected_cross_language_source_support_scope_reconciliation_signal_types": 6
+    "expected_cross_language_source_support_scope_reconciliation_signal_types": 6,
+    "expected_cross_language_source_recency_applicability_status": "local_fixture_pass",
+    "expected_cross_language_source_recency_applicability_control_count": 12,
+    "expected_cross_language_source_recency_applicability_pass_controls": 6,
+    "expected_cross_language_source_recency_applicability_blocked_controls": 6,
+    "expected_cross_language_source_recency_applicability_signal_types": 6
   },
   "safety_boundaries": {
     "synthetic_only": true,
@@ -313,7 +323,22 @@
     "required_before_public_use": [
       "run source support scope reconciliation scorer",
       "run source support scope reconciliation report validator",
-      "confirm source truth certification absence before public use"
+      "confirm source truth certification absence before public use",
+      "run source recency applicability scorer",
+      "run source recency applicability report validator",
+      "confirm source date population setting and applicability limits before public use"
+    ],
+    "cross_language_source_recency_applicability_report": [
+      "twelve synthetic cross language source recency and applicability controls",
+      "six pass controls",
+      "six blocked controls",
+      "source date preservation",
+      "source recency status preservation",
+      "population scope preservation",
+      "setting scope preservation",
+      "applicability limit preservation",
+      "source recency applicability clearance absence",
+      "external publication clearance absence"
     ]
   },
   "planned_rows": [
@@ -475,5 +500,5 @@
       ]
     }
   ],
-  "next_build_suggestion": "cross language source recency and applicability controls"
+  "next_build_suggestion": "cross language source conflict and provenance controls"
 }
