@@ -1,0 +1,1019 @@
+{
+  "artifact_paths": {
+    "drift_negative_controls": "data/multilingual_medical_intelligence_public_wording_drift_negative_controls_v0_1_20260625.jsonl",
+    "paired_state_examples": "data/multilingual_medical_intelligence_paired_state_examples_v0_1_20260625.jsonl",
+    "public_wording_bank": "data/multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.jsonl",
+    "public_wording_index": "data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
+    "release_gate": "data/medical_intelligence_atlas_release_gate_v0_1_20260625.json",
+    "score_report_builder": "scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+    "score_report_json": "data/multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.json",
+    "score_report_markdown": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_PUBLIC_WORDING_DRIFT_SCORE_REPORT_V0_1_20260625.md",
+    "score_report_validator": "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+    "validator": "scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py"
+  },
+  "atlas_layer": "Multilingual Medical Intelligence",
+  "atlas_node_id": "mia_mmi_002",
+  "blockers": [],
+  "control_rows": [
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_001",
+      "detected_drift_signals": [
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": false
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": false
+      },
+      "drift_type": "missing_data_removed",
+      "expected_failure_reasons": [
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_001",
+      "source_state_pair_id": "MMI_PAIR_001"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_002",
+      "detected_drift_signals": [
+        "certainty_increased",
+        "patient_facing_instruction_added",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "drift_signal_score": 3,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": true,
+        "source_support_weakened": false
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": true,
+        "source_support_weakened": false
+      },
+      "drift_type": "patient_facing_instruction_added",
+      "expected_failure_reasons": [
+        "patient_facing_instruction_added",
+        "diagnosis_or_treatment_instruction_added",
+        "certainty_increased"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "certainty_increased",
+        "patient_facing_instruction_added",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_002",
+      "source_state_pair_id": "MMI_PAIR_002"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_003",
+      "detected_drift_signals": [
+        "missing_data_removed",
+        "source_support_weakened",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": false,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_signals_detected": {
+        "certainty_increased": false,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_type": "source_support_weakened",
+      "expected_failure_reasons": [
+        "source_support_weakened",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "missing_data_removed",
+        "source_support_weakened",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_003",
+      "source_state_pair_id": "MMI_PAIR_003"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_004",
+      "detected_drift_signals": [
+        "certainty_increased",
+        "patient_facing_instruction_added"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": true,
+        "source_support_weakened": false
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": true,
+        "source_support_weakened": false
+      },
+      "drift_type": "certainty_increased",
+      "expected_failure_reasons": [
+        "certainty_increased",
+        "patient_facing_instruction_added"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "certainty_increased",
+        "patient_facing_instruction_added"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_004",
+      "source_state_pair_id": "MMI_PAIR_004"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_005",
+      "detected_drift_signals": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_type": "source_support_weakened",
+      "expected_failure_reasons": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_005",
+      "source_state_pair_id": "MMI_PAIR_005"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_006",
+      "detected_drift_signals": [
+        "missing_data_removed",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": false,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": false
+      },
+      "drift_signals_detected": {
+        "certainty_increased": false,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": false
+      },
+      "drift_type": "diagnosis_or_treatment_instruction_added",
+      "expected_failure_reasons": [
+        "diagnosis_or_treatment_instruction_added",
+        "missing_data_removed"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "missing_data_removed",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_006",
+      "source_state_pair_id": "MMI_PAIR_006"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_007",
+      "detected_drift_signals": [
+        "missing_data_removed",
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "drift_signal_score": 3,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_type": "source_support_weakened",
+      "expected_failure_reasons": [
+        "source_support_weakened",
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "missing_data_removed",
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_007",
+      "source_state_pair_id": "MMI_PAIR_005"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_008",
+      "detected_drift_signals": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_type": "translation_certainty_increased",
+      "expected_failure_reasons": [
+        "certainty_increased",
+        "source_support_weakened"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_008",
+      "source_state_pair_id": "MMI_PAIR_001"
+    }
+  ],
+  "drift_signal_counts": {
+    "declared_true": {
+      "certainty_increased": 6,
+      "diagnosis_or_treatment_instruction_added": 3,
+      "missing_data_removed": 3,
+      "patient_facing_instruction_added": 2,
+      "source_support_weakened": 4
+    },
+    "detected_true": {
+      "certainty_increased": 6,
+      "diagnosis_or_treatment_instruction_added": 3,
+      "missing_data_removed": 4,
+      "patient_facing_instruction_added": 2,
+      "source_support_weakened": 4
+    },
+    "mismatch_count": 1
+  },
+  "exact_next_action": "Add a rewrite candidate drift scorer that compares future public wording attempts against this score profile.",
+  "fail_control_summary": {
+    "controls_that_failed_gate": 8,
+    "covered_source_row_count": 8,
+    "expected_fail_controls": 8,
+    "observed_fail_controls": 8,
+    "unexpected_pass_controls": 0,
+    "unique_control_id_count": 8
+  },
+  "fail_controls": [
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_001",
+      "detected_drift_signals": [
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": false
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": false
+      },
+      "drift_type": "missing_data_removed",
+      "expected_failure_reasons": [
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_001",
+      "source_state_pair_id": "MMI_PAIR_001"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_002",
+      "detected_drift_signals": [
+        "certainty_increased",
+        "patient_facing_instruction_added",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "drift_signal_score": 3,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": true,
+        "source_support_weakened": false
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": true,
+        "source_support_weakened": false
+      },
+      "drift_type": "patient_facing_instruction_added",
+      "expected_failure_reasons": [
+        "patient_facing_instruction_added",
+        "diagnosis_or_treatment_instruction_added",
+        "certainty_increased"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "certainty_increased",
+        "patient_facing_instruction_added",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_002",
+      "source_state_pair_id": "MMI_PAIR_002"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_003",
+      "detected_drift_signals": [
+        "missing_data_removed",
+        "source_support_weakened",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": false,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_signals_detected": {
+        "certainty_increased": false,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_type": "source_support_weakened",
+      "expected_failure_reasons": [
+        "source_support_weakened",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "missing_data_removed",
+        "source_support_weakened",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_003",
+      "source_state_pair_id": "MMI_PAIR_003"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_004",
+      "detected_drift_signals": [
+        "certainty_increased",
+        "patient_facing_instruction_added"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": true,
+        "source_support_weakened": false
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": true,
+        "source_support_weakened": false
+      },
+      "drift_type": "certainty_increased",
+      "expected_failure_reasons": [
+        "certainty_increased",
+        "patient_facing_instruction_added"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "certainty_increased",
+        "patient_facing_instruction_added"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_004",
+      "source_state_pair_id": "MMI_PAIR_004"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_005",
+      "detected_drift_signals": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_type": "source_support_weakened",
+      "expected_failure_reasons": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_005",
+      "source_state_pair_id": "MMI_PAIR_005"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_006",
+      "detected_drift_signals": [
+        "missing_data_removed",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": false,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": false
+      },
+      "drift_signals_detected": {
+        "certainty_increased": false,
+        "diagnosis_or_treatment_instruction_added": true,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": false
+      },
+      "drift_type": "diagnosis_or_treatment_instruction_added",
+      "expected_failure_reasons": [
+        "diagnosis_or_treatment_instruction_added",
+        "missing_data_removed"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "missing_data_removed",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_006",
+      "source_state_pair_id": "MMI_PAIR_006"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_007",
+      "detected_drift_signals": [
+        "missing_data_removed",
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "drift_signal_score": 3,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": true,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_type": "source_support_weakened",
+      "expected_failure_reasons": [
+        "source_support_weakened",
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "missing_data_removed",
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_007",
+      "source_state_pair_id": "MMI_PAIR_005"
+    },
+    {
+      "boundary_pass": true,
+      "control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_008",
+      "detected_drift_signals": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "drift_signal_score": 2,
+      "drift_signals_declared": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_signals_detected": {
+        "certainty_increased": true,
+        "diagnosis_or_treatment_instruction_added": false,
+        "missing_data_removed": false,
+        "patient_facing_instruction_added": false,
+        "source_support_weakened": true
+      },
+      "drift_type": "translation_certainty_increased",
+      "expected_failure_reasons": [
+        "certainty_increased",
+        "source_support_weakened"
+      ],
+      "expected_status": "fail",
+      "failure_reason_match": true,
+      "gate_failed": true,
+      "must_fail_review_gate": true,
+      "observed_failure_reasons": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "observed_status": "fail",
+      "review_outcome": "blocked_expected_fail_control",
+      "source_row_id": "MMI_PUBLIC_WORDING_008",
+      "source_state_pair_id": "MMI_PAIR_001"
+    }
+  ],
+  "failure_reason_counts": {
+    "certainty_increased": 6,
+    "diagnosis_or_treatment_instruction_added": 3,
+    "missing_data_removed": 3,
+    "patient_facing_instruction_added": 2,
+    "source_support_weakened": 4
+  },
+  "fixture_version": "v0_1_20260625",
+  "generated_date": "20260625",
+  "pass_row_summary": {
+    "blocked_row_count": 0,
+    "clinical_domain_count": 8,
+    "expected_pass_rows": 8,
+    "observed_pass_rows": 8,
+    "ready_row_count": 8,
+    "unique_row_id_count": 8
+  },
+  "pass_rows": [
+    {
+      "boundary_pass": true,
+      "clinical_domain": "emergency symptom wording",
+      "failure_reasons": [],
+      "language_pair": "Turkish English",
+      "missing_data_item_count": 5,
+      "plain_language_check_count": 3,
+      "review_gate_status": "ready_for_local_fixture_use",
+      "row_id": "MMI_PUBLIC_WORDING_001",
+      "source_state_pair_id": "MMI_PAIR_001",
+      "source_support_item_count": 1
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "medication safety wording",
+      "failure_reasons": [],
+      "language_pair": "Turkish English",
+      "missing_data_item_count": 6,
+      "plain_language_check_count": 3,
+      "review_gate_status": "ready_for_local_fixture_use",
+      "row_id": "MMI_PUBLIC_WORDING_002",
+      "source_state_pair_id": "MMI_PAIR_002",
+      "source_support_item_count": 1
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "chronic monitoring wording",
+      "failure_reasons": [],
+      "language_pair": "Turkish English",
+      "missing_data_item_count": 6,
+      "plain_language_check_count": 3,
+      "review_gate_status": "ready_for_local_fixture_use",
+      "row_id": "MMI_PUBLIC_WORDING_003",
+      "source_state_pair_id": "MMI_PAIR_003",
+      "source_support_item_count": 1
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "pregnancy symptom wording",
+      "failure_reasons": [],
+      "language_pair": "Turkish English",
+      "missing_data_item_count": 6,
+      "plain_language_check_count": 3,
+      "review_gate_status": "ready_for_local_fixture_use",
+      "row_id": "MMI_PUBLIC_WORDING_004",
+      "source_state_pair_id": "MMI_PAIR_004",
+      "source_support_item_count": 1
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "laboratory result wording",
+      "failure_reasons": [],
+      "language_pair": "Turkish English",
+      "missing_data_item_count": 6,
+      "plain_language_check_count": 3,
+      "review_gate_status": "ready_for_local_fixture_use",
+      "row_id": "MMI_PUBLIC_WORDING_005",
+      "source_state_pair_id": "MMI_PAIR_005",
+      "source_support_item_count": 1
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "follow up result wording",
+      "failure_reasons": [],
+      "language_pair": "Turkish English",
+      "missing_data_item_count": 6,
+      "plain_language_check_count": 3,
+      "review_gate_status": "ready_for_local_fixture_use",
+      "row_id": "MMI_PUBLIC_WORDING_006",
+      "source_state_pair_id": "MMI_PAIR_006",
+      "source_support_item_count": 1
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "source support excerpt wording",
+      "failure_reasons": [],
+      "language_pair": "Turkish English",
+      "missing_data_item_count": 6,
+      "plain_language_check_count": 3,
+      "review_gate_status": "ready_for_local_fixture_use",
+      "row_id": "MMI_PUBLIC_WORDING_007",
+      "source_state_pair_id": "MMI_PAIR_005",
+      "source_support_item_count": 1
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "multilingual translation wording",
+      "failure_reasons": [],
+      "language_pair": "Turkish English",
+      "missing_data_item_count": 6,
+      "plain_language_check_count": 3,
+      "review_gate_status": "ready_for_local_fixture_use",
+      "row_id": "MMI_PUBLIC_WORDING_008",
+      "source_state_pair_id": "MMI_PAIR_001",
+      "source_support_item_count": 1
+    }
+  ],
+  "release_boundary": {
+    "allowed_use": "Repo local synthetic wording drift review.",
+    "clinical_advice_allowed": false,
+    "clinical_deployment_claim_made": false,
+    "clinical_use_allowed": false,
+    "clinical_validation_claim_made": false,
+    "diagnosis_or_treatment_instruction_allowed": false,
+    "external_publication_clearance": false,
+    "external_urls_present": false,
+    "model_ranking_claim_made": false,
+    "model_superiority_claim_made": false,
+    "not_allowed_use": "Patient care, clinical advice, external publication clearance, model ranking, or release claim.",
+    "not_clinical_validation": true,
+    "not_model_ranking": true,
+    "partner_or_institution_claim_made": false,
+    "patient_data_used": false,
+    "risk_gate": "public wording must separate education from care",
+    "score_certification_claim_made": false,
+    "source_truth_certification_claim_made": false,
+    "synthetic_only": true
+  },
+  "report_id": "multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625",
+  "report_scope": "local_fixture_triage_only",
+  "report_type": "machine_readable_public_wording_drift_score_report",
+  "report_version": "v0_1_20260625",
+  "reviewer_triage": {
+    "blocked_use": [
+      "patient care",
+      "clinical advice",
+      "clinical validation claim",
+      "clinical deployment claim",
+      "model ranking claim",
+      "partner or institution claim"
+    ],
+    "expected_fail_controls_to_review": 8,
+    "pass_rows_to_review": 8,
+    "primary_question": "Does a rewrite preserve missing data, source support, uncertainty, and action boundary.",
+    "triage_order": [
+      "diagnosis_or_treatment_instruction_added",
+      "patient_facing_instruction_added",
+      "missing_data_removed",
+      "source_support_weakened",
+      "certainty_increased"
+    ]
+  },
+  "scope": "Local synthetic public wording drift score report.",
+  "score_summary": {
+    "critical_action_boundary_fail_controls": 4,
+    "drift_signal_type_count": 5,
+    "expected_fail_controls": 8,
+    "observed_blocked_controls": 8,
+    "passing_public_wording_rows": 8,
+    "source_rows_with_fail_control": 8,
+    "source_state_pair_count": 6
+  },
+  "source_artifacts": {
+    "drift_negative_controls": "data/multilingual_medical_intelligence_public_wording_drift_negative_controls_v0_1_20260625.jsonl",
+    "public_wording_bank": "data/multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.jsonl"
+  },
+  "source_pair_coverage": {
+    "covered_source_pair_count": 6,
+    "covered_source_pair_ids": [
+      "MMI_PAIR_001",
+      "MMI_PAIR_002",
+      "MMI_PAIR_003",
+      "MMI_PAIR_004",
+      "MMI_PAIR_005",
+      "MMI_PAIR_006"
+    ],
+    "expected_source_pair_count": 6,
+    "missing_source_pair_ids": []
+  },
+  "source_row_coverage": [
+    {
+      "clinical_domain": "emergency symptom wording",
+      "failure_reasons_tested": [
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_001",
+      "negative_control_status": "expected_fail_control_present",
+      "public_wording_status": "passes_local_fixture_boundary_check",
+      "row_id": "MMI_PUBLIC_WORDING_001",
+      "source_state_pair_id": "MMI_PAIR_001"
+    },
+    {
+      "clinical_domain": "medication safety wording",
+      "failure_reasons_tested": [
+        "patient_facing_instruction_added",
+        "diagnosis_or_treatment_instruction_added",
+        "certainty_increased"
+      ],
+      "negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_002",
+      "negative_control_status": "expected_fail_control_present",
+      "public_wording_status": "passes_local_fixture_boundary_check",
+      "row_id": "MMI_PUBLIC_WORDING_002",
+      "source_state_pair_id": "MMI_PAIR_002"
+    },
+    {
+      "clinical_domain": "chronic monitoring wording",
+      "failure_reasons_tested": [
+        "source_support_weakened",
+        "diagnosis_or_treatment_instruction_added"
+      ],
+      "negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_003",
+      "negative_control_status": "expected_fail_control_present",
+      "public_wording_status": "passes_local_fixture_boundary_check",
+      "row_id": "MMI_PUBLIC_WORDING_003",
+      "source_state_pair_id": "MMI_PAIR_003"
+    },
+    {
+      "clinical_domain": "pregnancy symptom wording",
+      "failure_reasons_tested": [
+        "certainty_increased",
+        "patient_facing_instruction_added"
+      ],
+      "negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_004",
+      "negative_control_status": "expected_fail_control_present",
+      "public_wording_status": "passes_local_fixture_boundary_check",
+      "row_id": "MMI_PUBLIC_WORDING_004",
+      "source_state_pair_id": "MMI_PAIR_004"
+    },
+    {
+      "clinical_domain": "laboratory result wording",
+      "failure_reasons_tested": [
+        "source_support_weakened",
+        "certainty_increased"
+      ],
+      "negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_005",
+      "negative_control_status": "expected_fail_control_present",
+      "public_wording_status": "passes_local_fixture_boundary_check",
+      "row_id": "MMI_PUBLIC_WORDING_005",
+      "source_state_pair_id": "MMI_PAIR_005"
+    },
+    {
+      "clinical_domain": "follow up result wording",
+      "failure_reasons_tested": [
+        "diagnosis_or_treatment_instruction_added",
+        "missing_data_removed"
+      ],
+      "negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_006",
+      "negative_control_status": "expected_fail_control_present",
+      "public_wording_status": "passes_local_fixture_boundary_check",
+      "row_id": "MMI_PUBLIC_WORDING_006",
+      "source_state_pair_id": "MMI_PAIR_006"
+    },
+    {
+      "clinical_domain": "source support excerpt wording",
+      "failure_reasons_tested": [
+        "source_support_weakened",
+        "missing_data_removed",
+        "certainty_increased"
+      ],
+      "negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_007",
+      "negative_control_status": "expected_fail_control_present",
+      "public_wording_status": "passes_local_fixture_boundary_check",
+      "row_id": "MMI_PUBLIC_WORDING_007",
+      "source_state_pair_id": "MMI_PAIR_005"
+    },
+    {
+      "clinical_domain": "multilingual translation wording",
+      "failure_reasons_tested": [
+        "certainty_increased",
+        "source_support_weakened"
+      ],
+      "negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_008",
+      "negative_control_status": "expected_fail_control_present",
+      "public_wording_status": "passes_local_fixture_boundary_check",
+      "row_id": "MMI_PUBLIC_WORDING_008",
+      "source_state_pair_id": "MMI_PAIR_001"
+    }
+  ],
+  "source_row_coverage_summary": {
+    "covered_source_row_count": 8,
+    "covered_source_row_ids": [
+      "MMI_PUBLIC_WORDING_001",
+      "MMI_PUBLIC_WORDING_002",
+      "MMI_PUBLIC_WORDING_003",
+      "MMI_PUBLIC_WORDING_004",
+      "MMI_PUBLIC_WORDING_005",
+      "MMI_PUBLIC_WORDING_006",
+      "MMI_PUBLIC_WORDING_007",
+      "MMI_PUBLIC_WORDING_008"
+    ],
+    "duplicate_source_row_ids": [],
+    "expected_source_row_count": 8,
+    "missing_source_row_ids": []
+  },
+  "status": "local_fixture_pass",
+  "validation": {
+    "build_command": "python3 scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+    "check_command": "python3 scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py --check",
+    "expected_bank_row_count": 8,
+    "expected_negative_control_count": 8,
+    "expected_result": "pass",
+    "make_target": "make multilingual_medical_intelligence_public_wording_bank",
+    "observed_bank_row_count": 8,
+    "observed_negative_control_count": 8,
+    "validator_command": "python3 scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py",
+    "validator_result": "pass"
+  }
+}

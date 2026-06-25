@@ -151,13 +151,13 @@ Artifact: plain clinical language gate
 
 Input: synthetic public explanation
 
-Output: plain language review status
+Output: plain language review status and local drift triage report
 
-Validator: public wording cannot give diagnosis or treatment instruction
+Validator: public wording cannot give diagnosis or treatment instruction, and drift triage report must remain local fixture only
 
 Risk gate: public wording must separate education from care
 
-Next build: public wording drift score report
+Next build: rewrite candidate drift scorer
 
 ### mia_atlas_001 Medical Intelligence Atlas
 

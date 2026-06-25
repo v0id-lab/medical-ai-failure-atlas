@@ -93,6 +93,22 @@ Covered drift signals:
 
 The validator requires every public wording source row to have one drift control. It also checks that the declared fail signal is visible in the mutated wording.
 
+## Drift Score Report
+
+The drift score report turns the eight passing public wording rows and eight expected fail drift controls into a local reviewer triage surface.
+
+Report:
+
+`docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_PUBLIC_WORDING_DRIFT_SCORE_REPORT_V0_1_20260625.md`
+
+Machine readable data:
+
+`data/multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.json`
+
+The report summarizes drift signal counts, failure reason counts, source row coverage, source pair coverage, and critical action boundary fail controls.
+
+It is local fixture triage only. It is not benchmark scoring, model ranking, score certification, source truth certification, clinical validation, clinical deployment, external publication clearance, partner status, institutional support, or patient care guidance.
+
 ## Checks
 
 1. Language meaning: Turkish and English wording describe the same synthetic situation.

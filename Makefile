@@ -16,6 +16,8 @@ validate:
 	$(PYTHON) scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_paired_state_examples_v0_1_20260625.py
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py
+	$(PYTHON) scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
 	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
@@ -244,6 +246,8 @@ clinical_intelligence_stack:
 	$(PYTHON) scripts/simulate_agentic_medicine_sandbox_event_flow_v0_1_20260625.py
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_paired_state_examples_v0_1_20260625.py
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py
+	$(PYTHON) scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_source_check
 multilingual_medical_intelligence_source_check:
@@ -253,7 +257,15 @@ multilingual_medical_intelligence_source_check:
 .PHONY: multilingual_medical_intelligence_public_wording_bank
 multilingual_medical_intelligence_public_wording_bank:
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py
+	$(PYTHON) scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py
 	$(PYTHON) -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json >/dev/null
+
+.PHONY: multilingual_medical_intelligence_public_wording_drift_score_report
+multilingual_medical_intelligence_public_wording_drift_score_report:
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py
+	$(PYTHON) scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py
 
 .PHONY: clinical_intelligence_stack_global_target_map
 clinical_intelligence_stack_global_target_map:
@@ -266,6 +278,8 @@ medical_intelligence_atlas:
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_paired_state_examples_v0_1_20260625.py
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py
+	$(PYTHON) scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_release_gate_v0_1_20260625.py --fixture data/medical_intelligence_atlas_release_gate_v0_1_20260625.json
 

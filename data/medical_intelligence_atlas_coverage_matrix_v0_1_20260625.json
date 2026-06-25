@@ -184,6 +184,39 @@
       "synthetic_only": true,
       "patient_data_used": false,
       "clinical_use_allowed": false
+    },
+    "mmi_public_wording_drift_score_report": {
+      "path": "data/multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.json",
+      "kind": "machine readable local fixture drift triage report",
+      "passing_public_wording_rows": 8,
+      "expected_fail_controls": 8,
+      "critical_action_boundary_fail_controls": 4,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "score_certification_claim_made": false
+    },
+    "mmi_public_wording_drift_score_report_doc": {
+      "path": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_PUBLIC_WORDING_DRIFT_SCORE_REPORT_V0_1_20260625.md",
+      "kind": "local fixture drift triage documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "score_certification_claim_made": false
+    },
+    "mmi_public_wording_drift_score_report_builder": {
+      "path": "scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+      "kind": "deterministic drift triage report builder",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "mmi_public_wording_drift_score_report_validator": {
+      "path": "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+      "kind": "drift triage report validator",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
     }
   },
   "coverage_rows": [
@@ -373,6 +406,10 @@
         "mmi_public_wording_index",
         "mmi_public_wording_drift_negative_controls",
         "mmi_public_wording_doc",
+        "mmi_public_wording_drift_score_report",
+        "mmi_public_wording_drift_score_report_doc",
+        "mmi_public_wording_drift_score_report_builder",
+        "mmi_public_wording_drift_score_report_validator",
         "stack_manifesto"
       ],
       "coverage_focus": [
@@ -387,11 +424,18 @@
         "missing data removal failure checks",
         "source support weakening failure checks",
         "certainty increase failure checks",
-        "patient facing instruction failure checks"
+        "patient facing instruction failure checks",
+        "local drift signal count triage",
+        "failure reason count triage",
+        "source row coverage for expected fail controls",
+        "source pair coverage for public wording rows",
+        "score certification absence boundary"
       ],
       "local_validation_refs": [
         "scripts/validate_multilingual_medical_intelligence_paired_state_examples_v0_1_20260625.py",
-        "scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py"
+        "scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py",
+        "scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py"
       ],
       "coverage_status": "direct fixture coverage"
     },
