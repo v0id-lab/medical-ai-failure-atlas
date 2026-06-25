@@ -140,4 +140,4 @@ Direct check:
 
 ## Exact Next Action
 
-Add cross language uncertainty calibration controls so translated variants preserve uncertainty, unresolved evidence, and reviewer state without creating confidence inflation.
+Add cross language source support scope reconciliation controls so translated variants preserve which source supports which claim, without broadening evidence scope.

@@ -151,13 +151,13 @@ Artifact: plain clinical language gate
 
 Input: synthetic public explanation
 
-Output: plain language review status, local drift triage report, cross language ambiguity report, negation audience report, scope anchor report, and temporal progression report
+Output: plain language review status, local drift triage report, cross language ambiguity report, negation audience report, scope anchor report, temporal progression report, and uncertainty calibration report
 
 Validator: public wording cannot give diagnosis or treatment instruction, and rewrite plus cross language reports must remain local fixture only
 
 Risk gate: public wording must separate education from care
 
-Next build: cross language uncertainty calibration controls
+Next build: cross language source support scope reconciliation controls
 
 ### mia_mmi_003 Multilingual Medical Intelligence
 
@@ -171,7 +171,7 @@ Validator: negation and audience role report must remain local fixture only and 
 
 Risk gate: translation must not invert warnings or shift who is being addressed
 
-Next build: cross language uncertainty calibration controls
+Next build: cross language source support scope reconciliation controls
 
 ### mia_mmi_004 Multilingual Medical Intelligence
 
@@ -185,7 +185,7 @@ Validator: scope anchor report must remain local fixture only and must block mis
 
 Risk gate: translation must not detach missing variables, actor role, action boundary, or local context from the same record
 
-Next build: cross language uncertainty calibration controls
+Next build: cross language source support scope reconciliation controls
 
 ### mia_mmi_005 Multilingual Medical Intelligence
 
@@ -199,7 +199,21 @@ Validator: temporal progression report must remain local fixture only and must b
 
 Risk gate: translation must not shift duration, reverse sequence, remove follow up timing, lose interval precision, or create care instructions
 
-Next build: cross language uncertainty calibration controls
+Next build: cross language source support scope reconciliation controls
+
+### mia_mmi_006 Multilingual Medical Intelligence
+
+Artifact: cross language uncertainty calibration controls
+
+Input: synthetic Turkish English uncertainty calibration control rows
+
+Output: uncertainty calibration drift report
+
+Validator: uncertainty calibration report must remain local fixture only and must block confidence inflation, uncertainty marker removal, evidence gap closure, reviewer state downgrade, or confidence score creation
+
+Risk gate: translation must not inflate confidence, remove uncertainty, close unresolved evidence, downgrade reviewer state, or create confidence scores
+
+Next build: cross language source support scope reconciliation controls
 
 ### mia_atlas_001 Medical Intelligence Atlas
 

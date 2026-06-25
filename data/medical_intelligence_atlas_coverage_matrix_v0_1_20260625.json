@@ -17,7 +17,7 @@
     "atlas_registry": {
       "path": "data/medical_intelligence_atlas_v0_1_20260625.json",
       "kind": "atlas node registry",
-      "record_count": 15,
+      "record_count": 16,
       "synthetic_only": true,
       "patient_data_used": false,
       "clinical_use_allowed": false
@@ -461,6 +461,43 @@
       "synthetic_only": true,
       "patient_data_used": false,
       "clinical_use_allowed": false
+    },
+    "cross_language_uncertainty_calibration_controls": {
+      "path": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_uncertainty_calibration_controls_v0_1_20260625.jsonl",
+      "kind": "synthetic cross language uncertainty calibration controls",
+      "record_count": 12,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "cross_language_uncertainty_calibration_report_json": {
+      "path": "data/multilingual_medical_intelligence_cross_language_uncertainty_calibration_report_v0_1_20260625.json",
+      "kind": "machine readable cross language uncertainty calibration report",
+      "record_count": 12,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "cross_language_uncertainty_calibration_report_doc": {
+      "path": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_UNCERTAINTY_CALIBRATION_REPORT_V0_1_20260625.md",
+      "kind": "generated cross language uncertainty calibration report",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "cross_language_uncertainty_calibration_scorer": {
+      "path": "scripts/score_multilingual_medical_intelligence_cross_language_uncertainty_calibration_controls_v0_1_20260625.py",
+      "kind": "cross language uncertainty calibration scorer",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "cross_language_uncertainty_calibration_validator": {
+      "path": "scripts/validate_multilingual_medical_intelligence_cross_language_uncertainty_calibration_report_v0_1_20260625.py",
+      "kind": "cross language uncertainty calibration report validator",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
     }
   },
   "coverage_rows": [
@@ -808,6 +845,30 @@
       "coverage_status": "direct fixture coverage"
     },
     {
+      "node_id": "mia_mmi_006",
+      "layer": "Multilingual Medical Intelligence",
+      "node_artifact": "cross language uncertainty calibration controls",
+      "stack_runtime_artifact_ids": [
+        "cross_language_uncertainty_calibration_controls",
+        "cross_language_uncertainty_calibration_report_json",
+        "cross_language_uncertainty_calibration_report_doc",
+        "cross_language_uncertainty_calibration_scorer",
+        "cross_language_uncertainty_calibration_validator"
+      ],
+      "coverage_focus": [
+        "uncertainty marker preservation",
+        "unresolved evidence preservation",
+        "reviewer state preservation",
+        "confidence score creation drift",
+        "uncertainty calibration clearance absence"
+      ],
+      "local_validation_refs": [
+        "scripts/score_multilingual_medical_intelligence_cross_language_uncertainty_calibration_controls_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_cross_language_uncertainty_calibration_report_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
       "node_id": "mia_atlas_001",
       "layer": "Medical Intelligence Atlas",
       "node_artifact": "node registry",
@@ -817,7 +878,7 @@
         "atlas_markdown"
       ],
       "coverage_focus": [
-        "fifteen atlas nodes",
+        "sixteen atlas nodes",
         "input output validator risk gate and next build fields",
         "stack layer alignment"
       ],
@@ -854,5 +915,6 @@
     "requires_each_atlas_node_once": true,
     "requires_no_external_url_strings": true,
     "requires_boundary_flags": true
-  }
+  },
+  "summary": {}
 }

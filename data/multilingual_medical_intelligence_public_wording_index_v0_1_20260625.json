@@ -46,7 +46,12 @@
     "cross_language_temporal_progression_report_json": "data/multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.json",
     "cross_language_temporal_progression_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_TEMPORAL_PROGRESSION_REPORT_V0_1_20260625.md",
     "cross_language_temporal_progression_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_temporal_progression_controls_v0_1_20260625.py",
-    "cross_language_temporal_progression_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.py"
+    "cross_language_temporal_progression_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_temporal_progression_report_v0_1_20260625.py",
+    "cross_language_uncertainty_calibration_controls": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_uncertainty_calibration_controls_v0_1_20260625.jsonl",
+    "cross_language_uncertainty_calibration_report_json": "data/multilingual_medical_intelligence_cross_language_uncertainty_calibration_report_v0_1_20260625.json",
+    "cross_language_uncertainty_calibration_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_UNCERTAINTY_CALIBRATION_REPORT_V0_1_20260625.md",
+    "cross_language_uncertainty_calibration_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_uncertainty_calibration_controls_v0_1_20260625.py",
+    "cross_language_uncertainty_calibration_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_uncertainty_calibration_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -96,7 +101,14 @@
     "expected_cross_language_temporal_progression_control_count": 12,
     "expected_cross_language_temporal_progression_pass_controls": 6,
     "expected_cross_language_temporal_progression_blocked_controls": 6,
-    "expected_cross_language_temporal_progression_signal_types": 6
+    "expected_cross_language_temporal_progression_signal_types": 6,
+    "cross_language_uncertainty_calibration_score_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_uncertainty_calibration_controls_v0_1_20260625.py --check",
+    "cross_language_uncertainty_calibration_validation_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_uncertainty_calibration_report_v0_1_20260625.py",
+    "expected_cross_language_uncertainty_calibration_status": "local_fixture_pass",
+    "expected_cross_language_uncertainty_calibration_control_count": 12,
+    "expected_cross_language_uncertainty_calibration_pass_controls": 6,
+    "expected_cross_language_uncertainty_calibration_blocked_controls": 6,
+    "expected_cross_language_uncertainty_calibration_signal_types": 6
   },
   "safety_boundaries": {
     "synthetic_only": true,
@@ -154,7 +166,15 @@
       "follow up timing removal detection",
       "interval precision loss detection",
       "care instruction creation detection",
-      "temporal progression clearance absence"
+      "temporal progression clearance absence",
+      "cross language uncertainty calibration control",
+      "English confidence inflation detection",
+      "Turkish ASCII confidence inflation detection",
+      "uncertainty marker removal detection",
+      "evidence gap closure detection",
+      "reviewer state downgrade detection",
+      "confidence score creation detection",
+      "uncertainty calibration clearance absence"
     ],
     "not_covered": [
       "clinical validation",
@@ -244,6 +264,20 @@
       "care instruction creation signal",
       "translation clearance absence",
       "temporal progression clearance absence",
+      "external publication clearance absence"
+    ],
+    "cross_language_uncertainty_calibration_report": [
+      "twelve synthetic cross language uncertainty calibration controls",
+      "six pass controls",
+      "six blocked controls",
+      "English confidence inflation signal",
+      "Turkish ASCII confidence inflation signal",
+      "uncertainty marker removed signal",
+      "evidence gap closed signal",
+      "reviewer state downgraded signal",
+      "confidence score created signal",
+      "translation clearance absence",
+      "uncertainty calibration clearance absence",
       "external publication clearance absence"
     ]
   },
@@ -407,7 +441,7 @@
     }
   ],
   "next_build_suggestion": {
-    "suggested_action": "Add cross language uncertainty calibration controls so translated variants preserve uncertainty, unresolved evidence, and reviewer state without creating confidence inflation.",
+    "suggested_action": "Add cross language source support scope reconciliation controls so translated variants preserve which source supports which claim, without broadening evidence scope.",
     "required_before_public_use": [
       "local row count check",
       "ASCII text check",
@@ -434,7 +468,10 @@
       "scope anchor clearance absence check",
       "cross language temporal progression controls check",
       "cross language temporal progression report freshness check",
-      "temporal progression clearance absence check"
+      "temporal progression clearance absence check",
+      "cross language uncertainty calibration controls check",
+      "cross language uncertainty calibration report freshness check",
+      "uncertainty calibration clearance absence check"
     ]
   }
 }
