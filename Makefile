@@ -10,7 +10,12 @@ validate:
 	$(PYTHON) scripts/validate_readme_current_surface_links_20260625.py
 	$(PYTHON) scripts/validate_internal_medicine_ai_safety_strategy_20260625.py
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_20260625.py
+	$(PYTHON) scripts/validate_clinical_state_language_v0_1.py --input data/clinical_state_language_synthetic_fixture_v0_1_20260625.jsonl --check-normalized data/clinical_state_language_synthetic_fixture_normalized_v0_1_20260625.jsonl
+	$(PYTHON) scripts/validate_clinical_trajectory_engine_transitions_v0_1.py
+	$(PYTHON) scripts/score_medical_reasoning_verifier_v0_1.py --examples data/medical_reasoning_verifier_synthetic_examples_v0_1.jsonl --check
+	$(PYTHON) scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
+	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
 	$(PYTHON) scripts/validate_public_visibility_claim_gate_20260625.py
 	$(PYTHON) scripts/validate_public_review_operating_system_20260625.py
 	$(PYTHON) scripts/validate_repo_acceleration_system_20260625.py
@@ -228,11 +233,21 @@ internal_medicine_ai_safety_strategy:
 clinical_intelligence_stack:
 	$(PYTHON) scripts/build_clinical_intelligence_stack_20260625.py --check
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_20260625.py
+	$(PYTHON) scripts/validate_clinical_state_language_v0_1.py --input data/clinical_state_language_synthetic_fixture_v0_1_20260625.jsonl --check-normalized data/clinical_state_language_synthetic_fixture_normalized_v0_1_20260625.jsonl
+	$(PYTHON) scripts/validate_clinical_trajectory_engine_transitions_v0_1.py
+	$(PYTHON) scripts/score_medical_reasoning_verifier_v0_1.py --examples data/medical_reasoning_verifier_synthetic_examples_v0_1.jsonl --check
+	$(PYTHON) scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py
+	$(PYTHON) scripts/simulate_agentic_medicine_sandbox_event_flow_v0_1_20260625.py
 
 .PHONY: clinical_intelligence_stack_global_target_map
 clinical_intelligence_stack_global_target_map:
 	$(PYTHON) scripts/build_clinical_intelligence_stack_global_target_map_20260625.py --check
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
+
+.PHONY: medical_intelligence_atlas
+medical_intelligence_atlas:
+	$(PYTHON) scripts/build_medical_intelligence_atlas_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
 
 validate-public: validate
 
