@@ -1,0 +1,369 @@
+{
+  "matrix_id": "medical_intelligence_atlas_coverage_matrix_v0_1_20260625",
+  "date": "2026 06 25",
+  "status": "machine readable repo coverage fixture",
+  "scope": "Medical Intelligence Atlas nodes mapped to existing local stack runtime artifacts",
+  "source_policy": "repo artifact references only",
+  "boundary_assertions": {
+    "external_urls_included": false,
+    "patient_data_used": false,
+    "synthetic_only": true,
+    "clinical_use_allowed": false,
+    "clinical_validation_claim_made": false,
+    "clinical_deployment_claim_made": false,
+    "model_ranking_claim_made": false
+  },
+  "source_artifacts": {
+    "atlas_registry": {
+      "path": "data/medical_intelligence_atlas_v0_1_20260625.json",
+      "kind": "atlas node registry",
+      "record_count": 12,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "stack_config": {
+      "path": "docs/clinical_intelligence_stack_20260625.json",
+      "kind": "stack configuration artifact",
+      "record_count": 6,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "csl_schema": {
+      "path": "data/clinical_state_language_v0_1_20260625.schema.json",
+      "kind": "clinical state schema",
+      "required_field_count": 18,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "csl_fixture_normalized": {
+      "path": "data/clinical_state_language_synthetic_fixture_normalized_v0_1_20260625.jsonl",
+      "kind": "normalized synthetic state fixture",
+      "record_count": 3,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "cte_seed_set": {
+      "path": "data/clinical_trajectory_seed_set_v0_1_20260625.jsonl",
+      "kind": "synthetic trajectory seed set",
+      "record_count": 20,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "cte_transition_fixtures": {
+      "path": "data/clinical_trajectory_engine_transition_fixtures_v0_1_20260625.jsonl",
+      "kind": "synthetic trajectory transition fixture",
+      "record_count": 5,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "mrv_examples": {
+      "path": "data/medical_reasoning_verifier_synthetic_examples_v0_1.jsonl",
+      "kind": "synthetic reasoning verifier examples",
+      "record_count": 7,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "ams_event_fixtures": {
+      "path": "data/agentic_medicine_sandbox_event_fixtures_v0_1_20260625.jsonl",
+      "kind": "synthetic sandbox event fixture",
+      "record_count": 18,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "mmi_eval_rows": {
+      "path": "data/turkish_internal_medicine_safety_eval_v0_1_20260625.jsonl",
+      "kind": "synthetic multilingual safety evaluation rows",
+      "record_count": 30,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "atlas_markdown": {
+      "path": "docs/MEDICAL_INTELLIGENCE_ATLAS_V0_1_20260625.md",
+      "kind": "generated atlas documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "stack_manifesto": {
+      "path": "docs/CLINICAL_INTELLIGENCE_STACK_MANIFESTO_20260625.md",
+      "kind": "generated stack documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "state_language_doc": {
+      "path": "docs/CLINICAL_STATE_LANGUAGE_V0_1_20260625.md",
+      "kind": "generated state language documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "trajectory_engine_doc": {
+      "path": "docs/CLINICAL_TRAJECTORY_ENGINE_V0_1_20260625.md",
+      "kind": "generated trajectory engine documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "reasoning_verifier_doc": {
+      "path": "docs/MEDICAL_REASONING_VERIFIER_V0_1_20260625.md",
+      "kind": "generated verifier documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "sandbox_doc": {
+      "path": "docs/AGENTIC_MEDICINE_SANDBOX_V0_1_20260625.md",
+      "kind": "generated sandbox documentation",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    }
+  },
+  "coverage_rows": [
+    {
+      "node_id": "mia_csl_001",
+      "layer": "Clinical State Language",
+      "node_artifact": "clinical state record validator",
+      "stack_runtime_artifact_ids": [
+        "csl_schema",
+        "csl_fixture_normalized",
+        "state_language_doc"
+      ],
+      "coverage_focus": [
+        "required clinical state fields",
+        "normalized synthetic state rows",
+        "missing data and source support fields"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_clinical_state_language_v0_1.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_csl_002",
+      "layer": "Clinical State Language",
+      "node_artifact": "state transition contract",
+      "stack_runtime_artifact_ids": [
+        "csl_schema",
+        "cte_transition_fixtures",
+        "trajectory_engine_doc"
+      ],
+      "coverage_focus": [
+        "ordered synthetic states",
+        "risk state change",
+        "prior signal preservation"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_clinical_trajectory_engine_transitions_v0_1.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_cte_001",
+      "layer": "Clinical Trajectory Engine",
+      "node_artifact": "trajectory row runner",
+      "stack_runtime_artifact_ids": [
+        "cte_seed_set",
+        "stack_config",
+        "trajectory_engine_doc"
+      ],
+      "coverage_focus": [
+        "twenty synthetic trajectory seed rows",
+        "state count and turn order",
+        "clinical use false boundary"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_clinical_intelligence_stack_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_cte_002",
+      "layer": "Clinical Trajectory Engine",
+      "node_artifact": "missing variable pressure test",
+      "stack_runtime_artifact_ids": [
+        "cte_transition_fixtures",
+        "csl_fixture_normalized"
+      ],
+      "coverage_focus": [
+        "missing variable lists",
+        "transition level missing data pressure",
+        "empty missing data rejection"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_clinical_trajectory_engine_transitions_v0_1.py",
+        "scripts/validate_clinical_state_language_v0_1.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_mrv_001",
+      "layer": "Medical Reasoning Verifier",
+      "node_artifact": "reasoning trace scorer",
+      "stack_runtime_artifact_ids": [
+        "mrv_examples",
+        "reasoning_verifier_doc"
+      ],
+      "coverage_focus": [
+        "state completeness",
+        "timeline tracking",
+        "uncertainty handling",
+        "source support",
+        "forbidden claim avoidance"
+      ],
+      "local_validation_refs": [
+        "scripts/score_medical_reasoning_verifier_v0_1.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_mrv_002",
+      "layer": "Medical Reasoning Verifier",
+      "node_artifact": "source support gate",
+      "stack_runtime_artifact_ids": [
+        "mrv_examples",
+        "stack_config"
+      ],
+      "coverage_focus": [
+        "source support dimension",
+        "claim support left unresolved unless evidence exists",
+        "public claim boundary"
+      ],
+      "local_validation_refs": [
+        "scripts/score_medical_reasoning_verifier_v0_1.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_ams_001",
+      "layer": "Agentic Medicine Sandbox",
+      "node_artifact": "agent event protocol",
+      "stack_runtime_artifact_ids": [
+        "ams_event_fixtures",
+        "sandbox_doc"
+      ],
+      "coverage_focus": [
+        "six agent role sequence",
+        "event payload shape",
+        "safe next agent routing"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_ams_002",
+      "layer": "Agentic Medicine Sandbox",
+      "node_artifact": "tool use boundary map",
+      "stack_runtime_artifact_ids": [
+        "ams_event_fixtures",
+        "sandbox_doc"
+      ],
+      "coverage_focus": [
+        "blocked patient specific action",
+        "source support release gate",
+        "clinical use false boundary"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_mmi_001",
+      "layer": "Multilingual Medical Intelligence",
+      "node_artifact": "language context lock",
+      "stack_runtime_artifact_ids": [
+        "csl_fixture_normalized",
+        "mmi_eval_rows",
+        "stack_manifesto"
+      ],
+      "coverage_focus": [
+        "language context field",
+        "Turkish synthetic evaluation rows",
+        "translation must not add certainty"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_clinical_state_language_v0_1.py",
+        "scripts/validate_clinical_intelligence_stack_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_mmi_002",
+      "layer": "Multilingual Medical Intelligence",
+      "node_artifact": "plain clinical language gate",
+      "stack_runtime_artifact_ids": [
+        "mmi_eval_rows",
+        "stack_manifesto"
+      ],
+      "coverage_focus": [
+        "plain public wording boundary",
+        "diagnosis and treatment instruction avoidance",
+        "education separated from care"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_clinical_intelligence_stack_20260625.py"
+      ],
+      "coverage_status": "fixture inventory coverage"
+    },
+    {
+      "node_id": "mia_atlas_001",
+      "layer": "Medical Intelligence Atlas",
+      "node_artifact": "node registry",
+      "stack_runtime_artifact_ids": [
+        "atlas_registry",
+        "stack_config",
+        "atlas_markdown"
+      ],
+      "coverage_focus": [
+        "twelve atlas nodes",
+        "input output validator risk gate and next build fields",
+        "stack layer alignment"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py",
+        "scripts/validate_clinical_intelligence_stack_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
+      "node_id": "mia_atlas_002",
+      "layer": "Medical Intelligence Atlas",
+      "node_artifact": "release readiness map",
+      "stack_runtime_artifact_ids": [
+        "atlas_registry",
+        "atlas_markdown",
+        "stack_config"
+      ],
+      "coverage_focus": [
+        "ready blocked and needs source check release states",
+        "validator bounded release status",
+        "machine readable coverage matrix"
+      ],
+      "local_validation_refs": [
+        "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    }
+  ],
+  "matrix_checks": {
+    "expected_atlas_node_count": 12,
+    "expected_stack_layer_count": 6,
+    "requires_all_referenced_artifacts_to_exist": true,
+    "requires_each_atlas_node_once": true,
+    "requires_no_external_url_strings": true,
+    "requires_boundary_flags": true
+  }
+}

@@ -33,6 +33,8 @@ REQUIRED_LINKS = {
     "scripts/score_medical_reasoning_verifier_v0_1.py",
     "data/agentic_medicine_sandbox_event_fixtures_v0_1_20260625.jsonl",
     "docs/MEDICAL_INTELLIGENCE_ATLAS_V0_1_20260625.md",
+    "docs/medical_intelligence_atlas_coverage_dashboard.md",
+    "data/medical_intelligence_atlas_release_gate_v0_1_20260625.json",
 }
 
 REQUIRED_PHRASES = [
@@ -106,7 +108,14 @@ REQUIRED_PHRASES = [
     "Medical Intelligence Atlas v0.1",
     "machine readable repo construction map",
     "build nodes, validators, risk gates, release states, and exact next builds",
+    "Medical Intelligence Atlas Coverage Dashboard",
+    "maps twelve atlas nodes to local runtime artifacts",
+    "validators, coverage focus, and open gap state",
+    "Medical Intelligence Atlas Release Gate",
+    "release gate for six Clinical Intelligence Stack layers",
+    "synthetic boundary flags, source check state, and exact next action",
     "make medical_intelligence_atlas",
+    "coverage dashboard, release gate, local artifact paths, and exact next action state",
     "public navigation and claim hygiene materials only",
     "not submissions, applications, merge decisions",
 ]

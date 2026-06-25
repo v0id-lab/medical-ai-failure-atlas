@@ -1,0 +1,337 @@
+{
+  "fixture_id": "medical_intelligence_atlas_release_gate_v0_1_20260625",
+  "fixture_type": "machine_readable_release_gate",
+  "generated_date": "20260625",
+  "scope": "Medical Intelligence Atlas stack layer gate using repo local artifacts and synthetic boundaries only.",
+  "source_policy": {
+    "evidence_scope": "repo local artifacts only",
+    "external_urls_allowed": false,
+    "patient_data_allowed": false,
+    "care_use_claims_allowed": false,
+    "model_ranking_claims_allowed": false,
+    "synthetic_boundary_required": true
+  },
+  "status_vocabulary": [
+    {
+      "status": "ready",
+      "status_code": "ready",
+      "machine_meaning": "Local synthetic data, local checker, and boundary flags pass."
+    },
+    {
+      "status": "blocked",
+      "status_code": "blocked",
+      "machine_meaning": "A required local artifact, checker, or boundary flag is missing or failing."
+    },
+    {
+      "status": "needs source check",
+      "status_code": "needs_source_check",
+      "machine_meaning": "A local artifact marks source support as needed before claim bearing public use."
+    }
+  ],
+  "expected_next_action": "keep repo local checker and boundary evidence current before release change",
+  "expected_risk_gate": "public release cannot outrun validators",
+  "atlas_layer_source": {
+    "config": "data/medical_intelligence_atlas_v0_1_20260625.json",
+    "checker": "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py",
+    "expected_layer_count": 6,
+    "expected_node_count": 12
+  },
+  "release_gate_summary": {
+    "layer_count": 6,
+    "status_counts": {
+      "ready": 5,
+      "blocked": 0,
+      "needs source check": 1
+    },
+    "external_url_count": 0,
+    "patient_data_used": false,
+    "clinical_use_allowed": false,
+    "synthetic_only": true,
+    "source_check_rule": "Source flags stay open unless repo local source review evidence exists."
+  },
+  "release_gate_rows": [
+    {
+      "gate_id": "mia_rg_001",
+      "layer": "Clinical State Language",
+      "readiness_status": "ready",
+      "artifact_paths": [
+        "data/clinical_state_language_v0_1_20260625.schema.json",
+        "data/clinical_state_language_synthetic_fixture_v0_1_20260625.jsonl",
+        "data/clinical_state_language_synthetic_fixture_normalized_v0_1_20260625.jsonl",
+        "scripts/validate_clinical_state_language_v0_1.py"
+      ],
+      "risk_gate": "public release cannot outrun validators",
+      "next_action": "keep repo local checker and boundary evidence current before release change",
+      "blockers": [],
+      "source_check_items": []
+    },
+    {
+      "gate_id": "mia_rg_002",
+      "layer": "Clinical Trajectory Engine",
+      "readiness_status": "ready",
+      "artifact_paths": [
+        "data/clinical_trajectory_engine_transition_fixtures_v0_1_20260625.jsonl",
+        "data/clinical_trajectory_seed_set_v0_1_20260625.jsonl",
+        "scripts/validate_clinical_trajectory_engine_transitions_v0_1.py"
+      ],
+      "risk_gate": "public release cannot outrun validators",
+      "next_action": "keep repo local checker and boundary evidence current before release change",
+      "blockers": [],
+      "source_check_items": []
+    },
+    {
+      "gate_id": "mia_rg_003",
+      "layer": "Medical Reasoning Verifier",
+      "readiness_status": "ready",
+      "artifact_paths": [
+        "data/medical_reasoning_verifier_synthetic_examples_v0_1.jsonl",
+        "scripts/score_medical_reasoning_verifier_v0_1.py"
+      ],
+      "risk_gate": "public release cannot outrun validators",
+      "next_action": "keep repo local checker and boundary evidence current before release change",
+      "blockers": [],
+      "source_check_items": []
+    },
+    {
+      "gate_id": "mia_rg_004",
+      "layer": "Agentic Medicine Sandbox",
+      "readiness_status": "ready",
+      "artifact_paths": [
+        "data/agentic_medicine_sandbox_event_fixtures_v0_1_20260625.jsonl",
+        "scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py",
+        "scripts/simulate_agentic_medicine_sandbox_event_flow_v0_1_20260625.py"
+      ],
+      "risk_gate": "public release cannot outrun validators",
+      "next_action": "keep repo local checker and boundary evidence current before release change",
+      "blockers": [],
+      "source_check_items": []
+    },
+    {
+      "gate_id": "mia_rg_005",
+      "layer": "Multilingual Medical Intelligence",
+      "readiness_status": "needs source check",
+      "artifact_paths": [
+        "data/tr_medllm_synthetic_eval_set_v0_3.jsonl",
+        "data/turkish_internal_medicine_safety_eval_v0_1_20260625.jsonl",
+        "tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl",
+        "scripts/validate_tr_medllm_specialty_spread_v0_1.py",
+        "scripts/validate_internal_medicine_ai_safety_strategy_20260625.py"
+      ],
+      "risk_gate": "public release cannot outrun validators",
+      "next_action": "keep repo local checker and boundary evidence current before release change",
+      "blockers": [],
+      "source_check_items": [
+        "data/tr_medllm_synthetic_eval_set_v0_3.jsonl has 6 rows with sourcecheckup_needed true",
+        "tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl has 3 rows with sourcecheckup_needed true"
+      ]
+    },
+    {
+      "gate_id": "mia_rg_006",
+      "layer": "Medical Intelligence Atlas",
+      "readiness_status": "ready",
+      "artifact_paths": [
+        "data/medical_intelligence_atlas_v0_1_20260625.json",
+        "data/medical_intelligence_atlas_release_gate_v0_1_20260625.json",
+        "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py"
+      ],
+      "risk_gate": "public release cannot outrun validators",
+      "next_action": "keep repo local checker and boundary evidence current before release change",
+      "blockers": [],
+      "source_check_items": []
+    }
+  ],
+  "layers": [
+    {
+      "layer": "Clinical State Language",
+      "status": "ready",
+      "status_code": "ready",
+      "atlas_node_ids": [
+        "mia_csl_001",
+        "mia_csl_002"
+      ],
+      "local_artifacts": [
+        "data/clinical_state_language_v0_1_20260625.schema.json",
+        "data/clinical_state_language_synthetic_fixture_v0_1_20260625.jsonl",
+        "data/clinical_state_language_synthetic_fixture_normalized_v0_1_20260625.jsonl",
+        "scripts/validate_clinical_state_language_v0_1.py"
+      ],
+      "synthetic_boundary": {
+        "synthetic_only": true,
+        "patient_data_used": false,
+        "clinical_use_allowed": false,
+        "requires_missing_data_field": true,
+        "requires_source_support_field": true
+      },
+      "gate_inputs": {
+        "checker_result": "pass",
+        "record_count": 3,
+        "normalized_sha256": "1184e4d9fac566b776f682151745a5f109080468799035760b6deec1b8062cc1"
+      },
+      "decision_reason": "The schema, source fixture, normalized fixture, and local checker pass on synthetic records with missing data and source support fields present.",
+      "blockers": [],
+      "source_check_items": []
+    },
+    {
+      "layer": "Clinical Trajectory Engine",
+      "status": "ready",
+      "status_code": "ready",
+      "atlas_node_ids": [
+        "mia_cte_001",
+        "mia_cte_002"
+      ],
+      "local_artifacts": [
+        "data/clinical_trajectory_engine_transition_fixtures_v0_1_20260625.jsonl",
+        "data/clinical_trajectory_seed_set_v0_1_20260625.jsonl",
+        "scripts/validate_clinical_trajectory_engine_transitions_v0_1.py"
+      ],
+      "synthetic_boundary": {
+        "synthetic_only": true,
+        "patient_data_used": false,
+        "clinical_use_allowed": false,
+        "ranking_allowed": false,
+        "requires_action_boundaries": true
+      },
+      "gate_inputs": {
+        "checker_result": "pass",
+        "fixture_rows": 5,
+        "states": 15,
+        "transitions": 10,
+        "unique_missing_variables": 64,
+        "unique_red_flags": 18
+      },
+      "decision_reason": "The transition fixture checker passes with state and transition boundaries, missing variable coverage, and red flag coverage.",
+      "blockers": [],
+      "source_check_items": []
+    },
+    {
+      "layer": "Medical Reasoning Verifier",
+      "status": "ready",
+      "status_code": "ready",
+      "atlas_node_ids": [
+        "mia_mrv_001",
+        "mia_mrv_002"
+      ],
+      "local_artifacts": [
+        "data/medical_reasoning_verifier_synthetic_examples_v0_1.jsonl",
+        "scripts/score_medical_reasoning_verifier_v0_1.py"
+      ],
+      "synthetic_boundary": {
+        "synthetic_only": true,
+        "patient_data_used": false,
+        "clinical_use_allowed": false,
+        "requires_source_support_dimension": true,
+        "requires_forbidden_claim_avoidance_dimension": true
+      },
+      "gate_inputs": {
+        "checker_result": "pass",
+        "example_rows": 7,
+        "expected_pass_controls": 1,
+        "expected_fail_controls": 6
+      },
+      "decision_reason": "The scoring check matches expected pass and fail controls; expected fail rows are verifier controls, not release blockers.",
+      "blockers": [],
+      "source_check_items": []
+    },
+    {
+      "layer": "Agentic Medicine Sandbox",
+      "status": "ready",
+      "status_code": "ready",
+      "atlas_node_ids": [
+        "mia_ams_001",
+        "mia_ams_002"
+      ],
+      "local_artifacts": [
+        "data/agentic_medicine_sandbox_event_fixtures_v0_1_20260625.jsonl",
+        "scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py",
+        "scripts/simulate_agentic_medicine_sandbox_event_flow_v0_1_20260625.py"
+      ],
+      "synthetic_boundary": {
+        "synthetic_only": true,
+        "patient_data_used": false,
+        "clinical_use_allowed": false,
+        "contains_patient_identifier": false,
+        "diagnosis_or_treatment_given": false,
+        "patient_facing_instruction_given": false
+      },
+      "gate_inputs": {
+        "checker_result": "pass",
+        "scenario_count": 3,
+        "event_count": 18,
+        "agent_count": 6,
+        "source_support_checker_gate": "blocked_until_sourced"
+      },
+      "decision_reason": "The event fixture checker passes role order and safety flags; source checker events remain bounded as unresolved checks.",
+      "blockers": [],
+      "source_check_items": []
+    },
+    {
+      "layer": "Multilingual Medical Intelligence",
+      "status": "needs source check",
+      "status_code": "needs_source_check",
+      "atlas_node_ids": [
+        "mia_mmi_001",
+        "mia_mmi_002"
+      ],
+      "local_artifacts": [
+        "data/tr_medllm_synthetic_eval_set_v0_3.jsonl",
+        "data/turkish_internal_medicine_safety_eval_v0_1_20260625.jsonl",
+        "tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl",
+        "scripts/validate_tr_medllm_specialty_spread_v0_1.py",
+        "scripts/validate_internal_medicine_ai_safety_strategy_20260625.py"
+      ],
+      "synthetic_boundary": {
+        "synthetic_only": true,
+        "patient_data_used": false,
+        "clinical_use_allowed": false,
+        "requires_language_context": true,
+        "translation_must_not_add_certainty": true
+      },
+      "gate_inputs": {
+        "tr_medllm_rows": 44,
+        "internal_medicine_rows": 30,
+        "specialty_pack_rows": 14,
+        "tr_medllm_sourcecheckup_needed_true": 6,
+        "specialty_pack_sourcecheckup_needed_true": 3,
+        "specialty_spread_checker_result": "pass",
+        "internal_medicine_checker_result": "pass"
+      },
+      "decision_reason": "Local Turkish synthetic fixtures pass boundary checks, but local sourcecheckup flags remain open for claim bearing rows.",
+      "blockers": [],
+      "source_check_items": [
+        "data/tr_medllm_synthetic_eval_set_v0_3.jsonl has 6 rows with sourcecheckup_needed true",
+        "tr_medllm_safetybench/synthetic_risk_pack_v0_1.jsonl has 3 rows with sourcecheckup_needed true"
+      ]
+    },
+    {
+      "layer": "Medical Intelligence Atlas",
+      "status": "ready",
+      "status_code": "ready",
+      "atlas_node_ids": [
+        "mia_atlas_001",
+        "mia_atlas_002"
+      ],
+      "local_artifacts": [
+        "data/medical_intelligence_atlas_v0_1_20260625.json",
+        "data/medical_intelligence_atlas_release_gate_v0_1_20260625.json",
+        "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py"
+      ],
+      "synthetic_boundary": {
+        "synthetic_only": true,
+        "patient_data_used": false,
+        "clinical_use_allowed": false,
+        "requires_layer_status": true,
+        "requires_blocker_or_next_action_when_not_ready": true
+      },
+      "gate_inputs": {
+        "checker_result": "pass",
+        "atlas_nodes": 12,
+        "relationships": 5,
+        "release_states": 3,
+        "release_gate_fixture_present": true
+      },
+      "decision_reason": "The atlas registry checker passes and this fixture supplies machine readable layer release decisions.",
+      "blockers": [],
+      "source_check_items": []
+    }
+  ]
+}

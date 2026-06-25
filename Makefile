@@ -16,6 +16,8 @@ validate:
 	$(PYTHON) scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
+	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
+	$(PYTHON) scripts/validate_medical_intelligence_atlas_release_gate_v0_1_20260625.py --fixture data/medical_intelligence_atlas_release_gate_v0_1_20260625.json
 	$(PYTHON) scripts/validate_public_visibility_claim_gate_20260625.py
 	$(PYTHON) scripts/validate_public_review_operating_system_20260625.py
 	$(PYTHON) scripts/validate_repo_acceleration_system_20260625.py
@@ -248,6 +250,8 @@ clinical_intelligence_stack_global_target_map:
 medical_intelligence_atlas:
 	$(PYTHON) scripts/build_medical_intelligence_atlas_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
+	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
+	$(PYTHON) scripts/validate_medical_intelligence_atlas_release_gate_v0_1_20260625.py --fixture data/medical_intelligence_atlas_release_gate_v0_1_20260625.json
 
 validate-public: validate
 
