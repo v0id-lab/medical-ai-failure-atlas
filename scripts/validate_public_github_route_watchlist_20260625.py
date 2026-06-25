@@ -19,9 +19,10 @@ REQUIRED_DOC_PHRASES = [
     "wait. Do not add a visibility comment.",
     "Hugging Face lighteval pull request 1272",
     "Live review state: review required.",
-    "Live merge state: mergeable.",
+    "Live merge state: blocked.",
     "UK Government inspect ai pull request 4343",
-    "Live merge state: unknown.",
+    "Live merge state: behind.",
+    "no comments or reviews found in the live pull request metadata.",
     "Medical AI Failure Atlas issue 154",
     "no outside comment found in the live issue list.",
     "The right next move is still build and wait",
@@ -78,6 +79,11 @@ EXPECTED_ROUTE_IDS = {
     "lighteval_pr_1272",
     "inspect_ai_pr_4343",
     "failure_atlas_issue_154",
+}
+
+EXPECTED_MERGE_STATES = {
+    "lighteval_pr_1272": "blocked",
+    "inspect_ai_pr_4343": "behind",
 }
 
 
@@ -138,6 +144,11 @@ def main() -> int:
             errors.append(f"Route {route.get('id')} missing allowed next action")
         if not route.get("blocked_claims"):
             errors.append(f"Route {route.get('id')} missing blocked claims")
+        expected_merge_state = EXPECTED_MERGE_STATES.get(route.get("id"))
+        if expected_merge_state and route.get("merge_state") != expected_merge_state:
+            errors.append(
+                f"Route {route.get('id')} expected merge state {expected_merge_state}"
+            )
 
     if len(payload.get("routing_decision", [])) != 5:
         errors.append("Expected five routing decisions")

@@ -39,11 +39,13 @@ Live state: open.
 
 Live review state: review required.
 
-Live merge state: mergeable.
+Live merge state: blocked.
+
+Latest useful public signal: no comments or reviews found in the live pull request metadata.
 
 Current action: wait for maintainer review.
 
-Allowed next action: respond only if a maintainer comments or requests changes.
+Allowed next action: respond only if a maintainer comments or requests changes. Do not ask for review again.
 
 Blocked claim: merge status beyond the live pull request state, acceptance status, maintainer approval, release inclusion.
 
@@ -55,11 +57,13 @@ Live state: open.
 
 Live review state: review required.
 
-Live merge state: unknown.
+Live merge state: behind.
+
+Latest useful public signal: no comments or reviews found in the live pull request metadata.
 
 Current action: wait for maintainer review.
 
-Allowed next action: respond only if a maintainer comments or requests changes.
+Allowed next action: respond only if a maintainer comments, requests changes, or asks for a branch refresh. Do not push a branch refresh without explicit user approval.
 
 Blocked claim: merge status beyond the live pull request state, acceptance status, maintainer approval, release inclusion.
 
