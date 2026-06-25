@@ -106,10 +106,20 @@
       "layer": "Multilingual Medical Intelligence",
       "artifact": "plain clinical language gate",
       "input": "synthetic public explanation",
-      "output": "plain language review status, local drift triage report, and cross language ambiguity report",
-      "validator": "public wording cannot give diagnosis or treatment instruction, and rewrite plus cross language ambiguity reports must remain local fixture only",
+      "output": "plain language review status, local drift triage report, cross language ambiguity report, and negation audience report",
+      "validator": "public wording cannot give diagnosis or treatment instruction, and rewrite plus cross language reports must remain local fixture only",
       "risk_gate": "public wording must separate education from care",
-      "next_build": "cross language negation and audience role controls"
+      "next_build": "cross language scope anchor controls"
+    },
+    {
+      "id": "mia_mmi_003",
+      "layer": "Multilingual Medical Intelligence",
+      "artifact": "cross language negation and audience role controls",
+      "input": "synthetic Turkish English negation and audience role control rows",
+      "output": "negation inversion and audience role drift report",
+      "validator": "negation and audience role report must remain local fixture only and must block role shift or warning inversion signals",
+      "risk_gate": "translation must not invert warnings or shift who is being addressed",
+      "next_build": "cross language scope anchor controls"
     },
     {
       "id": "mia_atlas_001",

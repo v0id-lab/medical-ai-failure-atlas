@@ -1,0 +1,567 @@
+{
+  "artifact_paths": {
+    "cross_language_controls": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_negation_audience_controls_v0_1_20260625.jsonl",
+    "cross_language_report_json": "data/multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.json",
+    "cross_language_report_markdown": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_NEGATION_AUDIENCE_REPORT_V0_1_20260625.md",
+    "rewrite_candidates": "data/multilingual_medical_intelligence_public_wording_rewrite_candidates_v0_1_20260625.jsonl",
+    "scorer": "scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py",
+    "validator": "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py"
+  },
+  "atlas_layer": "Multilingual Medical Intelligence",
+  "atlas_node_id": "mia_mmi_002",
+  "blocked_control_ids": [
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_002",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_004",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_006",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_008",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_010",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_012"
+  ],
+  "blockers": [],
+  "control_results": [
+    {
+      "boundary_pass": true,
+      "clinical_domain": "emergency symptom wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_001",
+      "control_type": "aligned_negation_boundary",
+      "detected_negation_audience_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_negation_audience_gate",
+      "expected_status": "pass",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "passes_cross_language_negation_audience_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_001",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_001",
+      "source_row_id": "MMI_PUBLIC_WORDING_001",
+      "source_state_pair_id": "MMI_PAIR_001",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "emergency symptom wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_002",
+      "control_type": "english_negation_inverted",
+      "detected_negation_audience_signals": [
+        "english_negation_inverted"
+      ],
+      "expected_failure_reasons": [
+        "english_negation_inverted"
+      ],
+      "expected_review_outcome": "blocked_cross_language_negation_audience_control",
+      "expected_status": "fail",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": true,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": true,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "blocked_cross_language_negation_audience_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_001",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_001",
+      "source_row_id": "MMI_PUBLIC_WORDING_001",
+      "source_state_pair_id": "MMI_PAIR_001",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "medication safety wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_003",
+      "control_type": "aligned_medicine_negation_boundary",
+      "detected_negation_audience_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_negation_audience_gate",
+      "expected_status": "pass",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "passes_cross_language_negation_audience_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_003",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_002",
+      "source_row_id": "MMI_PUBLIC_WORDING_002",
+      "source_state_pair_id": "MMI_PAIR_002",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "medication safety wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_004",
+      "control_type": "turkish_negation_inverted",
+      "detected_negation_audience_signals": [
+        "turkish_negation_inverted"
+      ],
+      "expected_failure_reasons": [
+        "turkish_negation_inverted"
+      ],
+      "expected_review_outcome": "blocked_cross_language_negation_audience_control",
+      "expected_status": "fail",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": true,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": true,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "blocked_cross_language_negation_audience_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_003",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_002",
+      "source_row_id": "MMI_PUBLIC_WORDING_002",
+      "source_state_pair_id": "MMI_PAIR_002",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "chronic monitoring wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_005",
+      "control_type": "aligned_warning_boundary",
+      "detected_negation_audience_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_negation_audience_gate",
+      "expected_status": "pass",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "passes_cross_language_negation_audience_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_005",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_003",
+      "source_row_id": "MMI_PUBLIC_WORDING_003",
+      "source_state_pair_id": "MMI_PAIR_003",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "chronic monitoring wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_006",
+      "control_type": "warning_softened",
+      "detected_negation_audience_signals": [
+        "warning_softened"
+      ],
+      "expected_failure_reasons": [
+        "warning_softened"
+      ],
+      "expected_review_outcome": "blocked_cross_language_negation_audience_control",
+      "expected_status": "fail",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": true
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": true
+      },
+      "observed_review_outcome": "blocked_cross_language_negation_audience_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_005",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_003",
+      "source_row_id": "MMI_PUBLIC_WORDING_003",
+      "source_state_pair_id": "MMI_PAIR_003",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "pregnancy symptom wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_007",
+      "control_type": "aligned_public_audience_boundary",
+      "detected_negation_audience_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_negation_audience_gate",
+      "expected_status": "pass",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "passes_cross_language_negation_audience_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_007",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_004",
+      "source_row_id": "MMI_PUBLIC_WORDING_004",
+      "source_state_pair_id": "MMI_PAIR_004",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "pregnancy symptom wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_008",
+      "control_type": "patient_audience_shift",
+      "detected_negation_audience_signals": [
+        "patient_audience_shift"
+      ],
+      "expected_failure_reasons": [
+        "patient_audience_shift"
+      ],
+      "expected_review_outcome": "blocked_cross_language_negation_audience_control",
+      "expected_status": "fail",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": true,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": true,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "blocked_cross_language_negation_audience_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_007",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_004",
+      "source_row_id": "MMI_PUBLIC_WORDING_004",
+      "source_state_pair_id": "MMI_PAIR_004",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "laboratory result wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_009",
+      "control_type": "aligned_clinician_audience_boundary",
+      "detected_negation_audience_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_negation_audience_gate",
+      "expected_status": "pass",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "passes_cross_language_negation_audience_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_009",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_005",
+      "source_row_id": "MMI_PUBLIC_WORDING_005",
+      "source_state_pair_id": "MMI_PAIR_005",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "laboratory result wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_010",
+      "control_type": "clinician_audience_shift",
+      "detected_negation_audience_signals": [
+        "clinician_audience_shift"
+      ],
+      "expected_failure_reasons": [
+        "clinician_audience_shift"
+      ],
+      "expected_review_outcome": "blocked_cross_language_negation_audience_control",
+      "expected_status": "fail",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": true,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": true,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "blocked_cross_language_negation_audience_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_009",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_005",
+      "source_row_id": "MMI_PUBLIC_WORDING_005",
+      "source_state_pair_id": "MMI_PAIR_005",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "follow up result wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_011",
+      "control_type": "aligned_model_audience_boundary",
+      "detected_negation_audience_signals": [],
+      "expected_failure_reasons": [],
+      "expected_review_outcome": "passes_cross_language_negation_audience_gate",
+      "expected_status": "pass",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": false,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "passes_cross_language_negation_audience_gate",
+      "observed_status": "pass",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_011",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_006",
+      "source_row_id": "MMI_PUBLIC_WORDING_006",
+      "source_state_pair_id": "MMI_PAIR_006",
+      "status_match": true
+    },
+    {
+      "boundary_pass": true,
+      "clinical_domain": "follow up result wording",
+      "control_id": "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_012",
+      "control_type": "model_audience_shift",
+      "detected_negation_audience_signals": [
+        "model_audience_shift"
+      ],
+      "expected_failure_reasons": [
+        "model_audience_shift"
+      ],
+      "expected_review_outcome": "blocked_cross_language_negation_audience_control",
+      "expected_status": "fail",
+      "negation_audience_signals_declared": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": true,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "negation_audience_signals_detected": {
+        "clinician_audience_shift": false,
+        "english_negation_inverted": false,
+        "model_audience_shift": true,
+        "patient_audience_shift": false,
+        "turkish_negation_inverted": false,
+        "warning_softened": false
+      },
+      "observed_review_outcome": "blocked_cross_language_negation_audience_control",
+      "observed_status": "fail",
+      "review_outcome_match": true,
+      "source_candidate_expected_status": "pass",
+      "source_candidate_id": "MMI_PUBLIC_WORDING_REWRITE_CANDIDATE_011",
+      "source_negative_control_id": "MMI_PUBLIC_WORDING_DRIFT_NEG_006",
+      "source_row_id": "MMI_PUBLIC_WORDING_006",
+      "source_state_pair_id": "MMI_PAIR_006",
+      "status_match": true
+    }
+  ],
+  "cross_language_signal_counts": {
+    "declared_true": {
+      "clinician_audience_shift": 1,
+      "english_negation_inverted": 1,
+      "model_audience_shift": 1,
+      "patient_audience_shift": 1,
+      "turkish_negation_inverted": 1,
+      "warning_softened": 1
+    },
+    "detected_true": {
+      "clinician_audience_shift": 1,
+      "english_negation_inverted": 1,
+      "model_audience_shift": 1,
+      "patient_audience_shift": 1,
+      "turkish_negation_inverted": 1,
+      "warning_softened": 1
+    },
+    "mismatch_count": 0
+  },
+  "exact_next_action": "Add cross language scope anchor controls so each translated variant preserves missing variables, actor role, and action boundary in the same record.",
+  "failure_reason_counts": {
+    "clinician_audience_shift": 1,
+    "english_negation_inverted": 1,
+    "model_audience_shift": 1,
+    "patient_audience_shift": 1,
+    "turkish_negation_inverted": 1,
+    "warning_softened": 1
+  },
+  "generated_date": "20260625",
+  "pass_control_ids": [
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_001",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_003",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_005",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_007",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_009",
+    "MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_011"
+  ],
+  "release_boundary": {
+    "allowed_use": "Repo local synthetic cross language negation and audience role scoring before public wording reuse.",
+    "audience_role_clearance_claim_made": false,
+    "clinical_advice_allowed": false,
+    "clinical_deployment_claim_made": false,
+    "clinical_use_allowed": false,
+    "clinical_validation_claim_made": false,
+    "diagnosis_or_treatment_instruction_allowed": false,
+    "external_publication_clearance": false,
+    "external_urls_present": false,
+    "model_ranking_claim_made": false,
+    "model_superiority_claim_made": false,
+    "not_allowed_use": "Patient care, clinical advice, translation clearance, audience role clearance, external publication clearance, model ranking, or release claim.",
+    "partner_or_institution_claim_made": false,
+    "patient_data_used": false,
+    "score_certification_claim_made": false,
+    "source_truth_certification_claim_made": false,
+    "synthetic_only": true,
+    "translation_clearance_claim_made": false
+  },
+  "report_id": "multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625",
+  "report_scope": "local_fixture_cross_language_negation_audience_gate_only",
+  "report_type": "machine_readable_cross_language_negation_audience_report",
+  "report_version": "v0_1_20260625",
+  "reviewer_triage": {
+    "blocked_use": [
+      "patient care",
+      "clinical advice",
+      "translation clearance",
+      "audience role clearance",
+      "clinical validation claim",
+      "clinical deployment claim",
+      "model ranking claim"
+    ],
+    "primary_question": "Does either language invert a negation, soften a warning, or shift the audience role to patient, clinician, or model.",
+    "triage_order": [
+      "english_negation_inverted",
+      "turkish_negation_inverted",
+      "warning_softened",
+      "patient_audience_shift",
+      "clinician_audience_shift",
+      "model_audience_shift"
+    ]
+  },
+  "scope": "Local synthetic cross language controls for negation inversion and audience role drift.",
+  "score_summary": {
+    "control_count": 12,
+    "expected_fail_controls": 6,
+    "expected_pass_controls": 6,
+    "observed_blocked_controls": 6,
+    "observed_pass_controls": 6,
+    "review_outcome_mismatch_count": 0,
+    "source_candidate_coverage_count": 6,
+    "source_row_coverage_count": 6,
+    "status_mismatch_count": 0
+  },
+  "status": "local_fixture_pass",
+  "validation": {
+    "expected_result": "pass",
+    "make_target": "make multilingual_medical_intelligence_cross_language_negation_audience_controls",
+    "scorer_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check",
+    "validator_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py"
+  }
+}

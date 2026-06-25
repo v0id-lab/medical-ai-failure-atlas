@@ -580,7 +580,7 @@ def build_report(
             "not_clinical_validation": True,
         },
         "blockers": [],
-        "exact_next_action": "Add cross language negation and audience role controls so translations cannot invert warnings or shift who the wording addresses.",
+        "exact_next_action": "Add cross language scope anchor controls so each translated variant preserves missing variables, actor role, and action boundary in the same record.",
     }
 
 

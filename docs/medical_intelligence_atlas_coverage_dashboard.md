@@ -2,7 +2,7 @@
 
 Source data: `data/medical_intelligence_atlas_coverage_matrix_v0_1_20260625.json`
 
-Rows: 12
+Rows: 13
 
 Boundary: this dashboard uses the source coverage data only and does not assert clinical readiness.
 
@@ -20,7 +20,7 @@ Boundary: this dashboard uses the source coverage data only and does not assert 
 
 | Status | Rows |
 | --- | --- |
-| direct fixture coverage | 12 |
+| direct fixture coverage | 13 |
 
 ## Layer Coverage
 
@@ -31,7 +31,7 @@ Boundary: this dashboard uses the source coverage data only and does not assert 
 | Clinical Trajectory Engine | 2 | 2 |
 | Medical Intelligence Atlas | 2 | 2 |
 | Medical Reasoning Verifier | 2 | 2 |
-| Multilingual Medical Intelligence | 2 | 2 |
+| Multilingual Medical Intelligence | 3 | 3 |
 
 ## Open Gaps
 
@@ -51,5 +51,6 @@ No open gaps were found in the source data.
 | Agentic Medicine Sandbox | mia_ams_002 | direct fixture coverage | tool use boundary map | ["ams_event_fixtures", "sandbox_doc"] | ["blocked patient specific action", "source support release gate", "clinical use false boundary"] | ["scripts/validate_agentic_medicine_sandbox_event_fixtures_v0_1_20260625.py"] |
 | Multilingual Medical Intelligence | mia_mmi_001 | direct fixture coverage | language context lock | ["csl_fixture_normalized", "mmi_eval_rows", "mmi_paired_state_examples", "mmi_source_check_index", "stack_manifesto"] | ["language context field", "paired Turkish English synthetic state rows", "translation must not add certainty", "missing data and source support preservation"] | ["scripts/validate_multilingual_medical_intelligence_paired_state_examples_v0_1_20260625.py", "scripts/validate_clinical_state_language_v0_1.py", "scripts/validate_clinical_intelligence_stack_20260625.py"] |
 | Multilingual Medical Intelligence | mia_mmi_002 | direct fixture coverage | plain clinical language gate | ["mmi_paired_state_examples", "mmi_source_check_index", "mmi_source_check_doc", "mmi_public_wording_bank", "mmi_public_wording_index", "mmi_public_wording_drift_negative_controls", "mmi_public_wording_doc", "mmi_public_wording_drift_score_report", "mmi_public_wording_drift_score_report_doc", "mmi_public_wording_drift_score_report_builder", "mmi_public_wording_drift_score_report_validator", "mmi_public_wording_rewrite_candidates", "mmi_public_wording_rewrite_candidate_score_report", "mmi_public_wording_rewrite_candidate_score_report_doc", "mmi_public_wording_rewrite_candidate_scorer", "mmi_public_wording_rewrite_candidate_score_validator", "stack_manifesto", "mmi_cross_language_ambiguity_controls", "mmi_cross_language_ambiguity_report", "mmi_cross_language_ambiguity_report_doc", "mmi_cross_language_ambiguity_scorer", "mmi_cross_language_ambiguity_validator"] | ["eight synthetic public wording rows", "plain public wording boundary", "diagnosis and treatment instruction avoidance", "education separated from care", "missing data preservation", "source support preservation", "action boundary preservation across Turkish and English", "eight expected fail drift controls", "missing data removal failure checks", "source support weakening failure checks", "certainty increase failure checks", "patient facing instruction failure checks", "local drift signal count triage", "failure reason count triage", "source row coverage for expected fail controls", "source pair coverage for public wording rows", "rewrite candidate source row coverage", "rewrite candidate pass and blocked counts", "rewrite candidate drift signal checks", "rewrite candidate external publication clearance boundary", "score certification absence boundary", "cross language ambiguity controls", "English and Turkish ASCII certainty shifts", "source support shift detection", "missing data softened detection", "action boundary shifted detection", "translation review removed detection", "translation clearance absence boundary"] | ["scripts/validate_multilingual_medical_intelligence_paired_state_examples_v0_1_20260625.py", "scripts/validate_multilingual_medical_intelligence_public_wording_bank_v0_1_20260625.py", "scripts/build_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py", "scripts/validate_multilingual_medical_intelligence_public_wording_drift_score_report_v0_1_20260625.py", "scripts/score_multilingual_medical_intelligence_rewrite_candidates_v0_1_20260625.py", "scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py", "scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py", "scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py"] |
-| Medical Intelligence Atlas | mia_atlas_001 | direct fixture coverage | node registry | ["atlas_registry", "stack_config", "atlas_markdown"] | ["twelve atlas nodes", "input output validator risk gate and next build fields", "stack layer alignment"] | ["scripts/validate_medical_intelligence_atlas_v0_1_20260625.py", "scripts/validate_clinical_intelligence_stack_20260625.py"] |
+| Multilingual Medical Intelligence | mia_mmi_003 | direct fixture coverage | cross language negation and audience role controls | ["mmi_cross_language_negation_audience_controls", "mmi_cross_language_negation_audience_report", "mmi_cross_language_negation_audience_report_doc", "mmi_cross_language_negation_audience_scorer", "mmi_cross_language_negation_audience_validator", "mmi_public_wording_rewrite_candidates", "mmi_cross_language_ambiguity_report", "stack_manifesto"] | ["twelve synthetic negation and audience role controls", "six pass controls", "six blocked controls", "English negation inversion detection", "Turkish ASCII negation inversion detection", "warning softened detection", "patient audience shift detection", "clinician audience shift detection", "model audience shift detection", "translation clearance absence boundary", "audience role clearance absence boundary"] | ["scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py", "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py"] |
+| Medical Intelligence Atlas | mia_atlas_001 | direct fixture coverage | node registry | ["atlas_registry", "stack_config", "atlas_markdown"] | ["thirteen atlas nodes", "input output validator risk gate and next build fields", "stack layer alignment"] | ["scripts/validate_medical_intelligence_atlas_v0_1_20260625.py", "scripts/validate_clinical_intelligence_stack_20260625.py"] |
 | Medical Intelligence Atlas | mia_atlas_002 | direct fixture coverage | release readiness map | ["atlas_registry", "atlas_markdown", "stack_config"] | ["ready blocked and needs source check release states", "validator bounded release status", "machine readable coverage matrix"] | ["scripts/validate_medical_intelligence_atlas_v0_1_20260625.py"] |

@@ -31,7 +31,12 @@
     "cross_language_ambiguity_report_json": "data/multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.json",
     "cross_language_ambiguity_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_AMBIGUITY_REPORT_V0_1_20260625.md",
     "cross_language_ambiguity_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py",
-    "cross_language_ambiguity_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py"
+    "cross_language_ambiguity_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py",
+    "cross_language_negation_audience_controls": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_negation_audience_controls_v0_1_20260625.jsonl",
+    "cross_language_negation_audience_report_json": "data/multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.json",
+    "cross_language_negation_audience_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_NEGATION_AUDIENCE_REPORT_V0_1_20260625.md",
+    "cross_language_negation_audience_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py",
+    "cross_language_negation_audience_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -60,7 +65,14 @@
     "expected_cross_language_ambiguity_control_count": 12,
     "expected_cross_language_ambiguity_pass_controls": 6,
     "expected_cross_language_ambiguity_blocked_controls": 6,
-    "expected_cross_language_ambiguity_signal_types": 6
+    "expected_cross_language_ambiguity_signal_types": 6,
+    "cross_language_negation_audience_score_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check",
+    "cross_language_negation_audience_validation_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py",
+    "expected_cross_language_negation_audience_status": "local_fixture_pass",
+    "expected_cross_language_negation_audience_control_count": 12,
+    "expected_cross_language_negation_audience_pass_controls": 6,
+    "expected_cross_language_negation_audience_blocked_controls": 6,
+    "expected_cross_language_negation_audience_signal_types": 6
   },
   "safety_boundaries": {
     "synthetic_only": true,
@@ -96,7 +108,13 @@
       "Turkish ASCII certainty shift detection",
       "source support shift detection",
       "missing data softening detection",
-      "translation review removal detection"
+      "translation review removal detection",
+      "cross language negation inversion control",
+      "warning softening detection",
+      "patient audience shift detection",
+      "clinician audience shift detection",
+      "model audience shift detection",
+      "audience role clearance absence"
     ],
     "not_covered": [
       "clinical validation",
@@ -144,6 +162,20 @@
       "action boundary shifted signal",
       "translation review removed signal",
       "translation clearance absence",
+      "external publication clearance absence"
+    ],
+    "cross_language_negation_audience_report": [
+      "twelve synthetic cross language negation and audience role controls",
+      "six pass controls",
+      "six blocked controls",
+      "English negation inversion signal",
+      "Turkish ASCII negation inversion signal",
+      "warning softened signal",
+      "patient audience shift signal",
+      "clinician audience shift signal",
+      "model audience shift signal",
+      "translation clearance absence",
+      "audience role clearance absence",
       "external publication clearance absence"
     ]
   },
@@ -307,7 +339,7 @@
     }
   ],
   "next_build_suggestion": {
-    "suggested_action": "Add cross language negation and audience role controls so translations cannot invert warnings or shift who the wording addresses.",
+    "suggested_action": "Add cross language scope anchor controls so each translated variant preserves missing variables, actor role, and action boundary in the same record.",
     "required_before_public_use": [
       "local row count check",
       "ASCII text check",
@@ -325,7 +357,10 @@
       "source truth certification absence check",
       "cross language ambiguity controls check",
       "cross language ambiguity report freshness check",
-      "translation clearance absence check"
+      "translation clearance absence check",
+      "cross language negation audience controls check",
+      "cross language negation audience report freshness check",
+      "audience role clearance absence check"
     ]
   }
 }

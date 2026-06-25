@@ -33,26 +33,26 @@ REWRITE_CANDIDATES = (
 CROSS_LANGUAGE_CONTROLS = (
     ROOT
     / "data"
-    / "multilingual_medical_intelligence_rewrite_candidate_cross_language_ambiguity_controls_v0_1_20260625.jsonl"
+    / "multilingual_medical_intelligence_rewrite_candidate_cross_language_negation_audience_controls_v0_1_20260625.jsonl"
 )
 OUTPUT_JSON = (
     ROOT
     / "data"
-    / "multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.json"
+    / "multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.json"
 )
 OUTPUT_MARKDOWN = (
     ROOT
     / "docs"
-    / "MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_AMBIGUITY_REPORT_V0_1_20260625.md"
+    / "MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_NEGATION_AUDIENCE_REPORT_V0_1_20260625.md"
 )
 
-CROSS_LANGUAGE_SIGNAL_ORDER = [
-    "english_added_certainty",
-    "turkish_added_certainty",
-    "source_support_shift",
-    "missing_data_softened",
-    "action_boundary_shifted",
-    "translation_review_removed",
+SIGNAL_ORDER = [
+    "english_negation_inverted",
+    "turkish_negation_inverted",
+    "warning_softened",
+    "patient_audience_shift",
+    "clinician_audience_shift",
+    "model_audience_shift",
 ]
 
 REQUIRED_CONTROL_FIELDS = {
@@ -66,29 +66,29 @@ REQUIRED_CONTROL_FIELDS = {
     "source_negative_control_id",
     "language_pair",
     "clinical_domain",
-    "ambiguity_type",
+    "control_type",
     "english_text",
     "turkish_ascii_text",
     "expected_status",
     "expected_failure_reasons",
-    "ambiguity_signals",
+    "negation_audience_signals",
     "expected_review_outcome",
     "release_boundary",
 }
 
-ALLOWED_AMBIGUITY_TYPES = {
-    "aligned_missing_data_boundary",
-    "english_added_certainty",
-    "aligned_medicine_context_boundary",
-    "turkish_added_certainty",
-    "aligned_source_support_boundary",
-    "source_support_shift",
-    "aligned_sensitive_context_boundary",
-    "missing_data_softened",
-    "aligned_action_boundary",
-    "action_boundary_shifted",
-    "aligned_translation_review_boundary",
-    "translation_review_removed",
+ALLOWED_CONTROL_TYPES = {
+    "aligned_negation_boundary",
+    "english_negation_inverted",
+    "aligned_medicine_negation_boundary",
+    "turkish_negation_inverted",
+    "aligned_warning_boundary",
+    "warning_softened",
+    "aligned_public_audience_boundary",
+    "patient_audience_shift",
+    "aligned_clinician_audience_boundary",
+    "clinician_audience_shift",
+    "aligned_model_audience_boundary",
+    "model_audience_shift",
 }
 
 EXPECTED_BOUNDARY_FLAGS = {
@@ -99,35 +99,54 @@ EXPECTED_BOUNDARY_FLAGS = {
     "external_urls_present": False,
 }
 
-ENGLISH_CERTAINTY_RE = re.compile(
-    r"\b(confirmed|clearly|clear enough by itself|enough by itself|certain)\b",
+ENGLISH_NEGATION_RE = re.compile(
+    r"\b(can prove|can rule out|is enough to prove|is enough to rule out|shows no missing)\b",
     re.IGNORECASE,
 )
-TURKISH_CERTAINTY_RE = re.compile(
-    r"\b(kesin|dogrulanmis|tek basina|zararsiz)\b",
+TURKISH_NEGATION_RE = re.compile(
+    r"\b(kanitlar|dislar|yeterlidir|gerek olmadigini|eksik baglam olmadigini)\b",
     re.IGNORECASE,
 )
-SOURCE_SUPPORT_SHIFT_RE = re.compile(
-    r"\b(source support is not needed|source support not needed|without source support)\b|"
-    r"\b(kaynak destegi gerekmez|kaynak destegi olmadan|kaynak gerekmez)\b",
+WARNING_SOFTENED_RE = re.compile(
+    r"\b(low concern|can wait|not urgent)\b|\b(dusuk onemli|dusuk onem|bekleyebilir|acil degil)\b",
     re.IGNORECASE,
 )
-MISSING_DATA_SOFTENED_RE = re.compile(
-    r"\b(details are optional|missing details are minor|missing measurements are minor|missing context is optional)\b|"
-    r"\b(eksik ayrintilar onemsiz|ek veriye gerek yok|olcum baglami .*gerekli degil)\b",
+PATIENT_AUDIENCE_RE = re.compile(
+    r"\b(patient reader|reader can decide|patient can decide)\b|\b(hasta okuyucu|okuyucu karar verebilir)\b",
     re.IGNORECASE,
 )
-ACTION_BOUNDARY_SHIFTED_RE = re.compile(
-    r"\b(you should|wait at home|plan should change|should change now)\b|"
-    r"\b(evde beklemen|planin .*degismesi gerektigini|simdi degismesi)\b",
+CLINICIAN_AUDIENCE_RE = re.compile(
+    r"\b(turns .* clinician handoff|clinician reader can close)\b|"
+    r"\b(hekim okuyucu devrine cevirir|hekim .*kapatabilir)\b",
     re.IGNORECASE,
 )
-TRANSLATION_REVIEW_REMOVED_RE = re.compile(
-    r"\b(can be used without review|without review|review is not needed)\b|"
-    r"\b(incelemesiz kullanilabilir|incelemesiz|inceleme gerekmez)\b",
+MODEL_AUDIENCE_RE = re.compile(
+    r"\b(makes the model the audience|model can choose|model can decide)\b|"
+    r"\b(modeli hedef kitle yapar|model .*secer)\b",
     re.IGNORECASE,
 )
 
+EXTERNAL_URL_RE = re.compile(r"\b(?:https?://|www\.)", re.IGNORECASE)
+EMAIL_RE = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.IGNORECASE)
+PHONE_CANDIDATE_RE = re.compile(r"\+?\d[\d .()/\-]{8,}\d")
+PRIVATE_FIELD_NAMES = {
+    "date_of_birth",
+    "dob",
+    "email",
+    "full_name",
+    "home_address",
+    "medical_record_number",
+    "mrn",
+    "national_id",
+    "passport",
+    "patient_id",
+    "patient_name",
+    "phone",
+    "record_number",
+    "social_security_number",
+    "tc_kimlik",
+    "tckn",
+}
 FORBIDDEN_PHRASES = {
     "approved wording",
     "clinical validation complete",
@@ -152,28 +171,6 @@ FORBIDDEN_PHRASES = {
     "institutional support confirmed",
     "payment completed",
     "terms accepted",
-}
-
-EXTERNAL_URL_RE = re.compile(r"\b(?:https?://|www\.)", re.IGNORECASE)
-EMAIL_RE = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.IGNORECASE)
-PHONE_CANDIDATE_RE = re.compile(r"\+?\d[\d .()/\-]{8,}\d")
-PRIVATE_FIELD_NAMES = {
-    "date_of_birth",
-    "dob",
-    "email",
-    "full_name",
-    "home_address",
-    "medical_record_number",
-    "mrn",
-    "national_id",
-    "passport",
-    "patient_id",
-    "patient_name",
-    "phone",
-    "record_number",
-    "social_security_number",
-    "tc_kimlik",
-    "tckn",
 }
 
 
@@ -221,30 +218,30 @@ def iter_keys(value: Any, path: str = "") -> list[tuple[str, str]]:
     return []
 
 
-def detected_cross_language_signals(row: dict[str, Any]) -> dict[str, bool]:
+def detected_signals(row: dict[str, Any]) -> dict[str, bool]:
     english_text = str(row.get("english_text", ""))
     turkish_text = str(row.get("turkish_ascii_text", ""))
     joined = f"{english_text} {turkish_text}"
     return {
-        "english_added_certainty": bool(ENGLISH_CERTAINTY_RE.search(english_text)),
-        "turkish_added_certainty": bool(TURKISH_CERTAINTY_RE.search(turkish_text)),
-        "source_support_shift": bool(SOURCE_SUPPORT_SHIFT_RE.search(joined)),
-        "missing_data_softened": bool(MISSING_DATA_SOFTENED_RE.search(joined)),
-        "action_boundary_shifted": bool(ACTION_BOUNDARY_SHIFTED_RE.search(joined)),
-        "translation_review_removed": bool(TRANSLATION_REVIEW_REMOVED_RE.search(joined)),
+        "english_negation_inverted": bool(ENGLISH_NEGATION_RE.search(english_text)),
+        "turkish_negation_inverted": bool(TURKISH_NEGATION_RE.search(turkish_text)),
+        "warning_softened": bool(WARNING_SOFTENED_RE.search(joined)),
+        "patient_audience_shift": bool(PATIENT_AUDIENCE_RE.search(joined)),
+        "clinician_audience_shift": bool(CLINICIAN_AUDIENCE_RE.search(joined)),
+        "model_audience_shift": bool(MODEL_AUDIENCE_RE.search(joined)),
     }
 
 
 def signal_object(signals: list[str]) -> dict[str, bool]:
     signal_set = set(signals)
-    return {signal: signal in signal_set for signal in CROSS_LANGUAGE_SIGNAL_ORDER}
+    return {signal: signal in signal_set for signal in SIGNAL_ORDER}
 
 
 def true_signals(row: dict[str, Any]) -> list[str]:
-    signals = row.get("ambiguity_signals")
+    signals = row.get("negation_audience_signals")
     if not isinstance(signals, dict):
         return []
-    return [signal for signal in CROSS_LANGUAGE_SIGNAL_ORDER if signals.get(signal) is True]
+    return [signal for signal in SIGNAL_ORDER if signals.get(signal) is True]
 
 
 def validate_control_rows(
@@ -255,7 +252,7 @@ def validate_control_rows(
     candidates_by_id = {str(row.get("candidate_id")): row for row in rewrite_candidates}
 
     if len(controls) != 12:
-        errors.append(f"Expected 12 cross language ambiguity controls, found {len(controls)}")
+        errors.append(f"Expected 12 cross language negation audience controls, found {len(controls)}")
 
     seen: set[str] = set()
     pass_count = 0
@@ -272,9 +269,9 @@ def validate_control_rows(
             continue
 
         if not isinstance(control_id, str) or not re.fullmatch(
-            r"MMI_CROSS_LANGUAGE_AMBIGUITY_\d{3}", control_id
+            r"MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_\d{3}", control_id
         ):
-            errors.append(f"{label}: control_id must match MMI_CROSS_LANGUAGE_AMBIGUITY_NNN")
+            errors.append(f"{label}: control_id must match MMI_CROSS_LANGUAGE_NEGATION_AUDIENCE_NNN")
         elif control_id in seen:
             errors.append(f"{label}: duplicate control_id")
         else:
@@ -288,8 +285,8 @@ def validate_control_rows(
             errors.append(f"{label}: atlas_node_id must be {ATLAS_NODE_ID}")
         if row.get("language_pair") != "Turkish English":
             errors.append(f"{label}: language_pair must be Turkish English")
-        if row.get("ambiguity_type") not in ALLOWED_AMBIGUITY_TYPES:
-            errors.append(f"{label}: ambiguity_type is not allowed: {row.get('ambiguity_type')}")
+        if row.get("control_type") not in ALLOWED_CONTROL_TYPES:
+            errors.append(f"{label}: control_type is not allowed: {row.get('control_type')}")
 
         candidate = candidates_by_id.get(str(row.get("source_candidate_id")))
         if candidate is None:
@@ -310,28 +307,26 @@ def validate_control_rows(
         expected_status = row.get("expected_status")
         if expected_status == "pass":
             pass_count += 1
-            if row.get("expected_review_outcome") != "passes_cross_language_ambiguity_gate":
+            if row.get("expected_review_outcome") != "passes_cross_language_negation_audience_gate":
                 errors.append(f"{label}: pass control review outcome mismatch")
         elif expected_status == "fail":
             fail_count += 1
-            if row.get("expected_review_outcome") != "blocked_cross_language_ambiguity_control":
+            if row.get("expected_review_outcome") != "blocked_cross_language_negation_audience_control":
                 errors.append(f"{label}: fail control review outcome mismatch")
         else:
             errors.append(f"{label}: expected_status must be pass or fail")
 
-        declared_signals = row.get("ambiguity_signals")
+        declared_signals = row.get("negation_audience_signals")
         expected_reasons = row.get("expected_failure_reasons")
-        if not isinstance(declared_signals, dict) or set(declared_signals) != set(
-            CROSS_LANGUAGE_SIGNAL_ORDER
-        ):
-            errors.append(f"{label}: ambiguity_signals must exactly match required signal keys")
+        if not isinstance(declared_signals, dict) or set(declared_signals) != set(SIGNAL_ORDER):
+            errors.append(f"{label}: negation_audience_signals must exactly match required signal keys")
             declared_signals = {}
         if not isinstance(expected_reasons, list):
             errors.append(f"{label}: expected_failure_reasons must be a list")
             expected_reasons = []
         else:
             for reason in expected_reasons:
-                if reason not in CROSS_LANGUAGE_SIGNAL_ORDER:
+                if reason not in SIGNAL_ORDER:
                     errors.append(f"{label}: unsupported expected failure reason: {reason}")
                 if declared_signals.get(reason) is not True:
                     errors.append(f"{label}: expected reason must have true signal: {reason}")
@@ -341,7 +336,7 @@ def validate_control_rows(
         if expected_status == "fail" and not expected_reasons:
             errors.append(f"{label}: fail controls must include failure reasons")
 
-        observed = detected_cross_language_signals(row)
+        observed = detected_signals(row)
         for signal, expected in declared_signals.items():
             if bool(expected) != bool(observed.get(signal)):
                 errors.append(f"{label}: observed signal mismatch: {signal}")
@@ -363,7 +358,7 @@ def validate_control_rows(
         errors.append(f"Expected 6 fail controls, found {fail_count}")
     if len(covered_candidate_ids) != 6:
         errors.append(
-            f"Expected cross language controls to cover 6 source candidates, found {len(covered_candidate_ids)}"
+            f"Expected cross language negation audience controls to cover 6 source candidates, found {len(covered_candidate_ids)}"
         )
 
     return errors
@@ -384,11 +379,7 @@ def build_report(
     for control in controls:
         candidate = candidates_by_id[str(control["source_candidate_id"])]
         declared = true_signals(control)
-        detected = [
-            signal
-            for signal, value in detected_cross_language_signals(control).items()
-            if value is True
-        ]
+        detected = [signal for signal, value in detected_signals(control).items() if value is True]
         expected_reasons = [str(reason) for reason in control["expected_failure_reasons"]]
         declared_counts.update(declared)
         detected_counts.update(detected)
@@ -396,9 +387,9 @@ def build_report(
 
         observed_status = "fail" if detected else "pass"
         review_outcome = (
-            "blocked_cross_language_ambiguity_control"
+            "blocked_cross_language_negation_audience_control"
             if observed_status == "fail"
-            else "passes_cross_language_ambiguity_gate"
+            else "passes_cross_language_negation_audience_gate"
         )
         if observed_status == "pass":
             pass_controls.append(str(control["control_id"]))
@@ -413,7 +404,7 @@ def build_report(
                 "source_state_pair_id": control["source_state_pair_id"],
                 "source_negative_control_id": control["source_negative_control_id"],
                 "clinical_domain": control["clinical_domain"],
-                "ambiguity_type": control["ambiguity_type"],
+                "control_type": control["control_type"],
                 "expected_status": control["expected_status"],
                 "observed_status": observed_status,
                 "expected_review_outcome": control["expected_review_outcome"],
@@ -421,36 +412,36 @@ def build_report(
                 "status_match": control["expected_status"] == observed_status,
                 "review_outcome_match": control["expected_review_outcome"] == review_outcome,
                 "expected_failure_reasons": expected_reasons,
-                "detected_ambiguity_signals": detected,
-                "ambiguity_signals_declared": signal_object(declared),
-                "ambiguity_signals_detected": signal_object(detected),
+                "detected_negation_audience_signals": detected,
+                "negation_audience_signals_declared": signal_object(declared),
+                "negation_audience_signals_detected": signal_object(detected),
                 "source_candidate_expected_status": candidate["expected_status"],
                 "boundary_pass": True,
             }
         )
 
     return {
-        "report_id": "multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625",
-        "report_type": "machine_readable_cross_language_ambiguity_report",
+        "report_id": "multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625",
+        "report_type": "machine_readable_cross_language_negation_audience_report",
         "report_version": VERSION,
         "generated_date": DATE_TOKEN,
         "atlas_layer": ATLAS_LAYER,
         "atlas_node_id": ATLAS_NODE_ID,
         "status": "local_fixture_pass",
-        "report_scope": "local_fixture_cross_language_ambiguity_gate_only",
-        "scope": "Local synthetic cross language ambiguity controls for rewrite candidate public wording.",
+        "report_scope": "local_fixture_cross_language_negation_audience_gate_only",
+        "scope": "Local synthetic cross language controls for negation inversion and audience role drift.",
         "artifact_paths": {
             "rewrite_candidates": repo_relative(REWRITE_CANDIDATES),
             "cross_language_controls": repo_relative(CROSS_LANGUAGE_CONTROLS),
             "cross_language_report_json": repo_relative(OUTPUT_JSON),
             "cross_language_report_markdown": repo_relative(OUTPUT_MARKDOWN),
-            "scorer": "scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py",
-            "validator": "scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py",
+            "scorer": "scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py",
+            "validator": "scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py",
         },
         "validation": {
-            "scorer_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check",
-            "validator_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py",
-            "make_target": "make multilingual_medical_intelligence_cross_language_ambiguity_controls",
+            "scorer_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check",
+            "validator_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py",
+            "make_target": "make multilingual_medical_intelligence_cross_language_negation_audience_controls",
             "expected_result": "pass",
         },
         "score_summary": {
@@ -467,38 +458,34 @@ def build_report(
             ),
         },
         "cross_language_signal_counts": {
-            "declared_true": {
-                signal: declared_counts.get(signal, 0) for signal in CROSS_LANGUAGE_SIGNAL_ORDER
-            },
-            "detected_true": {
-                signal: detected_counts.get(signal, 0) for signal in CROSS_LANGUAGE_SIGNAL_ORDER
-            },
+            "declared_true": {signal: declared_counts.get(signal, 0) for signal in SIGNAL_ORDER},
+            "detected_true": {signal: detected_counts.get(signal, 0) for signal in SIGNAL_ORDER},
             "mismatch_count": sum(
                 1
                 for result in results
-                if result["ambiguity_signals_declared"] != result["ambiguity_signals_detected"]
+                if result["negation_audience_signals_declared"]
+                != result["negation_audience_signals_detected"]
             ),
         },
-        "failure_reason_counts": {
-            signal: failure_counts.get(signal, 0) for signal in CROSS_LANGUAGE_SIGNAL_ORDER
-        },
+        "failure_reason_counts": {signal: failure_counts.get(signal, 0) for signal in SIGNAL_ORDER},
         "control_results": results,
         "pass_control_ids": pass_controls,
         "blocked_control_ids": blocked_controls,
         "reviewer_triage": {
-            "primary_question": "Does either language variant add certainty, weaken source support, soften missing data, shift action boundary, or remove translation review.",
+            "primary_question": "Does either language invert a negation, soften a warning, or shift the audience role to patient, clinician, or model.",
             "triage_order": [
-                "action_boundary_shifted",
-                "translation_review_removed",
-                "source_support_shift",
-                "missing_data_softened",
-                "english_added_certainty",
-                "turkish_added_certainty",
+                "english_negation_inverted",
+                "turkish_negation_inverted",
+                "warning_softened",
+                "patient_audience_shift",
+                "clinician_audience_shift",
+                "model_audience_shift",
             ],
             "blocked_use": [
                 "patient care",
                 "clinical advice",
                 "translation clearance",
+                "audience role clearance",
                 "clinical validation claim",
                 "clinical deployment claim",
                 "model ranking claim",
@@ -511,6 +498,7 @@ def build_report(
             "clinical_advice_allowed": False,
             "external_urls_present": False,
             "translation_clearance_claim_made": False,
+            "audience_role_clearance_claim_made": False,
             "diagnosis_or_treatment_instruction_allowed": False,
             "clinical_validation_claim_made": False,
             "clinical_deployment_claim_made": False,
@@ -520,8 +508,8 @@ def build_report(
             "score_certification_claim_made": False,
             "source_truth_certification_claim_made": False,
             "external_publication_clearance": False,
-            "allowed_use": "Repo local synthetic cross language ambiguity scoring before public wording reuse.",
-            "not_allowed_use": "Patient care, clinical advice, translation clearance, external publication clearance, model ranking, or release claim.",
+            "allowed_use": "Repo local synthetic cross language negation and audience role scoring before public wording reuse.",
+            "not_allowed_use": "Patient care, clinical advice, translation clearance, audience role clearance, external publication clearance, model ranking, or release claim.",
         },
         "blockers": [],
         "exact_next_action": "Add cross language scope anchor controls so each translated variant preserves missing variables, actor role, and action boundary in the same record.",
@@ -535,7 +523,7 @@ def markdown_list(items: list[str]) -> list[str]:
 def render_markdown(report: dict[str, Any]) -> str:
     summary = report["score_summary"]
     lines = [
-        "# Multilingual Medical Intelligence Cross Language Ambiguity Controls v0.1",
+        "# Multilingual Medical Intelligence Cross Language Negation Audience Controls v0.1",
         "",
         f"Date: {DATE}",
         "",
@@ -543,9 +531,11 @@ def render_markdown(report: dict[str, Any]) -> str:
         "",
         "## Purpose",
         "",
-        "This report checks whether English and Turkish ASCII variants keep the same uncertainty, missing data, source support, action boundary, and translation review boundary.",
+        "This report checks whether English and Turkish ASCII variants preserve negation boundaries and audience role boundaries.",
         "",
-        "It blocks cross language ambiguity when one language adds certainty, weakens source support, softens missing data, shifts action boundary, or removes translation review.",
+        "It blocks cross language negation inversion when one language turns cannot prove into can prove, turns does not rule out into can rule out, or softens a warning.",
+        "",
+        "It also blocks audience role drift when a public wording row shifts toward a patient reader, clinician reader, or model route owner.",
         "",
         "The controls use synthetic rows only. They contain no patient data and make no diagnosis, treatment instruction, clinical validation, clinical deployment, model ranking, partner, or institutional claim.",
         "",
@@ -566,7 +556,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         "## Cross Language Signal Counts",
         "",
     ]
-    for index, signal in enumerate(CROSS_LANGUAGE_SIGNAL_ORDER, 1):
+    for index, signal in enumerate(SIGNAL_ORDER, 1):
         lines.append(
             f"{index}. `{signal}`: declared {report['cross_language_signal_counts']['declared_true'][signal]}, detected {report['cross_language_signal_counts']['detected_true'][signal]}."
         )
@@ -584,17 +574,17 @@ def render_markdown(report: dict[str, Any]) -> str:
             "",
             "## Release Boundary",
             "",
-            "This report supports repo local review only. It does not clear text for patient care, clinical advice, translation clearance, clinical validation, clinical deployment, model comparison, institutional use, or external publication.",
+            "This report supports repo local review only. It does not clear text for patient care, clinical advice, translation clearance, audience role clearance, clinical validation, clinical deployment, model comparison, institutional use, or external publication.",
             "",
-            "Boundary note: not score certification, not source truth certification, not clinical validation, not clinical deployment, not translation clearance, and not external publication clearance.",
+            "Boundary note: not score certification, not source truth certification, not clinical validation, not clinical deployment, not translation clearance, not audience role clearance, and not external publication clearance.",
             "",
             "## Validation Command",
             "",
-            "`make multilingual_medical_intelligence_cross_language_ambiguity_controls`",
+            "`make multilingual_medical_intelligence_cross_language_negation_audience_controls`",
             "",
             "Direct check:",
             "",
-            "`python3 scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check`",
+            "`python3 scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check`",
             "",
             "## Exact Next Action",
             "",
@@ -632,12 +622,12 @@ def validate_report(report: dict[str, Any]) -> list[str]:
         errors.append("cross_language_signal_counts must be an object")
     else:
         for group in ("declared_true", "detected_true"):
-            if set(counts.get(group, {})) != set(CROSS_LANGUAGE_SIGNAL_ORDER):
+            if set(counts.get(group, {})) != set(SIGNAL_ORDER):
                 errors.append(f"cross_language_signal_counts.{group} must contain required signals")
         if counts.get("mismatch_count") != 0:
             errors.append("cross_language_signal_counts.mismatch_count must be 0")
 
-    if set(report.get("failure_reason_counts", {})) != set(CROSS_LANGUAGE_SIGNAL_ORDER):
+    if set(report.get("failure_reason_counts", {})) != set(SIGNAL_ORDER):
         errors.append("failure_reason_counts must contain exactly required signals")
 
     results = report.get("control_results")
@@ -669,6 +659,7 @@ def validate_report(report: dict[str, Any]) -> list[str]:
             "clinical_advice_allowed": False,
             "external_urls_present": False,
             "translation_clearance_claim_made": False,
+            "audience_role_clearance_claim_made": False,
             "diagnosis_or_treatment_instruction_allowed": False,
             "clinical_validation_claim_made": False,
             "clinical_deployment_claim_made": False,
@@ -708,20 +699,21 @@ def validate_report(report: dict[str, Any]) -> list[str]:
 def validate_markdown(markdown_text: str) -> list[str]:
     errors: list[str] = []
     required_phrases = [
-        "cross language ambiguity",
+        "cross language negation inversion",
         "English and Turkish ASCII variants",
-        "adds certainty",
-        "weakens source support",
-        "softens missing data",
-        "shifts action boundary",
-        "removes translation review",
+        "preserve negation boundaries",
+        "audience role boundaries",
+        "patient reader",
+        "clinician reader",
+        "model route owner",
         "not score certification",
         "not source truth certification",
         "not clinical validation",
         "not clinical deployment",
         "not translation clearance",
+        "not audience role clearance",
         "not external publication clearance",
-        "make multilingual_medical_intelligence_cross_language_ambiguity_controls",
+        "make multilingual_medical_intelligence_cross_language_negation_audience_controls",
     ]
     lower = markdown_text.lower()
     for phrase in required_phrases:
@@ -741,7 +733,7 @@ def run(check: bool) -> int:
         if not path.exists():
             errors.append(f"missing required file: {repo_relative(path)}")
     if errors:
-        print("FAIL cross language ambiguity controls")
+        print("FAIL cross language negation audience controls")
         for error in errors:
             print(f"- {error}")
         return 1
@@ -750,7 +742,7 @@ def run(check: bool) -> int:
         rewrite_candidates = load_jsonl(REWRITE_CANDIDATES)
         controls = load_jsonl(CROSS_LANGUAGE_CONTROLS)
     except ValueError as error:
-        print(f"FAIL cross language ambiguity controls: {error}")
+        print(f"FAIL cross language negation audience controls: {error}")
         return 1
 
     errors.extend(validate_control_rows(controls, rewrite_candidates))
@@ -770,13 +762,13 @@ def run(check: bool) -> int:
             errors.append(f"stale Markdown report: {repo_relative(OUTPUT_MARKDOWN)}")
 
     if errors:
-        print("FAIL cross language ambiguity controls")
+        print("FAIL cross language negation audience controls")
         for error in errors:
             print(f"- {error}")
         return 1
 
     if check:
-        print("PASS cross language ambiguity controls")
+        print("PASS cross language negation audience controls")
         print(f"controls={report['score_summary']['control_count']}")
         print(f"blocked_controls={report['score_summary']['observed_blocked_controls']}")
         print(f"pass_controls={report['score_summary']['observed_pass_controls']}")

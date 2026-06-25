@@ -151,13 +151,27 @@ Artifact: plain clinical language gate
 
 Input: synthetic public explanation
 
-Output: plain language review status, local drift triage report, and cross language ambiguity report
+Output: plain language review status, local drift triage report, cross language ambiguity report, and negation audience report
 
-Validator: public wording cannot give diagnosis or treatment instruction, and rewrite plus cross language ambiguity reports must remain local fixture only
+Validator: public wording cannot give diagnosis or treatment instruction, and rewrite plus cross language reports must remain local fixture only
 
 Risk gate: public wording must separate education from care
 
-Next build: cross language negation and audience role controls
+Next build: cross language scope anchor controls
+
+### mia_mmi_003 Multilingual Medical Intelligence
+
+Artifact: cross language negation and audience role controls
+
+Input: synthetic Turkish English negation and audience role control rows
+
+Output: negation inversion and audience role drift report
+
+Validator: negation and audience role report must remain local fixture only and must block role shift or warning inversion signals
+
+Risk gate: translation must not invert warnings or shift who is being addressed
+
+Next build: cross language scope anchor controls
 
 ### mia_atlas_001 Medical Intelligence Atlas
 

@@ -22,6 +22,8 @@ validate:
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
 	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
@@ -256,6 +258,8 @@ clinical_intelligence_stack:
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_source_check
 multilingual_medical_intelligence_source_check:
@@ -271,6 +275,8 @@ multilingual_medical_intelligence_public_wording_bank:
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py
 	$(PYTHON) -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json >/dev/null
 
 .PHONY: multilingual_medical_intelligence_rewrite_candidate_drift_scorer
@@ -282,6 +288,8 @@ multilingual_medical_intelligence_rewrite_candidate_drift_scorer:
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_ambiguity_controls
 multilingual_medical_intelligence_cross_language_ambiguity_controls:
@@ -289,6 +297,15 @@ multilingual_medical_intelligence_cross_language_ambiguity_controls:
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py
+
+.PHONY: multilingual_medical_intelligence_cross_language_negation_audience_controls
+multilingual_medical_intelligence_cross_language_negation_audience_controls:
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_rewrite_candidates_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_public_wording_drift_score_report
 multilingual_medical_intelligence_public_wording_drift_score_report:
@@ -313,6 +330,8 @@ medical_intelligence_atlas:
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py
 	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_release_gate_v0_1_20260625.py --fixture data/medical_intelligence_atlas_release_gate_v0_1_20260625.json
 
@@ -360,6 +379,8 @@ public_github_route_preflight:
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_rewrite_candidate_score_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_ambiguity_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_ambiguity_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_multilingual_medical_intelligence_cross_language_negation_audience_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_multilingual_medical_intelligence_cross_language_negation_audience_report_v0_1_20260625.py
 	$(PYTHON) scripts/validate_public_release.py --root .
 
 .PHONY: medical_ai_safety_field_kit_reviewer_start_here

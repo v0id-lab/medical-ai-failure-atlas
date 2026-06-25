@@ -60,4 +60,4 @@ Direct check:
 
 ## Exact Next Action
 
-Add cross language negation and audience role controls so translations cannot invert warnings or shift who the wording addresses.
+Add cross language scope anchor controls so each translated variant preserves missing variables, actor role, and action boundary in the same record.
