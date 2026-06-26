@@ -959,6 +959,43 @@
       "synthetic_only": true,
       "patient_data_used": false,
       "clinical_use_allowed": false
+    },
+    "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_controls": {
+      "path": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_reviewer_closeout_ledger_reconciliation_exception_controls_v0_1_20260625.jsonl",
+      "kind": "synthetic reviewer closeout ledger reconciliation exception controls",
+      "record_count": 12,
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_report": {
+      "path": "data/multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_report_v0_1_20260625.json",
+      "kind": "machine readable reviewer closeout ledger reconciliation exception report",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false,
+      "reviewer_closeout_ledger_reconciliation_exception_clearance_claim_made": false
+    },
+    "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_report_doc": {
+      "path": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_REVIEWER_CLOSEOUT_LEDGER_RECONCILIATION_EXCEPTION_REPORT_V0_1_20260625.md",
+      "kind": "generated reviewer closeout ledger reconciliation exception report",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_scorer": {
+      "path": "scripts/score_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_controls_v0_1_20260625.py",
+      "kind": "deterministic reviewer closeout ledger reconciliation exception scorer",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
+    },
+    "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_validator": {
+      "path": "scripts/validate_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_report_v0_1_20260625.py",
+      "kind": "reviewer closeout ledger reconciliation exception report validator",
+      "synthetic_only": true,
+      "patient_data_used": false,
+      "clinical_use_allowed": false
     }
   },
   "coverage_rows": [
@@ -1608,6 +1645,28 @@
       "coverage_status": "direct fixture coverage"
     },
     {
+      "node_id": "mia_mmi_018",
+      "layer": "Multilingual Medical Intelligence",
+      "node_artifact": "cross language reviewer closeout ledger reconciliation exception controls",
+      "stack_runtime_artifact_ids": [
+        "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_controls",
+        "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_report",
+        "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_report_doc",
+        "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_scorer",
+        "mmi_cross_language_reviewer_closeout_ledger_reconciliation_exception_validator"
+      ],
+      "coverage_focus": [
+        "twelve synthetic reviewer closeout ledger reconciliation exception controls",
+        "source closeout id exported ledger row id owner final state dissent note and unresolved branch closure boundary attachment",
+        "authority or clearance claim absence and reviewer hold compare reject routing"
+      ],
+      "local_validation_refs": [
+        "scripts/score_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_controls_v0_1_20260625.py",
+        "scripts/validate_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_report_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage"
+    },
+    {
       "node_id": "mia_atlas_001",
       "layer": "Medical Intelligence Atlas",
       "node_artifact": "node registry",
@@ -1648,18 +1707,18 @@
     }
   ],
   "matrix_checks": {
-    "expected_atlas_node_count": 27,
+    "expected_atlas_node_count": 28,
     "expected_stack_layer_count": 6,
     "requires_all_referenced_artifacts_to_exist": true,
     "requires_each_atlas_node_once": true,
     "requires_no_external_url_strings": true,
     "requires_boundary_flags": true,
-    "expected_coverage_row_count": 27,
-    "expected_source_artifact_count": 111
+    "expected_coverage_row_count": 28,
+    "expected_source_artifact_count": 116
   },
   "summary": {
-    "atlas_node_count": 27,
-    "coverage_row_count": 27,
-    "source_artifact_count": 111
+    "atlas_node_count": 28,
+    "coverage_row_count": 28,
+    "source_artifact_count": 116
   }
 }
