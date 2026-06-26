@@ -455,7 +455,7 @@ def build_report(controls: list[dict[str, Any]], rewrite_candidates: list[dict[s
             "not_allowed_use": "Patient care, clinical advice, translation clearance, reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release clearance, external publication clearance, model ranking, authority claim, or clearance claim.",
         },
         "blockers": [],
-        "exact_next_action": "Add cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse controls so archived closure archive reuse release handoff closure archive packets remain source linked and reopenable during reuse without losing source attachments or creating authority or clearance claim.",
+        "exact_next_action": "Add cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff controls so released closure archive reuse release handoff closure archive reuse release packets remain source linked and reopenable during downstream handoff without losing source attachments or creating authority or clearance claim.",
     }
 
 
