@@ -242,6 +242,16 @@
       "next_build": "cross language reviewer closeout ledger export controls"
     },
     {
+      "id": "mia_mmi_016",
+      "layer": "Multilingual Medical Intelligence",
+      "artifact": "cross language reviewer closeout ledger export controls",
+      "input": "synthetic Turkish English reviewer closeout ledger export control rows",
+      "output": "reviewer closeout ledger export reproducibility report",
+      "validator": "reviewer closeout ledger export report must remain local fixture only and must preserve closeout decision export, dissent note export, owner final state export, closure comparison result export, unresolved branch closure boundary export, and authority or clearance claim absence across reviewer hold, compare, and reject routes",
+      "risk_gate": "translation must not remove closeout decision export, remove dissent note export, remove owner final state export, remove closure comparison result export, erase unresolved branch closure boundary export, or create authority or clearance claims",
+      "next_build": "cross language reviewer closeout ledger reconciliation controls"
+    },
+    {
       "id": "mia_atlas_001",
       "layer": "Medical Intelligence Atlas",
       "artifact": "node registry",
