@@ -402,6 +402,16 @@
       "next_build": "cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse controls"
     },
     {
+      "id": "mia_mmi_032",
+      "layer": "Multilingual Medical Intelligence",
+      "artifact": "cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse controls",
+      "input": "archived reuse release handoff closure packets before archive reuse with source attachment and reopenability state",
+      "output": "reused archived reuse release handoff closure packet with source attachments and reopenability preserved after archive reuse",
+      "validator": "each cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch closure boundary, archive snapshot, and reopenability or block the archive reuse packet",
+      "risk_gate": "reuse release handoff closure archive reuse packets cannot imply authority, clearance, publication readiness, clinical validation, clinical deployment, model ranking, partner approval, institutional backing, or regulatory approval",
+      "next_build": "cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release controls"
+    },
+    {
       "id": "mia_atlas_001",
       "layer": "Medical Intelligence Atlas",
       "artifact": "node registry",
