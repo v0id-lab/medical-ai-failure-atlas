@@ -21,7 +21,7 @@ REQUIRED_DOC_PHRASES = [
     "Live review state: review required.",
     "Live merge state: blocked.",
     "UK Government inspect ai pull request 4343",
-    "Live merge state: blocked.",
+    "Live merge state: behind.",
     "no comments or reviews found in the live pull request metadata.",
     "Medical AI Failure Atlas issue 154",
     "no outside comment found in the live issue list.",
@@ -85,7 +85,7 @@ EXPECTED_ROUTE_IDS = {
 
 EXPECTED_MERGE_STATES = {
     "lighteval_pr_1272": "blocked",
-    "inspect_ai_pr_4343": "blocked",
+    "inspect_ai_pr_4343": "behind",
 }
 
 
