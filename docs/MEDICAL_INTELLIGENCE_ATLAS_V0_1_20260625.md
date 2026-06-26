@@ -1307,6 +1307,20 @@ Risk gate: archive reuse release handoff closure archive reuse packets cannot im
 
 Next build: cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure
 
+### mia_mmi_085 Multilingual Medical Intelligence
+
+Artifact: cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure controls
+
+Input: handoff ready archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release packets, source attachment map, archive snapshot, reopenability state, and downstream closure boundary
+
+Output: closure ready archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff packets with source attachments, archive snapshot, and reopenability preserved before downstream archive review
+
+Validator: each MMI 085 archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure packet
+
+Risk gate: archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff packets cannot imply patient data use, clinical advice, authority, clearance, publication readiness, clinical validation, clinical deployment, model ranking, model superiority, partner approval, institutional backing, regulatory approval, or clinical use clearance
+
+Next build: cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive
+
 ### mia_atlas_001 Medical Intelligence Atlas
 
 Artifact: node registry
