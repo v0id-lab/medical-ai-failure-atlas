@@ -999,6 +999,20 @@ Risk gate: closure archive reuse release handoff closure archive reuse release h
 
 Next build: cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release controls
 
+### mia_mmi_063 Multilingual Medical Intelligence
+
+Artifact: cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release controls
+
+Input: reused closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse packets, source attachment map, archive snapshot, reopenability state, and downstream handoff boundary
+
+Output: released closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release packets with source attachments, archive snapshot, and reopenability preserved before downstream handoff
+
+Validator: each MMI 063 release control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the release packet
+
+Risk gate: release packets cannot imply authority, clearance, publication readiness, clinical validation, clinical deployment, model ranking, partner approval, institutional backing, regulatory approval, or clinical use clearance
+
+Next build: cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff controls
+
 ### mia_atlas_001 Medical Intelligence Atlas
 
 Artifact: node registry
