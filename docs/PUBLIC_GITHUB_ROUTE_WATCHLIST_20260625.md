@@ -57,7 +57,7 @@ Live state: open.
 
 Live review state: review required.
 
-Live merge state: behind.
+Live merge state: blocked.
 
 Latest useful public signal: no comments or reviews found in the live pull request metadata.
 

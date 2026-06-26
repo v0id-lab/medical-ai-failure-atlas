@@ -16,6 +16,7 @@ FIXTURE_CANDIDATES = [
     ROOT / "docs" / "medical_intelligence_atlas_release_gate_v0_1_20260625.json",
     ROOT / "docs" / "medical_intelligence_atlas_release_gate_fixture_v0_1_20260625.json",
 ]
+ATLAS_CONFIG = ROOT / "data" / "medical_intelligence_atlas_v0_1_20260625.json"
 
 EXPECTED_LAYERS = {
     "Clinical State Language",
@@ -27,7 +28,7 @@ EXPECTED_LAYERS = {
 }
 ALLOWED_READINESS_STATUSES = {"ready", "blocked", "needs source check"}
 EXPECTED_RISK_GATE = "public release cannot outrun validators"
-EXPECTED_ATLAS_NODE_COUNT = 63
+EXPECTED_ATLAS_NODE_COUNT = 64
 
 ROW_KEYS = ("release_gate_rows", "gate_rows", "readiness_rows", "layers", "rows")
 NEXT_ACTION_KEYS = ("expected_next_action", "exact_next_action")
@@ -319,6 +320,54 @@ def validate_gate_inputs(row: dict[str, Any], label: str, errors: list[str]) -> 
         errors.append(f"{label}: gate_inputs.atlas_nodes must be {EXPECTED_ATLAS_NODE_COUNT}")
 
 
+def atlas_node_ids_by_layer(errors: list[str]) -> dict[str, list[str]]:
+    if not ATLAS_CONFIG.exists():
+        errors.append(f"Missing atlas config: {repo_relative(ATLAS_CONFIG)}")
+        return {}
+    try:
+        payload = json.loads(ATLAS_CONFIG.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as error:
+        errors.append(f"{repo_relative(ATLAS_CONFIG)}: invalid JSON: {error}")
+        return {}
+
+    nodes = payload.get("nodes")
+    if not isinstance(nodes, list):
+        errors.append("Atlas config nodes must be a list")
+        return {}
+    if len(nodes) != EXPECTED_ATLAS_NODE_COUNT:
+        errors.append(f"Atlas config node count must be {EXPECTED_ATLAS_NODE_COUNT}")
+
+    by_layer: dict[str, list[str]] = {}
+    for node in nodes:
+        if not isinstance(node, dict):
+            continue
+        layer = node.get("layer")
+        node_id = node.get("id")
+        if isinstance(layer, str) and isinstance(node_id, str):
+            by_layer.setdefault(layer, []).append(node_id)
+    return by_layer
+
+
+def validate_atlas_node_id_continuity(rows: list[dict[str, Any]], errors: list[str]) -> None:
+    expected_by_layer = atlas_node_ids_by_layer(errors)
+    if not expected_by_layer:
+        return
+
+    for row in rows:
+        layer = row.get("layer")
+        if layer not in expected_by_layer:
+            continue
+        expected_ids = expected_by_layer[layer]
+        row_ids = row.get("atlas_node_ids")
+        if row_ids is not None and row_ids != expected_ids:
+            errors.append(f"{layer}: atlas_node_ids must match Medical Intelligence Atlas node ids")
+
+        gate_inputs = row.get("gate_inputs")
+        if isinstance(gate_inputs, dict) and "atlas_node_ids" in gate_inputs:
+            if gate_inputs.get("atlas_node_ids") != expected_ids:
+                errors.append(f"{layer}: gate_inputs.atlas_node_ids must match Medical Intelligence Atlas node ids")
+
+
 def validate_next_action(
     row: dict[str, Any],
     label: str,
@@ -417,6 +466,7 @@ def main() -> int:
         validate_status_vocabulary(payload, rows, errors)
         validate_source_policy(payload, errors)
         validate_rows(rows, expected_next_action, errors)
+        validate_atlas_node_id_continuity(rows, errors)
         validate_forbidden_claim_absence(payload, rows, errors)
 
     if errors:

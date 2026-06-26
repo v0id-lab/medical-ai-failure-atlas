@@ -64,7 +64,7 @@
       "url": "https://github.com/UKGovernmentBEIS/inspect_ai/pull/4343",
       "live_state": "open",
       "review_state": "review required",
-      "merge_state": "behind",
+      "merge_state": "blocked",
       "latest_signal": "no comments or reviews found in live pull request metadata",
       "current_action": "wait for maintainer review",
       "allowed_next_action": "respond only if a maintainer comments, requests changes, or asks for a branch refresh; do not push without explicit user approval",
