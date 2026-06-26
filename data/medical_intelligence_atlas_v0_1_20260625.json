@@ -292,6 +292,16 @@
       "next_build": "cross language reviewer closeout ledger reconciliation exception replay archive controls"
     },
     {
+      "id": "mia_mmi_021",
+      "layer": "Multilingual Medical Intelligence",
+      "artifact": "cross language reviewer closeout ledger reconciliation exception replay archive controls",
+      "input": "closed replay exception attachment rows with archive and reopenability state",
+      "output": "reopenable replay exception archive snapshot before rollup reuse",
+      "validator": "replay archive controls must keep source closeout id exported ledger row id owner final state dissent note unresolved branch closure boundary recheck trace handoff trace closeout snapshot and authority or clearance claim absence attached while preserving reopenability",
+      "risk_gate": "exception replay archive cannot create clearance or make archived closeout snapshots unreopenable",
+      "next_build": "cross language reviewer closeout ledger reconciliation exception replay archive rollup controls"
+    },
+    {
       "id": "mia_atlas_001",
       "layer": "Medical Intelligence Atlas",
       "artifact": "node registry",

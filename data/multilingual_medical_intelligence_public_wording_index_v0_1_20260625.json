@@ -121,7 +121,12 @@
     "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_report_json": "data/multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_report_v0_1_20260625.json",
     "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_REVIEWER_CLOSEOUT_LEDGER_RECONCILIATION_EXCEPTION_REPLAY_CLOSEOUT_REPORT_V0_1_20260625.md",
     "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_controls_v0_1_20260625.py",
-    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_report_v0_1_20260625.py"
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_report_v0_1_20260625.py",
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_controls": "data/multilingual_medical_intelligence_rewrite_candidate_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_controls_v0_1_20260625.jsonl",
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_report_json": "data/multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_report_v0_1_20260625.json",
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_report_doc": "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_REVIEWER_CLOSEOUT_LEDGER_RECONCILIATION_EXCEPTION_REPLAY_ARCHIVE_REPORT_V0_1_20260625.md",
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_scorer": "scripts/score_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_controls_v0_1_20260625.py",
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_validator": "scripts/validate_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -285,7 +290,15 @@
     "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_pass_controls": 6,
     "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_blocked_controls": 6,
     "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_signal_types": 6,
-    "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_decision_route_types": 3
+    "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_decision_route_types": 3,
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_score_command": "python3 scripts/score_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_controls_v0_1_20260625.py --check",
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_validation_command": "python3 scripts/validate_multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_report_v0_1_20260625.py",
+    "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_status": "local_fixture_pass",
+    "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_control_count": 12,
+    "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_pass_controls": 6,
+    "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_blocked_controls": 6,
+    "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_signal_types": 6,
+    "expected_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_decision_route_types": 3
   },
   "safety_boundaries": {
     "synthetic_only": true,
@@ -677,7 +690,7 @@
       ]
     }
   ],
-  "next_build_suggestion": "cross language reviewer closeout ledger reconciliation exception replay archive controls",
+  "next_build_suggestion": "cross language reviewer closeout ledger reconciliation exception replay archive rollup controls",
   "artifact_claims": {
     "cross_language_reviewer_decision_rationale_report": [
       "reviewer decision rationale preservation",
@@ -768,6 +781,16 @@
       "dissent note replay closeout preservation",
       "unresolved branch closure boundary replay closeout preservation",
       "authority or clearance claim absence"
+    ],
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_report": [
+      "reviewer closeout ledger reconciliation exception replay archive reproducibility",
+      "source closeout id replay archive preservation",
+      "exported ledger row id replay archive preservation",
+      "owner final state replay archive preservation",
+      "dissent note replay archive preservation",
+      "unresolved branch closure boundary replay archive preservation",
+      "closed replay exception archive reopenability",
+      "authority or clearance claim absence"
     ]
   },
   "report_index": {
@@ -787,6 +810,10 @@
     "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_report": [
       "data/multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_report_v0_1_20260625.json",
       "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_REVIEWER_CLOSEOUT_LEDGER_RECONCILIATION_EXCEPTION_REPLAY_CLOSEOUT_REPORT_V0_1_20260625.md"
+    ],
+    "cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_report": [
+      "data/multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_report_v0_1_20260625.json",
+      "docs/MULTILINGUAL_MEDICAL_INTELLIGENCE_CROSS_LANGUAGE_REVIEWER_CLOSEOUT_LEDGER_RECONCILIATION_EXCEPTION_REPLAY_ARCHIVE_REPORT_V0_1_20260625.md"
     ]
   }
 }
