@@ -226,7 +226,12 @@
     "mmi_041_closure_archive_reuse_release_handoff_closure_archive_report_json": "data/mmi_041_closure_archive_reuse_release_handoff_closure_archive_report_v0_1_20260625.json",
     "mmi_041_closure_archive_reuse_release_handoff_closure_archive_report_doc": "docs/MMI_041_CLOSURE_ARCHIVE_REUSE_RELEASE_HANDOFF_CLOSURE_ARCHIVE_REPORT_V0_1_20260625.md",
     "mmi_041_closure_archive_reuse_release_handoff_closure_archive_scorer": "scripts/score_mmi_041_closure_archive_reuse_release_handoff_closure_archive_controls_v0_1_20260625.py",
-    "mmi_041_closure_archive_reuse_release_handoff_closure_archive_validator": "scripts/validate_mmi_041_closure_archive_reuse_release_handoff_closure_archive_report_v0_1_20260625.py"
+    "mmi_041_closure_archive_reuse_release_handoff_closure_archive_validator": "scripts/validate_mmi_041_closure_archive_reuse_release_handoff_closure_archive_report_v0_1_20260625.py",
+    "mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_controls": "data/mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_controls_v0_1_20260625.jsonl",
+    "mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_report_json": "data/mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_report_v0_1_20260625.json",
+    "mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_report_doc": "docs/MMI_042_CLOSURE_ARCHIVE_REUSE_RELEASE_HANDOFF_CLOSURE_ARCHIVE_REUSE_REPORT_V0_1_20260625.md",
+    "mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_scorer": "scripts/score_mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_controls_v0_1_20260625.py",
+    "mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_validator": "scripts/validate_mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -817,6 +822,11 @@
       "closure archive reuse release handoff closure archive reproducibility",
       "source closeout id exported ledger row id owner final state dissent note unresolved branch closure boundary archive snapshot and reopenability preservation before downstream reuse",
       "authority or clearance claim absence before downstream reuse"
+    ],
+    "mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_report": [
+      "closure archive reuse release handoff closure archive reuse reproducibility",
+      "source closeout id exported ledger row id owner final state dissent note unresolved branch closure boundary archive snapshot and reopenability preservation before downstream release",
+      "authority or clearance claim absence before downstream release"
     ]
   },
   "planned_rows": [
@@ -978,7 +988,7 @@
       ]
     }
   ],
-  "next_build_suggestion": "cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse controls",
+  "next_build_suggestion": "cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release controls",
   "artifact_claims": {
     "cross_language_reviewer_decision_rationale_report": [
       "reviewer decision rationale preservation",
@@ -1263,6 +1273,15 @@
       "closure archive reuse release handoff closure archive reopenability preservation",
       "authority or clearance claim absence",
       "repo local synthetic review only"
+    ],
+    "mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_controls": [
+      "sixteen Turkish English synthetic controls",
+      "eight pass controls",
+      "eight blocked controls",
+      "closure archive reuse release handoff closure archive reuse source attachment preservation",
+      "closure archive reuse release handoff closure archive reuse reopenability preservation",
+      "authority or clearance claim absence",
+      "repo local synthetic review only"
     ]
   },
   "report_index": {
@@ -1366,6 +1385,10 @@
     "mmi_041_closure_archive_reuse_release_handoff_closure_archive_report": [
       "data/mmi_041_closure_archive_reuse_release_handoff_closure_archive_report_v0_1_20260625.json",
       "docs/MMI_041_CLOSURE_ARCHIVE_REUSE_RELEASE_HANDOFF_CLOSURE_ARCHIVE_REPORT_V0_1_20260625.md"
+    ],
+    "mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_report": [
+      "data/mmi_042_closure_archive_reuse_release_handoff_closure_archive_reuse_report_v0_1_20260625.json",
+      "docs/MMI_042_CLOSURE_ARCHIVE_REUSE_RELEASE_HANDOFF_CLOSURE_ARCHIVE_REUSE_REPORT_V0_1_20260625.md"
     ]
   }
 }
