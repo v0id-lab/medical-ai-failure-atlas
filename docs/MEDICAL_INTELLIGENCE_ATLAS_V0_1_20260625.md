@@ -397,6 +397,20 @@ Risk gate: exception replay cannot create clearance or close unresolved branch
 
 Next build: cross language reviewer closeout ledger reconciliation exception replay closeout controls
 
+### mia_mmi_020 Multilingual Medical Intelligence
+
+Artifact: cross language reviewer closeout ledger reconciliation exception replay closeout controls
+
+Input: replayed reconciliation exception rows with closeout snapshot state
+
+Output: closed replay exception attachment snapshot before archive reuse
+
+Validator: replay closeout controls must keep source closeout id exported ledger row id owner final state dissent note unresolved branch closure boundary recheck trace handoff trace and authority or clearance claim absence attached
+
+Risk gate: exception replay closeout cannot create clearance or treat unresolved branch closure as authority
+
+Next build: cross language reviewer closeout ledger reconciliation exception replay archive controls
+
 ### mia_atlas_001 Medical Intelligence Atlas
 
 Artifact: node registry
