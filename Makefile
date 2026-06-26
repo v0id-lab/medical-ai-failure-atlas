@@ -90,6 +90,8 @@ validate:
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
 	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
@@ -392,6 +394,8 @@ clinical_intelligence_stack:
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_source_check
 multilingual_medical_intelligence_source_check:
@@ -475,6 +479,8 @@ multilingual_medical_intelligence_public_wording_bank:
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 	$(PYTHON) -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json >/dev/null
 
 .PHONY: multilingual_medical_intelligence_rewrite_candidate_drift_scorer
@@ -554,6 +560,8 @@ multilingual_medical_intelligence_rewrite_candidate_drift_scorer:
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_ambiguity_controls
 multilingual_medical_intelligence_cross_language_ambiguity_controls:
@@ -684,6 +692,8 @@ multilingual_medical_intelligence_cross_language_source_support_scope_reconcilia
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_source_recency_applicability_controls
 multilingual_medical_intelligence_cross_language_source_recency_applicability_controls:
@@ -759,6 +769,8 @@ multilingual_medical_intelligence_cross_language_source_recency_applicability_co
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_source_conflict_provenance_controls
 multilingual_medical_intelligence_cross_language_source_conflict_provenance_controls:
@@ -834,6 +846,8 @@ multilingual_medical_intelligence_cross_language_source_conflict_provenance_cont
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_conflict_triage_controls
@@ -910,6 +924,8 @@ multilingual_medical_intelligence_cross_language_reviewer_conflict_triage_contro
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_decision_rationale_controls
 multilingual_medical_intelligence_cross_language_reviewer_decision_rationale_controls:
@@ -985,6 +1001,8 @@ multilingual_medical_intelligence_cross_language_reviewer_decision_rationale_con
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_handoff_packet_controls
 multilingual_medical_intelligence_cross_language_reviewer_handoff_packet_controls:
@@ -1042,6 +1060,8 @@ multilingual_medical_intelligence_cross_language_reviewer_handoff_packet_control
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_handoff_replay_controls
 multilingual_medical_intelligence_cross_language_reviewer_handoff_replay_controls:
@@ -1097,6 +1117,8 @@ multilingual_medical_intelligence_cross_language_reviewer_handoff_replay_control
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_replay_audit_trail_controls
 multilingual_medical_intelligence_cross_language_reviewer_replay_audit_trail_controls:
@@ -1150,6 +1172,8 @@ multilingual_medical_intelligence_cross_language_reviewer_replay_audit_trail_con
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_replay_audit_trail_closeout_controls
 multilingual_medical_intelligence_cross_language_reviewer_replay_audit_trail_closeout_controls:
@@ -1199,6 +1223,8 @@ multilingual_medical_intelligence_cross_language_reviewer_replay_audit_trail_clo
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_export_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_export_controls:
@@ -1246,6 +1272,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_export
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_public_wording_drift_score_report
 multilingual_medical_intelligence_public_wording_drift_score_report:
@@ -1338,6 +1366,8 @@ medical_intelligence_atlas:
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_release_gate_v0_1_20260625.py --fixture data/medical_intelligence_atlas_release_gate_v0_1_20260625.json
 
@@ -1406,6 +1436,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_controls
@@ -1436,6 +1468,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_controls:
@@ -1463,6 +1497,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_controls:
@@ -1488,6 +1524,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_controls:
@@ -1511,6 +1549,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_controls
@@ -1533,6 +1573,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_controls:
@@ -1552,6 +1594,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: public_github_route_preflight
 public_github_route_preflight:
@@ -1630,6 +1674,8 @@ public_github_route_preflight:
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 	$(PYTHON) scripts/validate_public_release.py --root .
 
 .PHONY: medical_ai_safety_field_kit_reviewer_start_here
@@ -2325,6 +2371,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_controls:
@@ -2368,6 +2416,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_controls:
@@ -2409,6 +2459,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_closeout_controls:
@@ -2448,6 +2500,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_controls:
@@ -2485,6 +2539,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_controls:
@@ -2525,6 +2581,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_archive_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_archive_controls:
@@ -2540,6 +2598,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_controls:
@@ -2553,6 +2613,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_controls:
@@ -2564,6 +2626,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_controls
 multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconciliation_exception_replay_archive_rollup_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_controls:
@@ -2573,6 +2637,8 @@ multilingual_medical_intelligence_cross_language_reviewer_closeout_ledger_reconc
 	$(PYTHON) scripts/validate_mmi_035_closure_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
 
 .PHONY: mmi_035_closure_controls
 mmi_035_closure_controls:
@@ -2583,3 +2649,8 @@ mmi_035_closure_controls:
 mmi_036_closure_archive_controls:
 	$(PYTHON) scripts/score_mmi_036_closure_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_036_closure_archive_report_v0_1_20260625.py
+
+.PHONY: mmi_037_closure_archive_reuse_controls
+mmi_037_closure_archive_reuse_controls:
+	$(PYTHON) scripts/score_mmi_037_closure_archive_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_037_closure_archive_reuse_report_v0_1_20260625.py
