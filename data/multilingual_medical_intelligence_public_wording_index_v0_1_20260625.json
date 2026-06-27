@@ -581,7 +581,12 @@
     "mmi_112_chain_reuse_report": "data/mmi_112_chain_reuse_report_v0_1_20260625.json",
     "mmi_112_chain_reuse_report_doc": "docs/MMI_112_CHAIN_REUSE_REPORT_V0_1_20260625.md",
     "mmi_112_chain_reuse_scorer": "scripts/score_mmi_112_chain_reuse_controls_v0_1_20260625.py",
-    "mmi_112_chain_reuse_validator": "scripts/validate_mmi_112_chain_reuse_report_v0_1_20260625.py"
+    "mmi_112_chain_reuse_validator": "scripts/validate_mmi_112_chain_reuse_report_v0_1_20260625.py",
+    "mmi_113_chain_release_controls": "data/mmi_113_chain_release_controls_v0_1_20260625.jsonl",
+    "mmi_113_chain_release_report": "data/mmi_113_chain_release_report_v0_1_20260625.json",
+    "mmi_113_chain_release_report_doc": "docs/MMI_113_CHAIN_RELEASE_REPORT_V0_1_20260625.md",
+    "mmi_113_chain_release_scorer": "scripts/score_mmi_113_chain_release_controls_v0_1_20260625.py",
+    "mmi_113_chain_release_validator": "scripts/validate_mmi_113_chain_release_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -1438,7 +1443,7 @@
       ]
     }
   ],
-  "next_build_suggestion": "MMI 113 chain release controls",
+  "next_build_suggestion": "MMI 114 chain handoff controls",
   "artifact_claims": {
     "cross_language_reviewer_decision_rationale_report": [
       "reviewer decision rationale preservation",
@@ -2114,7 +2119,8 @@
       "synthetic repo controls only",
       "source attachment and archive reopenability boundaries during chain reuse",
       "no patient data clinical advice validation deployment ranking superiority partner institution regulatory publication authority or clearance claim"
-    ]
+    ],
+    "mmi_113_chain_release_report": "MMI 113 chain release report preserves source attachment, archive snapshot, and reopenability boundaries for local synthetic release review."
   },
   "report_index": {
     "cross_language_reviewer_closeout_ledger_reconciliation_exception_report": [
@@ -2501,6 +2507,10 @@
     "mmi_112_chain_reuse_report": [
       "data/mmi_112_chain_reuse_report_v0_1_20260625.json",
       "docs/MMI_112_CHAIN_REUSE_REPORT_V0_1_20260625.md"
+    ],
+    "mmi_113_chain_release_report": [
+      "data/mmi_113_chain_release_report_v0_1_20260625.json",
+      "docs/MMI_113_CHAIN_RELEASE_REPORT_V0_1_20260625.md"
     ]
   }
 }

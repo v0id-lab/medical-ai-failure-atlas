@@ -28,13 +28,13 @@
       "machine_meaning": "A local artifact marks source support as needed before claim bearing public use."
     }
   ],
-  "expected_next_action": "MMI 113 chain release controls",
+  "expected_next_action": "MMI 114 chain handoff controls",
   "expected_risk_gate": "public release cannot outrun validators",
   "atlas_layer_source": {
     "config": "data/medical_intelligence_atlas_v0_1_20260625.json",
     "checker": "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py",
     "expected_layer_count": 6,
-    "expected_node_count": 122
+    "expected_node_count": 123
   },
   "release_gate_summary": {
     "layer_count": 6,
@@ -48,7 +48,7 @@
     "clinical_use_allowed": false,
     "synthetic_only": true,
     "source_check_rule": "Source flags stay open unless repo local source review evidence exists.",
-    "expected_atlas_node_count": 122
+    "expected_atlas_node_count": 123
   },
   "release_gate_rows": [
     {
@@ -62,14 +62,22 @@
         "scripts/validate_clinical_state_language_v0_1.py"
       ],
       "risk_gate": "public release cannot outrun validators",
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "blockers": [],
       "source_check_items": [],
       "gate_inputs": {
-        "atlas_nodes": 122
+        "atlas_nodes": 123,
+        "atlas_node_ids": [
+          "mia_csl_001",
+          "mia_csl_002"
+        ]
       },
-      "expected_next_action": "MMI 113 chain release controls",
-      "exact_next_action": "MMI 113 chain release controls"
+      "expected_next_action": "MMI 114 chain handoff controls",
+      "exact_next_action": "MMI 114 chain handoff controls",
+      "atlas_node_ids": [
+        "mia_csl_001",
+        "mia_csl_002"
+      ]
     },
     {
       "gate_id": "mia_rg_002",
@@ -81,14 +89,22 @@
         "scripts/validate_clinical_trajectory_engine_transitions_v0_1.py"
       ],
       "risk_gate": "public release cannot outrun validators",
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "blockers": [],
       "source_check_items": [],
       "gate_inputs": {
-        "atlas_nodes": 122
+        "atlas_nodes": 123,
+        "atlas_node_ids": [
+          "mia_cte_001",
+          "mia_cte_002"
+        ]
       },
-      "expected_next_action": "MMI 113 chain release controls",
-      "exact_next_action": "MMI 113 chain release controls"
+      "expected_next_action": "MMI 114 chain handoff controls",
+      "exact_next_action": "MMI 114 chain handoff controls",
+      "atlas_node_ids": [
+        "mia_cte_001",
+        "mia_cte_002"
+      ]
     },
     {
       "gate_id": "mia_rg_003",
@@ -99,14 +115,22 @@
         "scripts/score_medical_reasoning_verifier_v0_1.py"
       ],
       "risk_gate": "public release cannot outrun validators",
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "blockers": [],
       "source_check_items": [],
       "gate_inputs": {
-        "atlas_nodes": 122
+        "atlas_nodes": 123,
+        "atlas_node_ids": [
+          "mia_mrv_001",
+          "mia_mrv_002"
+        ]
       },
-      "expected_next_action": "MMI 113 chain release controls",
-      "exact_next_action": "MMI 113 chain release controls"
+      "expected_next_action": "MMI 114 chain handoff controls",
+      "exact_next_action": "MMI 114 chain handoff controls",
+      "atlas_node_ids": [
+        "mia_mrv_001",
+        "mia_mrv_002"
+      ]
     },
     {
       "gate_id": "mia_rg_004",
@@ -118,14 +142,22 @@
         "scripts/simulate_agentic_medicine_sandbox_event_flow_v0_1_20260625.py"
       ],
       "risk_gate": "public release cannot outrun validators",
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "blockers": [],
       "source_check_items": [],
       "gate_inputs": {
-        "atlas_nodes": 122
+        "atlas_nodes": 123,
+        "atlas_node_ids": [
+          "mia_ams_001",
+          "mia_ams_002"
+        ]
       },
-      "expected_next_action": "MMI 113 chain release controls",
-      "exact_next_action": "MMI 113 chain release controls"
+      "expected_next_action": "MMI 114 chain handoff controls",
+      "exact_next_action": "MMI 114 chain handoff controls",
+      "atlas_node_ids": [
+        "mia_ams_001",
+        "mia_ams_002"
+      ]
     },
     {
       "gate_id": "mia_rg_005",
@@ -709,10 +741,15 @@
         "data/mmi_112_chain_reuse_report_v0_1_20260625.json",
         "docs/MMI_112_CHAIN_REUSE_REPORT_V0_1_20260625.md",
         "scripts/score_mmi_112_chain_reuse_controls_v0_1_20260625.py",
-        "scripts/validate_mmi_112_chain_reuse_report_v0_1_20260625.py"
+        "scripts/validate_mmi_112_chain_reuse_report_v0_1_20260625.py",
+        "data/mmi_113_chain_release_controls_v0_1_20260625.jsonl",
+        "data/mmi_113_chain_release_report_v0_1_20260625.json",
+        "docs/MMI_113_CHAIN_RELEASE_REPORT_V0_1_20260625.md",
+        "scripts/score_mmi_113_chain_release_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_113_chain_release_report_v0_1_20260625.py"
       ],
       "risk_gate": "public release cannot outrun validators",
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "blockers": [],
       "source_check_items": [],
       "atlas_node_ids": [
@@ -827,7 +864,8 @@
         "mia_mmi_109",
         "mia_mmi_110",
         "mia_mmi_111",
-        "mia_mmi_112"
+        "mia_mmi_112",
+        "mia_mmi_113"
       ],
       "gate_inputs": {
         "cross_language_source_recency_applicability_checker_result": "pass",
@@ -1102,7 +1140,8 @@
           "mia_mmi_109",
           "mia_mmi_110",
           "mia_mmi_111",
-          "mia_mmi_112"
+          "mia_mmi_112",
+          "mia_mmi_113"
         ],
         "mmi_037_closure_archive_reuse_checker_result": "pass",
         "mmi_037_closure_archive_reuse_control_count": 16,
@@ -1224,7 +1263,7 @@
         "mmi_056_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_blocked_controls": 8,
         "mmi_056_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_signal_types": 8,
         "mmi_056_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_decision_route_types": 3,
-        "atlas_nodes": 122,
+        "atlas_nodes": 123,
         "mmi_057_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_checker_result": "pass",
         "mmi_057_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_control_count": 16,
         "mmi_057_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_release_handoff_closure_archive_reuse_pass_controls": 8,
@@ -2154,8 +2193,8 @@
         "scripts/score_mmi_112_chain_reuse_controls_v0_1_20260625.py",
         "scripts/validate_mmi_112_chain_reuse_report_v0_1_20260625.py"
       ],
-      "expected_next_action": "MMI 113 chain release controls",
-      "exact_next_action": "MMI 113 chain release controls"
+      "expected_next_action": "MMI 114 chain handoff controls",
+      "exact_next_action": "MMI 114 chain handoff controls"
     },
     {
       "gate_id": "mia_rg_006",
@@ -2167,14 +2206,22 @@
         "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py"
       ],
       "risk_gate": "public release cannot outrun validators",
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "blockers": [],
       "source_check_items": [],
       "gate_inputs": {
-        "atlas_nodes": 122
+        "atlas_nodes": 123,
+        "atlas_node_ids": [
+          "mia_atlas_001",
+          "mia_atlas_002"
+        ]
       },
-      "expected_next_action": "MMI 113 chain release controls",
-      "exact_next_action": "MMI 113 chain release controls"
+      "expected_next_action": "MMI 114 chain handoff controls",
+      "exact_next_action": "MMI 114 chain handoff controls",
+      "atlas_node_ids": [
+        "mia_atlas_001",
+        "mia_atlas_002"
+      ]
     }
   ],
   "layers": [
@@ -2432,7 +2479,7 @@
       "decision_reason": "The schema, source fixture, normalized fixture, and local checker pass on synthetic records with missing data and source support fields present.",
       "blockers": [],
       "source_check_items": [],
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "expected_next_action": "MMI 113 chain release controls",
       "exact_next_action": "MMI 113 chain release controls"
     },
@@ -2692,7 +2739,7 @@
       "decision_reason": "The transition fixture checker passes with state and transition boundaries, missing variable coverage, and red flag coverage.",
       "blockers": [],
       "source_check_items": [],
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "expected_next_action": "MMI 113 chain release controls",
       "exact_next_action": "MMI 113 chain release controls"
     },
@@ -2949,7 +2996,7 @@
       "decision_reason": "The scoring check matches expected pass and fail controls; expected fail rows are verifier controls, not release blockers.",
       "blockers": [],
       "source_check_items": [],
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "expected_next_action": "MMI 113 chain release controls",
       "exact_next_action": "MMI 113 chain release controls"
     },
@@ -3209,7 +3256,7 @@
       "decision_reason": "The event fixture checker passes role order and safety flags; source checker events remain bounded as unresolved checks.",
       "blockers": [],
       "source_check_items": [],
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "expected_next_action": "MMI 113 chain release controls",
       "exact_next_action": "MMI 113 chain release controls"
     },
@@ -5523,7 +5570,7 @@
         "scripts/score_mmi_112_chain_reuse_controls_v0_1_20260625.py",
         "scripts/validate_mmi_112_chain_reuse_report_v0_1_20260625.py"
       ],
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "expected_next_action": "MMI 113 chain release controls",
       "exact_next_action": "MMI 113 chain release controls"
     },
@@ -5781,10 +5828,10 @@
       "decision_reason": "The atlas registry checker passes and this fixture supplies machine readable layer release decisions.",
       "blockers": [],
       "source_check_items": [],
-      "next_action": "MMI 113 chain release controls",
+      "next_action": "MMI 114 chain handoff controls",
       "expected_next_action": "MMI 113 chain release controls",
       "exact_next_action": "MMI 113 chain release controls"
     }
   ],
-  "exact_next_action": "MMI 113 chain release controls"
+  "exact_next_action": "MMI 114 chain handoff controls"
 }

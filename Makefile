@@ -242,6 +242,8 @@ validate:
 	$(PYTHON) scripts/validate_mmi_111_chain_archive_report_v0_1_20260625.py
 	$(PYTHON) scripts/score_mmi_112_chain_reuse_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_112_chain_reuse_report_v0_1_20260625.py
+	$(PYTHON) scripts/score_mmi_113_chain_release_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_113_chain_release_report_v0_1_20260625.py
 	$(PYTHON) scripts/validate_clinical_intelligence_stack_global_target_map_20260625.py
 	$(PYTHON) scripts/validate_medical_intelligence_atlas_v0_1_20260625.py
 	$(PYTHON) scripts/build_medical_intelligence_atlas_coverage_dashboard.py --check
@@ -7334,3 +7336,8 @@ mmi_111_chain_archive_controls:
 mmi_112_chain_reuse_controls:
 	$(PYTHON) scripts/score_mmi_112_chain_reuse_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_112_chain_reuse_report_v0_1_20260625.py
+
+.PHONY: mmi_113_chain_release_controls
+mmi_113_chain_release_controls:
+	$(PYTHON) scripts/score_mmi_113_chain_release_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_113_chain_release_report_v0_1_20260625.py
