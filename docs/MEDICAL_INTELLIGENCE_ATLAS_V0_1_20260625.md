@@ -2693,6 +2693,20 @@ Risk gate: MMI 181 chain archive packets cannot imply patient data, clinical adv
 
 Next build: MMI 182 chain reuse controls
 
+### mia_mmi_182 Multilingual Medical Intelligence
+
+Artifact: MMI 182 chain reuse controls
+
+Input: MMI 181 archive reviewed archived packets
+
+Output: chain reuse review packet with source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability preserved
+
+Validator: each MMI 182 chain reuse control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the reuse packet
+
+Risk gate: MMI 182 chain reuse packets cannot imply patient data, clinical advice, clinical validation, clinical deployment, model ranking, model superiority, partner, institutional, regulatory, publication, authority, clearance, or outward use without user approval
+
+Next build: MMI 183 chain release controls
+
 ## Relationships
 
 ### Clinical State Language to Clinical Trajectory Engine
