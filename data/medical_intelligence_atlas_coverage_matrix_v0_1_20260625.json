@@ -4289,6 +4289,41 @@
       "boundary": "local synthetic only",
       "description": "MMI 119 chain handoff report validator",
       "artifact_id": "mmi_119_chain_handoff_validator"
+    },
+    "mmi_120_chain_closure_controls": {
+      "path": "data/mmi_120_chain_closure_controls_v0_1_20260625.jsonl",
+      "exists": true,
+      "boundary": "local synthetic only",
+      "description": "MMI 120 chain closure synthetic Turkish English controls",
+      "artifact_id": "mmi_120_chain_closure_controls"
+    },
+    "mmi_120_chain_closure_report": {
+      "path": "data/mmi_120_chain_closure_report_v0_1_20260625.json",
+      "exists": true,
+      "boundary": "local synthetic only",
+      "description": "MMI 120 chain closure machine report",
+      "artifact_id": "mmi_120_chain_closure_report"
+    },
+    "mmi_120_chain_closure_report_doc": {
+      "path": "docs/MMI_120_CHAIN_CLOSURE_REPORT_V0_1_20260625.md",
+      "exists": true,
+      "boundary": "local synthetic only",
+      "description": "MMI 120 chain closure markdown report",
+      "artifact_id": "mmi_120_chain_closure_report_doc"
+    },
+    "mmi_120_chain_closure_scorer": {
+      "path": "scripts/score_mmi_120_chain_closure_controls_v0_1_20260625.py",
+      "exists": true,
+      "boundary": "local synthetic only",
+      "description": "MMI 120 chain closure scorer",
+      "artifact_id": "mmi_120_chain_closure_scorer"
+    },
+    "mmi_120_chain_closure_validator": {
+      "path": "scripts/validate_mmi_120_chain_closure_report_v0_1_20260625.py",
+      "exists": true,
+      "boundary": "local synthetic only",
+      "description": "MMI 120 chain closure report validator",
+      "artifact_id": "mmi_120_chain_closure_validator"
     }
   },
   "coverage_rows": [
@@ -8840,7 +8875,7 @@
       ],
       "primary_artifact": "docs/MMI_119_CHAIN_HANDOFF_REPORT_V0_1_20260625.md",
       "artifact": "MMI 119 chain handoff controls",
-      "open_gap": "next closure step not yet represented",
+      "open_gap": "closure step represented by MMI 120",
       "required_artifacts": [
         "mmi_119_chain_handoff_controls",
         "mmi_119_chain_handoff_report",
@@ -8864,6 +8899,63 @@
       ]
     },
     {
+      "node_id": "mia_mmi_120",
+      "layer": "Multilingual Medical Intelligence",
+      "node_artifact": "MMI 120 chain closure controls",
+      "stack_runtime_artifact_ids": [
+        "mmi_120_chain_closure_controls",
+        "mmi_120_chain_closure_report",
+        "mmi_120_chain_closure_report_doc",
+        "mmi_120_chain_closure_scorer",
+        "mmi_120_chain_closure_validator"
+      ],
+      "coverage_focus": "closure review source attachment preservation and overclaim blocking",
+      "local_validation_refs": [
+        "scripts/score_mmi_120_chain_closure_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_120_chain_closure_report_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage",
+      "validator": "scripts/validate_mmi_120_chain_closure_report_v0_1_20260625.py",
+      "source_artifact_refs": [
+        "mmi_120_chain_closure_controls",
+        "mmi_120_chain_closure_report",
+        "mmi_120_chain_closure_report_doc",
+        "mmi_120_chain_closure_scorer",
+        "mmi_120_chain_closure_validator"
+      ],
+      "local_artifacts": [
+        "data/mmi_120_chain_closure_controls_v0_1_20260625.jsonl",
+        "data/mmi_120_chain_closure_report_v0_1_20260625.json",
+        "docs/MMI_120_CHAIN_CLOSURE_REPORT_V0_1_20260625.md",
+        "scripts/score_mmi_120_chain_closure_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_120_chain_closure_report_v0_1_20260625.py"
+      ],
+      "primary_artifact": "docs/MMI_120_CHAIN_CLOSURE_REPORT_V0_1_20260625.md",
+      "artifact": "MMI 120 chain closure controls",
+      "open_gap": "next archive step not yet represented",
+      "required_artifacts": [
+        "mmi_120_chain_closure_controls",
+        "mmi_120_chain_closure_report",
+        "mmi_120_chain_closure_report_doc",
+        "mmi_120_chain_closure_scorer",
+        "mmi_120_chain_closure_validator"
+      ],
+      "source_artifact_ids": [
+        "mmi_120_chain_closure_controls",
+        "mmi_120_chain_closure_report",
+        "mmi_120_chain_closure_report_doc",
+        "mmi_120_chain_closure_scorer",
+        "mmi_120_chain_closure_validator"
+      ],
+      "source_artifact_paths": [
+        "data/mmi_120_chain_closure_controls_v0_1_20260625.jsonl",
+        "data/mmi_120_chain_closure_report_v0_1_20260625.json",
+        "docs/MMI_120_CHAIN_CLOSURE_REPORT_V0_1_20260625.md",
+        "scripts/score_mmi_120_chain_closure_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_120_chain_closure_report_v0_1_20260625.py"
+      ]
+    },
+    {
       "node_id": "mia_atlas_001",
       "layer": "Medical Intelligence Atlas",
       "node_artifact": "node registry",
@@ -8872,7 +8964,7 @@
         "stack_config",
         "atlas_markdown"
       ],
-      "coverage_focus": "['one hundred twenty nine atlas nodes', 'input output validator risk gate and next build fields', 'stack layer alignment']",
+      "coverage_focus": "['one hundred thirty atlas nodes', 'input output validator risk gate and next build fields', 'stack layer alignment']",
       "local_validation_refs": [
         "scripts/validate_medical_intelligence_atlas_v0_1_20260625.py",
         "scripts/validate_clinical_intelligence_stack_20260625.py"
@@ -8914,24 +9006,24 @@
     "source_artifact_count": 621
   },
   "summary": {
-    "atlas_node_count": 129,
-    "coverage_row_count": 129,
-    "source_artifact_count": 621,
-    "expected_atlas_node_count": 129,
-    "expected_node_count": 129,
-    "expected_coverage_row_count": 129,
-    "expected_source_artifact_count": 621,
-    "node_count": 129
+    "atlas_node_count": 130,
+    "coverage_row_count": 130,
+    "source_artifact_count": 626,
+    "expected_atlas_node_count": 130,
+    "expected_node_count": 130,
+    "expected_coverage_row_count": 130,
+    "expected_source_artifact_count": 626,
+    "node_count": 130
   },
   "expected_counts": {
-    "expected_atlas_node_count": 129,
-    "expected_coverage_row_count": 129,
-    "expected_source_artifact_count": 621,
-    "expected_node_count": 129,
-    "atlas_node_count": 129,
-    "coverage_row_count": 129,
-    "source_artifact_count": 621,
-    "coverage_rows": 129,
-    "source_artifacts": 621
+    "expected_atlas_node_count": 130,
+    "expected_coverage_row_count": 130,
+    "expected_source_artifact_count": 626,
+    "expected_node_count": 130,
+    "atlas_node_count": 130,
+    "coverage_row_count": 130,
+    "source_artifact_count": 626,
+    "coverage_rows": 130,
+    "source_artifacts": 626
   }
 }
