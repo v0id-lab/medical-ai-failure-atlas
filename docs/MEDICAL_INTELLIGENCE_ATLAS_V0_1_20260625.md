@@ -1643,6 +1643,20 @@ Risk gate: archive reuse release handoff closure archive reuse release handoff c
 
 Next build: cross language reviewer closeout ledger reconciliation exception replay archive rollup release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff closure archive reuse release handoff
 
+### mia_mmi_109 Multilingual Medical Intelligence
+
+Artifact: MMI 109 chain handoff controls
+
+Input: release reviewed archived packets, source attachment map, archive snapshot, reopenability state, and downstream handoff boundary
+
+Output: handoff reviewed archived packets with source attachments, archive snapshot, and reopenability preserved during downstream handoff review
+
+Validator: each MMI 109 chain handoff control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the handoff packet
+
+Risk gate: MMI 109 chain handoff packets cannot imply patient data use, clinical advice, authority, clearance, publication readiness, clinical validation, clinical deployment, model ranking, model superiority, partner approval, institutional backing, regulatory approval, or clinical use clearance
+
+Next build: MMI 110 chain closure controls
+
 ### mia_atlas_001 Medical Intelligence Atlas
 
 Artifact: node registry
