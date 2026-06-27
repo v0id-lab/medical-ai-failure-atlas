@@ -1769,6 +1769,20 @@ Risk gate: MMI 117 chain reuse packets cannot imply patient data use, clinical a
 
 Next build: MMI 118 chain release controls
 
+### mia_mmi_118 Multilingual Medical Intelligence
+
+Artifact: MMI 118 chain release controls
+
+Input: reuse reviewed archived packets, source attachment map, archive snapshot, reopenability state, and downstream release boundary
+
+Output: release reviewed archived packets with source attachments, archive snapshot, and reopenability preserved during downstream release review
+
+Validator: each MMI 118 chain release control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the release packet
+
+Risk gate: MMI 118 chain release packets cannot imply patient data use, clinical advice, authority, clearance, publication readiness, clinical validation, clinical deployment, model ranking, model superiority, partner approval, institutional backing, regulatory approval, or clinical use clearance
+
+Next build: MMI 119 chain handoff controls
+
 ### mia_atlas_001 Medical Intelligence Atlas
 
 Artifact: node registry
