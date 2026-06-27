@@ -591,7 +591,12 @@
     "mmi_114_chain_handoff_report": "data/mmi_114_chain_handoff_report_v0_1_20260625.json",
     "mmi_114_chain_handoff_report_doc": "docs/MMI_114_CHAIN_HANDOFF_REPORT_V0_1_20260625.md",
     "mmi_114_chain_handoff_scorer": "scripts/score_mmi_114_chain_handoff_controls_v0_1_20260625.py",
-    "mmi_114_chain_handoff_validator": "scripts/validate_mmi_114_chain_handoff_report_v0_1_20260625.py"
+    "mmi_114_chain_handoff_validator": "scripts/validate_mmi_114_chain_handoff_report_v0_1_20260625.py",
+    "mmi_115_chain_closure_controls": "data/mmi_115_chain_closure_controls_v0_1_20260625.jsonl",
+    "mmi_115_chain_closure_report": "data/mmi_115_chain_closure_report_v0_1_20260625.json",
+    "mmi_115_chain_closure_report_doc": "docs/MMI_115_CHAIN_CLOSURE_REPORT_V0_1_20260625.md",
+    "mmi_115_chain_closure_scorer": "scripts/score_mmi_115_chain_closure_controls_v0_1_20260625.py",
+    "mmi_115_chain_closure_validator": "scripts/validate_mmi_115_chain_closure_report_v0_1_20260625.py"
   },
   "validation": {
     "index_validation_command": "python3 -m json.tool data/multilingual_medical_intelligence_public_wording_index_v0_1_20260625.json",
@@ -1289,7 +1294,8 @@
     "mmi_111_chain_archive_control": "preserve source attachments, archive snapshot, and reopenability while archive reviewing closure reviewed archived packets",
     "mmi_112_chain_reuse_control": "preserve source attachments, archive snapshot, and reopenability while reuse reviewing archive reviewed archived packets",
     "mmi_113_chain_release_control": "preserve source attachments, archive snapshot, and reopenability while release reviewing reuse reviewed archived packets",
-    "mmi_114_chain_handoff_control": "preserve source attachments, archive snapshot, and reopenability while handoff reviewing release reviewed archived packets"
+    "mmi_114_chain_handoff_control": "preserve source attachments, archive snapshot, and reopenability while handoff reviewing release reviewed archived packets",
+    "mmi_115_chain_closure_control": "preserve source attachments, archive snapshot, and reopenability while closure reviewing handoff reviewed archived packets"
   },
   "planned_rows": [
     {
@@ -1450,7 +1456,7 @@
       ]
     }
   ],
-  "next_build_suggestion": "MMI 115 chain closure controls",
+  "next_build_suggestion": "MMI 116 chain archive controls",
   "artifact_claims": {
     "cross_language_reviewer_decision_rationale_report": [
       "reviewer decision rationale preservation",
@@ -2128,7 +2134,8 @@
       "no patient data clinical advice validation deployment ranking superiority partner institution regulatory publication authority or clearance claim"
     ],
     "mmi_113_chain_release_report": "MMI 113 chain release report preserves source attachment, archive snapshot, and reopenability boundaries for local synthetic release review.",
-    "mmi_114_chain_handoff_report": "MMI 114 chain handoff report preserves source attachment, archive snapshot, and reopenability boundaries for local synthetic handoff review."
+    "mmi_114_chain_handoff_report": "MMI 114 chain handoff report preserves source attachment, archive snapshot, and reopenability boundaries for local synthetic handoff review.",
+    "mmi_115_chain_closure_report": "MMI 115 chain closure report preserves source attachment, archive snapshot, and reopenability boundaries for local synthetic closure review."
   },
   "report_index": {
     "cross_language_reviewer_closeout_ledger_reconciliation_exception_report": [
@@ -2523,6 +2530,10 @@
     "mmi_114_chain_handoff_report": [
       "data/mmi_114_chain_handoff_report_v0_1_20260625.json",
       "docs/MMI_114_CHAIN_HANDOFF_REPORT_V0_1_20260625.md"
+    ],
+    "mmi_115_chain_closure_report": [
+      "data/mmi_115_chain_closure_report_v0_1_20260625.json",
+      "docs/MMI_115_CHAIN_CLOSURE_REPORT_V0_1_20260625.md"
     ]
   }
 }
