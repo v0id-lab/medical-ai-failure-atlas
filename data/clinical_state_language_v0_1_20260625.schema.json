@@ -1,0 +1,108 @@
+{
+  "$id": "https://github.com/goktugozkanmd/medical-ai-failure-atlas/clinical-state-language/v0.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A clinician built open system for representing patient state, patient trajectories, reasoning quality, tool use, source support, and multilingual clinical context.",
+  "properties": {
+    "action_boundary": {
+      "type": "string"
+    },
+    "clinical_use_allowed": {
+      "type": "boolean"
+    },
+    "evidence_against": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidence_for": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "follow_up_triggers": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "hypotheses": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "language_context": {
+      "type": "string"
+    },
+    "missing_data": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patient_data_used": {
+      "type": "boolean"
+    },
+    "patient_voice": {
+      "type": "string"
+    },
+    "problem_list": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "risk_state": {
+      "type": "string"
+    },
+    "source_support_needed": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "state_id": {
+      "type": "string"
+    },
+    "synthetic_only": {
+      "type": "boolean"
+    },
+    "timeline": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "timepoint": {
+      "type": "string"
+    },
+    "trajectory_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "state_id",
+    "trajectory_id",
+    "timepoint",
+    "patient_voice",
+    "problem_list",
+    "timeline",
+    "missing_data",
+    "hypotheses",
+    "evidence_for",
+    "evidence_against",
+    "risk_state",
+    "action_boundary",
+    "follow_up_triggers",
+    "source_support_needed",
+    "language_context",
+    "synthetic_only",
+    "patient_data_used",
+    "clinical_use_allowed"
+  ],
+  "title": "Clinical State Language v0.1",
+  "type": "object"
+}

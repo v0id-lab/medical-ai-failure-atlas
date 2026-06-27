@@ -1,0 +1,244 @@
+{
+  "artifact": "Internal medicine AI safety strategy",
+  "date": "2026 06 25",
+  "status": "public field command plan and runnable synthetic eval path",
+  "decision": "Build the Turkish internal medicine safety evaluation lane as the fastest defensible path to visible medical AI authority.",
+  "position": "A clinician led safety and source support layer for Turkish and English internal medicine scenarios, focused on missing context, escalation, medication safety, laboratory interpretation, source support, and claim hygiene.",
+  "source_registry": [
+    {
+      "id": "SRC001",
+      "name": "FDA AI enabled medical devices list",
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices",
+      "verified_use": "Use only to state that FDA maintains a public list of AI enabled medical devices authorized for marketing in the United States and that the list supports transparency.",
+      "strategy_signal": "Regulated health AI has visible device routes, but a public list does not prove clinical usefulness for broad internal medicine workflows."
+    },
+    {
+      "id": "SRC002",
+      "name": "FDA AI and machine learning software as a medical device page",
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
+      "verified_use": "Use only to ground the need for lifecycle and safety thinking around AI software as medical device work.",
+      "strategy_signal": "The repo should speak in lifecycle, risk, and review language rather than product launch language."
+    },
+    {
+      "id": "SRC003",
+      "name": "WHO Europe AI health system readiness report",
+      "url": "https://www.who.int/europe/publications/i/item/WHO-EURO-2025-12707-52481-81028",
+      "verified_use": "Use only to state that WHO Europe reported a regional AI health readiness assessment based on a 2024 to 2025 survey across 50 Member States.",
+      "strategy_signal": "Country readiness, governance, data, workforce, and local uptake matter as much as model score."
+    },
+    {
+      "id": "SRC004",
+      "name": "WHO large multi modal model guidance",
+      "url": "https://www.who.int/publications/i/item/9789240084759",
+      "verified_use": "Use only to state that WHO issued guidance on ethics and governance for large multi modal models in health.",
+      "strategy_signal": "Public materials must keep ethics, safety, governance, and uncertainty visible."
+    },
+    {
+      "id": "SRC005",
+      "name": "IMDRF AI and machine learning working group",
+      "url": "https://www.imdrf.org/working-groups/artificial-intelligencemachine-learning-enabled",
+      "verified_use": "Use only to state that IMDRF lists GMLP final guidance from 2025 and a 2026 AI lifecycle management consultation.",
+      "strategy_signal": "A strong public project should map failures to lifecycle controls."
+    },
+    {
+      "id": "SRC006",
+      "name": "OpenAI HealthBench",
+      "url": "https://openai.com/index/healthbench/",
+      "verified_use": "Use only to state that HealthBench contains 5000 realistic health conversations and physician created rubrics built with 262 physicians across 60 countries.",
+      "strategy_signal": "Rubrics and realistic dialogue now matter more than exam style scoring alone."
+    },
+    {
+      "id": "SRC007",
+      "name": "Google MedGemma developer page",
+      "url": "https://developers.google.com/health-ai-developer-foundations/medgemma",
+      "verified_use": "Use only to state that MedGemma is a Google collection of open models for medical text and image comprehension and that Google says specific use case validation is required.",
+      "strategy_signal": "Open model builders need clinician evaluation rows and source support checks."
+    },
+    {
+      "id": "SRC008",
+      "name": "MedHELM",
+      "url": "https://medhelm.org/",
+      "verified_use": "Use only to state that MedHELM describes an open community benchmark with 121 clinical tasks in a clinician validated taxonomy.",
+      "strategy_signal": "A Turkish internal medicine safety lane can become an issue or contribution path if it stays structured."
+    },
+    {
+      "id": "SRC009",
+      "name": "AgentClinic",
+      "url": "https://agentclinic.github.io/",
+      "verified_use": "Use only to state that AgentClinic evaluates clinical agents through simulated sequential encounters under incomplete information.",
+      "strategy_signal": "Sequential missing information and tool use are central failure surfaces."
+    },
+    {
+      "id": "SRC010",
+      "name": "Nature Medicine clinical AI tool comparison",
+      "url": "https://www.nature.com/articles/s41591-026-04431-5",
+      "verified_use": "Use only to state that the article highlights the need for independent real world evaluation before clinical settings.",
+      "strategy_signal": "Independent evaluation is the public wedge. Brand claims should not replace evidence."
+    },
+    {
+      "id": "SRC011",
+      "name": "Sağlık Bakanlığı Yapay Zeka ve Yenilikçi Teknolojiler Daire Başkanlığı",
+      "url": "https://sbsgm.saglik.gov.tr/TR-104172/yapay-zeka-ve-yenilikci-teknolojiler-daire-baskanligi.html",
+      "verified_use": "Use only to state that the Ministry page lists an AI and innovative technologies department and describes duties around identifying, producing, maintaining, monitoring, and coordinating AI solutions.",
+      "strategy_signal": "Türkiye has an official AI health system route, so public language must stay route aware."
+    },
+    {
+      "id": "SRC012",
+      "name": "TÜYZE RADİS technical launch",
+      "url": "https://tuyze.tuseb.gov.tr/haberler/radis-teknik-lansmani-himss-eurasia-2025te-gerceklestirildi-20260116",
+      "verified_use": "Use only to state that TÜYZE reported a RADİS radiology clinical decision support technical launch at HIMSS Eurasia 2025.",
+      "strategy_signal": "Türkiye has visible radiology decision support momentum; internal medicine appropriateness remains the faster open lane."
+    },
+    {
+      "id": "SRC013",
+      "name": "Sağlık Bakanlığı active KDS list",
+      "url": "https://kayittescil.saglik.gov.tr/TR-26534/aktif-kds-listesi.html",
+      "verified_use": "Use only to state that the active KDS list names registered decision support system vendors, including HEVI AI and other health software firms.",
+      "strategy_signal": "A neutral KDS question form can help firms show evidence without overclaim."
+    },
+    {
+      "id": "SRC014",
+      "name": "NeyimVar award page",
+      "url": "https://sbsgm.saglik.gov.tr/TR-94051/neyimvar-uygulamasina-yilin-saglik-bilgi-sistemleri---yenilikci-uygulamasi-odulu.html",
+      "verified_use": "Use only to state that the Ministry page describes NeyimVar as using AI to evaluate answers and previous health data to suggest possible diagnoses and route users to MHRS.",
+      "strategy_signal": "Public Turkish patient routing language already exists, but external evaluation still needs careful safety gates."
+    },
+    {
+      "id": "SRC015",
+      "name": "TÜBİTAK open calls",
+      "url": "https://tubitak.gov.tr/tr/acik-cagrilar",
+      "verified_use": "Use only to state that TÜBİTAK listed the 1711 AI Ecosystem 2026 call with a 15 June 2026 to 18 September 2026 application window.",
+      "strategy_signal": "Funding routes exist, but partner, payment, terms, and institution claims stay blocked until verified."
+    },
+    {
+      "id": "SRC016",
+      "name": "TEKNOFEST health AI competition result page",
+      "url": "https://tuyze.tuseb.gov.tr/haberler/teknofest-2025-saglikta-yapay-zeka-yarismasi-sonuclandi-20251016",
+      "verified_use": "Use only to state that TÜYZE described strong youth participation and imaging focused tasks in the 2025 health AI competition.",
+      "strategy_signal": "Education and competition energy is strong; report claim hygiene can convert that energy into safer public output."
+    }
+  ],
+  "strategic_read": [
+    {
+      "id": "READ001",
+      "claim": "Global medical AI is crowded in model branding, general health chat, radiology, and benchmark leaderboards.",
+      "evidence_ids": ["SRC001", "SRC006", "SRC007", "SRC008"],
+      "action": "Avoid model race language. Build clinician review rows that model builders can reuse."
+    },
+    {
+      "id": "READ002",
+      "claim": "The new credible edge is workflow evaluation under missing information, source support, escalation safety, and local clinical language.",
+      "evidence_ids": ["SRC003", "SRC004", "SRC005", "SRC008", "SRC009", "SRC010"],
+      "action": "Make every row name missing variables, dangerous reassurance, source gap, and safer wording."
+    },
+    {
+      "id": "READ003",
+      "claim": "Türkiye has official health AI activity, decision support vendors, and radiology momentum, but a public internal medicine evaluation lane is still underbuilt.",
+      "evidence_ids": ["SRC011", "SRC012", "SRC013", "SRC014", "SRC016"],
+      "action": "Lead with Turkish internal medicine safety evaluation rather than broad AI transformation claims."
+    }
+  ],
+  "operating_model": [
+    {
+      "agent": "Agent one",
+      "lane": "Field radar",
+      "job": "Track FDA, WHO, IMDRF, HealthBench, MedGemma, MedHELM, AgentClinic, TÜYZE, KDS, NeyimVar, TÜBİTAK, and TEKNOFEST signals.",
+      "output": "One source checked weekly field note and one route owner action gate."
+    },
+    {
+      "agent": "Agent two",
+      "lane": "Eval factory",
+      "job": "Turn synthetic Turkish internal medicine scenarios into rows with escalation, missing variable, source support, and scoring gates.",
+      "output": "Validated JSONL rows, generated docs, and a maintainer ready issue pack."
+    }
+  ],
+  "six_hour_sprint": [
+    {
+      "id": "H001",
+      "work": "Generate the Turkish internal medicine safety eval lane from the existing v0.3 synthetic case set.",
+      "proof": "Data file, generated doc, validator, Makefile target, and README link."
+    },
+    {
+      "id": "H002",
+      "work": "Produce the field command plan with source registry and source support boundaries.",
+      "proof": "Generated Markdown and JSON with blocked claim checks."
+    },
+    {
+      "id": "H003",
+      "work": "Update the public PR so the repo direction becomes visible.",
+      "proof": "Draft PR remains open with new commit and validation record."
+    }
+  ],
+  "thirty_day_targets": [
+    {
+      "id": "D001",
+      "target": "100 synthetic Turkish internal medicine cases with English summaries and safety gates.",
+      "measure": "Rows pass validator and stay patient data free."
+    },
+    {
+      "id": "D002",
+      "target": "A MedHELM or Medmarks issue pack for Turkish internal medicine and escalation safety.",
+      "measure": "Public issue opened only after route state and claim gate pass."
+    },
+    {
+      "id": "D003",
+      "target": "A KDS vendor evidence question form.",
+      "measure": "Fifteen questions cover intended use, data, validation, monitoring, privacy, and failure handling."
+    },
+    {
+      "id": "D004",
+      "target": "A RADİS style internal medicine appropriateness concept pack.",
+      "measure": "Synthetic scenarios cover troponin, D dimer, potassium, creatinine, antibiotics, anticoagulation, and urgent referral."
+    },
+    {
+      "id": "D005",
+      "target": "A visible LinkedIn and GitHub proof rhythm.",
+      "measure": "One public post draft and one validated repo artifact per loop, without endorsement or validation claims."
+    }
+  ],
+  "eval_selection": {
+    "source_jsonl": "data/tr_medllm_synthetic_eval_set_v0_3.jsonl",
+    "output_jsonl": "data/turkish_internal_medicine_safety_eval_v0_1_20260625.jsonl",
+    "max_rows": 30,
+    "included_domain_terms": [
+      "nephrology",
+      "cardiology",
+      "gastroenterology",
+      "endocrinology",
+      "infectious",
+      "respiratory",
+      "geriatrics",
+      "hematology",
+      "rheumatology",
+      "intensive care",
+      "emergency and critical care"
+    ],
+    "lane_map": {
+      "nephrology": "electrolyte and kidney safety",
+      "cardiology": "chest pain and cardiovascular escalation",
+      "gastroenterology": "bleeding and abdominal danger",
+      "endocrinology": "diabetes steroid and endocrine emergency",
+      "infectious": "infection stewardship and sepsis caution",
+      "respiratory": "dyspnea and respiratory escalation",
+      "geriatrics": "polypharmacy and fall safety",
+      "hematology": "anticoagulation bleeding and cytopenia risk",
+      "rheumatology": "immunosuppression and medication safety",
+      "intensive care": "critical care workflow",
+      "emergency and critical care": "urgent escalation"
+    }
+  },
+  "blocked_claims": [
+    "clinical validation",
+    "clinical deployment",
+    "patient data use",
+    "model superiority",
+    "score certification",
+    "source truth certification",
+    "regulatory clearance",
+    "institutional approval",
+    "partner commitment",
+    "endorsement",
+    "acceptance",
+    "merge"
+  ]
+}
