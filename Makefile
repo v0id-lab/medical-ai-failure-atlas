@@ -7680,3 +7680,8 @@ mmi_177_chain_reuse_controls:
 mmi_178_chain_release_controls:
 	$(PYTHON) scripts/score_mmi_178_chain_release_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_178_chain_release_report_v0_1_20260625.py
+
+.PHONY: mmi_179_chain_handoff_controls
+mmi_179_chain_handoff_controls:
+	$(PYTHON) scripts/score_mmi_179_chain_handoff_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_179_chain_handoff_report_v0_1_20260625.py

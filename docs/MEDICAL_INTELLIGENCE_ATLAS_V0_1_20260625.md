@@ -2651,6 +2651,20 @@ Risk gate: MMI 178 chain release packets cannot imply patient data, clinical adv
 
 Next build: MMI 179 chain handoff controls
 
+### mia_mmi_179 Multilingual Medical Intelligence
+
+Artifact: MMI 179 chain handoff controls
+
+Input: MMI 178 release reviewed archived packets
+
+Output: chain handoff review packet with source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability preserved
+
+Validator: each MMI 179 chain handoff control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the handoff packet
+
+Risk gate: MMI 179 chain handoff packets cannot imply patient data, clinical advice, clinical validation, clinical deployment, model ranking, model superiority, partner, institutional, regulatory, publication, authority, clearance, or outward use without user approval
+
+Next build: MMI 180 chain closure controls
+
 ## Relationships
 
 ### Clinical State Language to Clinical Trajectory Engine
