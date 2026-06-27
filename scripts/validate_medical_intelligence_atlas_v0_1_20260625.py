@@ -55,8 +55,8 @@ def main() -> int:
         errors.append(check.stdout.strip())
 
     nodes = data.get("nodes", [])
-    if len(nodes) != 169:
-        errors.append("Expected one hundred sixty nine atlas nodes")
+    if len(nodes) != 170:
+        errors.append("Expected one hundred seventy atlas nodes")
 
     layers = {node.get("layer") for node in nodes}
     if layers != EXPECTED_LAYERS:
