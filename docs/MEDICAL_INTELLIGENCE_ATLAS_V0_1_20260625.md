@@ -2371,6 +2371,20 @@ Risk gate: MMI 160 chain closure packets cannot imply patient data use, clinical
 
 Next build: MMI 161 chain archive controls
 
+### mia_mmi_161 Multilingual Medical Intelligence
+
+Artifact: MMI 161 chain archive controls
+
+Input: MMI 160 closure reviewed archived packets
+
+Output: chain archive review packet with source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability preserved
+
+Validator: each MMI 161 chain archive control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the archive packet
+
+Risk gate: MMI 161 chain archive packets cannot imply patient data use, clinical advice, authority, clearance, publication readiness, clinical validation, clinical deployment, model ranking, model superiority, partner approval, institutional backing, regulatory approval, or clinical use clearance
+
+Next build: MMI 162 chain reuse controls
+
 ### mia_atlas_001 Medical Intelligence Atlas
 
 Artifact: node registry
