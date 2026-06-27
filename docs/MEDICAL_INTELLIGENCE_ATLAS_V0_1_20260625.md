@@ -2455,6 +2455,20 @@ Risk gate: MMI 166 chain archive packets cannot imply patient data use, clinical
 
 Next build: MMI 167 chain reuse controls
 
+### mia_mmi_167 Multilingual Medical Intelligence
+
+Artifact: MMI 167 chain reuse controls
+
+Input: MMI 166 archive reviewed archived packets
+
+Output: chain reuse review packet with source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability preserved
+
+Validator: each MMI 167 chain reuse control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the reuse packet
+
+Risk gate: MMI 167 chain reuse packets cannot imply patient data, clinical advice, clinical validation, clinical deployment, model ranking, model superiority, partner, institutional, regulatory, publication, authority, clearance, or outward use without user approval
+
+Next build: MMI 168 chain release controls
+
 ### mia_atlas_001 Medical Intelligence Atlas
 
 Artifact: node registry
