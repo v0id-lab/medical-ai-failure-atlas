@@ -28,7 +28,7 @@ EXPECTED_LAYERS = {
 }
 ALLOWED_READINESS_STATUSES = {"ready", "blocked", "needs source check"}
 EXPECTED_RISK_GATE = "public release cannot outrun validators"
-EXPECTED_ATLAS_NODE_COUNT = 141
+EXPECTED_ATLAS_NODE_COUNT = 142
 
 ROW_KEYS = ("release_gate_rows", "gate_rows", "readiness_rows", "layers", "rows")
 NEXT_ACTION_KEYS = ("expected_next_action", "exact_next_action")
@@ -414,6 +414,7 @@ def validate_mmi_layer_mirrors_release_gate(payload: dict[str, Any], errors: lis
         "mia_mmi_129",
         "mia_mmi_130",
         "mia_mmi_131",
+        "mia_mmi_132",
         "mmi_113_chain_release",
         "mmi_114_chain_handoff",
         "mmi_115_chain_closure",
@@ -433,6 +434,7 @@ def validate_mmi_layer_mirrors_release_gate(payload: dict[str, Any], errors: lis
         "mmi_129_chain_handoff",
         "mmi_130_chain_closure",
         "mmi_131_chain_archive",
+        "mmi_132_chain_reuse",
     ):
         if token in row_blob and token not in layer_blob:
             errors.append(f"Multilingual Medical Intelligence layer must include release gate evidence token: {token}")

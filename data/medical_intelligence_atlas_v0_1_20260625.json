@@ -1402,6 +1402,16 @@
       "next_build": "MMI 132 chain reuse controls"
     },
     {
+      "id": "mia_mmi_132",
+      "layer": "Multilingual Medical Intelligence",
+      "artifact": "MMI 132 chain reuse controls",
+      "input": "MMI 131 archive reviewed archived packets",
+      "output": "chain reuse review packet with source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability preserved",
+      "validator": "each MMI 132 chain reuse control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the reuse packet",
+      "risk_gate": "MMI 132 chain reuse packets cannot imply patient data use, clinical advice, authority, clearance, publication readiness, clinical validation, clinical deployment, model ranking, model superiority, partner approval, institutional backing, regulatory approval, or clinical use clearance",
+      "next_build": "MMI 133 chain release controls"
+    },
+    {
       "id": "mia_atlas_001",
       "layer": "Medical Intelligence Atlas",
       "artifact": "node registry",

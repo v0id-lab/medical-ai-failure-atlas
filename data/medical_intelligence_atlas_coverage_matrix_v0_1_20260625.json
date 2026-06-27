@@ -4714,7 +4714,12 @@
     "mmi_131_chain_archive_report": "data/mmi_131_chain_archive_report_v0_1_20260625.json",
     "mmi_131_chain_archive_report_doc": "docs/MMI_131_CHAIN_ARCHIVE_REPORT_V0_1_20260625.md",
     "mmi_131_chain_archive_scorer": "scripts/score_mmi_131_chain_archive_controls_v0_1_20260625.py",
-    "mmi_131_chain_archive_validator": "scripts/validate_mmi_131_chain_archive_report_v0_1_20260625.py"
+    "mmi_131_chain_archive_validator": "scripts/validate_mmi_131_chain_archive_report_v0_1_20260625.py",
+    "mmi_132_chain_reuse_controls": "data/mmi_132_chain_reuse_controls_v0_1_20260625.jsonl",
+    "mmi_132_chain_reuse_report": "data/mmi_132_chain_reuse_report_v0_1_20260625.json",
+    "mmi_132_chain_reuse_report_doc": "docs/MMI_132_CHAIN_REUSE_REPORT_V0_1_20260625.md",
+    "mmi_132_chain_reuse_scorer": "scripts/score_mmi_132_chain_reuse_controls_v0_1_20260625.py",
+    "mmi_132_chain_reuse_validator": "scripts/validate_mmi_132_chain_reuse_report_v0_1_20260625.py"
   },
   "coverage_rows": [
     {
@@ -9984,7 +9989,7 @@
       ],
       "primary_artifact": "docs/MMI_131_CHAIN_ARCHIVE_REPORT_V0_1_20260625.md",
       "artifact": "MMI 131 chain archive controls",
-      "open_gap": "next reuse step not yet represented",
+      "open_gap": "reuse step represented by MMI 132",
       "required_artifacts": [
         "mmi_131_chain_archive_controls",
         "mmi_131_chain_archive_report",
@@ -10006,41 +10011,98 @@
         "scripts/score_mmi_131_chain_archive_controls_v0_1_20260625.py",
         "scripts/validate_mmi_131_chain_archive_report_v0_1_20260625.py"
       ]
+    },
+    {
+      "node_id": "mia_mmi_132",
+      "layer": "Multilingual Medical Intelligence",
+      "node_artifact": "MMI 132 chain reuse controls",
+      "stack_runtime_artifact_ids": [
+        "mmi_132_chain_reuse_controls",
+        "mmi_132_chain_reuse_report",
+        "mmi_132_chain_reuse_report_doc",
+        "mmi_132_chain_reuse_scorer",
+        "mmi_132_chain_reuse_validator"
+      ],
+      "coverage_focus": "reuse review source attachment preservation and overclaim blocking",
+      "local_validation_refs": [
+        "scripts/score_mmi_132_chain_reuse_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_132_chain_reuse_report_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage",
+      "validator": "scripts/validate_mmi_132_chain_reuse_report_v0_1_20260625.py",
+      "source_artifact_refs": [
+        "mmi_132_chain_reuse_controls",
+        "mmi_132_chain_reuse_report",
+        "mmi_132_chain_reuse_report_doc",
+        "mmi_132_chain_reuse_scorer",
+        "mmi_132_chain_reuse_validator"
+      ],
+      "local_artifacts": [
+        "data/mmi_132_chain_reuse_controls_v0_1_20260625.jsonl",
+        "data/mmi_132_chain_reuse_report_v0_1_20260625.json",
+        "docs/MMI_132_CHAIN_REUSE_REPORT_V0_1_20260625.md",
+        "scripts/score_mmi_132_chain_reuse_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_132_chain_reuse_report_v0_1_20260625.py"
+      ],
+      "primary_artifact": "docs/MMI_132_CHAIN_REUSE_REPORT_V0_1_20260625.md",
+      "artifact": "MMI 132 chain reuse controls",
+      "open_gap": "next release step not yet represented",
+      "required_artifacts": [
+        "mmi_132_chain_reuse_controls",
+        "mmi_132_chain_reuse_report",
+        "mmi_132_chain_reuse_report_doc",
+        "mmi_132_chain_reuse_scorer",
+        "mmi_132_chain_reuse_validator"
+      ],
+      "source_artifact_ids": [
+        "mmi_132_chain_reuse_controls",
+        "mmi_132_chain_reuse_report",
+        "mmi_132_chain_reuse_report_doc",
+        "mmi_132_chain_reuse_scorer",
+        "mmi_132_chain_reuse_validator"
+      ],
+      "source_artifact_paths": [
+        "data/mmi_132_chain_reuse_controls_v0_1_20260625.jsonl",
+        "data/mmi_132_chain_reuse_report_v0_1_20260625.json",
+        "docs/MMI_132_CHAIN_REUSE_REPORT_V0_1_20260625.md",
+        "scripts/score_mmi_132_chain_reuse_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_132_chain_reuse_report_v0_1_20260625.py"
+      ]
     }
   ],
   "matrix_checks": {
-    "expected_atlas_node_count": 140,
+    "expected_atlas_node_count": 142,
     "expected_stack_layer_count": 6,
     "requires_all_referenced_artifacts_to_exist": true,
     "requires_each_atlas_node_once": 138,
     "requires_no_external_url_strings": true,
     "requires_boundary_flags": true,
-    "expected_coverage_row_count": 140,
-    "expected_source_artifact_count": 676,
-    "expected_node_count": 140,
-    "atlas_node_count": 140,
-    "coverage_row_count": 140,
-    "source_artifact_count": 676
+    "expected_coverage_row_count": 142,
+    "expected_source_artifact_count": 686,
+    "expected_node_count": 142,
+    "atlas_node_count": 142,
+    "coverage_row_count": 142,
+    "source_artifact_count": 686
   },
   "summary": {
-    "atlas_node_count": 141,
-    "coverage_row_count": 141,
-    "source_artifact_count": 681,
-    "expected_atlas_node_count": 141,
-    "expected_node_count": 141,
-    "expected_coverage_row_count": 141,
-    "expected_source_artifact_count": 681,
-    "node_count": 141
+    "atlas_node_count": 142,
+    "coverage_row_count": 142,
+    "source_artifact_count": 686,
+    "expected_atlas_node_count": 142,
+    "expected_node_count": 142,
+    "expected_coverage_row_count": 142,
+    "expected_source_artifact_count": 686,
+    "node_count": 142
   },
   "expected_counts": {
-    "expected_atlas_node_count": 141,
-    "expected_coverage_row_count": 141,
-    "expected_source_artifact_count": 681,
-    "expected_node_count": 141,
-    "atlas_node_count": 141,
-    "coverage_row_count": 141,
-    "source_artifact_count": 681,
-    "coverage_rows": 137,
-    "source_artifacts": 661
+    "expected_atlas_node_count": 142,
+    "expected_coverage_row_count": 142,
+    "expected_source_artifact_count": 686,
+    "expected_node_count": 142,
+    "atlas_node_count": 142,
+    "coverage_row_count": 142,
+    "source_artifact_count": 686,
+    "coverage_rows": 142,
+    "source_artifacts": 686
   }
 }

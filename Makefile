@@ -7464,3 +7464,7 @@ mmi_130_chain_closure_controls:
 mmi_131_chain_archive_controls:
 	$(PYTHON) scripts/score_mmi_131_chain_archive_controls_v0_1_20260625.py --check
 	$(PYTHON) scripts/validate_mmi_131_chain_archive_report_v0_1_20260625.py
+.PHONY: mmi_132_chain_reuse_controls
+mmi_132_chain_reuse_controls:
+	$(PYTHON) scripts/score_mmi_132_chain_reuse_controls_v0_1_20260625.py --check
+	$(PYTHON) scripts/validate_mmi_132_chain_reuse_report_v0_1_20260625.py
