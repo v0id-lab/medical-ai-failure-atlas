@@ -2847,6 +2847,20 @@ Risk gate: MMI 192 chain reuse packets cannot imply patient data, clinical advic
 
 Next build: MMI 193 chain release controls
 
+### mia_mmi_193 Multilingual Medical Intelligence
+
+Artifact: MMI 193 chain release controls
+
+Input: MMI 192 reuse reviewed archived packets
+
+Output: chain release review packet with source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability preserved
+
+Validator: each MMI 193 chain release control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the release packet
+
+Risk gate: MMI 193 chain release packets cannot imply patient data, clinical advice, clinical validation, clinical deployment, model ranking, model superiority, partner, institutional, regulatory, publication, authority, clearance, or outward use without user approval
+
+Next build: MMI 194 chain handoff controls
+
 ## Relationships
 
 ### Clinical State Language to Clinical Trajectory Engine
