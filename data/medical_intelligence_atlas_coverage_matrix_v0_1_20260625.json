@@ -4629,6 +4629,46 @@
       ],
       "description": "MMI 128 chain release validator",
       "artifact_id": "mmi_128_chain_release_validator"
+    },
+    "mmi_129_chain_handoff_controls": {
+      "path": "data/mmi_129_chain_handoff_controls_v0_1_20260625.jsonl",
+      "atlas_nodes": [
+        "mia_mmi_129"
+      ],
+      "description": "MMI 129 chain handoff controls",
+      "artifact_id": "mmi_129_chain_handoff_controls"
+    },
+    "mmi_129_chain_handoff_report": {
+      "path": "data/mmi_129_chain_handoff_report_v0_1_20260625.json",
+      "atlas_nodes": [
+        "mia_mmi_129"
+      ],
+      "description": "MMI 129 chain handoff report",
+      "artifact_id": "mmi_129_chain_handoff_report"
+    },
+    "mmi_129_chain_handoff_report_doc": {
+      "path": "docs/MMI_129_CHAIN_HANDOFF_REPORT_V0_1_20260625.md",
+      "atlas_nodes": [
+        "mia_mmi_129"
+      ],
+      "description": "MMI 129 chain handoff report doc",
+      "artifact_id": "mmi_129_chain_handoff_report_doc"
+    },
+    "mmi_129_chain_handoff_scorer": {
+      "path": "scripts/score_mmi_129_chain_handoff_controls_v0_1_20260625.py",
+      "atlas_nodes": [
+        "mia_mmi_129"
+      ],
+      "description": "MMI 129 chain handoff scorer",
+      "artifact_id": "mmi_129_chain_handoff_scorer"
+    },
+    "mmi_129_chain_handoff_validator": {
+      "path": "scripts/validate_mmi_129_chain_handoff_report_v0_1_20260625.py",
+      "atlas_nodes": [
+        "mia_mmi_129"
+      ],
+      "description": "MMI 129 chain handoff validator",
+      "artifact_id": "mmi_129_chain_handoff_validator"
     }
   },
   "coverage_rows": [
@@ -9728,7 +9768,7 @@
       ],
       "primary_artifact": "docs/MMI_128_CHAIN_RELEASE_REPORT_V0_1_20260625.md",
       "artifact": "MMI 128 chain release controls",
-      "open_gap": "next handoff step not yet represented",
+      "open_gap": "handoff step represented by MMI 129",
       "required_artifacts": [
         "mmi_128_chain_release_controls",
         "mmi_128_chain_release_report",
@@ -9750,40 +9790,97 @@
         "scripts/score_mmi_128_chain_release_controls_v0_1_20260625.py",
         "scripts/validate_mmi_128_chain_release_report_v0_1_20260625.py"
       ]
+    },
+    {
+      "node_id": "mia_mmi_129",
+      "layer": "Multilingual Medical Intelligence",
+      "node_artifact": "MMI 129 chain handoff controls",
+      "stack_runtime_artifact_ids": [
+        "mmi_129_chain_handoff_controls",
+        "mmi_129_chain_handoff_report",
+        "mmi_129_chain_handoff_report_doc",
+        "mmi_129_chain_handoff_scorer",
+        "mmi_129_chain_handoff_validator"
+      ],
+      "coverage_focus": "handoff review source attachment preservation and overclaim blocking",
+      "local_validation_refs": [
+        "scripts/score_mmi_124_chain_handoff_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_124_chain_handoff_report_v0_1_20260625.py"
+      ],
+      "coverage_status": "direct fixture coverage",
+      "validator": "scripts/validate_mmi_129_chain_handoff_report_v0_1_20260625.py",
+      "source_artifact_refs": [
+        "mmi_129_chain_handoff_controls",
+        "mmi_129_chain_handoff_report",
+        "mmi_129_chain_handoff_report_doc",
+        "mmi_129_chain_handoff_scorer",
+        "mmi_129_chain_handoff_validator"
+      ],
+      "local_artifacts": [
+        "data/mmi_129_chain_handoff_controls_v0_1_20260625.jsonl",
+        "data/mmi_129_chain_handoff_report_v0_1_20260625.json",
+        "docs/MMI_129_CHAIN_HANDOFF_REPORT_V0_1_20260625.md",
+        "scripts/score_mmi_129_chain_handoff_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_129_chain_handoff_report_v0_1_20260625.py"
+      ],
+      "primary_artifact": "docs/MMI_129_CHAIN_HANDOFF_REPORT_V0_1_20260625.md",
+      "artifact": "MMI 129 chain handoff controls",
+      "open_gap": "next closure step not yet represented",
+      "required_artifacts": [
+        "mmi_129_chain_handoff_controls",
+        "mmi_129_chain_handoff_report",
+        "mmi_129_chain_handoff_report_doc",
+        "mmi_129_chain_handoff_scorer",
+        "mmi_129_chain_handoff_validator"
+      ],
+      "source_artifact_ids": [
+        "mmi_129_chain_handoff_controls",
+        "mmi_129_chain_handoff_report",
+        "mmi_129_chain_handoff_report_doc",
+        "mmi_129_chain_handoff_scorer",
+        "mmi_129_chain_handoff_validator"
+      ],
+      "source_artifact_paths": [
+        "data/mmi_129_chain_handoff_controls_v0_1_20260625.jsonl",
+        "data/mmi_129_chain_handoff_report_v0_1_20260625.json",
+        "docs/MMI_129_CHAIN_HANDOFF_REPORT_V0_1_20260625.md",
+        "scripts/score_mmi_129_chain_handoff_controls_v0_1_20260625.py",
+        "scripts/validate_mmi_129_chain_handoff_report_v0_1_20260625.py"
+      ]
     }
   ],
   "matrix_checks": {
-    "expected_atlas_node_count": 138,
+    "expected_atlas_node_count": 139,
     "expected_stack_layer_count": 6,
     "requires_all_referenced_artifacts_to_exist": true,
     "requires_each_atlas_node_once": 138,
     "requires_no_external_url_strings": true,
     "requires_boundary_flags": true,
-    "expected_coverage_row_count": 137,
-    "expected_source_artifact_count": 661,
-    "expected_node_count": 138,
-    "atlas_node_count": 138,
-    "coverage_row_count": 137,
-    "source_artifact_count": 661
+    "expected_coverage_row_count": 139,
+    "expected_source_artifact_count": 671,
+    "expected_node_count": 139,
+    "atlas_node_count": 139,
+    "coverage_row_count": 139,
+    "source_artifact_count": 671
   },
   "summary": {
-    "atlas_node_count": 138,
-    "coverage_row_count": 138,
-    "source_artifact_count": 666,
-    "expected_atlas_node_count": 138,
-    "expected_node_count": 138,
-    "expected_coverage_row_count": 138,
-    "expected_source_artifact_count": 666,
-    "node_count": 138
+    "atlas_node_count": 139,
+    "coverage_row_count": 139,
+    "source_artifact_count": 671,
+    "expected_atlas_node_count": 139,
+    "expected_node_count": 139,
+    "expected_coverage_row_count": 139,
+    "expected_source_artifact_count": 671,
+    "node_count": 139
   },
   "expected_counts": {
-    "expected_atlas_node_count": 138,
-    "expected_coverage_row_count": 138,
-    "expected_source_artifact_count": 666,
-    "expected_node_count": 138,
-    "atlas_node_count": 138,
-    "coverage_row_count": 138,
-    "source_artifact_count": 666,
+    "expected_atlas_node_count": 139,
+    "expected_coverage_row_count": 139,
+    "expected_source_artifact_count": 671,
+    "expected_node_count": 139,
+    "atlas_node_count": 139,
+    "coverage_row_count": 139,
+    "source_artifact_count": 671,
     "coverage_rows": 137,
     "source_artifacts": 661
   }
