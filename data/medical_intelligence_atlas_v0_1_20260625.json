@@ -1921,7 +1921,18 @@
       "validator": "each MMI 180 chain closure control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the closure packet",
       "risk_gate": "MMI 180 chain closure packets cannot imply patient data, clinical advice, clinical validation, clinical deployment, model ranking, model superiority, partner, institutional, regulatory, publication, authority, clearance, or outward use without user approval",
       "next_build": "MMI 181 chain archive controls",
-      "open_gap": "next archive step not yet represented"
+      "open_gap": "archive step represented by MMI 181"
+    },
+    {
+      "id": "mia_mmi_181",
+      "layer": "Multilingual Medical Intelligence",
+      "artifact": "MMI 181 chain archive controls",
+      "input": "MMI 180 closure reviewed archived packets",
+      "output": "chain archive review packet with source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability preserved",
+      "validator": "each MMI 181 chain archive control must preserve source closeout id, exported ledger row id, owner final state, dissent note, unresolved branch archive boundary, archive snapshot, and reopenability or block the archive packet",
+      "risk_gate": "MMI 181 chain archive packets cannot imply patient data, clinical advice, clinical validation, clinical deployment, model ranking, model superiority, partner, institutional, regulatory, publication, authority, clearance, or outward use without user approval",
+      "next_build": "MMI 182 chain reuse controls",
+      "open_gap": "next reuse step not yet represented"
     }
   ],
   "relationships": [
