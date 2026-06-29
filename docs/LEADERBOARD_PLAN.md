@@ -16,13 +16,14 @@ The current leaderboard folder contains:
 
 1. `leaderboard/synthetic_report_template_v0_1.tsv`, the preview result table.
 2. `scripts/validate_leaderboard_template_v0_1.py`, the schema and safety boundary validator.
-3. `scripts/generate_leaderboard_report_v0_1.py`, the Markdown report generator.
-4. `leaderboard/app.py`, a Gradio app with synthetic preview and pending review submission tabs.
-5. `leaderboard/requirements.txt`, the Python dependency file for the app.
-6. `leaderboard/SPACE_README.md`, the Space metadata and copy instructions.
-7. `leaderboard/submissions.json`, the JSON store for contributor supplied rows.
-8. `app.py`, the repository root Space entrypoint.
-9. `requirements.txt`, the repository root Space dependency file.
+3. `scripts/validate_leaderboard_submissions_v0_1.py`, the pending submission store validator.
+4. `scripts/generate_leaderboard_report_v0_1.py`, the Markdown report generator.
+5. `leaderboard/app.py`, a Gradio app with synthetic preview and pending review submission tabs.
+6. `leaderboard/requirements.txt`, the Python dependency file for the app.
+7. `leaderboard/SPACE_README.md`, the Space metadata and copy instructions.
+8. `leaderboard/submissions.json`, the JSON store for contributor supplied rows.
+9. `app.py`, the repository root Space entrypoint.
+10. `requirements.txt`, the repository root Space dependency file.
 
 HuggingFace Spaces supports Gradio apps, repository based deployment, `app.py`, `requirements.txt`, and README YAML configuration. Official docs checked:
 
@@ -106,6 +107,7 @@ Already added:
 3. `leaderboard/SPACE_README.md` for Space metadata.
 4. Root `app.py` and `requirements.txt` for direct repository deployment.
 5. `leaderboard/submissions.json` for pending review contributor rows.
+6. `scripts/validate_leaderboard_submissions_v0_1.py` for submission store safety checks.
 
 Still needed for a full public leaderboard:
 
@@ -127,8 +129,9 @@ Still needed for a full public leaderboard:
 ## Acceptance Checklist
 
 1. `make leaderboard_report` passes.
-2. `python3 -m py_compile leaderboard/app.py` passes.
-3. The Space loads the TSV without editing data files.
-4. Filters work for all current gate values.
-5. The boundary note is visible before the table.
-6. The README links to the Space only after a live Space URL exists.
+2. `python3 scripts/validate_leaderboard_submissions_v0_1.py` passes.
+3. `python3 -m py_compile leaderboard/app.py` passes.
+4. The Space loads the TSV without editing data files.
+5. Filters work for all current gate values.
+6. The boundary note is visible before the table.
+7. The README links to the Space only after a live Space URL exists.

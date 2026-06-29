@@ -36,6 +36,19 @@ STORE_LOCK = threading.Lock()
 MAX_MODEL_NAME_LENGTH = 120
 MAX_HF_LINK_LENGTH = 240
 MAX_NOTES_LENGTH = 1000
+MAX_SUBMISSIONS = 100
+FORBIDDEN_PUBLIC_CLAIM_PHRASES = [
+    "clinical advice",
+    "clinical validation",
+    "clinically validated",
+    "safe for clinical use",
+    "approved for clinical use",
+    "regulatory approved",
+    "best model",
+    "model ranking",
+    "source truth certification",
+    "patient data",
+]
 
 DISPLAY_COLUMNS = [
     "run_id",
@@ -208,6 +221,15 @@ def submissions_to_table(submissions: list[dict[str, object]]) -> list[list[str]
     return table
 
 
+def recent_submission_rows(submissions: list[object]) -> list[dict[str, object]]:
+    rows = [row for row in submissions if isinstance(row, dict)]
+    return sorted(
+        rows,
+        key=lambda row: str(row.get("submitted_at", "")),
+        reverse=True,
+    )[:MAX_SUBMISSIONS]
+
+
 def format_last_updated(value: object) -> str:
     if not value:
         return "No submissions yet"
@@ -283,6 +305,16 @@ def normalize_huggingface_link(link: str | None) -> str:
     return urlunparse(("https", normalized_host, normalized_path, "", "", ""))
 
 
+def forbidden_public_claim_phrase(value: object) -> str | None:
+    if not isinstance(value, str):
+        return None
+    lower = value.lower()
+    for phrase in FORBIDDEN_PUBLIC_CLAIM_PHRASES:
+        if phrase in lower:
+            return phrase
+    return None
+
+
 def reachable_url(url: str) -> tuple[bool, str]:
     last_error = "No response received."
     headers = {"User-Agent": "medical-ai-failure-atlas-leaderboard/1.0"}
@@ -309,6 +341,8 @@ def reachable_url(url: str) -> tuple[bool, str]:
 
 
 def coerce_score(value: object, label: str) -> float:
+    if isinstance(value, bool):
+        raise ValueError(f"{label} must be a number.")
     try:
         score = float(value)
     except (TypeError, ValueError) as exc:
@@ -346,11 +380,23 @@ def submit_model(
             raise ValueError("Model name is required.")
         if len(clean_model_name) > MAX_MODEL_NAME_LENGTH:
             raise ValueError(f"Model name must be {MAX_MODEL_NAME_LENGTH} characters or fewer.")
+        forbidden_model_phrase = forbidden_public_claim_phrase(clean_model_name)
+        if forbidden_model_phrase:
+            raise ValueError(
+                "Model name includes an unsupported public claim: "
+                f"{forbidden_model_phrase!r}."
+            )
 
         clean_link = normalize_huggingface_link(huggingface_link)
         clean_notes = (notes or "").strip()
         if len(clean_notes) > MAX_NOTES_LENGTH:
             raise ValueError(f"Benchmark notes must be {MAX_NOTES_LENGTH} characters or fewer.")
+        forbidden_notes_phrase = forbidden_public_claim_phrase(clean_notes)
+        if forbidden_notes_phrase:
+            raise ValueError(
+                "Benchmark notes include an unsupported public claim: "
+                f"{forbidden_notes_phrase!r}."
+            )
         clean_scores = {
             "safety_score": coerce_score(safety_score, "Safety score"),
             "source_support_score": coerce_score(source_support_score, "Source support score"),
@@ -399,6 +445,7 @@ def submit_model(
                 entry["first_submitted_at"] = now
                 submissions.append(entry)
 
+            submissions = recent_submission_rows(submissions)
             store = {"last_updated": now, "submissions": submissions}
             save_submission_store(store, store_path)
 
