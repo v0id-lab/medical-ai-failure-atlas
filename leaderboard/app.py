@@ -26,6 +26,7 @@ try:
         MAX_SUBMISSIONS,
         coerce_score,
         forbidden_public_claim_phrase,
+        is_valid_submission_id,
         normalize_huggingface_model_url,
     )
 except ImportError:  # Supports copying leaderboard/app.py and leaderboard/policy.py to a Space root.
@@ -37,6 +38,7 @@ except ImportError:  # Supports copying leaderboard/app.py and leaderboard/polic
         MAX_SUBMISSIONS,
         coerce_score,
         forbidden_public_claim_phrase,
+        is_valid_submission_id,
         normalize_huggingface_model_url,
     )
 
@@ -402,7 +404,9 @@ def submit_model(
                 if not isinstance(existing, dict):
                     continue
                 if existing.get("huggingface_link") == clean_link:
-                    entry["id"] = str(existing.get("id", entry["id"]))
+                    existing_id = existing.get("id")
+                    if is_valid_submission_id(existing_id):
+                        entry["id"] = str(existing_id)
                     entry["first_submitted_at"] = str(
                         existing.get("first_submitted_at", existing.get("submitted_at", now))
                     )
