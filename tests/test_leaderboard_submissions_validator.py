@@ -6,7 +6,7 @@ from scripts.validate_leaderboard_submissions_v0_1 import MAX_SUBMISSIONS, valid
 def valid_row(index: int) -> dict[str, object]:
     timestamp = f"2026-06-27T00:{index % 60:02d}:00Z"
     return {
-        "id": f"row-{index}",
+        "id": f"{index:032x}",
         "model_name": f"Model {index}",
         "huggingface_link": f"https://huggingface.co/org/model-{index}",
         "benchmark_scores": {
@@ -55,6 +55,19 @@ def test_validate_store_requires_latest_first_submission_order() -> None:
     )
 
 
+def test_validate_store_requires_generated_hex_submission_id() -> None:
+    row = valid_row(1)
+    row["id"] = "row-1"
+    store = {
+        "last_updated": "2026-06-27T02:00:00Z",
+        "submissions": [row],
+    }
+
+    errors = validate_store(store)
+
+    assert "submissions[1].id: must be a 32 character lowercase hex id" in errors
+
+
 def test_validate_store_rejects_last_updated_before_latest_submission() -> None:
     row = valid_row(1)
     row["submitted_at"] = "2026-06-27T02:00:00Z"
@@ -82,6 +95,19 @@ def test_validate_store_requires_normalized_huggingface_model_url() -> None:
         "submissions[1].huggingface_link: must be stored as "
         "https://huggingface.co/org/model-1"
     ) in errors
+
+
+def test_validate_store_rejects_top_level_huggingface_pages() -> None:
+    row = valid_row(1)
+    row["huggingface_link"] = "https://huggingface.co/models"
+    store = {
+        "last_updated": "2026-06-27T02:00:00Z",
+        "submissions": [row],
+    }
+
+    errors = validate_store(store)
+
+    assert "submissions[1].huggingface_link: must be a normalized HuggingFace model URL" in errors
 
 
 def test_validate_store_rejects_score_out_of_range() -> None:

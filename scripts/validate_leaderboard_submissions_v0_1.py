@@ -19,6 +19,7 @@ from leaderboard.policy import (
     REQUIRED_SCORE_KEYS,
     coerce_score,
     forbidden_public_claim_phrase,
+    is_valid_submission_id,
     normalize_huggingface_model_url,
 )
 
@@ -86,6 +87,8 @@ def validate_store(data: object) -> list[str]:
         row_id = row.get("id")
         if not isinstance(row_id, str) or not row_id.strip():
             fail(errors, f"{label}.id: missing id")
+        elif not is_valid_submission_id(row_id):
+            fail(errors, f"{label}.id: must be a 32 character lowercase hex id")
         elif row_id in seen_ids:
             fail(errors, f"{label}.id: duplicate id {row_id}")
         else:

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import re
 from urllib.parse import urlparse, urlunparse
 
 
@@ -8,6 +9,7 @@ MAX_MODEL_NAME_LENGTH = 120
 MAX_HF_LINK_LENGTH = 240
 MAX_NOTES_LENGTH = 1000
 MAX_SUBMISSIONS = 100
+SUBMISSION_ID_PATTERN = re.compile(r"^[a-f0-9]{32}$")
 
 REQUIRED_SCORE_KEYS = [
     "safety_score",
@@ -16,6 +18,21 @@ REQUIRED_SCORE_KEYS = [
 ]
 
 ALLOWED_STATUS = {"pending review"}
+
+RESERVED_HF_PATH_PREFIXES = {
+    "api",
+    "collections",
+    "datasets",
+    "docs",
+    "join",
+    "login",
+    "models",
+    "new",
+    "organizations",
+    "pricing",
+    "settings",
+    "spaces",
+}
 
 FORBIDDEN_PUBLIC_CLAIM_PHRASES = [
     "clinical advice",
@@ -29,6 +46,10 @@ FORBIDDEN_PUBLIC_CLAIM_PHRASES = [
     "source truth certification",
     "patient data",
 ]
+
+
+def is_valid_submission_id(value: object) -> bool:
+    return isinstance(value, str) and bool(SUBMISSION_ID_PATTERN.fullmatch(value))
 
 
 def normalize_huggingface_model_url(link: str | None) -> str:
@@ -48,8 +69,8 @@ def normalize_huggingface_model_url(link: str | None) -> str:
     path_segments = [segment for segment in parsed.path.split("/") if segment]
     if not path_segments:
         raise ValueError("HuggingFace link must include a model path.")
-    if path_segments[0].lower() in {"datasets", "spaces"}:
-        raise ValueError("HuggingFace link must point to a model repo, not a dataset or Space.")
+    if path_segments[0].lower() in RESERVED_HF_PATH_PREFIXES:
+        raise ValueError("HuggingFace link must point to a model repo, not a site page, dataset, or Space.")
     if len(path_segments) > 2:
         raise ValueError(
             "HuggingFace link must point to a model repo path like "

@@ -39,6 +39,8 @@ def test_normalize_huggingface_link_requires_https_model_path() -> None:
 
 def test_normalize_huggingface_link_rejects_non_model_repo_paths() -> None:
     for link in (
+        "https://huggingface.co/models",
+        "https://huggingface.co/new",
         "https://huggingface.co/spaces/org/demo",
         "https://huggingface.co/datasets/org/data",
     ):
@@ -185,6 +187,57 @@ def test_submit_model_saves_new_row_and_replaces_duplicate(tmp_path: Path) -> No
     assert isinstance(submissions, list)
     assert len(submissions) == 1
     assert submissions[0]["first_submitted_at"]
+
+
+def test_submit_model_regenerates_malformed_legacy_duplicate_id(tmp_path: Path) -> None:
+    store_path = tmp_path / "submissions.json"
+    store_path.write_text(
+        json.dumps(
+            {
+                "last_updated": "2026-06-27T10:00:00Z",
+                "submissions": [
+                    {
+                        "id": "legacy-row",
+                        "model_name": "Legacy Model",
+                        "huggingface_link": "https://huggingface.co/org/model",
+                        "benchmark_scores": {
+                            "safety_score": 70,
+                            "source_support_score": 60,
+                            "clinical_boundary_score": 50,
+                        },
+                        "notes": "",
+                        "status": "pending review",
+                        "submitted_at": "2026-06-27T10:00:00Z",
+                        "first_submitted_at": "2026-06-27T09:00:00Z",
+                        "huggingface_reachable": True,
+                        "huggingface_status": "200",
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    message, _, _ = submit_model(
+        "Test Model",
+        "https://huggingface.co/org/model",
+        80,
+        70,
+        60,
+        "",
+        reachability_checker=reachable,
+        store_path=store_path,
+    )
+
+    assert message == "Submission updated and saved."
+    store = load_submission_store(store_path)
+    submissions = store["submissions"]
+    assert isinstance(submissions, list)
+    assert len(submissions) == 1
+    assert submissions[0]["id"] != "legacy-row"
+    assert len(str(submissions[0]["id"])) == 32
+    int(str(submissions[0]["id"]), 16)
+    assert submissions[0]["first_submitted_at"] == "2026-06-27T09:00:00Z"
 
 
 def test_submit_model_does_not_save_unreachable_link(tmp_path: Path) -> None:
