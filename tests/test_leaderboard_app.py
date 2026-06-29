@@ -58,6 +58,14 @@ def test_normalize_huggingface_link_requires_https_model_path() -> None:
     assert normalize_huggingface_link("huggingface.co/model-name/") == "https://huggingface.co/model-name"
     assert normalize_huggingface_link("huggingface.co/org/model/") == "https://huggingface.co/org/model"
     assert (
+        normalize_huggingface_link("https://huggingface.co/org-name/model_name.v1")
+        == "https://huggingface.co/org-name/model_name.v1"
+    )
+    assert (
+        normalize_huggingface_link("https://huggingface.co/org/model.git")
+        == "https://huggingface.co/org/model"
+    )
+    assert (
         normalize_huggingface_link("https://www.huggingface.co/org/model?revision=main")
         == "https://huggingface.co/org/model"
     )
@@ -83,6 +91,22 @@ def test_normalize_huggingface_link_rejects_non_model_repo_paths() -> None:
         assert "https://huggingface.co/org/model" in str(exc)
     else:
         raise AssertionError("Expected nested HuggingFace file path to fail")
+
+
+def test_normalize_huggingface_link_rejects_invalid_repo_segments() -> None:
+    for link in (
+        "https://huggingface.co/org/..",
+        "https://huggingface.co/org/-model",
+        "https://huggingface.co/org/model.",
+        "https://huggingface.co/org/model--candidate",
+        "https://huggingface.co/org/model%2Ffile",
+    ):
+        try:
+            normalize_huggingface_link(link)
+        except ValueError as exc:
+            assert "valid model repo path" in str(exc)
+        else:
+            raise AssertionError(f"Expected invalid HuggingFace repo segment to fail: {link}")
 
 
 def test_coerce_score_limits_public_submission_scores() -> None:

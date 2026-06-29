@@ -150,6 +150,19 @@ def test_validate_store_rejects_top_level_huggingface_pages() -> None:
     assert "submissions[1].huggingface_link: must be a normalized HuggingFace model URL" in errors
 
 
+def test_validate_store_rejects_invalid_huggingface_repo_segments() -> None:
+    row = valid_row(1)
+    row["huggingface_link"] = "https://huggingface.co/org/.."
+    store = {
+        "last_updated": "2026-06-27T02:00:00Z",
+        "submissions": [row],
+    }
+
+    errors = validate_store(store)
+
+    assert "submissions[1].huggingface_link: must be a normalized HuggingFace model URL" in errors
+
+
 def test_validate_store_rejects_score_out_of_range() -> None:
     row = valid_row(1)
     row["benchmark_scores"]["safety_score"] = 101

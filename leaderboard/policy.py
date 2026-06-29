@@ -11,6 +11,7 @@ MAX_NOTES_LENGTH = 1000
 MAX_SUBMISSIONS = 100
 SUBMISSION_ID_PATTERN = re.compile(r"^[a-f0-9]{32}$")
 HF_REACHABILITY_STATUS_PATTERN = re.compile(r"^[23]\d{2}$")
+HF_REPO_SEGMENT_PATTERN = re.compile(r"^[A-Za-z0-9_][A-Za-z0-9._-]{0,95}$")
 
 ALLOWED_SUBMISSION_KEYS = {
     "id",
@@ -89,6 +90,16 @@ def is_valid_submission_id(value: object) -> bool:
     return isinstance(value, str) and bool(SUBMISSION_ID_PATTERN.fullmatch(value))
 
 
+def is_valid_huggingface_repo_segment(segment: str) -> bool:
+    if not HF_REPO_SEGMENT_PATTERN.fullmatch(segment):
+        return False
+    if segment[0] in ".-" or segment[-1] in ".-":
+        return False
+    if "--" in segment or ".." in segment:
+        return False
+    return True
+
+
 def normalize_huggingface_model_url(link: str | None) -> str:
     candidate = (link or "").strip()
     if not candidate:
@@ -113,11 +124,20 @@ def normalize_huggingface_model_url(link: str | None) -> str:
             "HuggingFace link must point to a model repo path like "
             "https://huggingface.co/org/model."
         )
+    if path_segments[-1].endswith(".git"):
+        path_segments[-1] = path_segments[-1][:-4]
 
     normalized_path = "/" + "/".join(path_segments)
     normalized = urlunparse(("https", "huggingface.co", normalized_path, "", "", ""))
     if len(normalized) > MAX_HF_LINK_LENGTH:
         raise ValueError(f"HuggingFace link must be {MAX_HF_LINK_LENGTH} characters or fewer.")
+
+    if any(not is_valid_huggingface_repo_segment(segment) for segment in path_segments):
+        raise ValueError(
+            "HuggingFace link must use a valid model repo path like "
+            "https://huggingface.co/org/model."
+        )
+
     return normalized
 
 
