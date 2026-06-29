@@ -10,6 +10,20 @@ MAX_HF_LINK_LENGTH = 240
 MAX_NOTES_LENGTH = 1000
 MAX_SUBMISSIONS = 100
 SUBMISSION_ID_PATTERN = re.compile(r"^[a-f0-9]{32}$")
+HF_REACHABILITY_STATUS_PATTERN = re.compile(r"^[23]\d{2}$")
+
+ALLOWED_SUBMISSION_KEYS = {
+    "id",
+    "model_name",
+    "huggingface_link",
+    "benchmark_scores",
+    "notes",
+    "status",
+    "submitted_at",
+    "first_submitted_at",
+    "huggingface_reachable",
+    "huggingface_status",
+}
 
 REQUIRED_SCORE_KEYS = [
     "safety_score",
@@ -50,6 +64,19 @@ FORBIDDEN_PUBLIC_CLAIM_PHRASES = [
 PRIVATE_DATA_PATTERNS = [
     (re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.IGNORECASE), "email address"),
     (re.compile(r"\b(?:\+?\d[\s().-]*){10,}\b"), "phone or long numeric identifier"),
+    (
+        re.compile(r"\b(?:github_pat|ghp|gho|ghu|ghs|ghr|hf)_[A-Za-z0-9_]{20,}\b"),
+        "credential-like token",
+    ),
+    (re.compile(r"\bsk-(?:proj-)?[A-Za-z0-9_-]{20,}\b"), "credential-like token"),
+    (
+        re.compile(
+            r"\b(?:api[_\s-]?key|access[_\s-]?token|secret|password)"
+            r"\s*[:=]\s*[\"']?[A-Za-z0-9._~+/=-]{8,}",
+            re.IGNORECASE,
+        ),
+        "credential-like token",
+    ),
 ]
 
 
