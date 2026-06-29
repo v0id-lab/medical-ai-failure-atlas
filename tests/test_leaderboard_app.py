@@ -28,6 +28,32 @@ def unreachable(url: str) -> tuple[bool, str]:
     return False, "HTTP 404"
 
 
+def submission_row(
+    *,
+    model_name: str = "Test Model",
+    huggingface_link: str = "https://huggingface.co/org/model",
+    submitted_at: str = "2026-06-27T10:00:00Z",
+    row_id: str = "0" * 32,
+    notes: str = "",
+) -> dict[str, object]:
+    return {
+        "id": row_id,
+        "model_name": model_name,
+        "huggingface_link": huggingface_link,
+        "benchmark_scores": {
+            "safety_score": 80,
+            "source_support_score": 70,
+            "clinical_boundary_score": 60,
+        },
+        "notes": notes,
+        "status": "pending review",
+        "submitted_at": submitted_at,
+        "first_submitted_at": submitted_at,
+        "huggingface_reachable": True,
+        "huggingface_status": "200",
+    }
+
+
 def test_normalize_huggingface_link_requires_https_model_path() -> None:
     assert normalize_huggingface_link("huggingface.co/model-name/") == "https://huggingface.co/model-name"
     assert normalize_huggingface_link("huggingface.co/org/model/") == "https://huggingface.co/org/model"
@@ -471,3 +497,96 @@ def test_last_updated_markdown_falls_back_to_latest_submission_timestamp() -> No
     }
 
     assert leaderboard_app.last_updated_markdown(store) == "**Last Updated:** 2026-06-27 11:00:00 UTC"
+
+
+def test_leaderboard_state_hides_existing_rows_that_fail_public_display_rules(tmp_path: Path) -> None:
+    store_path = tmp_path / "submissions.json"
+    invalid_claim = submission_row(
+        model_name="best model",
+        huggingface_link="https://huggingface.co/org/unsafe-claim",
+        row_id="1" * 32,
+    )
+    invalid_private_note = submission_row(
+        model_name="Unsafe Note",
+        huggingface_link="https://huggingface.co/org/private-note",
+        row_id="2" * 32,
+        notes="Contact reviewer@example.com for details",
+    )
+    invalid_unexpected_field = submission_row(
+        model_name="Unexpected Field",
+        huggingface_link="https://huggingface.co/org/unexpected-field",
+        row_id="3" * 32,
+    )
+    invalid_unexpected_field["raw_model_output"] = "synthetic answer draft"
+    visible = submission_row(
+        model_name="Visible Model",
+        huggingface_link="https://huggingface.co/org/visible-model",
+        submitted_at="2026-06-27T11:00:00Z",
+        row_id="4" * 32,
+    )
+    store_path.write_text(
+        json.dumps(
+            {
+                "last_updated": "2026-06-27T11:00:00Z",
+                "submissions": [
+                    invalid_claim,
+                    invalid_private_note,
+                    invalid_unexpected_field,
+                    visible,
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    table, updated = leaderboard_app.leaderboard_state(store_path)
+
+    assert [row[0] for row in table] == ["Visible Model"]
+    assert table[0][1] == "https://huggingface.co/org/visible-model"
+    assert updated == "**Last Updated:** 2026-06-27 11:00:00 UTC"
+
+
+def test_submit_model_drops_existing_rows_that_fail_public_display_rules(tmp_path: Path) -> None:
+    store_path = tmp_path / "submissions.json"
+    unsafe_row = submission_row(
+        model_name="Clinical validation row",
+        huggingface_link="https://huggingface.co/org/unsafe-row",
+        row_id="1" * 32,
+    )
+    safe_row = submission_row(
+        model_name="Existing Safe Row",
+        huggingface_link="https://huggingface.co/org/existing-safe-row",
+        submitted_at="2026-06-27T09:00:00Z",
+        row_id="2" * 32,
+    )
+    store_path.write_text(
+        json.dumps(
+            {
+                "last_updated": "2026-06-27T10:00:00Z",
+                "submissions": [unsafe_row, safe_row],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    def reachable_any(url: str) -> tuple[bool, str]:
+        assert url == "https://huggingface.co/org/new-safe-row"
+        return True, "200"
+
+    message, table, _ = submit_model(
+        "New Safe Row",
+        "https://huggingface.co/org/new-safe-row",
+        82,
+        72,
+        62,
+        "",
+        reachability_checker=reachable_any,
+        store_path=store_path,
+    )
+
+    assert message == "Submission saved."
+    assert [row[0] for row in table] == ["New Safe Row", "Existing Safe Row"]
+    store = load_submission_store(store_path)
+    submissions = store["submissions"]
+    assert isinstance(submissions, list)
+    assert [row["model_name"] for row in submissions] == ["New Safe Row", "Existing Safe Row"]
