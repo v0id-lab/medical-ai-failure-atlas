@@ -183,6 +183,8 @@ def load_submission_store(path: Path | None = None) -> dict[str, object]:
         data = json.load(handle)
 
     if isinstance(data, list):
+        if not all(isinstance(row, dict) for row in data):
+            raise ValueError(f"Submission store rows must be objects: {target}")
         return {"last_updated": None, "submissions": data}
     if not isinstance(data, dict):
         raise ValueError(f"Submission store must contain a JSON object: {target}")
@@ -190,10 +192,12 @@ def load_submission_store(path: Path | None = None) -> dict[str, object]:
     submissions = data.get("submissions", [])
     if not isinstance(submissions, list):
         raise ValueError(f"Submission store submissions must be a list: {target}")
+    if not all(isinstance(row, dict) for row in submissions):
+        raise ValueError(f"Submission store rows must be objects: {target}")
 
     return {
         "last_updated": data.get("last_updated"),
-        "submissions": [row for row in submissions if isinstance(row, dict)],
+        "submissions": submissions,
     }
 
 
