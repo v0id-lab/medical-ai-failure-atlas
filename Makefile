@@ -808,9 +808,11 @@ clinician_literacy_map:
 
 leaderboard:
 	$(PYTHON) scripts/validate_leaderboard_template_v0_1.py
+	$(PYTHON) scripts/validate_leaderboard_submissions_v0_1.py
 
 leaderboard_report:
 	$(PYTHON) scripts/validate_leaderboard_template_v0_1.py
+	$(PYTHON) scripts/validate_leaderboard_submissions_v0_1.py
 	$(PYTHON) scripts/generate_leaderboard_report_v0_1.py
 
 case_intake:

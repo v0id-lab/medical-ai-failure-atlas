@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import leaderboard.app as leaderboard_app
 from leaderboard.app import (
     MAX_HF_LINK_LENGTH,
     MAX_MODEL_NAME_LENGTH,
     MAX_NOTES_LENGTH,
+    MAX_SUBMISSIONS,
     coerce_score,
     load_submission_store,
     normalize_huggingface_link,
@@ -58,6 +61,13 @@ def test_coerce_score_limits_public_submission_scores() -> None:
     assert coerce_score("89.126", "Safety score") == 89.13
 
     try:
+        coerce_score(True, "Safety score")
+    except ValueError as exc:
+        assert "must be a number" in str(exc)
+    else:
+        raise AssertionError("Expected boolean score to fail")
+
+    try:
         coerce_score(101, "Safety score")
     except ValueError as exc:
         assert "between 0 and 100" in str(exc)
@@ -102,6 +112,42 @@ def test_submission_text_limits_block_oversized_public_rows(tmp_path: Path) -> N
     assert message == f"Submission not saved. Benchmark notes must be {MAX_NOTES_LENGTH} characters or fewer."
     assert table == []
     assert "No submissions yet" in updated
+
+
+def test_submit_model_blocks_unsupported_public_claims(tmp_path: Path) -> None:
+    store_path = tmp_path / "submissions.json"
+
+    message, table, updated = submit_model(
+        "best model",
+        "https://huggingface.co/org/model",
+        80,
+        70,
+        60,
+        "",
+        reachability_checker=reachable,
+        store_path=store_path,
+    )
+    assert message == "Submission not saved. Model name includes an unsupported public claim: 'best model'."
+    assert table == []
+    assert "No submissions yet" in updated
+
+    message, table, updated = submit_model(
+        "Test Model",
+        "https://huggingface.co/org/model",
+        80,
+        70,
+        60,
+        "clinically validated by our team",
+        reachability_checker=reachable,
+        store_path=store_path,
+    )
+    assert (
+        message
+        == "Submission not saved. Benchmark notes include an unsupported public claim: 'clinically validated'."
+    )
+    assert table == []
+    assert "No submissions yet" in updated
+    assert not store_path.exists()
 
 
 def test_submit_model_saves_new_row_and_replaces_duplicate(tmp_path: Path) -> None:
@@ -197,6 +243,46 @@ def test_submit_model_handles_submission_store_errors(tmp_path: Path) -> None:
     assert message.startswith("Submission not saved.")
     assert table == []
     assert "Submission store error" in updated
+
+
+def test_submit_model_caps_submission_store_to_recent_rows(tmp_path: Path, monkeypatch) -> None:
+    store_path = tmp_path / "submissions.json"
+    base = datetime(2026, 6, 27, tzinfo=timezone.utc)
+    counter = {"value": 0}
+
+    def fake_now() -> str:
+        value = counter["value"]
+        counter["value"] += 1
+        return (base + timedelta(minutes=value)).isoformat().replace("+00:00", "Z")
+
+    def reachable_any(url: str) -> tuple[bool, str]:
+        assert url.startswith("https://huggingface.co/org/model-")
+        return True, "200"
+
+    monkeypatch.setattr(leaderboard_app, "current_utc_iso", fake_now)
+
+    table: list[list[str]] = []
+    for index in range(MAX_SUBMISSIONS + 5):
+        message, table, _ = submit_model(
+            f"Test Model {index}",
+            f"https://huggingface.co/org/model-{index}",
+            80,
+            70,
+            60,
+            "",
+            reachability_checker=reachable_any,
+            store_path=store_path,
+        )
+        assert message == "Submission saved."
+
+    store = load_submission_store(store_path)
+    submissions = store["submissions"]
+    assert isinstance(submissions, list)
+    assert len(submissions) == MAX_SUBMISSIONS
+    assert len(table) == MAX_SUBMISSIONS
+    links = {str(row["huggingface_link"]) for row in submissions}
+    assert "https://huggingface.co/org/model-0" not in links
+    assert f"https://huggingface.co/org/model-{MAX_SUBMISSIONS + 4}" in links
 
 
 def test_load_submission_store_accepts_legacy_list(tmp_path: Path) -> None:
