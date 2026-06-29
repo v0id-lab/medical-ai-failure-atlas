@@ -19,11 +19,15 @@ except ImportError:  # Allows syntax and data helper checks without Gradio insta
 
 try:
     from leaderboard.policy import (
+        ALLOWED_STATUS,
+        ALLOWED_SUBMISSION_KEYS,
         FORBIDDEN_PUBLIC_CLAIM_PHRASES,
+        HF_REACHABILITY_STATUS_PATTERN,
         MAX_HF_LINK_LENGTH,
         MAX_MODEL_NAME_LENGTH,
         MAX_NOTES_LENGTH,
         MAX_SUBMISSIONS,
+        REQUIRED_SCORE_KEYS,
         coerce_score,
         forbidden_private_data_pattern,
         forbidden_public_claim_phrase,
@@ -32,11 +36,15 @@ try:
     )
 except ImportError:  # Supports copying leaderboard/app.py and leaderboard/policy.py to a Space root.
     from policy import (  # type: ignore[no-redef]
+        ALLOWED_STATUS,
+        ALLOWED_SUBMISSION_KEYS,
         FORBIDDEN_PUBLIC_CLAIM_PHRASES,
+        HF_REACHABILITY_STATUS_PATTERN,
         MAX_HF_LINK_LENGTH,
         MAX_MODEL_NAME_LENGTH,
         MAX_NOTES_LENGTH,
         MAX_SUBMISSIONS,
+        REQUIRED_SCORE_KEYS,
         coerce_score,
         forbidden_private_data_pattern,
         forbidden_public_claim_phrase,
@@ -241,6 +249,91 @@ def recent_submission_rows(submissions: list[object]) -> list[dict[str, object]]
     )[:MAX_SUBMISSIONS]
 
 
+def parse_submission_timestamp(value: object) -> datetime | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return None
+    return parsed.astimezone(timezone.utc)
+
+
+def is_displayable_submission_row(row: object) -> bool:
+    if not isinstance(row, dict):
+        return False
+    if set(row) - ALLOWED_SUBMISSION_KEYS:
+        return False
+
+    row_id = row.get("id")
+    if not is_valid_submission_id(row_id):
+        return False
+
+    model_name = row.get("model_name")
+    if not isinstance(model_name, str) or not model_name.strip():
+        return False
+    if len(model_name) > MAX_MODEL_NAME_LENGTH:
+        return False
+    if forbidden_public_claim_phrase(model_name) or forbidden_private_data_pattern(model_name):
+        return False
+
+    link = row.get("huggingface_link")
+    if not isinstance(link, str) or not link.strip():
+        return False
+    try:
+        normalized_link = normalize_huggingface_link(link)
+    except ValueError:
+        return False
+    if normalized_link != link:
+        return False
+
+    scores = row.get("benchmark_scores")
+    if not isinstance(scores, dict):
+        return False
+    for score_key in REQUIRED_SCORE_KEYS:
+        try:
+            coerce_score(scores.get(score_key), score_key)
+        except ValueError:
+            return False
+
+    notes = row.get("notes", "")
+    if notes is not None and not isinstance(notes, str):
+        return False
+    if isinstance(notes, str):
+        if len(notes) > MAX_NOTES_LENGTH:
+            return False
+        if forbidden_public_claim_phrase(notes) or forbidden_private_data_pattern(notes):
+            return False
+
+    if row.get("status") not in ALLOWED_STATUS:
+        return False
+
+    submitted_at = parse_submission_timestamp(row.get("submitted_at"))
+    if submitted_at is None:
+        return False
+
+    first_submitted_at = row.get("first_submitted_at")
+    if first_submitted_at:
+        parsed_first_submitted_at = parse_submission_timestamp(first_submitted_at)
+        if parsed_first_submitted_at is None or parsed_first_submitted_at > submitted_at:
+            return False
+
+    if row.get("huggingface_reachable") is not True:
+        return False
+
+    hf_status = row.get("huggingface_status")
+    if not isinstance(hf_status, str) or not HF_REACHABILITY_STATUS_PATTERN.fullmatch(hf_status):
+        return False
+
+    return True
+
+
+def displayable_submission_rows(submissions: list[object]) -> list[dict[str, object]]:
+    return recent_submission_rows([row for row in submissions if is_displayable_submission_row(row)])
+
+
 def format_last_updated(value: object) -> str:
     if not value:
         return "No submissions yet"
@@ -347,7 +440,12 @@ def leaderboard_state(path: Path | None = None) -> tuple[list[list[str]], str]:
     submissions = store.get("submissions", [])
     if not isinstance(submissions, list):
         submissions = []
-    return submissions_to_table(submissions), last_updated_markdown(store)
+    display_rows = displayable_submission_rows(submissions)
+    display_store = dict(store)
+    display_store["submissions"] = display_rows
+    if not display_rows:
+        display_store["last_updated"] = None
+    return submissions_to_table(display_rows), last_updated_markdown(display_store)
 
 
 def submit_model(
@@ -448,7 +546,7 @@ def submit_model(
                 entry["first_submitted_at"] = now
                 submissions.append(entry)
 
-            submissions = recent_submission_rows(submissions)
+            submissions = displayable_submission_rows(submissions)
             store = {"last_updated": now, "submissions": submissions}
             save_submission_store(store, store_path)
 
