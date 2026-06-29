@@ -137,3 +137,14 @@ def test_validate_store_rejects_private_data_patterns() -> None:
     errors = validate_store(store)
 
     assert "submissions[1].notes: private data pattern 'email address'" in errors
+
+    row = valid_row(2)
+    row["model_name"] = "+90 555 555 5555"
+    store = {
+        "last_updated": "2026-06-27T02:00:00Z",
+        "submissions": [row],
+    }
+
+    errors = validate_store(store)
+
+    assert "submissions[1].model_name: private data pattern 'phone or long numeric identifier'" in errors
