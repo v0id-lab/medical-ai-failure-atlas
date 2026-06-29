@@ -148,3 +148,40 @@ def test_validate_store_rejects_private_data_patterns() -> None:
     errors = validate_store(store)
 
     assert "submissions[1].model_name: private data pattern 'phone or long numeric identifier'" in errors
+
+    row = valid_row(3)
+    row["notes"] = "pass" + "word=" + "REDACTED" + "123456"
+    store = {
+        "last_updated": "2026-06-27T02:00:00Z",
+        "submissions": [row],
+    }
+
+    errors = validate_store(store)
+
+    assert "submissions[1].notes: private data pattern 'credential-like token'" in errors
+
+
+def test_validate_store_rejects_unexpected_submission_fields() -> None:
+    row = valid_row(1)
+    row["raw_model_output"] = "synthetic answer draft"
+    store = {
+        "last_updated": "2026-06-27T02:00:00Z",
+        "submissions": [row],
+    }
+
+    errors = validate_store(store)
+
+    assert "submissions[1].raw_model_output: unexpected submission field" in errors
+
+
+def test_validate_store_requires_success_http_reachability_status() -> None:
+    row = valid_row(1)
+    row["huggingface_status"] = "HTTP 200"
+    store = {
+        "last_updated": "2026-06-27T02:00:00Z",
+        "submissions": [row],
+    }
+
+    errors = validate_store(store)
+
+    assert "submissions[1].huggingface_status: must be a 2xx or 3xx HTTP status" in errors

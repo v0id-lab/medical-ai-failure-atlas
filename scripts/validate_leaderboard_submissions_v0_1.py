@@ -13,6 +13,8 @@ if str(ROOT) not in sys.path:
 
 from leaderboard.policy import (
     ALLOWED_STATUS,
+    ALLOWED_SUBMISSION_KEYS,
+    HF_REACHABILITY_STATUS_PATTERN,
     MAX_MODEL_NAME_LENGTH,
     MAX_NOTES_LENGTH,
     MAX_SUBMISSIONS,
@@ -85,6 +87,10 @@ def validate_store(data: object) -> list[str]:
             fail(errors, f"{label}: row must be an object")
             continue
 
+        unexpected_keys = sorted(set(row) - ALLOWED_SUBMISSION_KEYS)
+        for key in unexpected_keys:
+            fail(errors, f"{label}.{key}: unexpected submission field")
+
         row_id = row.get("id")
         if not isinstance(row_id, str) or not row_id.strip():
             fail(errors, f"{label}.id: missing id")
@@ -154,6 +160,8 @@ def validate_store(data: object) -> list[str]:
         hf_status = row.get("huggingface_status")
         if not isinstance(hf_status, str) or not hf_status.strip():
             fail(errors, f"{label}.huggingface_status: missing reachability status")
+        elif not HF_REACHABILITY_STATUS_PATTERN.fullmatch(hf_status):
+            fail(errors, f"{label}.huggingface_status: must be a 2xx or 3xx HTTP status")
 
         for field in ("model_name", "notes", "status"):
             phrase = forbidden_public_claim_phrase(row.get(field))

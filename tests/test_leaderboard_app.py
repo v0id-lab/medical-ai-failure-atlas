@@ -195,6 +195,23 @@ def test_submit_model_blocks_private_data_patterns(tmp_path: Path) -> None:
     assert "No submissions yet" in updated
     assert not store_path.exists()
 
+    credential_like_note = "access_" + "token=" + "REDACTED" + "123456"
+    message, table, updated = submit_model(
+        "Test Model",
+        "https://huggingface.co/org/model",
+        80,
+        70,
+        60,
+        credential_like_note,
+        reachability_checker=reachable,
+        store_path=store_path,
+    )
+
+    assert message == "Submission not saved. Benchmark notes include private data pattern: credential-like token."
+    assert table == []
+    assert "No submissions yet" in updated
+    assert not store_path.exists()
+
 
 def test_submit_model_saves_new_row_and_replaces_duplicate(tmp_path: Path) -> None:
     store_path = tmp_path / "submissions.json"
