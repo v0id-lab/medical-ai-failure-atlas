@@ -16,10 +16,15 @@ The current leaderboard folder contains:
 
 1. `leaderboard/synthetic_report_template_v0_1.tsv`, the preview result table.
 2. `scripts/validate_leaderboard_template_v0_1.py`, the schema and safety boundary validator.
-3. `scripts/generate_leaderboard_report_v0_1.py`, the Markdown report generator.
-4. `leaderboard/app.py`, a Gradio app added for Space deployment.
-5. `leaderboard/requirements.txt`, the Python dependency file for the app.
-6. `leaderboard/SPACE_README.md`, the Space metadata and copy instructions.
+3. `scripts/validate_leaderboard_submissions_v0_1.py`, the pending submission store validator.
+4. `scripts/generate_leaderboard_report_v0_1.py`, the Markdown report generator.
+5. `leaderboard/app.py`, a Gradio app with synthetic preview and pending review submission tabs.
+6. `leaderboard/policy.py`, the shared submission policy used by both the app and validator.
+7. `leaderboard/requirements.txt`, the Python dependency file for the app.
+8. `leaderboard/SPACE_README.md`, the Space metadata and copy instructions.
+9. `leaderboard/submissions.json`, the JSON store for contributor supplied rows.
+10. `app.py`, the repository root Space entrypoint.
+11. `requirements.txt`, the repository root Space dependency file.
 
 HuggingFace Spaces supports Gradio apps, repository based deployment, `app.py`, `requirements.txt`, and README YAML configuration. Official docs checked:
 
@@ -30,7 +35,7 @@ HuggingFace Spaces supports Gradio apps, repository based deployment, `app.py`, 
 
 ## Data Format
 
-The preview app reads a tab separated file. The current minimum columns are:
+The preview app reads a tab separated file for synthetic result rows. The current minimum columns are:
 
 | Column | Required | Meaning |
 | --- | --- | --- |
@@ -61,15 +66,21 @@ The next result schema should add these columns before the first public model ru
 | `runner` | Script or evaluation harness used. |
 | `result_file_sha256` | Hash for the raw result artifact kept outside the public table when needed. |
 
+Contributor submitted rows are stored separately in `leaderboard/submissions.json`. They remain pending review, are ordered by latest submission time, and must use HuggingFace model repository links rather than Spaces, datasets, or nested file paths. Model names and notes must not include contact details, long numeric identifiers, patient data, clinical validation claims, or ranking claims.
+
+For a public Space, the JSON submission store should use persistent Space storage or be exported before rebuilds. Without persistent storage, submitted rows can reset when the runtime is rebuilt.
+
 ## Space UI
 
-The first Space should contain:
+The first Space contains:
 
 1. A boundary note above the table.
-2. Dropdown filters for SourceCheckup gate, clinician review state, and release gate.
-3. A search box for model label, scenario set, and failure pattern.
-4. A table with visible result rows.
-5. A summary block with counts by safety gate and review state.
+2. A Submitted Runs tab with pending review contributor rows.
+3. A model submission form with HuggingFace model repo link validation.
+4. A Synthetic Preview tab with dropdown filters for SourceCheckup gate, clinician review state, and release gate.
+5. A search box for model label, scenario set, and failure pattern.
+6. A table with visible synthetic result rows.
+7. A summary block with counts by safety gate and review state.
 
 The next version should add:
 
@@ -82,21 +93,27 @@ The next version should add:
 ## Deployment Steps
 
 1. Create a new HuggingFace Space and choose Gradio as the SDK.
-2. Copy `leaderboard/SPACE_README.md` to the Space root as `README.md`.
-3. Copy `leaderboard/app.py` to the Space root as `app.py`.
-4. Copy `leaderboard/requirements.txt` to the Space root as `requirements.txt`.
-5. Copy `leaderboard/synthetic_report_template_v0_1.tsv` to the Space root.
-6. Set `FAILURE_ATLAS_LEADERBOARD_TSV=synthetic_report_template_v0_1.tsv` in Space variables if needed.
-7. Confirm the Space builds on CPU Basic.
-8. Add the Space URL to the repo README after the first successful build.
+2. Deploy the repository root directly, or copy `leaderboard/SPACE_README.md` to the Space root as `README.md`.
+3. For copy deployment, copy `leaderboard/app.py` as `app.py`.
+4. For copy deployment, copy `leaderboard/policy.py` as `policy.py`.
+5. For copy deployment, copy `leaderboard/requirements.txt` as `requirements.txt`.
+6. Copy `leaderboard/synthetic_report_template_v0_1.tsv` and `leaderboard/submissions.json`.
+7. Set `FAILURE_ATLAS_LEADERBOARD_TSV=synthetic_report_template_v0_1.tsv` and `FAILURE_ATLAS_SUBMISSIONS_JSON=submissions.json` if the files are copied to the Space root.
+8. Enable persistent Space storage if public submissions should survive runtime rebuilds.
+9. Confirm the Space builds on CPU Basic.
+10. Add the Space URL to the repo README after the first successful build.
 
 ## Code Needed
 
 Already added:
 
 1. `leaderboard/app.py` for the interactive preview.
-2. `leaderboard/requirements.txt` for Gradio.
-3. `leaderboard/SPACE_README.md` for Space metadata.
+2. `leaderboard/policy.py` for shared submission safety rules.
+3. `leaderboard/requirements.txt` for Gradio.
+4. `leaderboard/SPACE_README.md` for Space metadata.
+5. Root `app.py` and `requirements.txt` for direct repository deployment.
+6. `leaderboard/submissions.json` for pending review contributor rows.
+7. `scripts/validate_leaderboard_submissions_v0_1.py` for submission store safety checks.
 
 Still needed for a full public leaderboard:
 
@@ -118,8 +135,9 @@ Still needed for a full public leaderboard:
 ## Acceptance Checklist
 
 1. `make leaderboard_report` passes.
-2. `python3 -m py_compile leaderboard/app.py` passes.
-3. The Space loads the TSV without editing data files.
-4. Filters work for all current gate values.
-5. The boundary note is visible before the table.
-6. The README links to the Space only after a live Space URL exists.
+2. `python3 scripts/validate_leaderboard_submissions_v0_1.py` passes.
+3. `PYTHONPYCACHEPREFIX=/tmp/medical_ai_failure_atlas_pycache python3 -m py_compile leaderboard/app.py leaderboard/policy.py` passes.
+4. The Space loads the TSV without editing data files.
+5. Filters work for all current gate values.
+6. The boundary note is visible before the table.
+7. The README links to the Space only after a live Space URL exists.
