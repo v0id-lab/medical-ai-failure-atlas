@@ -545,6 +545,63 @@ def test_load_submission_store_accepts_legacy_list(tmp_path: Path) -> None:
     assert store["submissions"] == [{"model_name": "legacy"}]
 
 
+def test_load_submission_store_rejects_non_object_rows(tmp_path: Path) -> None:
+    store_path = tmp_path / "submissions.json"
+    store_path.write_text(
+        json.dumps(
+            {
+                "last_updated": "2026-06-27T10:00:00Z",
+                "submissions": [{"model_name": "valid"}, "malformed"],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    try:
+        load_submission_store(store_path)
+    except ValueError as exc:
+        assert "Submission store rows must be objects" in str(exc)
+    else:
+        raise AssertionError("Expected malformed submission rows to fail")
+
+
+def test_load_submission_store_rejects_non_object_legacy_list_rows(tmp_path: Path) -> None:
+    store_path = tmp_path / "legacy.json"
+    store_path.write_text(json.dumps([{"model_name": "legacy"}, None]), encoding="utf-8")
+
+    try:
+        load_submission_store(store_path)
+    except ValueError as exc:
+        assert "Submission store rows must be objects" in str(exc)
+    else:
+        raise AssertionError("Expected malformed legacy rows to fail")
+
+
+def test_submit_model_does_not_overwrite_malformed_submission_store(tmp_path: Path) -> None:
+    store_path = tmp_path / "submissions.json"
+    original_store = {
+        "last_updated": "2026-06-27T10:00:00Z",
+        "submissions": [{"model_name": "valid"}, "malformed"],
+    }
+    store_path.write_text(json.dumps(original_store), encoding="utf-8")
+
+    message, table, updated = submit_model(
+        "Test Model",
+        "https://huggingface.co/org/model",
+        80,
+        70,
+        60,
+        "",
+        reachability_checker=reachable,
+        store_path=store_path,
+    )
+
+    assert message.startswith("Submission not saved. Submission store rows must be objects")
+    assert table == []
+    assert "Submission store error" in updated
+    assert json.loads(store_path.read_text(encoding="utf-8")) == original_store
+
+
 def test_last_updated_markdown_falls_back_to_latest_submission_timestamp() -> None:
     store = {
         "last_updated": None,
