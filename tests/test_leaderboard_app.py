@@ -11,8 +11,11 @@ from leaderboard.app import (
     MAX_NOTES_LENGTH,
     MAX_SUBMISSIONS,
     coerce_score,
+    load_case_rows,
     load_submission_store,
     normalize_huggingface_link,
+    severity_distribution,
+    severity_distribution_html,
     submit_model,
     submissions_to_table,
 )
@@ -26,6 +29,42 @@ def reachable(url: str) -> tuple[bool, str]:
 def unreachable(url: str) -> tuple[bool, str]:
     assert url == "https://huggingface.co/org/model"
     return False, "HTTP 404"
+
+
+def test_load_case_rows_and_severity_distribution(tmp_path: Path) -> None:
+    cases_path = tmp_path / "cases.jsonl"
+    cases_path.write_text(
+        "\n".join(
+            [
+                json.dumps({"case_id": "a", "severity_1_to_5": 5}),
+                json.dumps({"case_id": "b", "severity_1_to_5": 4}),
+                json.dumps({"case_id": "c", "severity_1_to_5": 5}),
+            ]
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    rows = load_case_rows(cases_path)
+
+    assert len(rows) == 3
+    assert severity_distribution(rows) == [("4", 1), ("5", 2)]
+
+
+def test_severity_distribution_html_reports_boundary_note() -> None:
+    html = severity_distribution_html(
+        [
+            {"severity_1_to_5": 3},
+            {"severity_1_to_5": 4},
+            {"severity_1_to_5": 4},
+        ]
+    )
+
+    assert "Clinical severity distribution" in html
+    assert "3</strong> rows" in html
+    assert "Severity 4" in html
+    assert "2 cases (66.7%)" in html
+    assert "not a model ranking or clinical validation claim" in html
 
 
 def submission_row(

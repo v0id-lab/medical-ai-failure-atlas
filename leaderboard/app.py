@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import html as html_lib
 import json
 import os
 import threading
@@ -60,6 +61,7 @@ ROOT = APP_DIR.parent if APP_DIR.name == "leaderboard" else APP_DIR
 LEADERBOARD_DIR = ROOT / "leaderboard" if (ROOT / "leaderboard").exists() else APP_DIR
 DEFAULT_RESULTS = LEADERBOARD_DIR / "synthetic_report_template_v0_1.tsv"
 DEFAULT_SUBMISSIONS = LEADERBOARD_DIR / "submissions.json"
+DEFAULT_CASES = ROOT / "data" / "tr_medllm_synthetic_eval_set_v0_3.jsonl"
 GITHUB_REPO_URL = os.getenv(
     "FAILURE_ATLAS_GITHUB_REPO_URL",
     "https://github.com/goktugozkanmd/medical-ai-failure-atlas",
@@ -128,6 +130,29 @@ def submissions_path() -> Path:
         candidate = Path(configured)
         return candidate if candidate.is_absolute() else ROOT / candidate
     return DEFAULT_SUBMISSIONS
+
+
+def cases_path() -> Path:
+    configured = os.getenv("FAILURE_ATLAS_CASES_JSONL")
+    if configured:
+        candidate = Path(configured)
+        return candidate if candidate.is_absolute() else ROOT / candidate
+    return DEFAULT_CASES
+
+
+def load_case_rows(path: Path | None = None) -> list[dict[str, object]]:
+    target = path or cases_path()
+    if not target.exists():
+        return []
+    rows: list[dict[str, object]] = []
+    with target.open(encoding="utf-8") as handle:
+        for line in handle:
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if isinstance(row, dict):
+                rows.append(row)
+    return rows
 
 
 def load_rows(path: Path | None = None) -> list[dict[str, str]]:
@@ -409,6 +434,56 @@ def summary_markdown(rows: list[dict[str, str]]) -> str:
     )
 
 
+def severity_distribution(case_rows: list[dict[str, object]]) -> list[tuple[str, int]]:
+    counts = Counter(str(row.get("severity_1_to_5", "missing")) for row in case_rows)
+    return sorted(counts.items(), key=lambda item: (item[0] == "missing", item[0]))
+
+
+def severity_distribution_html(case_rows: list[dict[str, object]]) -> str:
+    distribution = severity_distribution(case_rows)
+    if not distribution:
+        return "<p><strong>Clinical severity distribution:</strong> case JSONL not available in this runtime.</p>"
+    total = sum(count for _, count in distribution)
+    max_count = max(count for _, count in distribution)
+    colors = {
+        "1": "#d1fae5",
+        "2": "#a7f3d0",
+        "3": "#fde68a",
+        "4": "#fb923c",
+        "5": "#ef4444",
+        "missing": "#9ca3af",
+    }
+    bars = []
+    for severity, count in distribution:
+        width = round((count / max_count) * 100, 2) if max_count else 0
+        percent = (count / total) * 100 if total else 0
+        escaped_severity = html_lib.escape(severity)
+        color = colors.get(severity, "#60a5fa")
+        bars.append(
+            "".join(
+                [
+                    '<div style="display:grid; grid-template-columns: 6rem 1fr 7rem; gap:0.75rem; align-items:center; margin:0.35rem 0;">',
+                    f'<div>Severity {escaped_severity}</div>',
+                    '<div style="background:#111827; border:1px solid #374151; border-radius:999px; overflow:hidden; height:1rem;">',
+                    f'<div style="width:{width}%; background:{color}; height:1rem;"></div>',
+                    "</div>",
+                    f'<div>{count} cases ({percent:.1f}%)</div>',
+                    "</div>",
+                ]
+            )
+        )
+    return "".join(
+        [
+            '<section style="border:1px solid #374151; border-radius:0.75rem; padding:1rem; margin:1rem 0;">',
+            "<h3>Clinical severity distribution</h3>",
+            f"<p>Synthetic clinician-reviewed case set: <strong>{total}</strong> rows. Higher severity means greater harm if the model misses the safety boundary.</p>",
+            *bars,
+            '<p style="font-size:0.9rem; opacity:0.8;">This chart describes the synthetic benchmark mix only. It is not a model ranking or clinical validation claim.</p>',
+            "</section>",
+        ]
+    )
+
+
 def update_table(
     sourcecheckup_gate: str,
     clinician_review_state: str,
@@ -590,6 +665,7 @@ def build_demo():
         raise RuntimeError("Install Gradio with: python3 -m pip install -r leaderboard/requirements.txt")
 
     rows = load_rows()
+    case_rows = load_case_rows()
     submission_table_rows, last_updated = leaderboard_state()
     with gr.Blocks(title="Medical AI Failure Atlas Leaderboard") as demo:
         gr.Markdown("# Medical AI Failure Atlas Leaderboard")
@@ -657,6 +733,7 @@ def build_demo():
                 )
 
         with gr.Tab("Synthetic Preview"):
+            gr.HTML(severity_distribution_html(case_rows))
             with gr.Row():
                 sourcecheckup_gate = gr.Dropdown(
                     choices=unique_values(rows, "sourcecheckup_gate"),
