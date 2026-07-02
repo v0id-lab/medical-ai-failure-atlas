@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.2.1c — 2026-07-02 23:00 (preprint Discussion expanded + Future Work)
+- Expanded Discussion with cross-model comparison (7B to 70B consistency).
+- Added "Future Work" subsection: DOI, weekly eval automation, second reviewer,
+  case expansion to 100, submission API.
+- Expanded "Relation to Other Benchmarks" with specific contrast to MMLU,
+  HealthBench, MedHELM, GPT-4/Med-PaLM 2 evaluations.
+- Strengthened Conclusion with community-invitation framing.
+- Created GitHub issues #184 (Zenodo DOI) and #185 (weekly eval automation).
+- main.tex: 229 -> 258 lines. All URLs 200 OK.
+
 ## v0.2.1b — 2026-07-02 22:00 (reference audit + arXiv ID fixes)
 - Reference hallucination audit: 4/13 arXiv IDs verified wrong via Crossref/arXiv API.
   Fixed: wornow2025healthbench (was SoundStorm), nori2023gpt4medical (was neutrino physics),

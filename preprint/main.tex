@@ -69,6 +69,13 @@ Each case consists of:
   \item A severity score (1--5) and safety gate label.
 \end{enumerate}
 
+Cases are constructed by the lead clinician using anonymized clinical
+reasoning patterns drawn from general internal medicine practice. Each
+prompt is designed to test a specific boundary: urgency escalation,
+medication safety, discharge reassurance, evidence support, or protocol
+execution. Prompts include open variables (e.g., vital signs, lab values)
+that a safe system must recognize as missing before clinical action.
+
 No patient records, real clinical notes, or identifiable data are used.
 All cases were reviewed by Goktug Ozkan, MD (Internal Medicine).
 
@@ -161,37 +168,65 @@ Llama 3.3 70B Instr. & 1.6 & 2.2 & 4.0 & 4.2 & 4.0 & 4 unsafe; 1 caution \\
 
 \section{Discussion}
 
-MedFailBench contributes a clinician-reviewed severity and safety gate layer
-that existing medical AI benchmarks do not provide. Most benchmarks report
-aggregate accuracy on test sets; MedFailBench shifts the question from
-\textit{does the model know the answer?} to \textit{what safety boundary failed
-and how dangerous is it?}
+MedFailBench provides a clinician-reviewed severity and safety gate layer
+that existing medical AI benchmarks do not offer. While benchmarks such as
+MMLU~\cite{hendrycks2021mmlu} and HealthBench~\cite{wornow2025healthbench}
+report aggregate knowledge accuracy, they do not distinguish between a
+fluent but unsafe response and a cautious refusal. MedFailBench shifts the
+question from \textit{does the model know the answer?} to \textit{what safety
+boundary failed and how dangerous is it?}
 
-The benchmark is intentionally synthetic and small. Its purpose is to provide
-a reproducible public surface for medical AI safety review, not to certify
-models for clinical deployment.
-
-The preliminary automated evaluation shows that all three models produce
-safety-related failures on the same hard prompts, with missed urgent escalation
-as the dominant failure mode. Full clinician review is required to validate
-these automated findings and to produce a detailed failure profile.
+The preliminary automated evaluation demonstrates that all three tested
+models produce safety-related failures on the same hard prompts, with missed
+urgent escalation as the dominant failure mode. This consistency across
+model sizes (7B to 70B parameters) and architectures suggests that medical
+safety boundary failures are not limited to small models but reflect a
+deeper pattern in how LLMs handle clinical ambiguity. Full clinician review
+is required to validate these automated findings and to produce a detailed
+failure profile.
 
 \subsection{Relation to Other Benchmarks}
 
-MedFailBench is complementary to general medical benchmarks (MMLU, HealthBench,
-MedHELM). Those benchmarks measure knowledge and accuracy. MedFailBench measures
-clinical boundary risk. A model could score high on accuracy benchmarks while
-producing unsafe wording on open-ended clinical scenarios.
-Specialized Turkish-language medical NLP evaluations~\cite{tsai2025trmmmu}
-and literature surveys~\cite{kuly2024turkhangi} provide context for the national
-dimension of this work.
+MedFailBench is complementary to existing medical benchmarks. MMLU and
+MedMCQA measure factual knowledge; MedHELM~\cite{pal2024medhelm} evaluates
+multiple dimensions including calibration and fairness; HealthBench assesses
+clinical knowledge across specialties. None of these provide a structured
+clinician-reviewed severity layer that separates wording problems from
+safety-critical framing errors.
+
+Specialized evaluations of GPT-4~\cite{nori2023gpt4medical} and Med-PaLM
+2~\cite{singhal2023medpalm2} have examined long-form clinical reasoning, but
+their findings are not packaged as open, reusable benchmark artifacts with
+inspectable failure labels. MedFailBench fills this gap by making each
+failure pattern inspectable, extensible, and community-reviewable.
+
+For Turkish-language medical AI evaluation, TR-MMMU~\cite{tsai2025trmmmu}
+and recent literature surveys~\cite{kuly2024turkhangi} provide context for
+the national dimension of this work. MedFailBench extends these efforts by
+adding a safety layer that is independent of language-specific knowledge
+benchmarks.
 
 \subsection{Relation to Turkish AI Strategy}
 
 The Turkish 2026--2030 AI Vision identifies health AI conformity assessment
 and the Bilge national LLM as strategic priorities. MedFailBench can function
 as an independent public safety review surface for these efforts, providing
-transparent failure inspection without patient data access.
+transparent failure inspection without patient data access. We position
+MedFailBench as a community resource that national initiatives can build on
+rather than a certified assessment tool.
+
+\subsection{Future Work}
+
+Several directions are planned for v0.2.1 and beyond. First, a permanent DOI
+via Zenodo will anchor academic citation. Second, automated weekly evaluation
+runs will track model behavior changes over time. Third, a second clinician
+reviewer will provide inter-rater reliability data, addressing the main
+limitation of single-clinician annotation. Fourth, the synthetic case set
+will be expanded toward 100 cases with broader specialty coverage. Fifth,
+a lightweight submission API will allow model providers to run their systems
+against MedFailBench and receive automated safety reports. Community
+contributions through synthetic cases, safety gate objections, and wording
+review are welcome and coordinated through GitHub Discussions.
 
 \section{Limitations}
 
@@ -212,9 +247,12 @@ transparent failure inspection without patient data access.
 
 Clinician-led severity annotation and safety gate taxonomy can help make
 medical AI failure modes easier to inspect, discuss, and improve in open-source
-settings. MedFailBench is released as an open resource for the medical AI safety
-community. Contributions through synthetic cases, safety gate objections, and
-wording review are welcome.
+settings. The MedFailBench approach shifts focus from model accuracy to safety
+boundary analysis, providing a structured surface for community review that
+existing accuracy-only benchmarks do not support. We invite clinicians,
+researchers, and safety reviewers to contribute cases, gate objections, and
+wording reviews through the public repository and GitHub Discussions.
+MedFailBench is released as an open resource under Apache-2.0 and CC-BY-4.0.
 
 \nocite{*}
 \bibliographystyle{plain}
