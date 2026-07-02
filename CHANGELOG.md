@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.2.1 — 2026-07-02 (preprint expansion + community infra)
+- Expanded preprint skeleton: main.tex now includes real model evaluation table,
+  13 total references, expanded Introduction, Results, Discussion sections.
+- Added `docs/MEDFAILBENCH_V0_2_1_ROADMAP.md` with DOI, Discussions,
+  contributor onboarding, weekly eval automation, and arXiv submit plan.
+- Enabled GitHub Discussions for community contributions.
+- Added 7 new references to `preprint/references.bib` (Med-PaLM 2, GPT-4 NEJM,
+  npj Digital Medicine safety, MedEval, Turkish NLP eval and survey).
+- Public boundaries remain unchanged.
+
 ## v0.2.0 flagship layer — 2026-07-02
 - Added clinical severity rubric v0.2: `docs/CLINICAL_SEVERITY_RUBRIC_V0_2.md`.
 - Added safety gate taxonomy v0.2: `docs/SAFETY_GATE_TAXONOMY_V0_2.md`.
