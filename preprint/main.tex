@@ -133,6 +133,24 @@ Each output was reviewed using the severity rubric and safety gate taxonomy.
 Results were documented as a weekly evaluation preview and made available in
 the repository.
 
+\subsection{Repository Structure}
+
+The MedFailBench repository (\url{https://github.com/goktugozkanmd/medical-ai-failure-atlas})
+is organized for inspectability and contribution:
+\begin{enumerate}[noitemsep]
+  \item \texttt{data/} -- synthetic case files in structured JSON format with
+  severity and gate annotations.
+  \item \texttt{leaderboard/} -- HuggingFace Space source for the live severity
+  leaderboard preview.
+  \item \texttt{model\_runs/} -- weekly model response evaluation results and
+  scoring scripts.
+  \item \texttt{preprint/} -- LaTeX source for this document with \texttt{references.bib}.
+  \item \texttt{scripts/} -- benchmarking, scoring, and validation scripts.
+  \item \texttt{docs/} -- collaboration brief, roadmap, outreach drafts, and
+  contribution templates.
+\end{enumerate}
+All synthetic cases are licensed under CC-BY-4.0; code is Apache-2.0.
+
 \section{Results}
 
 The current public release includes:

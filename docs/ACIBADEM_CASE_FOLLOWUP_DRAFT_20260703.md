@@ -1,6 +1,7 @@
 # Acıbadem CASE / Mehmet Emin Aksoy Follow-up Draft
-# Durum: TASLAK — 3 Temmuz 2026 sonrası G onayıyla gönderilecek
-# Not: Gmail Sent doğrulanmış, SMTP gerekirse `c0r3-gmail` skill'i kullanılır
+# Tarih: 3 Temmuz 2026 — aksiyon zamanı
+# Durum: TASLAK — G onayıyla gönderilecek
+# Mail gönderme yok: sadece içerik önerisi
 
 ---
 
@@ -8,14 +9,17 @@
 - **18 Haz 2026:** infocase@acibadem.edu.tr adresine ilk mail gönderildi
 - **19 Haz:** Nazlı Tansu Aksoy'a forward edildi
 - **20 Haz:** Mehmet Emin Aksoy "3 Temmuz sonrası haberleşelim" dedi
-- **3 Tem 2026:** Takip zamanı
+- **3 Tem 2026:** Takip zamanı — BUGÜN
 
-## Önerilen cevap (Taslak - G onayı gerekiyor)
+## Durum (C0R3 saatlik kontrol, 00:01 TRT)
+- Mail geldi mi kontrol edilmedi (sabah aralığı dışı).
+- MedFailBench canlı: HF Space RUNNING, GitHub Discussions açık, collaborator issue #182 yayında, v0.2.1 roadmap ilerliyor.
 
-**Konu:** Re: Medical AI safety benchmark collaboration / MedFailBench
+## Önerilen cevap (Taslak — G onayı gerekiyor)
 
-**Alıcı:** (mehmetemin.aksoy@acibadem.edu.tr veya daha önce kullandığı adres)
-**CC:** (varsa önceki zincirdeki kişiler)
+**Konu:** Re: Medical AI safety benchmark collaboration / MedFailBench update
+
+**Alıcı:** mehmetemin.aksoy@acibadem.edu.tr
 
 > Sayın Prof. Dr. Aksoy,
 >
@@ -24,13 +28,16 @@
 > MedFailBench projesi yayında: klinisyen-tarafından geliştirilmiş açık kaynak
 > bir medikal AI güvenlik benchmark'ı. HuggingFace'de canlı demo var:
 > https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas
+> GitHub'da açık kaynak: https://github.com/goktugozkanmd/medical-ai-failure-atlas
 >
-> Önümüzdeki haftalarda Acıbadem CASE ile iş birliği olasılığını konuşmak için
-> kısa bir online görüşme ayarlayabilir miyiz?
+> Proje şu an 44 klinisyen-tarafından incelenmiş sentetik vaka, canlı leaderboard,
+> ve 6 güvenlik kapısı taksonomisi ile yayında. Önümüzdeki haftalarda hedef 100
+> vakaya genişletmek ve ikinci bir klinisyen review eklemek.
 >
-> Şu formatı önerebilirim:
-> - MedFailBench'in mevcut durumu ve CASE'e uyumu (15 dk)
-> - CASE'in ihtiyaçları ve entegrasyon olasılıkları (15 dk)
+> Acıbadem CASE ile iş birliği olasılığını konuşmak için kısa bir online
+> görüşme ayarlayabilir miyiz? Şu formatı önerebilirim:
+> - MedFailBench'in mevcut durumu ve Türkiye AI vizyonu (10 dk)
+> - CASE'e nasıl entegre olabileceği (güvenlik değerlendirme katmanı, 15 dk)
 > - Sonraki adımlar (5 dk)
 >
 > Uygun gün/saatinizi bildirirseniz Zoom bağlantısı gönderebilirim.
