@@ -38,7 +38,10 @@
 - [ ] ArXiv PDF preview render dene (`make` çalışıyorsa Makefile ile)
 - [ ] Anahtar kelimeler listesi hazırla
 - [ ] Yazar ORCID ekle (varsa)
-- [ ] AI-assisted writing disclosure: şu an yok, eklenmeli mi?
+- [ ] AI-assisted writing disclosure: eklendi (main.tex'te AI-Assisted Writing Disclosure section)
+- [ ] Figure 1 (severity distribution) mevcut
+- [ ] LaTeX derleme testi: `pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex`
+- [ ] .bbl dosyasını da arXiv'e yükle (bibliography ayrı dosya kalırsa)
 
 ## Timeline
 - Zenodo DOI → v0.2.1 release'ine bağlanacak

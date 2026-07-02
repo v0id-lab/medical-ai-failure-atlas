@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.2.1d — 2026-07-03 01:00 (preprint figure + AI disclosure + eval protocol)
+
+- Added severity distribution figure (bar chart PDF) to preprint: 44 cases weighted toward high severity (52% level 5).
+- Added AI-Assisted Writing Disclosure section per arXiv requirements.
+- Expanded Methods: Real Model Response Evaluation protocol described (5 prompts, 5 dimensions, automated scoring pass).
+- Updated arXiv prep checklist with figure, LaTeX build, and .bbl upload steps.
+- Created `scripts/generate_severity_figure.py` for reproducible figure generation.
+- Created `scripts/verify_refs.py` for reference verification workflow.
+- Preprint main.tex: 285 → ~305 lines. All URLs 200 OK.
+
 ## v0.2.1c — 2026-07-02 23:00 (preprint Discussion expanded + Future Work)
 - Expanded Discussion with cross-model comparison (7B to 70B consistency).
 - Added "Future Work" subsection: DOI, weekly eval automation, second reviewer,

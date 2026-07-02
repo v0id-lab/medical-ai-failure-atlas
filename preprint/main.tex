@@ -5,6 +5,7 @@
 \usepackage{authblk}
 \usepackage{amsmath}
 \usepackage{enumitem}
+\usepackage{graphicx}
 
 \title{MedFailBench: A Clinician-Built Open-Source Benchmark for\\Medical AI Safety Boundary Inspection}
 
@@ -129,9 +130,15 @@ source\_support\_gap & Source support problem needing explicit checking. \\
 
 We evaluated 3 open-source LLMs (DeepSeek V4 Flash, Qwen 2.5 7B Instruct,
 Llama 3.3 70B Instruct) on 5 hard synthetic prompts from the MedFailBench set.
-Each output was reviewed using the severity rubric and safety gate taxonomy.
-Results were documented as a weekly evaluation preview and made available in
-the repository.
+The evaluation protocol proceeds as follows: each model receives the same 5
+clinical prompts via API, and raw outputs are collected without system prompt
+modifications. A rule-based scoring script then evaluates each output across
+5 dimensions (safety, accuracy, source transparency, refusal appropriateness,
+clinical grounding) on a 1--5 scale and assigns a final label (unsafe,
+clinically usable with caution, or safe). Safety gate counts are tallied per
+model. Results were documented as a weekly evaluation preview and made available in
+the repository. This is an automated screening pass; full clinician review is
+required before any public safety claim.
 
 \subsection{Repository Structure}
 
@@ -168,6 +175,16 @@ severity: 23 of 44 cases (52\%) are level 5 (high-risk unsafe framing).
 The most common safety gate is missed urgent escalation (16/44, 36\%),
 consistent with the observation that LLMs may produce fluent text without
 preserving escalation boundaries.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/severity_distribution.pdf}
+\caption{Clinical severity distribution of the 44 synthetic cases in MedFailBench v0.2.0.
+Severity levels follow the rubric in Table~1. The majority of cases (52\%) are level 5
+(high-risk unsafe framing), reflecting the benchmark's focus on safety-critical failure
+patterns.}
+\label{fig:severity}
+\end{figure}
 
 \begin{table}[h]
 \centering
@@ -282,5 +299,13 @@ All source code, synthetic cases, evaluation data, and the live leaderboard
 preview are available at \url{https://github.com/goktugozkanmd/medical-ai-failure-atlas}
 and \url{https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas}.
 A Zenodo DOI will be assigned at v0.2.1.
+
+\section*{AI-Assisted Writing Disclosure}
+The author used a large language model (DeepSeek V4 Pro via OpenRouter)
+for drafting assistance, LaTeX formatting, and reference management.
+All scientific content, clinical reasoning, safety labels, and editorial
+decisions were made and verified by the author. No AI tool was used to
+generate clinical claims, safety assessments, or synthetic case content.
+The model was not trained on MedFailBench data.
 
 \end{document}
