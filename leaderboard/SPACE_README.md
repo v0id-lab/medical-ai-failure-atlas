@@ -1,6 +1,6 @@
 ---
 title: Medical AI Failure Atlas Leaderboard
-colorFrom: teal
+colorFrom: green
 colorTo: yellow
 sdk: gradio
 app_file: app.py

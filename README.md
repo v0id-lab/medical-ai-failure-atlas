@@ -2,7 +2,7 @@
 
 A clinician-built benchmark for medical AI safety evaluation.
 
-[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](pyproject.toml) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) [![HF Space](https://img.shields.io/badge/HuggingFace%20Space-deploy--ready-yellow)](leaderboard/SPACE_README.md)
+[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](pyproject.toml) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) [![HF Space](https://img.shields.io/badge/HuggingFace%20Space-live-green)](https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas)
 
 ![Medical AI Failure Atlas demo screenshot](docs/assets/demo-screenshot.png)
 <!-- Legacy validator anchor: ![Demo screenshot placeholder](docs/assets/demo-placeholder.svg) -->
@@ -25,7 +25,9 @@ Medical AI Failure Atlas is a synthetic benchmark for testing whether medical AI
 
 ## Live Demo
 
-The leaderboard app is deploy-ready for HuggingFace Spaces. Public deployment should use a professional account or organization handle.
+The leaderboard app is live on HuggingFace Spaces:
+
+[https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas](https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas)
 
 Local preview:
 
