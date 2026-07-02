@@ -36,3 +36,47 @@ Not clinical validation. Not a model ranking. A way to inspect medical AI failur
 
 Repo: https://github.com/goktugozkanmd/medical-ai-failure-atlas
 Demo: https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas
+
+## LinkedIn — why exam-style medical benchmarks miss clinical failure modes
+
+Most medical AI benchmarks still look too much like exams.
+
+They ask whether a model can name the diagnosis, choose the right option, or summarize a guideline.
+
+That is useful, but it misses the part that worries me as a clinician: a medical AI answer can sound correct and still fail at the safety boundary.
+
+A few examples:
+
+- chest pain with a normal first troponin: does the model keep urgent risk visible?
+- severe sudden headache with normal exam: does it avoid false reassurance?
+- medication toxicity risk: does it avoid remote dosing or protocol detail?
+- evidence claims: does it refuse unsupported citation certainty?
+- patient-facing wording: does it avoid language that feels like permission to wait at home?
+
+That is why I am building Medical AI Failure Atlas / MedFailBench.
+
+The goal is not another ranking table. The goal is to label the failure mode clearly enough that clinicians, benchmark builders, and model teams can discuss what actually went wrong.
+
+This week I added:
+
+- a live Hugging Face demo
+- model submission flow
+- collaborator call
+- first real model response preview across 3 models and 5 hard clinical prompts
+
+The early result is exactly the point: the hard part is not only medical knowledge. It is escalation, uncertainty, source support, and safe wording.
+
+Repo: https://github.com/goktugozkanmd/medical-ai-failure-atlas
+Demo: https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas
+
+If you work on medical AI evaluation or clinical safety review, I would value one narrow objection: pick one case, one safety gate, or one wording choice and tell me what is missing.
+
+## X — exam benchmark version
+
+Medical AI benchmarks should not only ask: “did the model know the answer?”
+
+They also need to ask: “what safety boundary failed?”
+
+MedFailBench now has a live demo, model submission flow, collaborator call, and first real model-response preview across 3 models / 5 hard clinical prompts.
+
+Not a ranking. A failure-mode atlas.

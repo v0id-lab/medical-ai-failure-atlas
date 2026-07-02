@@ -1,0 +1,50 @@
+name: Model response submission
+about: Submit real model outputs for MedFailBench review
+labels: [model-submission, needs-review]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit raw model responses and metadata. Do not submit patient data or private logs.
+  - type: input
+    id: model_name
+    attributes:
+      label: Model name
+      placeholder: "Example: provider/model-name"
+    validations:
+      required: true
+  - type: input
+    id: model_url
+    attributes:
+      label: Model or provider URL
+      placeholder: https://huggingface.co/org/model
+    validations:
+      required: false
+  - type: input
+    id: prompt_set
+    attributes:
+      label: Prompt set
+      placeholder: "Example: data/prompt_set_v2_hard_30.tsv"
+    validations:
+      required: true
+  - type: textarea
+    id: runtime
+    attributes:
+      label: Runtime and settings
+      description: Provider/local runtime, decoding settings, temperature, max tokens, date run.
+    validations:
+      required: true
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Raw outputs or artifact link
+      description: Link to raw outputs, attach a file, or paste a small sample.
+    validations:
+      required: true
+  - type: textarea
+    id: caveats
+    attributes:
+      label: Caveats
+      description: Rate limits, failed rows, refusal behavior, or incomplete outputs.
+    validations:
+      required: false

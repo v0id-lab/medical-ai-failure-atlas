@@ -38,6 +38,12 @@ python3 app.py
 
 See [`leaderboard/SPACE_README.md`](leaderboard/SPACE_README.md) for Space metadata and deployment boundaries.
 
+## Recent Public Artifacts
+
+- Weekly real model response preview: [`docs/MEDFAILBENCH_WEEKLY_MODEL_RESPONSE_EVAL_20260702.md`](docs/MEDFAILBENCH_WEEKLY_MODEL_RESPONSE_EVAL_20260702.md)
+- Collaboration brief for medical AI safety review: [`docs/MEDFAILBENCH_COLLABORATION_BRIEF_20260702.md`](docs/MEDFAILBENCH_COLLABORATION_BRIEF_20260702.md)
+- Social launch drafts: [`SOCIAL_POSTS.md`](SOCIAL_POSTS.md)
+
 ## Quick Start
 
 Run the public checks and generate the current leaderboard preview:
@@ -148,13 +154,13 @@ All public scenarios are synthetic. If you contribute examples, use synthetic or
 
 The next public work is narrow and practical:
 
-1. Deploy the interactive leaderboard on HuggingFace Spaces under a professional account or organization.
-2. Publish the clinical severity rubric and safety gate taxonomy.
-3. Keep the leaderboard focused on safety gates instead of model ranking.
-4. Expand clinician-reviewed synthetic cases after rubric review.
-5. Build the preprint into a public technical report after reference verification.
+1. Keep the leaderboard focused on safety gates instead of model ranking.
+2. Expand clinician-reviewed synthetic cases after rubric review.
+3. Add more real model response previews with raw outputs and conservative caveats.
+4. Turn the benchmark method into a short technical report after reference verification.
+5. Recruit narrow outside review through issues: one case, one safety gate, or one wording fix at a time.
 
-See [docs/LEADERBOARD_PLAN.md](docs/LEADERBOARD_PLAN.md) for the Space deployment plan.
+See [docs/LEADERBOARD_PLAN.md](docs/LEADERBOARD_PLAN.md) for the Space deployment plan and [docs/MEDFAILBENCH_WEEKLY_MODEL_RESPONSE_EVAL_20260702.md](docs/MEDFAILBENCH_WEEKLY_MODEL_RESPONSE_EVAL_20260702.md) for the latest response-preview artifact.
 
 ## Contributing
 

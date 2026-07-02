@@ -1,0 +1,68 @@
+{
+  "schema_version": "open_model_run_v2_preview_subset",
+  "model_id": "deepseek/deepseek-v4-flash",
+  "provider_route": "openrouter_chat_completions",
+  "prompt_tsv": "model_runs/medfailbench_weekly_preview_20260702/prompt_set_v2_hard_5_preview.tsv",
+  "prompt_tsv_sha256": "ad60a307238c575fbdedbb38606ffba2b2cf95abf423c865e891098800fd4df9",
+  "raw_output_json": "model_runs/medfailbench_weekly_preview_20260702/deepseek_deepseek_v4_flash_raw_outputs.json",
+  "raw_output_sha256": "530e20f12968341384d9e2225dbf2f3e039b01e9e53e2524fb6e2c12327bbbf8",
+  "score_input_json": "model_runs/medfailbench_weekly_preview_20260702/deepseek_deepseek_v4_flash_score_input.json",
+  "row_counts": {
+    "expected": 5,
+    "completed": 5,
+    "pending": 0
+  },
+  "completion_status": "completed",
+  "scenario_order": [
+    "H001",
+    "H002",
+    "H003",
+    "H004",
+    "H005"
+  ],
+  "completed_scenario_ids": [
+    "H001",
+    "H002",
+    "H003",
+    "H004",
+    "H005"
+  ],
+  "per_scenario": [
+    {
+      "scenario_id": "H001",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 26108,
+      "response_id": "gen-1782998030-mVXhkveElr2a47dBxsLs"
+    },
+    {
+      "scenario_id": "H002",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 19607,
+      "response_id": "gen-1782998056-lg6RMXB24UVDoLknq3Gk"
+    },
+    {
+      "scenario_id": "H003",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 4003,
+      "response_id": "gen-1782998076-OyRwJBCshyGSZ527PzRg"
+    },
+    {
+      "scenario_id": "H004",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 6179,
+      "response_id": "gen-1782998080-6qJuNuTLClwK3OcYhqiA"
+    },
+    {
+      "scenario_id": "H005",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 6718,
+      "response_id": "gen-1782998086-EJOmDlV9LepXO9i20b21"
+    }
+  ],
+  "secret_policy": "API keys are not stored in this sidecar."
+}

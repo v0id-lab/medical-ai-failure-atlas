@@ -1,6 +1,6 @@
 cff-version: "1.2.0"
 message: "If you use this resource, please cite it as below."
-title: "Medical AI Failure Atlas"
+title: "Medical AI Failure Atlas / MedFailBench"
 type: dataset
 authors:
   - family-names: "Özkan"
@@ -10,6 +10,7 @@ authors:
 version: "0.2.0"
 date-released: "2026-07-02"
 repository-code: "https://github.com/goktugozkanmd/medical-ai-failure-atlas"
+url: "https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas"
 abstract: "A clinician-built synthetic evaluation resource for medical AI safety wording, missing variable awareness, escalation boundaries, safety gate review, and clinical severity annotation. The resource is intended for model development feedback and research. It is not clinical advice, not a model ranking, and not a clinically validated decision support tool."
 keywords:
   - medical AI

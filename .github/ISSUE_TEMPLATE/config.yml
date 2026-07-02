@@ -1,2 +1,8 @@
 blank_issues_enabled: false
-contact_links: [{ name: "Start here: one sentence objection", url: "https://github.com/v0id-lab/medical-ai-failure-atlas/issues/154", about: "No template needed. Paste one weak spot, missing gate, or safer wording. Use synthetic or public examples only." }, { name: "Project README", url: "https://github.com/v0id-lab/medical-ai-failure-atlas#readme", about: "Read the project scope and safety boundaries before opening an issue." }]
+contact_links:
+  - name: Live Hugging Face Space
+    url: https://huggingface.co/spaces/goktugozkanmd/medical-ai-failure-atlas
+    about: View the live MedFailBench leaderboard preview.
+  - name: Collaboration call
+    url: https://github.com/goktugozkanmd/medical-ai-failure-atlas/issues/182
+    about: Use this issue for general collaboration interest.

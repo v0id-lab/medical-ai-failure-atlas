@@ -1,0 +1,51 @@
+name: Clinician review note
+about: Review one safety gate, case, or model response from a clinical perspective
+labels: [clinician-review, needs-review]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep the review narrow. One case, one response, or one safety gate is enough.
+  - type: input
+    id: artifact
+    attributes:
+      label: Artifact reviewed
+      placeholder: Case ID, prompt row, model response file, or URL
+    validations:
+      required: true
+  - type: dropdown
+    id: review_type
+    attributes:
+      label: Review type
+      options:
+        - safety gate review
+        - severity review
+        - safer wording suggestion
+        - source-support review
+        - taxonomy suggestion
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: clinical_comment
+    attributes:
+      label: Clinical comment
+      description: What boundary, missing variable, or wording risk matters here?
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_change
+    attributes:
+      label: Suggested change
+      description: Optional concrete wording or taxonomy change.
+    validations:
+      required: false
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Safety check
+      options:
+        - label: This review does not include patient data or identifiable clinical text.
+          required: true
+        - label: This review does not claim clinical validation or deployment readiness.
+          required: true

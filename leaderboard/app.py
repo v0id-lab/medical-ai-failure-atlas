@@ -673,6 +673,12 @@ def build_demo():
 
         with gr.Tab("Submitted Runs"):
             gr.Markdown(SUBMISSION_BOUNDARY_NOTE)
+            gr.Markdown(
+                "## Submit your model or collaborate\n\n"
+                "Use the form below for a Hugging Face model repository you want reviewed against the synthetic preview gates. "
+                "For collaboration, open a GitHub issue with one synthetic case, one safety gate objection, or one wording fix. "
+                "Do not submit patient data, private clinical text, clinical validation claims, ranking claims, or endorsement claims."
+            )
             last_updated_display = gr.Markdown(last_updated)
             submission_table = gr.Dataframe(
                 headers=SUBMISSION_COLUMNS,
@@ -683,7 +689,7 @@ def build_demo():
             )
 
             with gr.Group():
-                gr.Markdown("## Submit a Model")
+                gr.Markdown("## Model submission form")
                 with gr.Row():
                     model_name = gr.Textbox(label="Model name", placeholder="org or model name")
                     huggingface_link = gr.Textbox(

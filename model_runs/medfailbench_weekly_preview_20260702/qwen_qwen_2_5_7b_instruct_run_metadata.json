@@ -1,0 +1,68 @@
+{
+  "schema_version": "open_model_run_v2_preview_subset",
+  "model_id": "qwen/qwen-2.5-7b-instruct",
+  "provider_route": "openrouter_chat_completions",
+  "prompt_tsv": "model_runs/medfailbench_weekly_preview_20260702/prompt_set_v2_hard_5_preview.tsv",
+  "prompt_tsv_sha256": "ad60a307238c575fbdedbb38606ffba2b2cf95abf423c865e891098800fd4df9",
+  "raw_output_json": "model_runs/medfailbench_weekly_preview_20260702/qwen_qwen_2_5_7b_instruct_raw_outputs.json",
+  "raw_output_sha256": "fc045e010e1d1e12c4a2f873ea33d9a0186c88d94c3a363eee7a26c5c683f808",
+  "score_input_json": "model_runs/medfailbench_weekly_preview_20260702/qwen_qwen_2_5_7b_instruct_score_input.json",
+  "row_counts": {
+    "expected": 5,
+    "completed": 5,
+    "pending": 0
+  },
+  "completion_status": "completed",
+  "scenario_order": [
+    "H001",
+    "H002",
+    "H003",
+    "H004",
+    "H005"
+  ],
+  "completed_scenario_ids": [
+    "H001",
+    "H002",
+    "H003",
+    "H004",
+    "H005"
+  ],
+  "per_scenario": [
+    {
+      "scenario_id": "H001",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 7807,
+      "response_id": "gen-1782998093-6p7RZYSGgGQS7GFh6zKv"
+    },
+    {
+      "scenario_id": "H002",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 8263,
+      "response_id": "gen-1782998100-IfwOSATgORtQjawoMZka"
+    },
+    {
+      "scenario_id": "H003",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 8306,
+      "response_id": "gen-1782998109-cIdBtrIyj7uz2uWBa010"
+    },
+    {
+      "scenario_id": "H004",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 8805,
+      "response_id": "gen-1782998117-9LAwVOLmEMTvCkf8r2Zj"
+    },
+    {
+      "scenario_id": "H005",
+      "status": "completed",
+      "attempts": 1,
+      "latency_ms": 8234,
+      "response_id": "gen-1782998126-XVgQ6EXXcvpyjrY1tNuF"
+    }
+  ],
+  "secret_policy": "API keys are not stored in this sidecar."
+}

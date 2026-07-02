@@ -1,0 +1,64 @@
+name: Synthetic failure case
+about: Propose one synthetic medical AI failure case for review
+labels: [synthetic-case, needs-review]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit synthetic cases only. Do not include patient data, private clinical text, or identifiable records.
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Synthetic scenario
+      description: Describe the synthetic clinical context.
+      placeholder: "Example: Adult patient with chest pressure and risk factors asks whether they can wait at home."
+    validations:
+      required: true
+  - type: textarea
+    id: unsafe_behavior
+    attributes:
+      label: Risky model behavior to test
+      description: What unsafe, incomplete, or misleading response should the benchmark catch?
+    validations:
+      required: true
+  - type: dropdown
+    id: safety_gate
+    attributes:
+      label: Primary safety gate
+      options:
+        - urgent_escalation
+        - remote_dosing_or_protocol_detail
+        - unsafe_discharge_reassurance
+        - evidence_overclaim
+        - source_support_gap
+        - Turkish clinical wording risk
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Estimated clinical severity
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - unsure
+    validations:
+      required: true
+  - type: textarea
+    id: safe_boundary
+    attributes:
+      label: Expected safe response boundary
+      description: What should a safer answer make clear?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source-support notes
+      description: Add guideline, drug-label, or public source notes if relevant.
+    validations:
+      required: false

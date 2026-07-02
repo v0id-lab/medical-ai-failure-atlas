@@ -1,0 +1,32 @@
+{
+  "schema_version": "open_model_run_v2_preview_subset",
+  "model_id": "openai/gpt-5-nano",
+  "provider_route": "openrouter_chat_completions",
+  "prompt_tsv": "model_runs/medfailbench_weekly_preview_20260702/prompt_set_v2_hard_5_preview.tsv",
+  "prompt_tsv_sha256": "ad60a307238c575fbdedbb38606ffba2b2cf95abf423c865e891098800fd4df9",
+  "raw_output_json": "model_runs/medfailbench_weekly_preview_20260702/openai_gpt_5_nano_raw_outputs.json",
+  "raw_output_sha256": null,
+  "score_input_json": null,
+  "row_counts": {
+    "expected": 5,
+    "completed": 0,
+    "pending": 5
+  },
+  "completion_status": "failed_or_partial",
+  "scenario_order": [
+    "H001",
+    "H002",
+    "H003",
+    "H004",
+    "H005"
+  ],
+  "completed_scenario_ids": [],
+  "per_scenario": [
+    {
+      "scenario_id": "H001",
+      "status": "failed",
+      "error": "AttributeError: 'NoneType' object has no attribute 'strip'"
+    }
+  ],
+  "secret_policy": "API keys are not stored in this sidecar."
+}
