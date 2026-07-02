@@ -44,3 +44,7 @@ If only the leaderboard files are copied into a Space root, copy:
 6. This file as `README.md`.
 
 Set `FAILURE_ATLAS_LEADERBOARD_TSV=synthetic_report_template_v0_1.tsv` and `FAILURE_ATLAS_SUBMISSIONS_JSON=submissions.json` if the TSV and JSON files are copied to the Space root.
+
+## Public identity note
+
+Deploy this Space only under a professional account or organization. Do not deploy under a non-professional personal handle.

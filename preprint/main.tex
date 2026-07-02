@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{authblk}
+
+\title{MedFailBench: A Clinician-Built Benchmark for Medical AI Safety Evaluation}
+\author[1]{Goktug Ozkan, MD}
+\affil[1]{Department of Internal Medicine, Kutahya Emet Dr. Fazil Dogan State Hospital, Kutahya, Turkiye}
+\date{Draft v0.1}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Medical AI systems can produce fluent answers that obscure missing variables, weak source support, escalation boundaries, and unsafe clinical framing. MedFailBench is a clinician-built synthetic benchmark and failure atlas designed to make these failure patterns visible without using patient data. The current public release contains synthetic medical scenarios, clinician-reviewed severity annotations, safety gate labels, source support review concepts, and a deployable leaderboard preview. The benchmark is not clinical advice, not a model ranking, and not a validation study. Its purpose is to provide a reproducible public surface for medical AI safety wording, boundary review, and clinician-led failure annotation.
+\end{abstract}
+
+\section{Introduction}
+Large language models are increasingly evaluated with general benchmarks, but medical safety failures often appear as wording, escalation, source support, and boundary errors. These failure modes require clinician review and narrow public claims.
+
+\section{Methods}
+We constructed synthetic medical scenarios and labeled them with severity levels from 1 to 5. Safety gates capture the primary review reason for each case. No patient records or private clinical text were used.
+
+\section{Benchmark Design}
+The public resource includes synthetic prompt sets, a failure atlas, a source support review surface, a Turkish medical language safety pack, and a leaderboard preview.
+
+\section{Results Overview}
+The current public synthetic set contains clinician-reviewed severity fields and safety gate annotations. Results are descriptive and are not model rankings.
+
+\section{Discussion}
+MedFailBench is intended as an open review layer for medical AI safety evaluation. Its main contribution is the clinician severity and safety gate layer rather than a new claim of model performance.
+
+\section{Limitations}
+The current release is synthetic, small, and intended for public safety review. It does not establish clinical effectiveness or deployment safety.
+
+\section{Conclusion}
+Clinician-led severity annotation can help make medical AI failure modes easier to inspect, discuss, and improve in open-source settings.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

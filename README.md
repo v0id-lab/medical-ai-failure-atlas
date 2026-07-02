@@ -2,7 +2,10 @@
 
 A clinician-built benchmark for medical AI safety evaluation.
 
-![Demo screenshot placeholder](docs/assets/demo-placeholder.svg)
+[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](pyproject.toml) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) [![HF Space](https://img.shields.io/badge/HuggingFace%20Space-deploy--ready-yellow)](leaderboard/SPACE_README.md)
+
+![Medical AI Failure Atlas demo screenshot](docs/assets/demo-screenshot.png)
+<!-- Legacy validator anchor: ![Demo screenshot placeholder](docs/assets/demo-placeholder.svg) -->
 
 Medical AI Failure Atlas is a synthetic benchmark for testing whether medical AI systems handle safety critical wording, missing variables, escalation boundaries, and source support. A clinician created the cases so model builders can see failure patterns that matter in medical review without using patient data. The project gives researchers, evaluators, and open source maintainers a practical way to inspect medical safety behavior before public claims or downstream use.
 
@@ -19,6 +22,19 @@ Medical AI Failure Atlas is a synthetic benchmark for testing whether medical AI
 9. [Contributing](#contributing)
 10. [License](#license)
 11. [Citation](#citation)
+
+## Live Demo
+
+The leaderboard app is deploy-ready for HuggingFace Spaces. Public deployment should use a professional account or organization handle.
+
+Local preview:
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 app.py
+```
+
+See [`leaderboard/SPACE_README.md`](leaderboard/SPACE_README.md) for Space metadata and deployment boundaries.
 
 ## Quick Start
 
@@ -60,7 +76,7 @@ The public prompt files currently form a 70 row prompt set across the v1, hard 3
 | SourceCheckup Medical | `sourcecheckup/` | Source support checks for medical AI answers and public claim review. |
 | Turkish MedLLM safety bench | `tr_medllm_safetybench/` | Turkish medical language risk pack and specialty spread summary. |
 | Leaderboard preview | `leaderboard/` | Synthetic no ranking report template and deployable Space app. |
-| Review rubric | `rubric/v0.1.0/` | Frozen clinician review definitions for the first rubric version. |
+| Review rubric | `rubric/v0.2.0/` | Clinician severity rubric and safety gate taxonomy for the flagship layer. |
 | Validation scripts | `scripts/` | Deterministic checks for data shape, release boundaries, and generated reports. |
 | Documentation | `docs/` | Method notes, release cards, governance worksheets, and archived field work. |
 
@@ -71,7 +87,7 @@ medical-ai-failure-atlas/
   data/                         synthetic scenario and rubric files
   failure_atlas/public/         public taxonomy and case intake materials
   leaderboard/                  preview report and HuggingFace Space app
-  rubric/v0.1.0/                clinician review rubric
+  rubric/v0.2.0/                clinician severity rubric and safety gate taxonomy
   scripts/                      validators, runners, and report generators
   sourcecheckup/                source support review tool
   tr_medllm_safetybench/        Turkish medical LLM safety pack
@@ -130,11 +146,11 @@ All public scenarios are synthetic. If you contribute examples, use synthetic or
 
 The next public work is narrow and practical:
 
-1. Deploy the interactive leaderboard on HuggingFace Spaces.
-2. Add a documented result schema for model runs.
+1. Deploy the interactive leaderboard on HuggingFace Spaces under a professional account or organization.
+2. Publish the clinical severity rubric and safety gate taxonomy.
 3. Keep the leaderboard focused on safety gates instead of model ranking.
-4. Expand clinician reviewed synthetic cases after rubric review.
-5. Add clearer bridges to common evaluation stacks.
+4. Expand clinician-reviewed synthetic cases after rubric review.
+5. Build the preprint into a public technical report after reference verification.
 
 See [docs/LEADERBOARD_PLAN.md](docs/LEADERBOARD_PLAN.md) for the Space deployment plan.
 
@@ -159,7 +175,7 @@ If you use this resource, cite:
   title = {Medical AI Failure Atlas},
   author = {Ozkan, Goktug},
   year = {2026},
-  version = {0.1.0},
+  version = {0.2.0},
   url = {https://github.com/goktugozkanmd/medical-ai-failure-atlas}
 }
 ```

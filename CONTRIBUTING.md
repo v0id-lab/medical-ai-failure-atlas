@@ -240,3 +240,8 @@ Run:
 ```bash
 make label_audit_maintainer_public_preview_closure_checklist
 ```
+
+
+## Clinical severity and safety gate layer
+
+Use `docs/CLINICAL_SEVERITY_RUBRIC_V0_2.md` and `docs/SAFETY_GATE_TAXONOMY_V0_2.md` when proposing synthetic case labels. Keep claims narrow: severity labels describe one synthetic case or one reviewed output, not global model safety.
