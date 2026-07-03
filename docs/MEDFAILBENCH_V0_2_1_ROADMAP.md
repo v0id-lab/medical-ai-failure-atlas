@@ -1,7 +1,7 @@
 # MedFailBench v0.2.1 Roadmap
 > Hedef: v0.2.0 flagship layer'ı gerçek bir işbirlikçi benchmark'a dönüştürmek
-> Oluşturma: 2026-07-02 20:00 TRT
-> Durum: PLAN — henüz başlamadı
+> Oluşturma: 2026-07-02 20:00 TRT, son güncelleme: 2026-07-03 03:00 TRT
+> Durum: AKTIF -- GitHub Discussions ✅, CONTRIBUTING ✅, weekly eval script ✅. Kalan: DOI, arXiv, expansion.
 
 ---
 
@@ -103,20 +103,26 @@ MedFailBench preprint'ini arXiv'e yükle.
 
 | Adım | Öncelik | Blocker | Tahmini Süre |
 |------|---------|---------|-------------|
-| GitHub Discussions aç | Yüksek | Yok | 10 dk |
-| Zenodo DOI | Yüksek | G hesabı | 30 dk |
-| CONTRIBUTING.md güncelle | Orta | Yok | 20 dk |
-| ~~Reference hallucination audit~~ | Kritik | Yok | ✅ 22:00 |
-| ~~Preprint Discussion genişletme~~ | Orta | Yok | ✅ 23:00 |
-| Haftalık eval script | Orta | API key | 1-2 saat |
-| ArXiv submit | Yüksek | DOI | 1 saat |
-| İkinci klinisyen review | Düşük | Gönüllü | 1-2 hafta |
+|| GitHub Discussions aç | ✅ Yüksek | — | ✅ (21:00 run) |
+|| Zenodo DOI | Yüksek | G hesabı | 30 dk |
+|| CONTRIBUTING.md güncelle | ✅ Orta | — | ✅ (21:00 run) |
+|| Reference hallucination audit | ✅ Kritik | — | ✅ (22:00 run) |
+|| Preprint Discussion genişletme | ✅ Orta | — | ✅ (23:00 run) |
+|| Haftalık eval script | ✅ Orta | API key | ✅ (02:00 run) |
+|| ArXiv submit | Yüksek | DOI | 1 saat |
+|| İkinci klinisyen review | Düşük | Gönüllü | 1-2 hafta |
+|| Release checklist doc | ✅ | — | ✅ (03:00 run) |
 
 ---
 
-## Next Best Actions (Bu Saat İçin)
+## Next Best Actions (Güncel — 03:00 TRT)
 
 1. ~~Preprint referanslarını genişlet~~ ✅ (20:00 run)
 2. ~~main.tex'i gerçek eval verisiyle genişlet~~ ✅ (20:00 run)
-3. GitHub Discussions'i etkinleştir — **bu saatte yapılabilir**
-4. Zenodo hesabı için G'ye bildir — **bu adım kullanıcı gerektirir, şimdilik planla**
+3. ~~GitHub Discussions'i etkinleştir~~ ✅ (21:00 run)
+4. ~~CONTRIBUTING.md güncelle~~ ✅ (21:00 run)
+5. ~~Weekly eval script oluştur~~ ✅ (02:00 run)
+6. ~~Release checklist doc oluştur~~ ✅ (03:00 run)
+7. ⏳ Zenodo DOI — G GitHub-Zenodo login yaparsa tamamlanır
+8. ⏳ ArXiv submit — DOI sonrası
+9. **Yeni iş adayları:** (a) HF Space'e model submission formu ekle, (b) İkinci growth post/LinkedIn brief taslağı, (c) Lighteval/Inspect entegrasyon planı, (d) Preprint'i 100 case expansion planına hazırla, (e) Collaborator onboarding dashboard

@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.2.1f — 2026-07-03 03:00 (release checklist + roadmap update)
+- Created `docs/V0_2_1_RELEASE_CHECKLIST.md`: comprehensive single-source release tracker covering preprint, Zenodo DOI, community, weekly eval, expansion, and visibility. Structured as tabular checklist with status per step.
+- Updated `docs/MEDFAILBENCH_V0_2_1_ROADMAP.md`: status header, timeline table (all completed items ✅ with run timestamps), next-best-actions refreshed with 5 new work candidates.
+- Updated CHANGELOG, verified files with py_compile + secret scan.
+- All URLs 200 OK (HF Space, GitHub, HF Runtime).
+- Next queue generated: 5 new tasks for upcoming runs.
+
 ## v0.2.1e — 2026-07-03 02:00 (weekly eval script + release issue + arXiv doc update)
 
 - Created `scripts/weekly_model_eval.py`: reusable weekly model response evaluation script (reads 5 hard prompts from TSV, calls configured model APIs, runs rule-based scoring, writes timestamped report). Handles all 3 models (DeepSeek Flash, Qwen 7B, Llama 70B) and includes `--dry-run` mode. Addresses issue #185.
